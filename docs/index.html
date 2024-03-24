@@ -5,7 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Record of Problems Solved</title>
 <style>
-   
+   body {
+        font-family: 'Courier New', Courier, monospace;
+        margin: 0;
+        padding: 0;
+        background-color: #0d0208; /* Dark background */
+        color: #b7a3f3; /* Light text */
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #1f1b24; /* Dark container background */
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        background: linear-gradient(to bottom, #1f1b24, #19151d);
+        border-radius: 10px;
+    }
+    th, td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #2b2733; /* Darker border color */
+    }
+    th {
+        background-color: #25212b; /* Dark header background */
+    }
+    tbody tr:nth-child(even) {
+        background-color: #1f1b24; /* Darker row background */
+    }
+    tbody tr:hover {
+        background-color: #312d3a; /* Darker background on hover */
+    }
+    a {
+        color: #b7a3f3; /* Light link color */
+        text-decoration: none;
+    }
+    a:hover {
+        color: #f3e1b7; /* Light link color on hover */
+    }
     @media screen and (max-width: 600px) {
         table {
             display: block;
