@@ -15,10 +15,20 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Convert Markdown to Pages
-        uses: wranders/markdown-to-pages-action@v0.1
+      - name: Setup Python
+        uses: actions/setup-python@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          python-version: '3.x'
+
+      - name: Install markdown2
+        run: pip install markdown2
+
+      - name: Convert Markdown to HTML and Generate Index Files
+        run: python convert_markdown.py
+
+      - name: Copy HTML and Images to Distribution
+        run: |
+          cp -r ./*.html ./dist/
 
       - name: Upload Pages Artifact
         uses: actions/upload-artifact@v2
