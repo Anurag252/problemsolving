@@ -34,6 +34,8 @@ def main():
 
         for directory in dirs:
             new_directory_path = os.path.join(root, "dist" ,directory)
+            if not os.path.exists(new_directory_path):
+               os.mkdir(new_directory_path)
             old_directory_path = os.path.join(root ,directory)
             shutil.move(f"{old_directory_path}/index.html", f"{new_directory_path}/index.html")
             
