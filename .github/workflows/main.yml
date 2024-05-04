@@ -30,7 +30,7 @@ jobs:
         run: |
           mkdir ./dist
           ls
-          cp -r ./*.html ./dist/
+          cp -r *.html ./dist/
           ls ./dist
 
       - name: Upload Pages Artifact
