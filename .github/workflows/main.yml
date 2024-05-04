@@ -30,7 +30,7 @@ jobs:
         run: |
           mkdir ./dist
           ls
-          python -c "import shutil; shutil.copytree('.', './dist', ignore=shutil.ignore_patterns('*.md', '.git', '__pycache__'))"
+          cp . ./dist
           ls ./dist
 
       - name: Upload Pages Artifact
