@@ -3,6 +3,7 @@ import markdown2
 import shutil
 
 def convert_markdown_to_html(md_file):
+    print(os.path.splitext(md_file)[0])
     html_file = os.path.splitext(md_file)[0] + '.html'
     with open(md_file, 'r', encoding='utf-8') as f:
         markdown_content = f.read()
@@ -34,6 +35,7 @@ def main():
 
         for directory in dirs:
             try:
+                print(directory, " dir")
                 new_directory_path = os.path.join(root, "dist")
                 if not os.path.exists(new_directory_path):
                    os.makedirs(new_directory_path)
