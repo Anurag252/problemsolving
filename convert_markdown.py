@@ -10,7 +10,7 @@ def convert_markdown_to_html(md_file):
         f.write(html_content)
 
 def generate_index(directory):
-    index_file = os.path.join(directory, 'index.html')
+    index_file = os.path.join(directory, f"{directory}.html")
     with open(index_file, 'w', encoding='utf-8') as f:
         f.write('<!DOCTYPE html>\n<html>\n<head>\n<title>Index</title>\n</head>\n<body>\n')
         f.write(f'<h1>Index of {directory}</h1>\n<ul>\n')
