@@ -16,6 +16,10 @@ jobs:
         uses: ZacJW/markdown-html-action@1.1.0
         with:
           input_files: '[["*.md"]]'
-          output_files: '["out1.html"]'
+          output_files: '["build/index.html"]'
           packages: 'pymdown-extensions'
           extensions: '["pymdownx.extra"]'
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build # The folder the action should deploy.
