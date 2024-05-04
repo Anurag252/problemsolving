@@ -29,8 +29,6 @@ jobs:
       - name: Copy HTML and Images to Distribution
         run: |
           mkdir ./dist
-          find find . -type d -regex '.*/.*[0-9]+.*' -exec cp -r {}/\*.html ./dist \;
-          ls ./dist
 
       - name: Upload Pages Artifact
         uses: actions/upload-artifact@v2
