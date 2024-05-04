@@ -33,8 +33,8 @@ def main():
             generate_index(directory_path)
 
         for directory in dirs:
-            new_directory_path = os.path.join(root, dist ,directory)
-            old_directory_path = os.path.join(root, dist ,directory)
+            new_directory_path = os.path.join(root, "dist" ,directory)
+            old_directory_path = os.path.join(root ,directory)
             shutil.move(f"{old_directory_path}/index.html", f"{new_directory_path}/index.html")
             
 
