@@ -24,6 +24,7 @@ def main():
         for file in files:
             if file.endswith('.md'):
                 md_file = os.path.join(root, file)
+                print( "converting file-", md_file)
                 convert_markdown_to_html(md_file)
 
         for directory in dirs:
