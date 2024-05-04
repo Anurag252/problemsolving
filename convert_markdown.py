@@ -2,7 +2,7 @@ import os
 import markdown2
 
 def convert_markdown_to_html(md_file):
-    html_file = os.path.splitext(md_file)[1] + '.html'
+    html_file = os.path.splitext(md_file)[0] + '.html'
     with open(md_file, 'r', encoding='utf-8') as f:
         markdown_content = f.read()
         html_content = markdown2.markdown(markdown_content)
