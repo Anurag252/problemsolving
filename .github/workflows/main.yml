@@ -26,9 +26,9 @@ jobs:
       - name: Convert Markdown to HTML and Generate Index Files
         run: python convert_markdown.py
 
-      - name: Copy HTML and Images to Distribution
+      - name: list HTML and Images to Distribution
         run: |
-          mkdir ./dist
+          ls ./dist
 
       - name: Upload Pages Artifact
         uses: actions/upload-artifact@v2
