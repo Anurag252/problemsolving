@@ -34,12 +34,12 @@ def main():
 
         for directory in dirs:
             try:
-                new_directory_path = os.path.join(root, "dist" ,directory)
+                new_directory_path = os.path.join(root, "dist")
                 if not os.path.exists(new_directory_path):
                    os.makedirs(new_directory_path)
                 old_directory_path = os.path.join(root ,directory)
-                if os.path.isfile(f"{old_directory_path}/index.html"):
-                    shutil.move(f"{old_directory_path}/index.html", f"{new_directory_path}/index.html")
+                if os.path.isfile(f"{old_directory_path}/{directory}.html"):
+                    shutil.move(f"{old_directory_path}/{directory}.html", f"{new_directory_path}/{directory}.html")
             except OSError as exc:
                 pass
             
