@@ -28,6 +28,7 @@ jobs:
 
       - name: Copy HTML and Images to Distribution
         run: |
+          mkdir ./dist
           cp -r ./*.html ./dist/
 
       - name: Upload Pages Artifact
