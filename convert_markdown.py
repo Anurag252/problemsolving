@@ -1,5 +1,6 @@
 import os
 import markdown2
+import shutil
 
 def convert_markdown_to_html(md_file):
     html_file = os.path.splitext(md_file)[0] + '.html'
@@ -30,6 +31,12 @@ def main():
         for directory in dirs:
             directory_path = os.path.join(root, directory)
             generate_index(directory_path)
+
+        for directory in dirs:
+            new_directory_path = os.path.join(root, dist ,directory)
+            old_directory_path = os.path.join(root, dist ,directory)
+            shutil.move(f"{old_directory_path}/index.html", f"{new_directory_path}/index.htm"l)
+            
 
 if __name__ == "__main__":
     main()
