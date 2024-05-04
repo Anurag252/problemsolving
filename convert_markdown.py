@@ -2,7 +2,7 @@ import os
 import markdown2
 
 def convert_markdown_to_html(md_file):
-    html_file = os.path.splitext(md_file)[0] + '.html'
+    html_file = os.path.splitext(md_file)[1] + '.html'
     with open(md_file, 'r', encoding='utf-8') as f:
         markdown_content = f.read()
         html_content = markdown2.markdown(markdown_content)
@@ -10,7 +10,7 @@ def convert_markdown_to_html(md_file):
         f.write(html_content)
 
 def generate_index(directory):
-    index_file = os.path.join(directory, f"{directory}.html")
+    index_file = os.path.join(directory, 'index.html')
     with open(index_file, 'w', encoding='utf-8') as f:
         f.write('<!DOCTYPE html>\n<html>\n<head>\n<title>Index</title>\n</head>\n<body>\n')
         f.write(f'<h1>Index of {directory}</h1>\n<ul>\n')
