@@ -6,4 +6,6 @@ plugins:
   with:
           input_files: '[["*.md"], ["dir1/*.md", "dir2/*.md]]'
           output_files: '["out1.html", "out2.html"]'
+  packages: 'pymdown-extensions'
+  extensions: '["pymdownx.extra"]'
             
