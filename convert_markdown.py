@@ -37,7 +37,8 @@ def main():
             if not os.path.exists(new_directory_path):
                os.mkdir(new_directory_path)
             old_directory_path = os.path.join(root ,directory)
-            shutil.move(f"{old_directory_path}/index.html", f"{new_directory_path}/index.html")
+            if os.path.isfile(f"{old_directory_path}/index.html")
+                shutil.move(f"{old_directory_path}/index.html", f"{new_directory_path}/index.html")
             
 
 if __name__ == "__main__":
