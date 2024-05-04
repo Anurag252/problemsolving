@@ -40,8 +40,8 @@ def main():
                 if not os.path.exists(new_directory_path):
                    os.makedirs(new_directory_path)
                 old_directory_path = os.path.join(root ,directory)
-                if os.path.isfile(f"{old_directory_path}/{directory}.html"):
-                    shutil.move(f"{old_directory_path}/{directory}.html", f"{new_directory_path}/{directory}.html")
+                if os.path.isfile(os.path.join(root, directory, f"{directory}.html")):
+                    shutil.move(os.path.join(root, directory, f"{directory}.html"), os.path.join(new_directory_path, f"{directory}.html")
             except OSError as exc:
                 pass
             
