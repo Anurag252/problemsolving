@@ -49,7 +49,7 @@ class MarkdownToHTML:
     def copy_to_dist(self, file : str):
         print(file)
         _,file_in_dest = os.path.split(file)
-        dest_path = "../dist/" + file_in_dest
+        dest_path = "./dist/" + file_in_dest
         shutil.move(file, dest_path)
 
 
