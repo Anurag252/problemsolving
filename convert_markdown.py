@@ -33,7 +33,7 @@ class MarkdownToHTML:
                     html_file.write(html_text)
                 self.copy_to_dist(root + ".html")
             
-            elif not file.endswith(".html"): # treat as text file
+            elif file.endswith(".py") or file.endswith(".c") or file.endswith(".cs") and not file.endswith(".html"): # treat as text file
                 html_text = ""
                 with open(file, 'r', encoding='latin-1') as content_file:
                     content = content_file.read()
