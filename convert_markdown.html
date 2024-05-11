@@ -50,8 +50,8 @@ import shutil</p>
         print(file)
         head,file_in_dest = os.path.split(file)
         if file_in_dest == <a href=""><span class="caps">README</span>.html</a>
-            dir_name, _ = os.path.split(head)
-            file_in_dest = dir_name + &#8220;_&#8221; + file_in_dest
+            dir_name = os.path.dirname(file).split(&#8220;/&#8221;)
+            file_in_dest = dir_name[len(dir_name)-1] + &#8220;_&#8221; + file_in_dest
         dest_path = &#8220;./dist/&#8221; + file_in_dest
         shutil.move(file, dest_path)
 
