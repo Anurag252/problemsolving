@@ -1,50 +1,58 @@
+from operator import __mod__
 import os
+import re
 import markdown2
+import textile
 import shutil
 
-def convert_markdown_to_html(md_file):
-    print(os.path.splitext(md_file)[0])
-    html_file = os.path.splitext(md_file)[0] + '.html'
-    with open(md_file, 'r', encoding='utf-8') as f:
-        markdown_content = f.read()
-        html_content = markdown2.markdown(markdown_content)
-    with open(html_file, 'w', encoding='utf-8') as f:
-        f.write(html_content)
+class MarkdownToHTML:
+        
+    def list_all_files(self) -> list[str]:
+        result = []
+        input_ext = str(os.environ.get("input_ext", ".*"))
+        for root, subdirs, files in os.walk(os.curdir):
+            for name in files:
+                for file_ext in input_ext.split(","):
+                    if re.search(file_ext.strip(), name) != None:
+                        list_file_path = os.path.join(root, name)
+                        result.append(list_file_path)
+        return result
 
-def generate_index(directory):
-    index_file = os.path.join(directory, 'index.html')
-    with open(index_file, 'w', encoding='utf-8') as f:
-        f.write('<!DOCTYPE html>\n<html>\n<head>\n<title>Index</title>\n</head>\n<body>\n')
-        f.write(f'<h1>Index of {directory}</h1>\n<ul>\n')
-        for filename in sorted(os.listdir(directory)):
-            if filename.endswith('.html') and filename != 'index.html':
-                f.write(f'<li><a href="{filename}">{filename}</a></li>\n')
-        f.write('</ul>\n</body>\n</html>\n')
 
-def main():
-    for root, dirs, files in os.walk('.'):
-        for file in files:
-            if file.endswith('.md'):
-                md_file = os.path.join(root, file)
-                print( "converting file-", md_file)
-                convert_markdown_to_html(md_file)
+    def convert_to_HTML(self, list_of_files: list[str]):
+        for file in list_of_files:
+            if file.endswith(".md") and not file.endswith(".html"):
+                html_text = ""
+                with open(file, 'r') as content_file:
+                    content = content_file.read()
+                    html_text= markdown2.markdown(content)
+                
+                root,ext = os.path.splitext(file)
 
-        for directory in dirs:
-            directory_path = os.path.join(root, directory)
-            generate_index(directory_path)
-
-        for directory in dirs:
-            try:
-                print(directory, " dir")
-                new_directory_path = os.path.join(root, "dist")
-                if not os.path.exists(new_directory_path):
-                   os.makedirs(new_directory_path)
-                old_directory_path = os.path.join(root ,directory)
-                if os.path.isfile(os.path.join(root, directory, f"{directory}.html")):
-                    shutil.move(os.path.join(root, directory, f"{directory}.html"), os.path.join(new_directory_path, f"{directory}.html"))
-            except OSError as exc:
-                pass
+                with open(root + ".html", 'w') as html_file:
+                    html_file.write(html_text)
+                self.copy_to_dist(root + ".html")
             
+            elif not file.endswith(".html"): # treat as text file
+                html_text = ""
+                with open(file, 'r', encoding='latin-1') as content_file:
+                    content = content_file.read()
+                    html_text= textile.textile(content)
+                
+                root,ext = os.path.splitext(file)
+                with open(root + ".html", 'w') as html_file:
+                    html_file.write(html_text)
+                self.copy_to_dist(root + ".html")
+                
 
-if __name__ == "__main__":
-    main()
+
+    def copy_to_dist(self, file : str):
+        print(file)
+        _,file_in_dest = os.path.split(file)
+        dest_path = "../dist/" + file_in_dest
+        shutil.move(file, dest_path)
+
+
+mktohtml = MarkdownToHTML()
+list_of_files = mktohtml.list_all_files()
+mktohtml.convert_to_HTML(list_of_files)
