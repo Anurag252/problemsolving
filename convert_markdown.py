@@ -40,7 +40,7 @@ class MarkdownToHTML:
                     html_text= textile.textile(content)
                 
                 root,ext = os.path.splitext(file)
-                with open(root + ".html", 'w+x') as html_file:
+                with open(root + ".html", 'x') as html_file:
                     html_file.write(html_text)
                 self.copy_to_dist(root + ".html")
                 
