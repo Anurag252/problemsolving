@@ -33,7 +33,7 @@ import shutil</p>
                     html_file.write(html_text)
                 self.copy_to_dist(root + &#8220;.html&#8221;)
 
-            elif not file.endswith(&#8220;.html&#8221;): # treat as text file
+            elif file.endswith(&#8220;.py&#8221;) or file.endswith(&#8220;.c&#8221;) or file.endswith(&#8220;.cs&#8221;) and not file.endswith(&#8220;.html&#8221;): # treat as text file
                 html_text = &#8220;&#8220;
                 with open(file, &#8216;r&#8217;, encoding=&#8216;latin-1&#8217;) as content_file:
                     content = content_file.read()
