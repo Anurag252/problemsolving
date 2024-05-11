@@ -21,7 +21,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install deps
-        run: pip install requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Convert Markdown to HTML and Generate Index Files
         run: python convert_markdown.py
