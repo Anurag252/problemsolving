@@ -1,0 +1,21 @@
+	<p>#!/bin/sh
+#
+	<ol>
+		<li>An example hook script to check the commit log message taken by</li>
+		<li>applypatch from an e-mail message.</li>
+	</ol>
+#
+	<ol>
+		<li>The hook should exit with non-zero status after issuing an</li>
+		<li>appropriate message if it wants to stop the commit.  The hook is</li>
+		<li>allowed to edit the commit message file.</li>
+	</ol>
+#
+	<ol>
+		<li>To enable this hook, rename this file to &#8220;applypatch-msg&#8221;.</li>
+	</ol></p>
+
+	<p>. git-sh-setup<br />
+commitmsg=&#8221;$(git rev-parse &#8212;git-path hooks/commit-msg)&#8220;<br />
+test -x &#8220;$commitmsg&#8221; &&amp; exec &#8220;$commitmsg&#8221; ${1+&#8221;$@&#8221;}
+:</p>

@@ -1,0 +1,67 @@
+	<p>#!/bin/sh</p>
+
+	<ol>
+		<li>An example hook script to verify what is about to be pushed.  Called by &#8220;git</li>
+		<li>push&#8221; after it has checked the remote status, but before anything has been</li>
+		<li>pushed.  If this script exits with a non-zero status nothing will be pushed.</li>
+	</ol>
+#
+	<ol>
+		<li>This hook is called with the following parameters:</li>
+	</ol>
+#
+	<ol>
+		<li>$1 &#8212; Name of the remote to which the push is being done</li>
+		<li>$2 &#8212; <span class="caps">URL</span> to which the push is being done</li>
+	</ol>
+#
+	<ol>
+		<li>If pushing without using a named remote those arguments will be equal.</li>
+	</ol>
+#
+	<ol>
+		<li>Information about the commits which are being pushed is supplied as lines to</li>
+		<li>the standard input in the form:</li>
+	</ol>
+#
+	<ol>
+		<li><local ref> <local oid> <remote ref> <remote oid></li>
+	</ol>
+#
+	<ol>
+		<li>This sample shows how to prevent push of commits where the log message starts</li>
+		<li>with &#8220;<span class="caps">WIP</span>&#8221; (work in progress).</li>
+	</ol>
+
+	<p>remote=&#8221;$1&#8220;<br />
+url=&#8221;$2&#8221;</p>
+
+	<p>zero=$(git hash-object &#8212;stdin </dev/null | tr &#8216;[0-9a-f]&#8217; &#8216;0&#8217;)</p>
+
+	<p>while read local_ref local_oid remote_ref remote_oid<br />
+do
+	if test &#8220;$local_oid&#8221; = &#8220;$zero&#8220;
+	then
+		# Handle delete
+		:
+	else
+		if test &#8220;$remote_oid&#8221; = &#8220;$zero&#8220;
+		then
+			# New branch, examine all commits
+			range=&#8221;$local_oid&#8220;
+		else
+			# Update to existing branch, examine new commits
+			range=&#8221;$remote_oid..$local_oid&#8220;
+		fi</p>
+
+	<p>		# Check for WIP commit
+		commit=$(git rev-list -n 1 &#8212;grep &#8216;^WIP&#8217; &#8220;$range&#8221;)
+		if test -n &#8220;$commit&#8220;
+		then
+			echo >&2 &#8220;Found <span class="caps">WIP</span> commit in $local_ref, not pushing&#8220;
+			exit 1
+		fi
+	fi<br />
+done</p>
+
+	<p>exit 0</p>

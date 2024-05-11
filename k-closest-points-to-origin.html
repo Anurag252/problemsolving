@@ -1,0 +1,15 @@
+	<p>class Solution:
+    import heapq
+    def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
+        arr = []
+        heapq.heapify(arr)
+        for item in points:
+            dist = item<sup class="footnote" id="fnrev325be41a5b0f42eaa8eb9c7c58a2d01b-1"><a href="#fn325be41a5b0f42eaa8eb9c7c58a2d01b-1">0</a></sup>*item<sup class="footnote"><a href="#fn325be41a5b0f42eaa8eb9c7c58a2d01b-1">0</a></sup> + item<sup class="footnote" id="fnrev325be41a5b0f42eaa8eb9c7c58a2d01b-2"><a href="#fn325be41a5b0f42eaa8eb9c7c58a2d01b-2">1</a></sup>*item<sup class="footnote"><a href="#fn325be41a5b0f42eaa8eb9c7c58a2d01b-2">1</a></sup>
+            heapq.heappush(arr, (dist, item))
+        result = []
+        for i in range(k):
+            (dist, item) = heapq.heappop(arr)
+            print(item)
+            result.append(item)</p>
+
+        return result

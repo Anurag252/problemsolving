@@ -1,0 +1,35 @@
+	<ol>
+		<li>Use the official Python image from the Docker Hub<br />
+<span class="caps">FROM</span> python:3.9-slim</li>
+	</ol>
+
+	<ol>
+		<li>Set environment variables<br />
+<span class="caps">ENV</span> <span class="caps">PYTHONDONTWRITEBYTECODE</span> 1<br />
+<span class="caps">ENV</span> <span class="caps">PYTHONUNBUFFERED</span> 1</li>
+	</ol>
+
+	<ol>
+		<li>Set the working directory in the container<br />
+<span class="caps">WORKDIR</span> /app</li>
+	</ol>
+
+	<ol>
+		<li>Copy the dependencies file to the working directory<br />
+<span class="caps">COPY</span> requirements.txt .</li>
+	</ol>
+
+	<ol>
+		<li>Install any dependencies specified in requirements.txt<br />
+<span class="caps">RUN</span> pip install -r requirements.txt</li>
+	</ol>
+
+	<ol>
+		<li>Copy the Python script into the container at /app<br />
+<span class="caps">COPY</span> convert_makrdown.py .</li>
+	</ol>
+
+	<ol>
+		<li>Run the Python script<br />
+<span class="caps">CMD</span> [&#8220;python&#8221;, &#8220;convert_makrdown.py&#8221;]</li>
+	</ol>

@@ -1,0 +1,58 @@
+	<p>from operator import <i>mod</i><br />
+import os<br />
+import re<br />
+import markdown2<br />
+import textile<br />
+import shutil</p>
+
+	<p>class MarkdownToHTML:</p>
+
+    def list_all_files(self) -> list[str]:
+        result = []
+        input_ext = str(os.environ.get(&#8220;input_ext&#8221;, &#8220;.*&#8221;))
+        for root, subdirs, files in os.walk(os.curdir):
+            for name in files:
+                for file_ext in input_ext.split(&#8220;,&#8221;):
+                    if re.search(file_ext.strip(), name) != None:
+                        list_file_path = os.path.join(root, name)
+                        result.append(list_file_path)
+        return result
+
+
+    def convert_to_HTML(self, list_of_files: list[str]):
+        for file in list_of_files:
+            if file.endswith(&#8220;.md&#8221;) and not file.endswith(&#8220;.html&#8221;):
+                html_text = &#8220;&#8220;
+                with open(file, &#8216;r&#8217;) as content_file:
+                    content = content_file.read()
+                    html_text= markdown2.markdown(content)
+
+                root,ext = os.path.splitext(file)
+
+                with open(root + &#8220;.html&#8221;, &#8216;w&#8217;) as html_file:
+                    html_file.write(html_text)
+                self.copy_to_dist(root + &#8220;.html&#8221;)
+
+            elif not file.endswith(&#8220;.html&#8221;): # treat as text file
+                html_text = &#8220;&#8220;
+                with open(file, &#8216;r&#8217;, encoding=&#8216;latin-1&#8217;) as content_file:
+                    content = content_file.read()
+                    html_text= textile.textile(content)
+
+                root,ext = os.path.splitext(file)
+                with open(root + &#8220;.html&#8221;, &#8216;x&#8217;) as html_file:
+                    html_file.write(html_text)
+                self.copy_to_dist(root + &#8220;.html&#8221;)
+
+
+
+    def copy_to_dist(self, file : str):
+        print(file)
+        _,file_in_dest = os.path.split(file)
+        dest_path = &#8220;./dist/&#8221; + file_in_dest
+        shutil.move(file, dest_path)
+
+
+	<p>mktohtml = MarkdownToHTML()<br />
+list_of_files = mktohtml.list_all_files()<br />
+mktohtml.convert_to_HTML(list_of_files)</p>

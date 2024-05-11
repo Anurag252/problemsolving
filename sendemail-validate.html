@@ -1,0 +1,93 @@
+	<p>#!/bin/sh</p>
+
+	<ol>
+		<li>An example hook script to validate a patch (and/or patch series) before</li>
+		<li>sending it via email.</li>
+	</ol>
+#
+	<ol>
+		<li>The hook should exit with non-zero status after issuing an appropriate</li>
+		<li>message if it wants to prevent the email(s) from being sent.</li>
+	</ol>
+#
+	<ol>
+		<li>To enable this hook, rename this file to &#8220;sendemail-validate&#8221;.</li>
+	</ol>
+#
+	<ol>
+		<li>By default, it will only check that the patch(es) can be applied on top of</li>
+		<li>the default upstream branch without conflicts in a secondary worktree. After</li>
+		<li>validation (successful or not) of the last patch of a series, the worktree</li>
+		<li>will be deleted.</li>
+	</ol>
+#
+	<ol>
+		<li>The following config variables can be set to change the default remote and</li>
+		<li>remote ref that are used to apply the patches against:</li>
+	</ol>
+#
+	<ol>
+		<li>sendemail.validateRemote (default: origin)</li>
+		<li>sendemail.validateRemoteRef (default: <span class="caps">HEAD</span>)</li>
+	</ol>
+#
+	<ol>
+		<li>Replace the <span class="caps">TODO</span> placeholders with appropriate checks according to your</li>
+		<li>needs.</li>
+	</ol>
+
+	<p>validate_cover_letter () {
+	file=&#8221;$1&#8220;
+	# <span class="caps">TODO</span>: Replace with appropriate checks (e.g. spell checking).
+	true<br />
+}</p>
+
+	<p>validate_patch () {
+	file=&#8221;$1&#8220;
+	# Ensure that the patch applies without conflicts.
+	git am -3 &#8220;$file&#8221; || return
+	# <span class="caps">TODO</span>: Replace with appropriate checks for this patch
+	# (e.g. checkpatch.pl).
+	true<br />
+}</p>
+
+	<p>validate_series () {
+	# <span class="caps">TODO</span>: Replace with appropriate checks for the whole series
+	# (e.g. quick build, coding style checks, etc.).
+	true<br />
+}</p>
+
+	<ol>
+		<li>main &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</li>
+	</ol>
+
+	<p>if test &#8220;$GIT_SENDEMAIL_FILE_COUNTER&#8221; = 1<br />
+then
+	remote=$(git config &#8212;default origin &#8212;get sendemail.validateRemote) &&amp;
+	ref=$(git config &#8212;default HEAD &#8212;get sendemail.validateRemoteRef) &&amp;
+	worktree=$(mktemp &#8212;tmpdir -d sendemail-validate.XXXXXXX) &&amp;
+	git worktree add -fd &#8212;checkout &#8220;$worktree&#8221; &#8220;refs/remotes/$remote/$ref&#8221; &&amp;
+	git config &#8212;replace-all sendemail.validateWorktree &#8220;$worktree&#8220;<br />
+else
+	worktree=$(git config &#8212;get sendemail.validateWorktree)<br />
+fi || {
+	echo &#8220;sendemail-validate: error: failed to prepare worktree&#8221; >&2
+	exit 1<br />
+}</p>
+
+	<p>unset <span class="caps">GIT</span>_DIR <span class="caps">GIT</span>_WORK_TREE<br />
+cd &#8220;$worktree&#8221; &&</p>
+
+	<p>if grep -q &#8220;^diff &#8212;git &#8220; &#8220;$1&#8220;<br />
+then
+	validate_patch &#8220;$1&#8220;<br />
+else
+	validate_cover_letter &#8220;$1&#8220;<br />
+fi &&</p>
+
+	<p>if test &#8220;$GIT_SENDEMAIL_FILE_COUNTER&#8221; = &#8220;$GIT_SENDEMAIL_FILE_TOTAL&#8220;<br />
+then
+	git config &#8212;unset-all sendemail.validateWorktree &&amp;
+	trap &#8216;git worktree remove -ff &#8220;$worktree&#8221;&#8217; <span class="caps">EXIT</span> &&amp;
+	validate_series<br />
+fi</p>

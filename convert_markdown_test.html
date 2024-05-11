@@ -1,0 +1,16 @@
+	<p>import unittest<br />
+import os<br />
+import MarkdownToHTML</p>
+
+
+	<p>class MarkdownToHTML(unittest.TestCase):</p>
+
+
+    def list_all_files(self):
+        os.environ[&#8220;input_ext&#8221;] = &#8220;.*&#8220;
+        mk_to_html = MarkdownToHTML()
+        list_of_files = mk_to_html.list_all_files()
+        self.assertGreater(len(list_of_files), 0)
+
+    def test_sum_tuple(self):
+        self.assertEqual(sum((1, 2, 2)), 6, &#8220;Should be 6&#8221;)

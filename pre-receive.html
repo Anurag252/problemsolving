@@ -1,0 +1,28 @@
+	<p>#!/bin/sh
+#
+	<ol>
+		<li>An example hook script to make use of push options.</li>
+		<li>The example simply echoes all push options that start with &#8216;echoback=&#8217;</li>
+		<li>and rejects all pushes when the &#8220;reject&#8221; push option is used.</li>
+	</ol>
+#
+	<ol>
+		<li>To enable this hook, rename this file to &#8220;pre-receive&#8221;.</li>
+	</ol></p>
+
+	<p>if test -n &#8220;$GIT_PUSH_OPTION_COUNT&#8220;<br />
+then
+	i=0
+	while test &#8220;$i&#8221; -lt &#8220;$GIT_PUSH_OPTION_COUNT&#8220;
+	do
+		eval &#8220;value=\$GIT_PUSH_OPTION_$i&#8220;
+		case &#8220;$value&#8221; in
+		echoback=*)
+			echo &#8220;echo from the pre-receive-hook: ${value#*=}&#8221; >&2
+			;;
+		reject)
+			exit 1
+		esac
+		i=$((i + 1))
+	done<br />
+fi</p>

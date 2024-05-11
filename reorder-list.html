@@ -1,0 +1,40 @@
+	<ol>
+		<li>Definition for singly-linked list.</li>
+		<li>class ListNode:</li>
+		<li>def __init__(self, val=0, next=None):</li>
+		<li>self.val = val</li>
+		<li>self.next = next<br />
+class Solution:</li>
+	</ol>
+
+
+    temp = None
+
+
+    def reorderList(self, head: Optional[ListNode]) -> None:
+        &#8220;&#8221;&#8220;
+        Do not return anything, modify head in-place instead.
+        &#8220;&#8221;&#8220;
+        if head.next == None:
+            return
+
+        self.temp = head
+        result = head
+        self.Traverse( head, None)
+        head = result
+
+    def Traverse(self, head : ListNode, prev : ListNode) :
+        if head == None:
+            return
+
+        self.Traverse( head.next, head)
+
+
+        if head.next == None and prev != self.temp and self.temp != None and self.temp.next != None:
+            print(head, prev)
+            temp1 = self.temp.next
+            self.temp.next = head
+            head.next = temp1
+            self.temp = temp1
+            if prev != None:
+                prev.next = None

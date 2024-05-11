@@ -1,0 +1,17 @@
+	<p>#!/bin/sh
+#
+	<ol>
+		<li>An example hook script to verify what is about to be committed.</li>
+		<li>Called by &#8220;git merge&#8221; with no arguments.  The hook should</li>
+		<li>exit with non-zero status after issuing an appropriate message to</li>
+		<li>stderr if it wants to stop the merge commit.</li>
+	</ol>
+#
+	<ol>
+		<li>To enable this hook, rename this file to &#8220;pre-merge-commit&#8221;.</li>
+	</ol></p>
+
+	<p>. git-sh-setup<br />
+test -x &#8220;$GIT_DIR/hooks/pre-commit&#8221; &&amp;
+        exec &#8220;$GIT_DIR/hooks/pre-commit&#8220;
+:</p>
