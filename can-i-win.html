@@ -1,0 +1,69 @@
+	<p>class Solution:</p>
+
+    def __init__(self):
+        from sortedcontainers import SortedSet
+        self.dict1 = []
+        self.cache = {}
+
+    def canIWin(self, maxChoosableInteger: int, desiredTotal: int) -> bool:
+        self.dict1 = [&#8220;0&#8221;]* (maxChoosableInteger+1)
+        self.dict1<sup class="footnote" id="fnrev74007448eacd4b7ab20fe6f9f94fefc5-1"><a href="#fn74007448eacd4b7ab20fe6f9f94fefc5-1">0</a></sup> = &#8220;1&#8220;
+        if (maxChoosableInteger * (maxChoosableInteger + 1)) // 2 < desiredTotal:
+            return False
+        if desiredTotal <= 0:
+            return True
+        return self.MoveByA(maxChoosableInteger, desiredTotal)
+
+    def MoveByA(self, maxChoosableInteger: int, desiredTotal: int) -> bool:
+        key = f&#8221;{desiredTotal}#{&#8216;,&#8217;.join(self.dict1)}&#8221;
+
+        if key in self.cache:
+            return self.cache[key]
+        if desiredTotal <= 0:
+            return False # B won
+
+        if &#8220;0&#8221; not in self.dict1:
+            print(&#8220;should never occur&#8221;)
+            return False
+
+        for k in range(1, maxChoosableInteger+1):
+            if self.dict1[k] == <a href="">0</a>
+                self.dict1[k] = &#8220;1&#8220;
+                key1 = f&#8221;{desiredTotal}#{&#8216;,&#8217;.join(self.dict1)}&#8220;
+                if not self.MoveByB(maxChoosableInteger, desiredTotal-k):
+                    self.cache[key1] = False
+                    self.dict1[k] = &#8220;0&#8220;
+                    self.cache[key] = True
+                    return True
+                self.cache[key1] = True
+                self.dict1[k] = &#8220;0&#8221;
+
+        self.cache[key] = False
+        return False
+
+    def MoveByB(self, maxChoosableInteger: int, desiredTotal: int) -> bool:
+        key = f&#8221;{desiredTotal}#{&#8216;,&#8217;.join(self.dict1)}&#8220;
+        if key in self.cache:
+            return self.cache[key]
+
+        if desiredTotal <= 0:
+            return False # A won
+
+        if &#8220;0&#8221; not in self.dict1:
+            print(&#8220;should never occur&#8221;)
+            return False
+
+        for k in range(1, maxChoosableInteger+1):
+            if self.dict1[k] == <a href="">0</a>
+                self.dict1[k] = &#8220;1&#8220;
+                key1 = f&#8221;{desiredTotal}#{&#8216;,&#8217;.join(self.dict1)}&#8220;
+                if not self.MoveByA(maxChoosableInteger, desiredTotal-k):
+                    self.cache[key1] = False
+                    self.dict1[k] = &#8220;0&#8220;
+                    self.cache[key] = True
+                    return True
+                self.cache[key1] = True
+                self.dict1[k] = &#8220;0&#8221;
+
+        self.cache[key] = False
+        return False
