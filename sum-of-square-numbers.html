@@ -1,0 +1,14 @@
+	<p>bool judgeSquareSum(int c) {
+    if (c  0) {
+        return true;
+    }
+    for (int i = 1 ; i <= (int)(sqrt(c)) ; i ++) {
+        double k = sqrt(c- i*i);
+        if ((int)(k)  k) {
+            //printf(&#8221; %d %d\n&#8221;,k, i);
+            return true;
+        }
+    }
+    return false;</p>
+
+	<p>}</p>
