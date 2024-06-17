@@ -1,0 +1,18 @@
+	<p>int cmpfunc (const void * a, const void * b) {
+   return ( <strong class="int*">a &#8211; *(int</strong>)b );<br />
+}</p>
+
+	<p>int minMovesToSeat(int* seats, int seatsSize, int* students, int studentsSize) {
+    qsort(seats, seatsSize, sizeof(int), cmpfunc);
+     qsort(students, studentsSize, sizeof(int), cmpfunc);
+    int result = 0;
+     for (int i = 0 ; i < seatsSize ; i ++){
+        if (seats[i] &#8211; students[i] > 0) {
+            result += seats[i] &#8211; students[i];
+        } else {
+            result +=  students[i] &#8211; seats[i] ;
+        }</p>
+
+     }
+     return result;
+}
