@@ -1,0 +1,51 @@
+	<p>struct couple {
+    int key;
+    int value;<br />
+};</p>
+
+	<p>int compare(const void *elem1, const void *elem2) {
+    int v1 = (*(struct couple**)elem1)->value;
+    int v2 = (*(struct couple**)elem2)->value;
+    return v2-v1;<br />
+}</p>
+
+	<p>long long maximumImportance(int n, int** roads, int roadsSize, int* roadsColSize) {
+     int list_of_nodes[n];
+    for (int i = 0 ; i < n ; i ++) {
+        list_of_nodes[i] = 0;
+    }</p>
+
+    for (int i = 0 ; i < roadsSize ; i ++) {
+        list_of_nodes[roads[i]<sup class="footnote" id="fnrev57ec3dc97b884c3d906056f5e701f25e-1"><a href="#fn57ec3dc97b884c3d906056f5e701f25e-1">0</a></sup>] ++ ;
+        list_of_nodes[roads[i]<sup class="footnote" id="fnrev57ec3dc97b884c3d906056f5e701f25e-2"><a href="#fn57ec3dc97b884c3d906056f5e701f25e-2">1</a></sup>] ++ ;
+    }
+
+
+    struct couple* list_of_nodes_with_kv[n];
+    for (int i = 0; i < n; i++) {
+        // Allocate memory for each struct couple
+        list_of_nodes_with_kv[i] = malloc(sizeof(struct couple));
+        // Assign the values to the struct couple
+        list_of_nodes_with_kv[i]->key = i;
+        list_of_nodes_with_kv[i]->value = list_of_nodes[i];
+    }
+    qsort(list_of_nodes_with_kv, n, sizeof(struct couple*), compare);
+
+    for (int i = 0 ; i < n; i++) {
+        printf(&#8221;  %d  %d &#8220;, list_of_nodes_with_kv[i]->key, list_of_nodes_with_kv[i]-> value);
+    }
+
+    int cache[n];
+    int top = n;
+    for (int i = 0 ; i < n ; i ++) {
+        cache[list_of_nodes_with_kv[i]->key] = top;
+        top &#8212;;
+    }
+    long result = 0;
+    for (int i = 0 ; i < roadsSize ; i ++) {
+        result += cache[roads[i]<sup class="footnote"><a href="#fn57ec3dc97b884c3d906056f5e701f25e-1">0</a></sup>];
+        result += cache[roads[i]<sup class="footnote"><a href="#fn57ec3dc97b884c3d906056f5e701f25e-2">1</a></sup>];
+    }
+
+    return result;
+}
