@@ -1,8 +1,3 @@
-int compare(void *a, void *b){
-   int k1 =  *((int*)(a));
-   int k2 =  *((int*)(b));
-   return k1 - k2;
-}
 
 bool threeConsecutiveOdds(int* arr, int arrSize) {
     //qsort(arr, arrSize, sizeof(int), compare);
