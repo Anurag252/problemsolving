@@ -1,14 +1,7 @@
 	<p>/**
  * Note: The returned array must be malloced, assume caller calls free().
- */</p>
-
-	<p>int compare(void* a, void * b) {
-    int k1 = <strong>((int</strong>)(a));
-    int k2 = <strong>((int</strong>)(b));
-    return k1 &#8211; k2;<br />
-}</p>
-
-	<p>int* intersect(int* nums1, int nums1Size, int* nums2, int nums2Size, int* returnSize) {
+ <strong>/<br />
+int</strong> intersect(int* nums1, int nums1Size, int* nums2, int nums2Size, int* returnSize) {
     *returnSize = 0;
     if (nums1Size > nums2Size) {
         *returnSize = nums1Size;
@@ -16,27 +9,18 @@
         *returnSize = nums2Size;
     }</p>
 
-    qsort(nums1, nums1Size, sizeof(int), compare);
-    qsort(nums2, nums2Size, sizeof(int), compare);
-
     int* arr = malloc(*returnSize * sizeof(int));
     int a = 0;
-    int b = 0;
-    int c = 0;
-    while(a < nums1Size &&amp; b < nums2Size){
-        if (nums1[a] > nums2[b]){
-            b ++ ;
-
-        }else if (nums1[a] < nums2[b]){
-            a ++ ;
-
-        } else {
-            arr&#169; = nums1[a];
-            c ++;
-            a ++ ;
-            b ++ ;
+    for (int i = 0 ; i < nums1Size ; i ++) {
+        for (int j = 0 ; j < nums2Size ; j ++) {
+            if (nums1[i] == nums2[j]) {
+                arr[a] = nums2[j];
+                nums2[j] = -1;
+                a ++ ;
+                break;
+            }
         }
     }
-    *returnSize = c;
+    *returnSize = a;
     return arr;
 }
