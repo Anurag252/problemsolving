@@ -1,0 +1,52 @@
+	<p>/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */<br />
+/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ <strong>/<br />
+int</strong> nodesBetweenCriticalPoints(struct ListNode* head, int* returnSize) {
+    int* arr1 = malloc(2 * sizeof(int));
+    *returnSize = 2;
+    if (head  NULL || head->next  NULL || head -> next -> next == <span class="caps">NULL</span>) {
+        arr1<sup class="footnote" id="fnrev841db5865c7c49d5b566604158c43685-1"><a href="#fn841db5865c7c49d5b566604158c43685-1">0</a></sup> = -1;
+        arr1<sup class="footnote" id="fnrev841db5865c7c49d5b566604158c43685-2"><a href="#fn841db5865c7c49d5b566604158c43685-2">1</a></sup> = -1;
+        return arr1;
+    }
+    struct ListNode* first = head;
+    struct ListNode* second = head->next;
+    struct ListNode* third = head->next -> next;
+    int* arr = malloc(100000 * sizeof(int));
+    int size = 0;
+    int index = 0;
+    while(third != NULL) {
+        if ((first->val > second->val &&amp; second->val < third->val) || 
+        (first->val < second->val &&amp; second->val > third->val)) {
+            arr[size] = index;
+            size ++ ;</p>
+
+        }
+        index ++ ;
+        first = first ->next;
+        second = second -> next;
+        third = third -> next;
+    }
+    int diff = 100000;
+    for (int i = 0 ; i < size-1; i ++){
+        if (diff > (arr[i+1] &#8211; arr[i])) {
+            diff = (arr[i+1] &#8211; arr[i]);
+        }
+    }
+    if (size < 2) {
+        arr1<sup class="footnote"><a href="#fn841db5865c7c49d5b566604158c43685-1">0</a></sup> = -1;
+        arr1<sup class="footnote"><a href="#fn841db5865c7c49d5b566604158c43685-2">1</a></sup> = -1;
+        return arr1;
+    }
+    arr1<sup class="footnote"><a href="#fn841db5865c7c49d5b566604158c43685-1">0</a></sup> = diff;
+    arr1<sup class="footnote"><a href="#fn841db5865c7c49d5b566604158c43685-2">1</a></sup> = arr[size-1] &#8211; arr<sup class="footnote"><a href="#fn841db5865c7c49d5b566604158c43685-1">0</a></sup>;
+    return arr1;
+
+	<p>}</p>
