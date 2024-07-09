@@ -3,7 +3,7 @@ double averageWaitingTime(int** customers, int customersSize, int* customersColS
     if (customersSize == 0){
         return 0;
     }
-    long wait = 0;
+    double wait = 0;
     int freeat = customers[0][0];
     for (int i = 0 ; i < customersSize ; i ++) {
         //printf("%d %d\n", freeat, wait);
@@ -18,5 +18,5 @@ double averageWaitingTime(int** customers, int customersSize, int* customersColS
         freeat = freeat + customers[i][1];
     }
 
-    return ((double)(wait))/customersSize;
+    return (wait)/customersSize;
 }
