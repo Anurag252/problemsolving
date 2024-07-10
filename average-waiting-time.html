@@ -3,20 +3,20 @@
     if (customersSize == 0){
         return 0;
     }
-    long wait = 0;
-    int freeat = customers<sup class="footnote" id="fnrev4ffb37c9deea4b53824c56726f2182f5-1"><a href="#fn4ffb37c9deea4b53824c56726f2182f5-1">0</a></sup><sup class="footnote"><a href="#fn4ffb37c9deea4b53824c56726f2182f5-1">0</a></sup>;
+    double wait = 0;
+    int freeat = customers<sup class="footnote" id="fnrev236181ddfefc4a7a89cdb28ec9f7a31d-1"><a href="#fn236181ddfefc4a7a89cdb28ec9f7a31d-1">0</a></sup><sup class="footnote"><a href="#fn236181ddfefc4a7a89cdb28ec9f7a31d-1">0</a></sup>;
     for (int i = 0 ; i < customersSize ; i ++) {
         //printf(&#8220;%d %d\n&#8221;, freeat, wait);
-        int diff = customers[i]<sup class="footnote" id="fnrev4ffb37c9deea4b53824c56726f2182f5-2"><a href="#fn4ffb37c9deea4b53824c56726f2182f5-2">1</a></sup>;
-        if (freeat > customers[i]<sup class="footnote"><a href="#fn4ffb37c9deea4b53824c56726f2182f5-1">0</a></sup>) {
-            wait = wait + freeat &#8211; customers[i]<sup class="footnote"><a href="#fn4ffb37c9deea4b53824c56726f2182f5-1">0</a></sup> + diff;  
+        int diff = customers[i]<sup class="footnote" id="fnrev236181ddfefc4a7a89cdb28ec9f7a31d-2"><a href="#fn236181ddfefc4a7a89cdb28ec9f7a31d-2">1</a></sup>;
+        if (freeat > customers[i]<sup class="footnote"><a href="#fn236181ddfefc4a7a89cdb28ec9f7a31d-1">0</a></sup>) {
+            wait = wait + freeat &#8211; customers[i]<sup class="footnote"><a href="#fn236181ddfefc4a7a89cdb28ec9f7a31d-1">0</a></sup> + diff;  
         } else {
             // wait time is 
-            freeat = customers[i]<sup class="footnote"><a href="#fn4ffb37c9deea4b53824c56726f2182f5-1">0</a></sup>;
+            freeat = customers[i]<sup class="footnote"><a href="#fn236181ddfefc4a7a89cdb28ec9f7a31d-1">0</a></sup>;
             wait = wait + diff;
         }
-        freeat = freeat + customers[i]<sup class="footnote"><a href="#fn4ffb37c9deea4b53824c56726f2182f5-2">1</a></sup>;
+        freeat = freeat + customers[i]<sup class="footnote"><a href="#fn236181ddfefc4a7a89cdb28ec9f7a31d-2">1</a></sup>;
     }
 
-    return ((double)(wait))/customersSize;
+    return (wait)/customersSize;
 }
