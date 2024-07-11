@@ -2,7 +2,7 @@ class Solution:
     def reverseParentheses(self, s: str) -> str:
         stack = deque()
         for k in s:
-            print(stack)
+            
             if k == ")":
                 ls = []
                 found = False
