@@ -1,8 +1,8 @@
 	<p>class Solution:
     def reverseParentheses(self, s: str) -> str:
         stack = deque()
-        for k in s:</p>
-
+        for k in s:
+            print(stack)
             if k  ")":
                 ls = []
                 found = False
@@ -10,7 +10,7 @@
                     ls.append(stack.pop())
                     if ls[-1]  <a href="">(</a>
                         found = True
-                del ls[-1]
+                del ls[-1]</p>
 
                 for v in ls:
                     stack.append(v)
