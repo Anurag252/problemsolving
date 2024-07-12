@@ -27,16 +27,19 @@ class Solution:
                 del stack[-1]
             i = i + 1
         #print(''.join(stack), result)
-        new_stack = []
-        while stack :
-            new_stack.append(stack.pop(0))
-            if len(new_stack) > 1 and new_stack[-2] + new_stack[-1] == second:
+        s = ''.join(stack)
+        stack=[]
+        i = 0
+        while(i < len(s)):
+            stack.append(s[i])
+            if len(stack) > 1 and str(stack[-2] + stack[-1]) == second:
                 result += diff2
-                new_stack.pop()
-                new_stack.pop()
+                del stack[-1]
+                del stack[-1]
+            i = i + 1
                 
         return result
-
+# aaa ab bbb -> due to this a new string to be created again 2nsd time
 
 
 
