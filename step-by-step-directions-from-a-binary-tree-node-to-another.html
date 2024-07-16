@@ -1,0 +1,66 @@
+	<ol>
+		<li>Definition for a binary tree node.</li>
+		<li>class TreeNode:</li>
+		<li>def __init__(self, val=0, left=None, right=None):</li>
+		<li>self.val = val</li>
+		<li>self.left = left</li>
+		<li>self.right = right<br />
+class TreeN:
+     def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+        self.parent = None
+        self.visited = False</li>
+	</ol>
+
+	<p>class Solution:
+    def getDirections(
+        self, root: TreeNode, startValue: int, destValue: int
+    ) -> str:
+        start_path = []
+        dest_path = []</p>
+
+        # Find paths from root to start and destination nodes
+        self._find_path(root, startValue, start_path)
+        self._find_path(root, destValue, dest_path)
+
+        directions = []
+        common_path_length = 0
+
+        # Find the length of the common path
+        while (
+            common_path_length < len(start_path)
+            and common_path_length < len(dest_path)
+            and start_path[common_path_length] == dest_path[common_path_length]
+        ):
+            common_path_length += 1
+
+        # Add &#8220;U&#8221; for each step to go up from start to common ancestor
+        directions.extend(&#8220;U&#8221; * (len(start_path) &#8211; common_path_length))
+
+        # Add directions from common ancestor to destination
+        directions.extend(dest_path[common_path_length:])
+
+        return &#8220;&#8221;.join(directions)
+
+    def _find_path(self, node: TreeNode, target: int, path: List[str]) -> bool:
+        if node is None:
+            return False
+
+        if node.val == target:
+            return True
+
+        # Try left subtree
+        path.append(&#8220;L&#8221;)
+        if self._find_path(node.left, target, path):
+            return True
+        path.pop()  # Remove last character
+
+        # Try right subtree
+        path.append(&#8220;R&#8221;)
+        if self._find_path(node.right, target, path):
+            return True
+        path.pop()  # Remove last character
+
+        return False
