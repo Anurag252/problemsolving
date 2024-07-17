@@ -28,7 +28,6 @@ class Solution:
         dfs(root, to_delete, False)
         if root not in parent:
             result.append(root)
-        print(result)
         return result
         
         
