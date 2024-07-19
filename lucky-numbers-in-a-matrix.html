@@ -1,0 +1,14 @@
+	<p>class Solution:
+    def luckyNumbers (self, matrix: List[List[int]]) -> List[int]:
+        result =[]
+        d = set()
+        for k in matrix:
+            d.add(min(k))
+        elem = 0
+        for l in range(len(matrix<sup class="footnote" id="fnrev5115c6f6e6284427815b4930f5fcd791-1"><a href="#fn5115c6f6e6284427815b4930f5fcd791-1">0</a></sup>)):
+            elem = 0
+            for k in range(len(matrix)):
+                elem = max(matrix[k][l], elem)
+            if elem in d:
+                result.append(elem)
+        return result</p>
