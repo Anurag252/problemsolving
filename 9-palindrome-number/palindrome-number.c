@@ -13,11 +13,6 @@ bool isPalindrome(int x) {
         x = x % k;
         k = k /10;
         y = y / 10;
-        if (k != 0 && l != 0) {
-            //printf("%d %d\n", x/k, y%l);
-        }
-        //
-        
     }
 
     if (x == 0) {
