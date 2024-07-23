@@ -1,0 +1,20 @@
+	<p>class Solution:
+    def frequencySort(self, nums: List[int]) -> List[int]:
+        h = {}
+        for k in nums:
+            if k in h:
+                h[k] = h[k] + 1
+            else:
+                h[k] = 1
+        m =[]
+        for k in h:
+            m.append((k, h[k]))
+        sign = &#8220;&#8221;</p>
+
+        m.sort(key=lambda x: (x<sup class="footnote" id="fnrevcc29041487bf4ebba65ddd712d633312-1"><a href="#fncc29041487bf4ebba65ddd712d633312-1">1</a></sup>, -x<sup class="footnote" id="fnrevcc29041487bf4ebba65ddd712d633312-2"><a href="#fncc29041487bf4ebba65ddd712d633312-2">0</a></sup>)) 
+
+        result =[]
+        for k in m:
+            for l in range(k<sup class="footnote"><a href="#fncc29041487bf4ebba65ddd712d633312-1">1</a></sup>):
+                result.append(k<sup class="footnote"><a href="#fncc29041487bf4ebba65ddd712d633312-2">0</a></sup>)
+        return result
