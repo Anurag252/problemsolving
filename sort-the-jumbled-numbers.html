@@ -1,0 +1,16 @@
+	<p>class Solution:
+    def sortJumbled(self, mapping: List[int], nums: List[int]) -> List[int]:</p>
+
+        def srt(x):
+            result = 0
+            mul = 1
+            if x == 0:
+                return mapping<sup class="footnote" id="fnrev1de25657820446f0a58707f4e319e889-1"><a href="#fn1de25657820446f0a58707f4e319e889-1">0</a></sup>
+            while x > 0:
+                y = x%10
+                result = result + mul*mapping[y]
+                mul = mul * 10
+                x = int(x /10)
+            return result
+        nums=sorted(nums,reverse=False, key=srt)
+        return nums
