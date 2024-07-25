@@ -1,6 +1,10 @@
 	<p>class Solution:
-    def sortArray(self, nums: List[int]) -> List[int]:</p>
-
+    def sortArray(self, nums: List[int]) -> List[int]:
+        if len(nums) == 2:
+            if nums<sup class="footnote" id="fnrev7f9ad6b78d504076933f782c3b0ee146-1"><a href="#fn7f9ad6b78d504076933f782c3b0ee146-1">0</a></sup> > nums<sup class="footnote" id="fnrev7f9ad6b78d504076933f782c3b0ee146-2"><a href="#fn7f9ad6b78d504076933f782c3b0ee146-2">1</a></sup>:
+                return [nums<sup class="footnote"><a href="#fn7f9ad6b78d504076933f782c3b0ee146-2">1</a></sup>, nums<sup class="footnote"><a href="#fn7f9ad6b78d504076933f782c3b0ee146-1">0</a></sup>]
+            else:
+                return nums</p>
 
         if len(nums) == 1:
             return nums
