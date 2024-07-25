@@ -1,10 +1,6 @@
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
-        if len(nums) == 2:
-            if nums[0] > nums[1]:
-                return [nums[1], nums[0]]
-            else:
-                return nums
+       
         
         if len(nums) == 1:
             return nums
