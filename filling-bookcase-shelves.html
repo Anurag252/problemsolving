@@ -1,0 +1,24 @@
+	<p>class Solution:
+    def __init__(self):
+        self.a = {}
+    def minHeightShelves(self, books: List[List[int]], shelfWidth: int) -> int:</p>
+
+        r = &#8220;&#8221;.join(str(books))
+        if r in self.a:
+            return self.a&#174;
+        total = 0
+        t = []
+        result = 1000000
+        i = 0
+        for k in books:
+
+            if total + k<sup class="footnote" id="fnrevdbc0ac66d8bf494db8054b6e14d29439-1"><a href="#fndbc0ac66d8bf494db8054b6e14d29439-1">0</a></sup> <= shelfWidth:
+                t.append(k<sup class="footnote" id="fnrevdbc0ac66d8bf494db8054b6e14d29439-2"><a href="#fndbc0ac66d8bf494db8054b6e14d29439-2">1</a></sup>)
+                total += k<sup class="footnote"><a href="#fndbc0ac66d8bf494db8054b6e14d29439-1">0</a></sup>
+                result = min(result, max(t) +  self.minHeightShelves( books[i+1:], shelfWidth))
+            else:
+                break
+            i += 1
+        #print(books, result)
+        self.a&#174; = 0 if result == 1000000 else result
+        return self.a&#174;

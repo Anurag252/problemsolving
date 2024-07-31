@@ -12,8 +12,8 @@ int</strong> nodesBetweenCriticalPoints(struct ListNode* head, int* returnSize) 
     int* arr1 = malloc(2 * sizeof(int));
     *returnSize = 2;
     if (head  NULL || head->next  NULL || head -> next -> next == <span class="caps">NULL</span>) {
-        arr1<sup class="footnote" id="fnrev8c736b243a6147fa88aa2ebd10c18fed-1"><a href="#fn8c736b243a6147fa88aa2ebd10c18fed-1">0</a></sup> = -1;
-        arr1<sup class="footnote" id="fnrev8c736b243a6147fa88aa2ebd10c18fed-2"><a href="#fn8c736b243a6147fa88aa2ebd10c18fed-2">1</a></sup> = -1;
+        arr1<sup class="footnote" id="fnrev90deda8676684a9a9081798c6abc8324-1"><a href="#fn90deda8676684a9a9081798c6abc8324-1">0</a></sup> = -1;
+        arr1<sup class="footnote" id="fnrev90deda8676684a9a9081798c6abc8324-2"><a href="#fn90deda8676684a9a9081798c6abc8324-2">1</a></sup> = -1;
         return arr1;
     }
     struct ListNode* first = head;
@@ -41,12 +41,12 @@ int</strong> nodesBetweenCriticalPoints(struct ListNode* head, int* returnSize) 
         }
     }
     if (size < 2) {
-        arr1<sup class="footnote"><a href="#fn8c736b243a6147fa88aa2ebd10c18fed-1">0</a></sup> = -1;
-        arr1<sup class="footnote"><a href="#fn8c736b243a6147fa88aa2ebd10c18fed-2">1</a></sup> = -1;
+        arr1<sup class="footnote"><a href="#fn90deda8676684a9a9081798c6abc8324-1">0</a></sup> = -1;
+        arr1<sup class="footnote"><a href="#fn90deda8676684a9a9081798c6abc8324-2">1</a></sup> = -1;
         return arr1;
     }
-    arr1<sup class="footnote"><a href="#fn8c736b243a6147fa88aa2ebd10c18fed-1">0</a></sup> = diff;
-    arr1<sup class="footnote"><a href="#fn8c736b243a6147fa88aa2ebd10c18fed-2">1</a></sup> = arr[size-1] &#8211; arr<sup class="footnote"><a href="#fn8c736b243a6147fa88aa2ebd10c18fed-1">0</a></sup>;
+    arr1<sup class="footnote"><a href="#fn90deda8676684a9a9081798c6abc8324-1">0</a></sup> = diff;
+    arr1<sup class="footnote"><a href="#fn90deda8676684a9a9081798c6abc8324-2">1</a></sup> = arr[size-1] &#8211; arr<sup class="footnote"><a href="#fn90deda8676684a9a9081798c6abc8324-1">0</a></sup>;
     return arr1;
 
 	<p>}</p>
