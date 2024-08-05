@@ -1,0 +1,15 @@
+	<p>class Solution:
+    def kthDistinct(self, arr: List[str], n: int) -> str:
+        mp = {}
+        nmp = {}
+        i = 0
+        for k in arr:
+            if k not in mp and k not in nmp:
+                mp[k]=i
+            elif k in mp:
+                del mp[k]
+                nmp[k]=1
+            i += 1
+        a = list(mp.items())
+        a.sort(reverse=False, key=lambda x : x<sup class="footnote" id="fnrev272a288ff9f54298a8bd496f09217b85-1"><a href="#fn272a288ff9f54298a8bd496f09217b85-1">1</a></sup>)
+        return &#8220;&#8221; if n &#8211; 1 >= len(a) else a[n-1]<sup class="footnote" id="fnrev272a288ff9f54298a8bd496f09217b85-2"><a href="#fn272a288ff9f54298a8bd496f09217b85-2">0</a></sup></p>
