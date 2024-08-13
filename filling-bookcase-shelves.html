@@ -12,9 +12,9 @@
         i = 0
         for k in books:
 
-            if total + k<sup class="footnote" id="fnrevf28b0a7de9cd437281886b4314d8a9a6-1"><a href="#fnf28b0a7de9cd437281886b4314d8a9a6-1">0</a></sup> <= shelfWidth:
-                t.append(k<sup class="footnote" id="fnrevf28b0a7de9cd437281886b4314d8a9a6-2"><a href="#fnf28b0a7de9cd437281886b4314d8a9a6-2">1</a></sup>)
-                total += k<sup class="footnote"><a href="#fnf28b0a7de9cd437281886b4314d8a9a6-1">0</a></sup>
+            if total + k<sup class="footnote" id="fnrev6f24621f356f43a9a6fc57c476961e17-1"><a href="#fn6f24621f356f43a9a6fc57c476961e17-1">0</a></sup> <= shelfWidth:
+                t.append(k<sup class="footnote" id="fnrev6f24621f356f43a9a6fc57c476961e17-2"><a href="#fn6f24621f356f43a9a6fc57c476961e17-2">1</a></sup>)
+                total += k<sup class="footnote"><a href="#fn6f24621f356f43a9a6fc57c476961e17-1">0</a></sup>
                 result = min(result, max(t) +  self.minHeightShelves( books[i+1:], shelfWidth))
             else:
                 break
