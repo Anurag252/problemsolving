@@ -1,0 +1,30 @@
+	<p>class Solution:
+    def maxDistance(self, arrays: List[List[int]]) -> int:
+        start_elem = []
+        end_elem = []</p>
+
+
+        for i,k in enumerate(arrays):
+            heapq.heappush(start_elem, (k<sup class="footnote" id="fnrev0288fd1aca5246ecaed83e313c2c34d5-1"><a href="#fn0288fd1aca5246ecaed83e313c2c34d5-1">0</a></sup>,i))
+
+        for i,k in enumerate(arrays):
+            heapq.heappush(end_elem, (-1 * k[len(k)-1],i) ) 
+        diff = 0
+        min_elem = 0
+        max_elem = 0
+        is_first = True
+        while (len(start_elem) > 0):
+            a = heapq.heappop(start_elem)
+            b = heapq.heappop(end_elem)
+            #print(a,b)
+            if a<sup class="footnote" id="fnrev0288fd1aca5246ecaed83e313c2c34d5-2"><a href="#fn0288fd1aca5246ecaed83e313c2c34d5-2">1</a></sup> != b<sup class="footnote"><a href="#fn0288fd1aca5246ecaed83e313c2c34d5-2">1</a></sup> and is_first:
+                return abs(a<sup class="footnote"><a href="#fn0288fd1aca5246ecaed83e313c2c34d5-1">0</a></sup> + b<sup class="footnote"><a href="#fn0288fd1aca5246ecaed83e313c2c34d5-1">0</a></sup>)
+            else: 
+                if is_first:
+                    min_elem = a<sup class="footnote"><a href="#fn0288fd1aca5246ecaed83e313c2c34d5-1">0</a></sup>
+                    max_elem = b<sup class="footnote"><a href="#fn0288fd1aca5246ecaed83e313c2c34d5-1">0</a></sup>
+                    is_first = False
+                else:
+                    return max(abs(min_elem + b<sup class="footnote"><a href="#fn0288fd1aca5246ecaed83e313c2c34d5-1">0</a></sup>), abs(max_elem + a<sup class="footnote"><a href="#fn0288fd1aca5246ecaed83e313c2c34d5-1">0</a></sup> ))
+
+        return 0
