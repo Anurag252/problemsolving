@@ -1,0 +1,40 @@
+	<p>class Solution:
+    def __init__(self):
+        self.cache = {}
+    def maxPoints(self, points: List[List[int]]) -> int:
+        n, m = len(points), len(points<sup class="footnote" id="fnrev0a2113d44d1541ef99ed94ed179f4b1c-1"><a href="#fn0a2113d44d1541ef99ed94ed179f4b1c-1">0</a></sup>)
+        cache = {}</p>
+
+        def precompute_max_arrays(dp_row):
+            max_left = [0] * m
+            max_right = [0] * m
+
+            max_left<sup class="footnote"><a href="#fn0a2113d44d1541ef99ed94ed179f4b1c-1">0</a></sup> = dp_row<sup class="footnote"><a href="#fn0a2113d44d1541ef99ed94ed179f4b1c-1">0</a></sup>
+            for c in range(1, m):
+                max_left&#169; = max(max_left[c &#8211; 1], dp_row&#169; + c)
+
+            max_right[-1] = dp_row[-1] &#8211; (m &#8211; 1)
+            for c in range(m &#8211; 2, -1, -1):
+                max_right&#169; = max(max_right[c + 1], dp_row&#169; &#8211; c)
+
+            return max_left, max_right
+
+        def dp&#174;:
+            if r in cache:
+                return cache&#174;
+            if r == n &#8211; 1:
+                return points&#174;
+
+            # Get DP row for the next row
+            dp_next_row = dp(r + 1)
+            max_left, max_right = precompute_max_arrays(dp_next_row)
+
+            current_dp = [0] * m
+            for c in range(m):
+                current_dp&#169; = points&#174;[c] + max(max_left&#169; &#8211; c, max_right&#169; + c)
+
+            cache&#174; = current_dp
+            return current_dp
+
+        # Compute result by taking the maximum of the first row
+        return max(dp(0))
