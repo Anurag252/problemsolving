@@ -5,32 +5,36 @@ class Solution:
         is_nagative = False
         is_number = False
         allowed_char = [0,1,2,3,4,5,6,7,8,9,"-", " "]
-        allowed_map = {"0":0,"1":1,"2":2,"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9}
+        allowed_map = {"0":0,"1":1,"2":2,"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9, " ":100,"+":100,"-":100}
         result = 0
         i = 1
         
         for k in s:
-            #if k not in allowed_char:
-                #break
-            if leading_whitespace_check:
-                if k == " ":
-                    continue
-                else:
-                    leading_whitespace_check = False
-            
-            if check_sign:
-                if k == "-":
-                    is_nagative = True
-                    check_sign = False
-                    continue
-                if k == "+":
-                    is_nagative = False
-                    check_sign = False
-                    continue
-            check_sign = False
-
             if k not in allowed_map:
                 break
+            if k == "+":
+                is_nagative = False
+                del allowed_map["+"]
+                del allowed_map["-"]
+                del allowed_map[" "]
+                continue
+            
+            if k == "-":
+                is_nagative = True
+                del allowed_map["-"]
+                del allowed_map["+"]
+                del allowed_map[" "]
+                continue
+
+            if k == " ":
+                continue
+            if allowed_map[k] < 100 :
+                if " " in allowed_map:
+                    del allowed_map[" "]
+                if "+" in allowed_map:
+                    del allowed_map["+"]
+                if "-" in allowed_map:
+                    del allowed_map["-"]
             
             result = result *  i + allowed_map[k]
             i = 10 if not(k == "0" and not is_number) else 1
