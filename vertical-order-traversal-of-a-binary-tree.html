@@ -1,0 +1,53 @@
+	<ol>
+		<li>Definition for a binary tree node.</li>
+		<li>class TreeNode:</li>
+		<li>def __init__(self, val=0, left=None, right=None):</li>
+		<li>self.val = val</li>
+		<li>self.left = left</li>
+		<li>self.right = right<br />
+class Solution:
+    def verticalTraversal(self, root: Optional[TreeNode]) -> List[List[int]]:
+        map ={ }</li>
+	</ol>
+
+        def Traverse(root, row, col):
+            if root == None:
+                return 
+            if col in map:
+                map[col].append((root.val, row))
+            else:
+                map[col] = []
+                map[col].append((root.val, row))
+            Traverse(root.left, row + 1, col -1)
+            Traverse(root.right, row + 1, col +1)
+        Traverse(root, 0,0)
+        col_min = 0
+        col_max = 0
+        #print(map)
+        for k,_ in map.items():
+            col_min = min(col_min, k)
+            col_max = max(col_max, k)
+        result = [None] * (col_max &#8211; col_min + 1)
+        #print(result, col_max, col_min)
+
+
+        for k,v in map.items():
+            print(k-col_min)
+            if result[k-col_min] == None:
+                result[k-col_min] = v
+            else:
+                result[k-col_min].append(v)
+        final = []
+        i = 0
+        for k in result:
+            final.append([])
+            k.sort(key= lambda x: (x<sup class="footnote" id="fnrevbc8e37cd931241f2b838adc9601d1651-1"><a href="#fnbc8e37cd931241f2b838adc9601d1651-1">1</a></sup>, x<sup class="footnote" id="fnrevbc8e37cd931241f2b838adc9601d1651-2"><a href="#fnbc8e37cd931241f2b838adc9601d1651-2">0</a></sup>))
+
+            for v in k:
+                final[i].append(v<sup class="footnote"><a href="#fnbc8e37cd931241f2b838adc9601d1651-2">0</a></sup>)
+            i += 1
+
+
+
+        #print(map, col_min, result)
+        return final
