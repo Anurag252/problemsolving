@@ -2,37 +2,53 @@ class Solution:
     def maxProbability(self, n: int, edges: List[List[int]], succProb: List[float], start_node: int, end_node: int) -> float:
         matrix = {}
         result = {}
-        for k,l in zip(edges,succProb):
+        
+        # Build the adjacency list
+        for k, l in zip(edges, succProb):
             if k[0] not in matrix:
-                matrix[k[0]] = [(k[1],l)]
+                matrix[k[0]] = [(k[1], l)]
             else:
-                matrix[k[0]].append((k[1],l))
-
+                matrix[k[0]].append((k[1], l))
+                
             if k[1] not in matrix:
-                matrix[k[1]] = [(k[0],l)]
+                matrix[k[1]] = [(k[0], l)]
             else:
-                matrix[k[1]].append((k[0],l))
+                matrix[k[1]].append((k[0], l))
+        
         visited = set()
-        global q
-        q = [(-1,start_node)]
-        result[start_node] = 1
+        global q  # Declare q as a global variable
+        q = [(-1, start_node)]  # Initialize max-heap with negative probabilities
+        result[start_node] = 1  # Probability of start_node is 1
+        
         def test():
-            global q 
-            while(len(q) > 0):
+            global q  # Declare q as global inside the function to use the global variable
+            while len(q) > 0:
                 t = heapq.heappop(q)
-                if t[0] == 0:
+                
+                # Convert back the probability to positive
+                current_prob = -t[0]
+                current_node = t[1]
+                
+                # If we've reached the end node, return the probability
+                if current_node == end_node:
+                    return current_prob
+                
+                if current_node in visited:
                     continue
-                if t[1] in visited:
+                
+                visited.add(current_node)
+                
+                if current_node not in matrix:
                     continue
-                if t[1] not in matrix:
-                    visited.add(t[1])
-                    continue
-                for k in matrix[t[1]]:
-                    result[k[0]] = max(result[k[0]] if k[0] in result else 0, -1*t[0] * k[1])
-                    heapq.heappush(q, (-1*result[k[0]], k[0]))
-                visited.add(t[1])
-            if len(q) == 0:
-                return
-        test()
-        return result[end_node] if end_node in result else 0
+                
+                for k in matrix[current_node]:
+                    new_prob = current_prob * k[1]
+                    if new_prob > result.get(k[0], 0):
+                        result[k[0]] = new_prob
+                        heapq.heappush(q, (-new_prob, k[0]))  # Push with negative probability to maintain max-heap
+            
+            return 0  # Return 0 if end_node is not reachable
+        
+        # Call the helper function and return its result
+        return test()   
 
