@@ -1,0 +1,20 @@
+	<p>&#8220;&#8221;&#8220;
+	<ol>
+		<li>Definition for a Node.<br />
+class Node:
+    def __init__(self, val=None, children=None):
+        self.val = val
+        self.children = children<br />
+&#8221;&#8220;&#8221;</li>
+	</ol></p>
+
+	<p>class Solution:
+    def __init__(self):
+        self.cache = []
+    def postorder(self, root: &#8216;Node&#8217;) -> List[int]:
+        if root == None:
+            return
+        for k in root.children:
+            self.postorder(k)
+        self.cache.append(root.val)
+        return self.cache</p>
