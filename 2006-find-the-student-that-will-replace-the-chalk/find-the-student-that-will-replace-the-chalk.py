@@ -2,11 +2,11 @@ class Solution:
     def chalkReplacer(self, chalk: List[int], k: int) -> int:
         if k >= sum(chalk):
             k = k % sum(chalk)
-        pre_sum = []
+        pre_sum = [0] * len(chalk)
         s = 0
-        for m in chalk:
+        for idx, m in enumerate(chalk):
             s += m
-            pre_sum.append(s)
+            pre_sum[idx] = s
         
         start = 0
         end = len(chalk) - 1
