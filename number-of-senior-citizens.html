@@ -1,3 +1,12 @@
-	<p>class Solution:
-    def countSeniors(self, details: List[str]) -> int:
-        return len(list(filter((lambda x : int(x[11:13]) > 60), details)))</p>
+	<p>int countSeniors(char ** details, int detailsSize){
+    int result = 0;</p>
+
+    for (int i = 0 ; i < detailsSize ; i ++) {
+
+        if ( (details[i]<sup class="footnote" id="fnrev4f0a062770b349988045039a39914fee-1"><a href="#fn4f0a062770b349988045039a39914fee-1">11</a></sup> &#8211; &#8216;0&#8217;) * 10 + (details[i]<sup class="footnote" id="fnrev4f0a062770b349988045039a39914fee-2"><a href="#fn4f0a062770b349988045039a39914fee-2">12</a></sup> &#8211; &#8216;0&#8217;) > 60) {
+            result ++;
+        }
+    }
+    return result;
+
+	<p>}</p>
