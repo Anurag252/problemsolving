@@ -3,11 +3,11 @@
 
 
         def Calc(s1, s2) -> str:
-            a1 = int(s1.split(&#8216;/&#8217;)<sup class="footnote" id="fnrev88e736cf5603495595cf82218d3dc72f-1"><a href="#fn88e736cf5603495595cf82218d3dc72f-1">0</a></sup>)
-            a2 = int(s1.split(&#8216;/&#8217;)<sup class="footnote" id="fnrev88e736cf5603495595cf82218d3dc72f-2"><a href="#fn88e736cf5603495595cf82218d3dc72f-2">1</a></sup>)
+            a1 = int(s1.split(&#8216;/&#8217;)<sup class="footnote" id="fnrevc0ecee82d9b44275879f6f7b5fff24de-1"><a href="#fnc0ecee82d9b44275879f6f7b5fff24de-1">0</a></sup>)
+            a2 = int(s1.split(&#8216;/&#8217;)<sup class="footnote" id="fnrevc0ecee82d9b44275879f6f7b5fff24de-2"><a href="#fnc0ecee82d9b44275879f6f7b5fff24de-2">1</a></sup>)
 
-            b1 = int(s2.split(&#8216;/&#8217;)<sup class="footnote"><a href="#fn88e736cf5603495595cf82218d3dc72f-1">0</a></sup>)
-            b2 = int(s2.split(&#8216;/&#8217;)<sup class="footnote"><a href="#fn88e736cf5603495595cf82218d3dc72f-2">1</a></sup>)
+            b1 = int(s2.split(&#8216;/&#8217;)<sup class="footnote"><a href="#fnc0ecee82d9b44275879f6f7b5fff24de-1">0</a></sup>)
+            b2 = int(s2.split(&#8216;/&#8217;)<sup class="footnote"><a href="#fnc0ecee82d9b44275879f6f7b5fff24de-2">1</a></sup>)
 
             c2 = a2*b2
             c1 = b2*a1 + a2*b1
@@ -47,10 +47,10 @@
         print(sign, val)
 
         a = 1
-        old = sign<sup class="footnote"><a href="#fn88e736cf5603495595cf82218d3dc72f-1">0</a></sup> + val<sup class="footnote"><a href="#fn88e736cf5603495595cf82218d3dc72f-1">0</a></sup>
+        old = sign<sup class="footnote"><a href="#fnc0ecee82d9b44275879f6f7b5fff24de-1">0</a></sup> + val<sup class="footnote"><a href="#fnc0ecee82d9b44275879f6f7b5fff24de-1">0</a></sup>
         while (a < len(sign)):
             print(old)
             old = Calc(old, sign[a] + val[a])
             print(old)
             a += 1
-        return old if old<sup class="footnote"><a href="#fn88e736cf5603495595cf82218d3dc72f-1">0</a></sup> != &#8220;+&#8221; else old[1:]
+        return old if old<sup class="footnote"><a href="#fnc0ecee82d9b44275879f6f7b5fff24de-1">0</a></sup> != &#8220;+&#8221; else old[1:]
