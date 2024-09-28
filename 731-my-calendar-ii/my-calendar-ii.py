@@ -14,10 +14,10 @@ class MyCalendarTwo:
                 e = min(end, k[1])
                 for idx2,l in enumerate(self.cal):
                     if l[0] <= s and s < l[1] and idx1 != idx2:
-                        print(start, end, l[0], l[1], s , e)
+                        #print(start, end, l[0], l[1], s , e)
                         return False
                     if l[0] < e and e <= l[1] and idx1 != idx2:
-                        print(start, end, l[0], l[1], s , e)
+                        #print(start, end, l[0], l[1], s , e)
                         return False
                     if l[0] < e and l[0] >= s and idx1 != idx2:
                         return False
@@ -27,10 +27,10 @@ class MyCalendarTwo:
                 e = end
                 for idx2,l in enumerate(self.cal):
                     if l[0] <= s and s < l[1] and idx1 != idx2:
-                        print(start, end, l[0], l[1], s , e)
+                        #print(start, end, l[0], l[1], s , e)
                         return False
                     if l[0] < e and e <= l[1] and idx1 != idx2:
-                        print(start, end, l[0], l[1], s , e)
+                        #print(start, end, l[0], l[1], s , e)
                         return False
                     if l[0] < e and l[0] >= s and idx1 != idx2:
                         return False
@@ -40,10 +40,10 @@ class MyCalendarTwo:
                 e = k[1]
                 for idx2,l in enumerate(self.cal):
                     if l[0] <= s and s < l[1] and idx1 != idx2:
-                        print(start, end, l[0], l[1], s , e)
+                        #print(start, end, l[0], l[1], s , e)
                         return False
                     if l[0] < e and e <= l[1] and idx1 != idx2:
-                        print(start, end, l[0], l[1], s , e)
+                        #print(start, end, l[0], l[1], s , e)
                         return False
                     if l[0] < e and l[0] >= s and idx1 != idx2:
                         return False
