@@ -18,7 +18,6 @@ class Solution:
 
         map = {}
         result = 10**5
-        print(prefix_sum, suffix_sum)
         for idx,k in enumerate(prefix_sum):
             if k == 0:
                 result = min(result, len(nums) - idx-1)
@@ -26,8 +25,7 @@ class Solution:
                 map[k].append(idx)
             else:
                 map[k] = [idx]
-        print(prefix_sum, suffix_sum[::-1], map, result)
-        
+           
         for idx,k in enumerate(suffix_sum[::-1]):
             if k == 0:
                 result = min(result, idx)
