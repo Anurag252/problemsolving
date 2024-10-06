@@ -16,7 +16,6 @@ class Solution:
             end += 1
             temp3 -= 1
             temp4 -= 1
-        print(temp1, temp2, temp3 , temp4 , start , end)
         if len(s1) > len(s2):
             return start + end == len(s2)
         else:
