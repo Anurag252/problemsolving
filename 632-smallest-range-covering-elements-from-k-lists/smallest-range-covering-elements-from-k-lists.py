@@ -1,64 +1,35 @@
+from typing import List
+import collections
+
 class Solution:
     def smallestRange(self, nums: List[List[int]]) -> List[int]:
         arr = []
-        for idx, k in enumerate(nums):
-            for l in k:
-                arr.append((l, idx))
+        for idx, sublist in enumerate(nums):
+            for num in sublist:
+                arr.append((num, idx))
 
-        arr.sort(key=lambda x : x[0])
-        #print(arr)
+        arr.sort()
+        count = collections.Counter()
+        left = 0
+        result = [-10**5, 10**5]
+        unique_count = 0
 
-        dic = {}
+        for right in range(len(arr)):
+            num, idx = arr[right]
+            count[idx] += 1
+            if count[idx] == 1:
+                unique_count += 1
 
-        for idx, k in enumerate(nums):
-            dic[idx] = 0
-        left = -1
-        right = 0
-        result = [1,10** 5]
-        #print(dic)
+            while unique_count == len(nums):
+                left_num, left_idx = arr[left]
+                # Update result if the current range is smaller
+                if num - left_num < result[1] - result[0]:
+                    result = [left_num, num]
 
-        def is_valid():
-            for k,v in dic.items():
-                if v == 0:
-                    return False
-            return True
-
-        def compare(result, left, right):
-            if result[1] - result[0] <= arr[right][0] - arr[left][0]:
-                return result
-            else:
-                #print([arr[left][0], arr[right][0]] , "here")
-                return [arr[left][0], arr[right][0]]
-
-        def is_all_plus(left):
-            if left -1 < 0:
-                return True
-
-            return dic[arr[left -1][1]] > 1
-
-
-        while(left <= right and right < len(arr)):
-            #print(dic, left, right)
-            dic[arr[right][1]] += 1
-
-            if is_valid():
-                result = compare(result, left, right)
-
-            while (is_all_plus(left + 1)):
-                if left >= 0:
-                    dic[arr[left][1]] -= 1
+                # Decrease the count for the left element and move left pointer
+                count[left_idx] -= 1
+                if count[left_idx] == 0:
+                    unique_count -= 1
                 left += 1
-            if is_valid():
-                result = compare(result, left, right)
-                #print(result, "result")
-            right += 1
 
         return result
-            
-
-
-        
-        #[a,b,c]
-
-        #incr always
-        #dec if after dec we are at least 1,1,1
