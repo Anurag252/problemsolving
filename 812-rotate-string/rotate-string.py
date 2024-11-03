@@ -3,7 +3,6 @@ class Solution:
         
 
         for idx, k in enumerate(s):
-            print(s[idx:] + s[:idx])
             if (s[idx:] + s[:idx]) == goal:
                 return True
         return False
