@@ -11,7 +11,7 @@ class Solution:
                     break
             if is_prime :
                 prime.append(k)
-        print(prime)
+        #print(prime)
 
 
         a = [0]
@@ -23,8 +23,8 @@ class Solution:
                 a.append(k - prime[t-1])
             else :
                 a.append(k)
-            print(t, prime[t-1])
-        print(a)
+            #print(t, prime[t-1])
+        #print(a)
 
         return True
 
