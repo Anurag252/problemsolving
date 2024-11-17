@@ -38,12 +38,9 @@ class Solution:
             t = bisect.bisect_left(naux, k + k1)
             #print(t)
            
-            
+            if t < len(aux) and min_arr[t] - idx > 0:
                 # Verify the prefix sum difference condition
-            if t < len(min_arr):
-                candidate_index = min_arr[t]
-                if candidate_index > idx and pref[candidate_index] - pref[idx] >= k1:
-                        result = min(result, candidate_index - idx)
+                result = min(result, min_arr[t] - idx)
         return result if result < 10 ** 18 else -1
 
 
