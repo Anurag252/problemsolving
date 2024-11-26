@@ -1,0 +1,41 @@
+	<p>class Solution:
+    def canSortArray(self, nums: List[int]) -&gt; bool:
+        num = copy.deepcopy(nums)
+        i = 0 
+        j = 0
+        def setbits(a, b):</p>
+
+            i = 8
+            counta = 0
+            countb = 0
+            while(i &gt;= 0):
+                counta += (a &amp; 1)
+                a = a &gt;&gt; 1
+                i -= 1
+            i = 8
+            while(i &gt;= 0):
+                countb += (b &amp; 1)
+                b = b &gt;&gt; 1
+                i -= 1
+            return counta == countb
+
+
+
+        while(i &lt; len(nums)):
+            j = i 
+            while(j &gt;= 0 and j + 1 &lt; len(nums)):
+                if nums[j] &gt; nums[j+1] and setbits(nums[j] , nums[j+1]):
+                    #print(nums[j], nums[j+1], &#8220;same&#8221;)
+                    temp = nums[j+1]
+                    nums[j+1] = nums[j]
+                    nums[j] = temp
+                j -= 1
+            i += 1
+        num.sort()
+        #print(nums)
+        return nums == num
+
+
+
+
+        

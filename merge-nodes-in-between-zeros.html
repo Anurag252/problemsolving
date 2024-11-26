@@ -8,11 +8,11 @@
 
 	<p>int merge(struct ListNode* temp1, struct ListNode* temp2){
     int s = 0;
-    struct ListNode* temp3 = temp1->next;
+    struct ListNode* temp3 = temp1-&gt;next;
     while(temp3 != temp2){
-        //printf(&#8220;%d&#8221;, temp3->val);
-        s += (temp3->val);
-        temp3 = temp3->next;
+        //printf(&#8220;%d&#8221;, temp3-&gt;val);
+        s += (temp3-&gt;val);
+        temp3 = temp3-&gt;next;
     }</p>
 
     return s;
@@ -25,47 +25,47 @@
     struct ListNode* result = malloc(sizeof(struct ListNode)); 
     struct ListNode* result2 = result; 
     struct ListNode* result3 = result; 
-    while(temp2 != NULL) {
-        //printf(&#8220;%d %d\n&#8221;, temp1->val, temp2->val);
-        if (temp1->val != 0 &&amp; temp2->val != 0) {</p>
+    while(temp2 != <span class="caps">NULL</span>) {
+        //printf(&#8220;%d %d\n&#8221;, temp1-&gt;val, temp2-&gt;val);
+        if (temp1-&gt;val != 0 &amp;&amp; temp2-&gt;val != 0) {</p>
 
-            temp1 = temp1->next;
-            temp2 = temp2->next;
+            temp1 = temp1-&gt;next;
+            temp2 = temp2-&gt;next;
             continue;
         }
 
-        if (temp1->val != 0 ){
-            temp1 = temp1->next;
+        if (temp1-&gt;val != 0 ){
+            temp1 = temp1-&gt;next;
             continue;
         }
 
-        if (temp2->val != 0) {
-            temp2 = temp2->next;
+        if (temp2-&gt;val != 0) {
+            temp2 = temp2-&gt;next;
             continue;
         }
 
         if (temp1  temp2 && temp1->val  0) {
-            temp2 = temp2->next;
+            temp2 = temp2-&gt;next;
             continue;
         }
 
-        if (temp1->val  0 && temp2->val  0) {
+        if (temp1-&gt;val  0 && temp2->val  0) {
             //merge
 
             int s = merge(temp1, temp2);
             //printf(&#8220;%d&#8212;\n&#8221;, s);
-            result2->val = s;
-            result2->next = malloc(sizeof(struct ListNode));
+            result2-&gt;val = s;
+            result2-&gt;next = malloc(sizeof(struct ListNode));
             result3 = result2;
-            result2 = result2->next;
-            temp1 = temp1->next;
-            temp2 = temp2->next;
-            //printf(&#8220;%d &#8212;%d\n&#8221;, temp1->val, temp2->val);
+            result2 = result2-&gt;next;
+            temp1 = temp1-&gt;next;
+            temp2 = temp2-&gt;next;
+            //printf(&#8220;%d &#8212;%d\n&#8221;, temp1-&gt;val, temp2-&gt;val);
 
         }
 
     }
-    result3->next= <span class="caps">NULL</span>;
+    result3-&gt;next= <span class="caps">NULL</span>;
 
 
 

@@ -1,0 +1,17 @@
+	<p>class Solution:
+    def findTheLongestSubstring(self, s: str) -&gt; int:
+        prefixXOR = 0
+        characterMap = [0] * 26
+        characterMap[ord(&#8220;a&#8221;) &#8211; ord(&#8220;a&#8221;)] = 1
+        characterMap[ord(&#8220;e&#8221;) &#8211; ord(&#8220;a&#8221;)] = 2
+        characterMap[ord(&#8220;i&#8221;) &#8211; ord(&#8220;a&#8221;)] = 4
+        characterMap[ord(&#8220;o&#8221;) &#8211; ord(&#8220;a&#8221;)] = 8
+        characterMap[ord(&#8220;u&#8221;) &#8211; ord(&#8220;a&#8221;)] = 16
+        mp = [-1] * 32
+        longestSubstring = 0
+        for i in range(len(s)):
+            prefixXOR ^= characterMap[ord(s[i]) &#8211; ord(&#8220;a&#8221;)]
+            if mp[prefixXOR] == -1 and prefixXOR != 0:
+                mp[prefixXOR] = i
+            longestSubstring = max(longestSubstring, i &#8211; mp[prefixXOR])
+        return longestSubstring</p>

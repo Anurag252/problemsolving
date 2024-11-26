@@ -7,7 +7,7 @@ import shutil</p>
 
 	<p>class MarkdownToHTML:</p>
 
-    def list_all_files(self) -> list[str]:
+    def list_all_files(self) -&gt; list[str]:
         result = []
         input_ext = str(os.environ.get(&#8220;input_ext&#8221;, &#8220;.*&#8221;))
         for root, subdirs, files in os.walk(os.curdir):

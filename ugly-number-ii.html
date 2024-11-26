@@ -1,9 +1,9 @@
 	<p>class Solution:
-    def nthUglyNumber(self, n: int) -> int:
+    def nthUglyNumber(self, n: int) -&gt; int:
         s = set()
         h = [1]
-        temp =<sup class="footnote" id="fnreva98405f3bde94bf1b4b8707722ace55b-1"><a href="#fna98405f3bde94bf1b4b8707722ace55b-1">1</a></sup>
-        while (len(h) <= 2*n):
+        temp =<sup class="footnote" id="fnrevc04e5baba704493aa527c29fe5e12079-1"><a href="#fnc04e5baba704493aa527c29fe5e12079-1">1</a></sup>
+        while (len(h) &lt;= 2*n):
             elem = heapq.heappop(temp)
             #print(elem)
             if elem*2 not in s:
@@ -24,4 +24,8 @@
 
 
 
-        # 2n, 2n + 2 (n > 1), 3n, 3n + 3 (n > 1), 5n, 5n + 5
+        # 2n, 2n + 2 (n &gt; 1), 3n, 3n + 3 (n &gt; 1), 5n, 5n + 5
+
+
+
+        

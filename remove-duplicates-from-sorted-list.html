@@ -14,17 +14,17 @@ struct ListNode* deleteDuplicates(struct ListNode* head) {</p>
     struct ListNode* tmp = head;
     while (prev ->next != NULL && prev ->next -> next != NULL ) {
         tmp = prev -> next;
-        if (prev -> val  tmp -> val) {
-            prev -> next = tmp -> next;
+        if (prev -> val  tmp -&gt; val) {
+            prev -&gt; next = tmp -&gt; next;
             free(tmp);
         } else {
-            prev = prev -> next;
+            prev = prev -&gt; next;
         }
-        //prev = prev -> next;
+        //prev = prev -&gt; next;
     }
 
-    if (prev ->next != NULL &&amp; prev -> val == prev -> next -> val) {
-        prev -> next = <span class="caps">NULL</span>;
+    if (prev -&gt;next != <span class="caps">NULL</span> &amp;&amp; prev -&gt; val == prev -&gt; next -&gt; val) {
+        prev -&gt; next = <span class="caps">NULL</span>;
     }
 
     return head;

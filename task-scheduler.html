@@ -2,7 +2,7 @@
     public int LeastInterval(char[] tasks, int n) {
         SortedList<char , int> dict = new SortedList<char , int>();</p>
 
-        for(int i = 0 ; i < tasks.Length ; i ++)
+        for(int i = 0 ; i &lt; tasks.Length ; i ++)
         {
             if(dict.ContainsKey(tasks[i]))
             {
@@ -14,12 +14,12 @@
             }
         }
 
-        var t  = dict.OrderByDescending(x => x.Value);
+        var t  = dict.OrderByDescending(x =&gt; x.Value);
 
         int availableSpace = (t.First().Value-1)*n;
         Console.WriteLine(availableSpace);
         Console.WriteLine(t.First().Value);
-        for(int i = 1 ; i < t.Count() ; i++)
+        for(int i = 1 ; i &lt; t.Count() ; i++)
         {
 
             Console.WriteLine(t.ElementAt(i).Value);

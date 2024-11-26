@@ -1,12 +1,12 @@
 	<p>class Solution:
-    def maximumGain(self, s: str, x: int, y: int) -> int:
+    def maximumGain(self, s: str, x: int, y: int) -&gt; int:
         i = 0
         first = &#8220;&#8220;
         second = &#8220;&#8220;
         diff1 = 0
         diff2 = 0
         result = 0
-        if x > y:
+        if x &gt; y:
             first = &#8220;ab&#8220;
             second = &#8220;ba&#8220;
             diff1 = x
@@ -19,9 +19,9 @@
 
         stack = []
 
-        while(i < len(s)):
+        while(i &lt; len(s)):
             stack.append(s[i])
-            if len(stack) > 1 and str(stack[-2] + stack[-1])  first:
+            if len(stack) &gt; 1 and str(stack[-2] + stack[-1])  first:
                 result += diff1
                 del stack[-1]
                 del stack[-1]
@@ -40,5 +40,10 @@
 
         return result
 	<ol>
-		<li>aaa ab bbb -> due to this a new string to be created again 2nsd time</li>
+		<li>aaa ab bbb -&gt; due to this a new string to be created again 2nsd time</li>
 	</ol>
+
+
+
+
+        

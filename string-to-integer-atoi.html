@@ -1,11 +1,11 @@
 	<p>class Solution:
-    def myAtoi(self, s: str) -> int:
+    def myAtoi(self, s: str) -&gt; int:
         leading_whitespace_check = True
         check_sign = True
         is_nagative = False
         is_number = False
         allowed_char = [0,1,2,3,4,5,6,7,8,9,&#8221;-&#8221;, &#8220; &#8220;]
-        allowed_map = {<a href="0%2CtextileRef%3Aaf879a492f374476b72dd69c654bb97a%3AlinkStartMarker">0</a>:&#8220;1&#8221;:1,<a href="2%2CtextileRef%3Aaf879a492f374476b72dd69c654bb97a%3AlinkStartMarker">2</a>:&#8220;3&#8221;:3,<a href="4%2CtextileRef%3Aaf879a492f374476b72dd69c654bb97a%3AlinkStartMarker">4</a>:&#8220;5&#8221;:5,<a href="6%2CtextileRef%3Aaf879a492f374476b72dd69c654bb97a%3AlinkStartMarker">6</a>:&#8220;7&#8221;:7,<a href="8%2CtextileRef%3Aaf879a492f374476b72dd69c654bb97a%3AlinkStartMarker">8</a>:&#8220;9&#8221;:9, <a href="100%2CtextileRef%3Aaf879a492f374476b72dd69c654bb97a%3AlinkStartMarker"></a>:&#8221;+&#8221;:100,<a href="100%7D">-</a>
+        allowed_map = {<a href="0%2CtextileRef%3A0a64ddb232634eaf98915fa5693ce3c3%3AlinkStartMarker">0</a>:&#8220;1&#8221;:1,<a href="2%2CtextileRef%3A0a64ddb232634eaf98915fa5693ce3c3%3AlinkStartMarker">2</a>:&#8220;3&#8221;:3,<a href="4%2CtextileRef%3A0a64ddb232634eaf98915fa5693ce3c3%3AlinkStartMarker">4</a>:&#8220;5&#8221;:5,<a href="6%2CtextileRef%3A0a64ddb232634eaf98915fa5693ce3c3%3AlinkStartMarker">6</a>:&#8220;7&#8221;:7,<a href="8%2CtextileRef%3A0a64ddb232634eaf98915fa5693ce3c3%3AlinkStartMarker">8</a>:&#8220;9&#8221;:9, <a href="100%2CtextileRef%3A0a64ddb232634eaf98915fa5693ce3c3%3AlinkStartMarker"></a>:&#8221;+&#8221;:100,<a href="100%7D">-</a>
         result = 0
         i = 1</p>
 
@@ -28,7 +28,7 @@
 
             if k == <a href=""></a>
                 continue
-            if allowed_map[k] < 100 :
+            if allowed_map[k] &lt; 100 :
                 if &#8220; &#8220; in allowed_map:
                     del allowed_map[&#8221; &#8220;]
                 if &#8220;+&#8221; in allowed_map:
@@ -40,8 +40,8 @@
             i = 10 if not(k == &#8220;0&#8221; and not is_number) else 1
             is_number = True
         result = result if not is_nagative else -1*result
-        if result <= -2147483648:
+        if result &lt;= -2147483648:
             return -2147483648
-        if result > 2147483647:
+        if result &gt; 2147483647:
             return 2147483647
         return result

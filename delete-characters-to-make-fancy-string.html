@@ -1,0 +1,19 @@
+	<p>class Solution:
+    def makeFancyString(self, s: str) -&gt; str:</p>
+
+        curr = &#8220;&#8220;
+        count = 0
+        res = []
+
+        for k in s:
+            if k == curr:
+                count += 1
+            else:
+                curr = k
+                count = 1
+
+            if count &lt; 3:
+                res.append(k)
+        return &#8220;&#8221;.join(res)
+
+        

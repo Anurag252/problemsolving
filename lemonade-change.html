@@ -1,5 +1,5 @@
 	<p>class Solution:
-    def lemonadeChange(self, bills: List[int]) -> bool:
+    def lemonadeChange(self, bills: List[int]) -&gt; bool:
         intake = [0,0,0]</p>
 
         outgoing = 0
@@ -8,31 +8,34 @@
             if k  5:
                 intake[0] += 1
             if k  10:
-                intake<sup class="footnote" id="fnreva27aa54cdc4543bfaca784dfa7806ece-1"><a href="#fna27aa54cdc4543bfaca784dfa7806ece-1">1</a></sup> += 1
+                intake<sup class="footnote" id="fnrev1d627f40e3804b7884096c1409adb67b-1"><a href="#fn1d627f40e3804b7884096c1409adb67b-1">1</a></sup> += 1
             if k == 20:
-                intake<sup class="footnote" id="fnreva27aa54cdc4543bfaca784dfa7806ece-2"><a href="#fna27aa54cdc4543bfaca784dfa7806ece-2">2</a></sup> += 1
+                intake<sup class="footnote" id="fnrev1d627f40e3804b7884096c1409adb67b-2"><a href="#fn1d627f40e3804b7884096c1409adb67b-2">2</a></sup> += 1
             to_return = (k &#8211; 5)
 
             if to_return  0:
                 continue
             if to_return  5:
-                if intake<sup class="footnote" id="fnreva27aa54cdc4543bfaca784dfa7806ece-3"><a href="#fna27aa54cdc4543bfaca784dfa7806ece-3">0</a></sup> > 0:
-                    intake<sup class="footnote"><a href="#fna27aa54cdc4543bfaca784dfa7806ece-3">0</a></sup> -= 1
+                if intake<sup class="footnote" id="fnrev1d627f40e3804b7884096c1409adb67b-3"><a href="#fn1d627f40e3804b7884096c1409adb67b-3">0</a></sup> &gt; 0:
+                    intake<sup class="footnote"><a href="#fn1d627f40e3804b7884096c1409adb67b-3">0</a></sup> -= 1
                     continue
                 else:
                     return False
 
             if to_return == 15:
-                if intake<sup class="footnote"><a href="#fna27aa54cdc4543bfaca784dfa7806ece-1">1</a></sup> >= 1 and intake<sup class="footnote"><a href="#fna27aa54cdc4543bfaca784dfa7806ece-3">0</a></sup> >= 1:
-                    intake<sup class="footnote"><a href="#fna27aa54cdc4543bfaca784dfa7806ece-3">0</a></sup> -= 1
-                    intake<sup class="footnote"><a href="#fna27aa54cdc4543bfaca784dfa7806ece-1">1</a></sup> -= 1
+                if intake<sup class="footnote"><a href="#fn1d627f40e3804b7884096c1409adb67b-1">1</a></sup> &gt;= 1 and intake<sup class="footnote"><a href="#fn1d627f40e3804b7884096c1409adb67b-3">0</a></sup> &gt;= 1:
+                    intake<sup class="footnote"><a href="#fn1d627f40e3804b7884096c1409adb67b-3">0</a></sup> -= 1
+                    intake<sup class="footnote"><a href="#fn1d627f40e3804b7884096c1409adb67b-1">1</a></sup> -= 1
                     continue
-                if intake<sup class="footnote"><a href="#fna27aa54cdc4543bfaca784dfa7806ece-3">0</a></sup> >= 3:
-                    intake<sup class="footnote"><a href="#fna27aa54cdc4543bfaca784dfa7806ece-3">0</a></sup> -= 3
+                if intake<sup class="footnote"><a href="#fn1d627f40e3804b7884096c1409adb67b-3">0</a></sup> &gt;= 3:
+                    intake<sup class="footnote"><a href="#fn1d627f40e3804b7884096c1409adb67b-3">0</a></sup> -= 3
                     continue
                 else:
                     return False
         return True
 
 
-        return outgoing < intake
+        return outgoing &lt; intake
+
+
+        

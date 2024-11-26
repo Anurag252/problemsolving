@@ -4,47 +4,47 @@
 };</p>
 
 	<p>int compare(const void *elem1, const void *elem2) {
-    int v1 = (*(struct couple**)elem1)->value;
-    int v2 = (*(struct couple**)elem2)->value;
+    int v1 = (*(struct couple**)elem1)-&gt;value;
+    int v2 = (*(struct couple**)elem2)-&gt;value;
     return v2-v1;<br />
 }</p>
 
 	<p>long long maximumImportance(int n, int** roads, int roadsSize, int* roadsColSize) {
      int list_of_nodes[n];
-    for (int i = 0 ; i < n ; i ++) {
+    for (int i = 0 ; i &lt; n ; i ++) {
         list_of_nodes[i] = 0;
     }</p>
 
-    for (int i = 0 ; i < roadsSize ; i ++) {
-        list_of_nodes[roads[i]<sup class="footnote" id="fnrev8dcbe58369f54b9d8213b536516050a5-1"><a href="#fn8dcbe58369f54b9d8213b536516050a5-1">0</a></sup>] ++ ;
-        list_of_nodes[roads[i]<sup class="footnote" id="fnrev8dcbe58369f54b9d8213b536516050a5-2"><a href="#fn8dcbe58369f54b9d8213b536516050a5-2">1</a></sup>] ++ ;
+    for (int i = 0 ; i &lt; roadsSize ; i ++) {
+        list_of_nodes[roads[i]<sup class="footnote" id="fnrevaf7722e0af7e45069ff15454c818bf8f-1"><a href="#fnaf7722e0af7e45069ff15454c818bf8f-1">0</a></sup>] ++ ;
+        list_of_nodes[roads[i]<sup class="footnote" id="fnrevaf7722e0af7e45069ff15454c818bf8f-2"><a href="#fnaf7722e0af7e45069ff15454c818bf8f-2">1</a></sup>] ++ ;
     }
 
 
     struct couple* list_of_nodes_with_kv[n];
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i &lt; n; i++) {
         // Allocate memory for each struct couple
         list_of_nodes_with_kv[i] = malloc(sizeof(struct couple));
         // Assign the values to the struct couple
-        list_of_nodes_with_kv[i]->key = i;
-        list_of_nodes_with_kv[i]->value = list_of_nodes[i];
+        list_of_nodes_with_kv[i]-&gt;key = i;
+        list_of_nodes_with_kv[i]-&gt;value = list_of_nodes[i];
     }
     qsort(list_of_nodes_with_kv, n, sizeof(struct couple*), compare);
 
-    for (int i = 0 ; i < n; i++) {
-        printf(&#8221;  %d  %d &#8220;, list_of_nodes_with_kv[i]->key, list_of_nodes_with_kv[i]-> value);
+    for (int i = 0 ; i &lt; n; i++) {
+        printf(&#8221;  %d  %d &#8220;, list_of_nodes_with_kv[i]-&gt;key, list_of_nodes_with_kv[i]-&gt; value);
     }
 
     int cache[n];
     int top = n;
-    for (int i = 0 ; i < n ; i ++) {
-        cache[list_of_nodes_with_kv[i]->key] = top;
+    for (int i = 0 ; i &lt; n ; i ++) {
+        cache[list_of_nodes_with_kv[i]-&gt;key] = top;
         top &#8212;;
     }
     long result = 0;
-    for (int i = 0 ; i < roadsSize ; i ++) {
-        result += cache[roads[i]<sup class="footnote"><a href="#fn8dcbe58369f54b9d8213b536516050a5-1">0</a></sup>];
-        result += cache[roads[i]<sup class="footnote"><a href="#fn8dcbe58369f54b9d8213b536516050a5-2">1</a></sup>];
+    for (int i = 0 ; i &lt; roadsSize ; i ++) {
+        result += cache[roads[i]<sup class="footnote"><a href="#fnaf7722e0af7e45069ff15454c818bf8f-1">0</a></sup>];
+        result += cache[roads[i]<sup class="footnote"><a href="#fnaf7722e0af7e45069ff15454c818bf8f-2">1</a></sup>];
     }
 
     return result;

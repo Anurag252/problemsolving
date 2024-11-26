@@ -1,0 +1,49 @@
+	<p>class Solution:
+    def longestDiverseString(self, a: int, b: int, c: int) -&gt; str:</p>
+
+
+
+        def test(a,b,c, d):
+            if (a  0 and b  0 and d  "c") or (b  0 and c  0 and d  &#8220;a&#8221;) or (c== 0 and a  0 and d  &#8220;b&#8221;):
+                return &#8220;&#8221;
+
+
+            arr = [(a, &#8220;a&#8221;),(b, &#8220;b&#8221;),(c, &#8220;c&#8221;)]
+            arr.sort(key = lambda x : x<sup class="footnote" id="fnrev51481d44af6c4da7a3367e9fb0156014-1"><a href="#fn51481d44af6c4da7a3367e9fb0156014-1">0</a></sup>)
+
+            (k,l) = arr<sup class="footnote" id="fnrev51481d44af6c4da7a3367e9fb0156014-2"><a href="#fn51481d44af6c4da7a3367e9fb0156014-2">2</a></sup> if d != arr<sup class="footnote"><a href="#fn51481d44af6c4da7a3367e9fb0156014-2">2</a></sup><sup class="footnote" id="fnrev51481d44af6c4da7a3367e9fb0156014-3"><a href="#fn51481d44af6c4da7a3367e9fb0156014-3">1</a></sup> else arr<sup class="footnote"><a href="#fn51481d44af6c4da7a3367e9fb0156014-3">1</a></sup>
+            is_max = True
+            if k != arr<sup class="footnote"><a href="#fn51481d44af6c4da7a3367e9fb0156014-2">2</a></sup><sup class="footnote"><a href="#fn51481d44af6c4da7a3367e9fb0156014-1">0</a></sup>:
+                is_max = False
+
+            #print(arr,d)
+
+            if l == &#8220;a&#8221; :
+                if is_max:
+                    return &#8220;a&#8221;*min(2,k) + test(a &#8211; min(2,k) , b, c, &#8220;a&#8221;)
+                else:
+                    return &#8220;a&#8221; + test(a &#8211; 1 , b, c, &#8220;a&#8221;)
+
+
+            if l == <a href="">b</a>
+                if is_max:
+                    return &#8220;b&#8221;*min(2,k) + test(a  , b &#8211; min(2,k), c, &#8220;b&#8221;)
+                else:
+                    return &#8220;b&#8221; + test(a  , b &#8211; 1, c, &#8220;b&#8221;)
+
+
+            if l == <a href="">c</a>
+                if is_max:
+                    return &#8220;c&#8221;*min(2,k) + test(a  , b, c &#8211; min(2,k), &#8220;c&#8221;)
+                else:
+                    return &#8220;c&#8221; + test(a  , b, c &#8211; 1, &#8220;c&#8221;)
+
+        return test(a,b,c, &#8220;&#8221;)
+
+        &#8216;&#8217;&#8216;
+        3,3,3
+        aacbbccba
+        bbccbc
+        aabaccbcb
+        &#8216;&#8217;&#8216;
+        

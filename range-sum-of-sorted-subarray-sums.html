@@ -1,12 +1,12 @@
 	<p>class Solution:
-    def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
+    def rangeSum(self, nums: List[int], n: int, left: int, right: int) -&gt; int:
         i = 0
         j = 0
         arr = []
-        while i < len(nums):
+        while i &lt; len(nums):
             j = i
             sum1 = 0
-            while j < len(nums):
+            while j &lt; len(nums):
                 sum1 += nums[j]
                 arr.append(sum1)
                 j += 1
@@ -16,3 +16,8 @@
         k = arr[left-1:right]
         x = sum(k)
         return x %  (pow(10,9) + 7)
+
+
+
+
+        

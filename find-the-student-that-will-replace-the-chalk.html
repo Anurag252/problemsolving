@@ -1,6 +1,6 @@
 	<p>class Solution:
-    def chalkReplacer(self, chalk: List[int], k: int) -> int:
-        if k >= sum(chalk):
+    def chalkReplacer(self, chalk: List[int], k: int) -&gt; int:
+        if k &gt;= sum(chalk):
             k = k % sum(chalk)
         pre_sum = [0] * len(chalk)
         s = 0
@@ -10,15 +10,20 @@
 
         start = 0
         end = len(chalk) &#8211; 1
-        while(start < end):
+        while(start &lt; end):
             mid = int((end + start) / 2)
             #print(mid)
-            if pre_sum[mid] > k and pre_sum[mid-1] <= k:
+            if pre_sum[mid] &gt; k and pre_sum[mid-1] &lt;= k:
                 return mid
             if pre_sum[mid] == k:
                 return mid + 1
-            if pre_sum[mid] > k:
+            if pre_sum[mid] &gt; k:
                 end = mid-1
-            if pre_sum[mid] < k:
+            if pre_sum[mid] &lt; k:
                 start = mid+1
         return start
+
+
+
+
+        

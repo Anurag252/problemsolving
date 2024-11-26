@@ -6,7 +6,7 @@
 		<li>self.left = left</li>
 		<li>self.right = right<br />
 class Solution:
-    def verticalTraversal(self, root: Optional[TreeNode]) -> List[List[int]]:
+    def verticalTraversal(self, root: Optional[TreeNode]) -&gt; List[List[int]]:
         map ={ }</li>
 	</ol>
 
@@ -41,13 +41,15 @@ class Solution:
         i = 0
         for k in result:
             final.append([])
-            k.sort(key= lambda x: (x<sup class="footnote" id="fnrev2340a65a418b4e05895350a3fac351eb-1"><a href="#fn2340a65a418b4e05895350a3fac351eb-1">1</a></sup>, x<sup class="footnote" id="fnrev2340a65a418b4e05895350a3fac351eb-2"><a href="#fn2340a65a418b4e05895350a3fac351eb-2">0</a></sup>))
+            k.sort(key= lambda x: (x<sup class="footnote" id="fnrev45af1f22e6a34919b92b84208ac67713-1"><a href="#fn45af1f22e6a34919b92b84208ac67713-1">1</a></sup>, x<sup class="footnote" id="fnrev45af1f22e6a34919b92b84208ac67713-2"><a href="#fn45af1f22e6a34919b92b84208ac67713-2">0</a></sup>))
 
             for v in k:
-                final[i].append(v<sup class="footnote"><a href="#fn2340a65a418b4e05895350a3fac351eb-2">0</a></sup>)
+                final[i].append(v<sup class="footnote"><a href="#fn45af1f22e6a34919b92b84208ac67713-2">0</a></sup>)
             i += 1
 
 
 
         #print(map, col_min, result)
         return final
+
+        

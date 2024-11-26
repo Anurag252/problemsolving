@@ -6,16 +6,16 @@
 		<li>self.left = left</li>
 		<li>self.right = right<br />
 class Solution:
-    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:</li>
+    def buildTree(self, preorder: List[int], inorder: List[int]) -&gt; Optional[TreeNode]:</li>
 	</ol>
 
         if len(inorder)  0 and len(preorder)  0:
             return None
 
-        root = TreeNode(preorder<sup class="footnote" id="fnrevdce06bdde7fc4ecd923080f039c1d6cb-1"><a href="#fndce06bdde7fc4ecd923080f039c1d6cb-1">0</a></sup>)
+        root = TreeNode(preorder<sup class="footnote" id="fnrevcc789b57593a4b33949b647b3f9208ab-1"><a href="#fncc789b57593a4b33949b647b3f9208ab-1">0</a></sup>)
         inorder_index = 0
 
-        inorder_index = inorder.index(preorder<sup class="footnote"><a href="#fndce06bdde7fc4ecd923080f039c1d6cb-1">0</a></sup>)
+        inorder_index = inorder.index(preorder<sup class="footnote"><a href="#fncc789b57593a4b33949b647b3f9208ab-1">0</a></sup>)
 
         left_inorder = inorder[:inorder_index]
         right_inorder = inorder[inorder_index+1:]
@@ -26,3 +26,4 @@ class Solution:
         root.left = self.buildTree( left_preorder, left_inorder)
         root.right = self.buildTree(right_preorder, right_inorder)
         return root
+        

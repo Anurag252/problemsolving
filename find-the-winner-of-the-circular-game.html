@@ -1,7 +1,7 @@
 	<p>int findTheWinner(int n, int k) {</p>
 
     int ans = 0;
-        for (int i = 2; i <= n; i++) {
+        for (int i = 2; i &lt;= n; i++) {
             ans = (ans + k) % i;
         }
         // add 1 to convert back to 1 indexing

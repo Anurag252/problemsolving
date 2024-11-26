@@ -1,11 +1,11 @@
 	<p>class Solution:
-    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
+    def combinationSum2(self, candidates: List[int], target: int) -&gt; List[List[int]]:
         visited = [0] * len(candidates)
         result = []
         candidates.sort()</p>
 
         def Traverse(visited, start, target):
-            if target < 0:
+            if target &lt; 0:
                 return 
             if target  0:
                 res = [] 
@@ -16,9 +16,9 @@
                 return
 
             for k in range(start, len(candidates)):
-                if k > start and candidates[k] == candidates[k &#8211; 1]:
+                if k &gt; start and candidates[k] == candidates[k &#8211; 1]:
                     continue
-                if target &#8211; candidates[k] < 0:
+                if target &#8211; candidates[k] &lt; 0:
                     break
                 visited[k] = 1
                 Traverse(visited, k + 1, target &#8211; candidates[k])

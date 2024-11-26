@@ -1,0 +1,15 @@
+	<p>class Solution:
+    from functools import cmp_to_key</p>
+
+    def largestNumber(self, nums: List[int]) -&gt; str:
+        def my_comparator(x,y):
+            return int(str(x) + str(y)) &#8211; int(str(y) + str(x))
+
+        nums.sort(reverse=True, key=cmp_to_key(my_comparator))
+        res = &#8216;&#8217;.join(str(x) for x in nums)
+        i = 0
+        while(i &lt; len(res)):
+            if res[i] != &#8216;0&#8217;:
+                return res[i:]
+            i += 1
+        return &#8220;0&#8221;

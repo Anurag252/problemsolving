@@ -6,7 +6,7 @@
 		<li>self.left = left</li>
 		<li>self.right = right<br />
 class Solution:
-    def delNodes(self, root: Optional[TreeNode], to_delete: List[int]) -> List[TreeNode]:
+    def delNodes(self, root: Optional[TreeNode], to_delete: List[int]) -&gt; List[TreeNode]:
         result = []
         parent = []
         def dfs(root, to_delete, start):
@@ -31,3 +31,5 @@ class Solution:
         if root not in parent:
             result.append(root)
         return result
+
+        

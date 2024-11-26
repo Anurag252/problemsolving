@@ -1,0 +1,14 @@
+	<p>class Solution:
+    def minLength(self, s: str) -&gt; int:
+        @cache
+        def test(s):
+            #print(s)
+            if &#8220;AB&#8221; not in s and &#8220;CD&#8221; not in s:
+                return len(s)
+            result = 100
+            s = s.replace(&#8220;AB&#8221;,&#8221;&#8220;)
+            s = s.replace(&#8220;CD&#8221;,&#8221;&#8220;)
+            return min(result, test(s))
+        return test(s)</p>
+
+        

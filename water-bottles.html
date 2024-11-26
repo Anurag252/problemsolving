@@ -1,7 +1,7 @@
 	<p>int replace(int numBottles, int numExchange, int emptyBottle) {</p>
 
     printf(&#8220;%d %d %d\n&#8221;, numBottles, numExchange ,emptyBottle);
-    if (emptyBottle >= numExchange) {
+    if (emptyBottle &gt;= numExchange) {
         numBottles += emptyBottle / numExchange;
         emptyBottle = emptyBottle % numExchange;
     }

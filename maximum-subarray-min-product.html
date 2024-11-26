@@ -27,7 +27,7 @@ Stack  Pop(Stack S);</p>
 
     long result = 0;
 
-    for (int i = 0 ; i < numsSize; i ++ ){
+    for (int i = 0 ; i &lt; numsSize; i ++ ){
         //printf(&#8220;%d kk&#8212;&#8221;, i);
         totalSum = totalSum + *(nums + i);
 
@@ -39,12 +39,12 @@ Stack  Pop(Stack S);</p>
     }
 
     Stack S = CreateStack();
-    for (int i = 0; i < numsSize ; i ++) {
+    for (int i = 0; i &lt; numsSize ; i ++) {
         //printf(&#8220;%d &#8212;&#8212;&#8221;, i);
-        if (!IsEmpty(S) &&amp; S -> Next -> Element > *(nums + i)){
-            while ( !IsEmpty(S) &&amp; S ->Next -> Element > *(nums + i) ) {
+        if (!IsEmpty(S) &amp;&amp; S -&gt; Next -&gt; Element &gt; *(nums + i)){
+            while ( !IsEmpty(S) &amp;&amp; S -&gt;Next -&gt; Element &gt; *(nums + i) ) {
              Stack tmp = Pop(S);
-             rightMin[tmp -> index] = i;
+             rightMin[tmp -&gt; index] = i;
              free(tmp);
             }
             rightMin[i] = numsSize ;
@@ -56,12 +56,12 @@ Stack  Pop(Stack S);</p>
     }
 
     S = CreateStack();
-     for (int i = numsSize-1; i >= 0 ; i &#8212;) {
-        if (!IsEmpty(S) &&amp; S ->Next-> Element > *(nums + i)) {
-            //printf(&#8220;\n%d &#8212;vvv&#8212;-\n&#8221;, S -> Next -> Element);
-            while (!IsEmpty(S) &&amp; S ->Next -> Element > *(nums + i) ) {
+     for (int i = numsSize-1; i &gt;= 0 ; i &#8212;) {
+        if (!IsEmpty(S) &amp;&amp; S -&gt;Next-&gt; Element &gt; *(nums + i)) {
+            //printf(&#8220;\n%d &#8212;vvv&#8212;-\n&#8221;, S -&gt; Next -&gt; Element);
+            while (!IsEmpty(S) &amp;&amp; S -&gt;Next -&gt; Element &gt; *(nums + i) ) {
             Stack tmp = Pop(S);
-            leftMin[tmp -> index] = i;
+            leftMin[tmp -&gt; index] = i;
             free(tmp);
             }
             leftMin[i] = -1;
@@ -73,12 +73,12 @@ Stack  Pop(Stack S);</p>
         }        
     }
 
-    for(int i = 0;i < numsSize; i ++){
+    for(int i = 0;i &lt; numsSize; i ++){
         //printf(&#8220;\n %d &#8212; %d &#8212; %dkkk&#8221;,i, leftMin[i],rightMin[i]);
-        if (leftMin[i] >= 0 &&amp; rightMin[i] < numsSize) {
+        if (leftMin[i] &gt;= 0 &amp;&amp; rightMin[i] &lt; numsSize) {
             //printf(&#8220;\n %d <del>hhh</del> %d &#8212; %dkkk&#8221;,i, totalSum &#8211; sumleft[leftMin[i]] &#8211; sumRight[rightMin[i]],rightMin[i]);
             long temp = (totalSum &#8211; sumleft[leftMin[i]] &#8211; sumRight[rightMin[i]])* *(nums + i);
-            if (temp > result) {
+            if (temp &gt; result) {
                 result = temp;
             }
         } else {
@@ -89,12 +89,12 @@ Stack  Pop(Stack S);</p>
                 }
             } else if (leftMin[i] != -1 && rightMin[i]  numsSize) {
                     long temp = (totalSum &#8211; sumleft[leftMin[i]])* *(nums + i);
-                    if (temp > result) {
+                    if (temp &gt; result) {
                         result = temp;
                     }
             } else {
                 long temp = (totalSum)* *(nums + i);
-                    if (temp > result) {
+                    if (temp &gt; result) {
                         result = temp;
                     }
             }
@@ -112,14 +112,14 @@ Stack  Pop(Stack S);</p>
 
 	<p>bool IsEmpty(Stack S)<br />
 {
-    return S->Next == <span class="caps">NULL</span>;<br />
+    return S-&gt;Next == <span class="caps">NULL</span>;<br />
 }</p>
 
 	<p>Stack  Pop(Stack S)<br />
 {
     PtrToNode FirstCell;
-    FirstCell = S->Next;
-    S->Next = S->Next->Next;
+    FirstCell = S-&gt;Next;
+    S-&gt;Next = S-&gt;Next-&gt;Next;
     return FirstCell;<br />
 }</p>
 
@@ -127,17 +127,17 @@ Stack  Pop(Stack S);</p>
 {
     PtrToNode TmpCell;
     TmpCell = malloc(sizeof(struct Node));
-    TmpCell->Element = X;
-    TmpCell->index = index;
-    TmpCell->Next = S->Next;
-    S->Next = TmpCell;<br />
+    TmpCell-&gt;Element = X;
+    TmpCell-&gt;index = index;
+    TmpCell-&gt;Next = S-&gt;Next;
+    S-&gt;Next = TmpCell;<br />
 }</p>
 
 	<p>Stack CreateStack(void)<br />
 {
     Stack S;
     S = malloc(sizeof(struct Node));
-    S->Next = <span class="caps">NULL</span>;</p>
+    S-&gt;Next = <span class="caps">NULL</span>;</p>
 
     while(!IsEmpty(S))
         Pop(S);

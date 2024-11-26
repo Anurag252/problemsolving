@@ -1,5 +1,5 @@
 	<p>class Solution:
-    def kthDistinct(self, arr: List[str], n: int) -> str:
+    def kthDistinct(self, arr: List[str], n: int) -&gt; str:
         mp = {}
         nmp = {}
         i = 0
@@ -11,5 +11,6 @@
                 nmp[k]=1
             i += 1
         a = list(mp.items())
-        a.sort(reverse=False, key=lambda x : x<sup class="footnote" id="fnrev907378fbe0044d59b10ef41a7f00b86b-1"><a href="#fn907378fbe0044d59b10ef41a7f00b86b-1">1</a></sup>)
-        return &#8220;&#8221; if n &#8211; 1 >= len(a) else a[n-1]<sup class="footnote" id="fnrev907378fbe0044d59b10ef41a7f00b86b-2"><a href="#fn907378fbe0044d59b10ef41a7f00b86b-2">0</a></sup></p>
+        a.sort(reverse=False, key=lambda x : x<sup class="footnote" id="fnrev2a7abe63f9e346cb9a13c6e63e255771-1"><a href="#fn2a7abe63f9e346cb9a13c6e63e255771-1">1</a></sup>)
+        return &#8220;&#8221; if n &#8211; 1 &gt;= len(a) else a[n-1]<sup class="footnote" id="fnrev2a7abe63f9e346cb9a13c6e63e255771-2"><a href="#fn2a7abe63f9e346cb9a13c6e63e255771-2">0</a></sup>
+        </p>

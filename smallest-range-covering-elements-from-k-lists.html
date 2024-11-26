@@ -1,0 +1,35 @@
+	<p>from typing import List<br />
+import collections</p>
+
+	<p>class Solution:
+    def smallestRange(self, nums: List[List[int]]) -&gt; List[int]:
+        arr = []
+        for idx, sublist in enumerate(nums):
+            for num in sublist:
+                arr.append((num, idx))</p>
+
+        arr.sort()
+        count = collections.Counter()
+        left = 0
+        result = [-10**5, 10**5]
+        unique_count = 0
+
+        for right in range(len(arr)):
+            num, idx = arr[right]
+            count[idx] += 1
+            if count[idx] == 1:
+                unique_count += 1
+
+            while unique_count == len(nums):
+                left_num, left_idx = arr[left]
+                # Update result if the current range is smaller
+                if num &#8211; left_num &lt; result<sup class="footnote" id="fnrevfd7f99dacdd74f0283a834dcd27a5d49-1"><a href="#fnfd7f99dacdd74f0283a834dcd27a5d49-1">1</a></sup> &#8211; result<sup class="footnote" id="fnrevfd7f99dacdd74f0283a834dcd27a5d49-2"><a href="#fnfd7f99dacdd74f0283a834dcd27a5d49-2">0</a></sup>:
+                    result = [left_num, num]
+
+                # Decrease the count for the left element and move left pointer
+                count[left_idx] -= 1
+                if count[left_idx] == 0:
+                    unique_count -= 1
+                left += 1
+
+        return result

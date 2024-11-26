@@ -1,0 +1,61 @@
+	<p>class Solution:
+    def rotateTheBox(self, box: List[List[str]]) -&gt; List[List[str]]:
+        ans = []
+        for rows in box:
+            start = 0
+            end = len(rows) &#8211; 1
+            temp = end
+            prev = &#8220;.&#8220;
+            res = []
+            while(temp &gt;= 0):
+                if rows[temp]  "#":
+                    m = 0
+                    while(len(res) > 0 and res[-1]  &#8220;.&#8221;):
+                        m += 1
+                        res.pop(-1)
+                    res.append(&#8220;#&#8221;)
+                    while(m &gt; 0):
+                        res.append(&#8220;.&#8221;)
+                        m -= 1</p>
+
+                    temp -= 1
+                    continue
+                if rows[temp]  ".":
+                    res.append(".")
+                    temp -= 1
+                    continue
+                if rows[temp]  <a href="">*</a>
+                    res.append(&#8220;*&#8221;)
+                    temp -= 1
+                    continue
+            # fill empty at end
+            #print(res)
+            while(len(res) &lt; len(rows)):
+                res.append(&#8220;.&#8221;)
+            # reverse
+            res.reverse()
+            ans.append(copy.deepcopy(res))
+        ans.reverse()
+        row = 0
+        col = 0
+        result = []
+        t = []
+        #print(ans)
+        while(col &lt; len(ans<sup class="footnote" id="fnrev16db8ef2db0e49afb2440c01b02e4855-1"><a href="#fn16db8ef2db0e49afb2440c01b02e4855-1">0</a></sup>)  and row &lt; len(ans)):
+
+            if row == len(ans) &#8211; 1:
+                t.append(ans[row][col])
+                col += 1
+                row = 0
+                result.append(copy.deepcopy(t))
+                t = []
+                continue
+            t.append(ans[row][col])
+            #print(t)
+            row += 1
+        return result
+
+
+
+
+        

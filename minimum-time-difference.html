@@ -1,0 +1,21 @@
+	<p>class Solution:
+    def findMinDifference(self, timePoints: List[str]) -&gt; int:
+        result = []
+        for k in timePoints:
+            hour = k.split(&#8220;:<a href="">)[0]
+            minute = k.split(</a>&#8221;)<sup class="footnote" id="fnrevf5e50b8331564b819d6ff2aa785787d6-1"><a href="#fnf5e50b8331564b819d6ff2aa785787d6-1">1</a></sup>
+            total = int(hour) * 60 + int(minute)
+            result.append(total)</p>
+
+        result.sort()
+        diff = 1440
+        start = 1
+        end = len(result)
+        while(start &lt; end):
+            diff = min(diff, result[start] &#8211; result[start-1])
+            start += 1
+
+        diff = min(diff, result<sup class="footnote" id="fnrevf5e50b8331564b819d6ff2aa785787d6-2"><a href="#fnf5e50b8331564b819d6ff2aa785787d6-2">0</a></sup> + 1440 &#8211; result[-1])
+        return diff
+
+        

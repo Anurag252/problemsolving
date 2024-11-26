@@ -8,7 +8,7 @@
 class Solution:
     def __init__(self):
         self.cache = []
-    def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+    def postorderTraversal(self, root: Optional[TreeNode]) -&gt; List[int]:
         if root == None:
             return</li>
 	</ol>
@@ -17,3 +17,5 @@ class Solution:
         self.postorderTraversal(root.right)
         self.cache.append(root.val)
         return self.cache
+
+        

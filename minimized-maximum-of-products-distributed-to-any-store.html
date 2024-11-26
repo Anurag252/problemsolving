@@ -1,0 +1,21 @@
+	<p>from typing import List<br />
+from math import ceil</p>
+
+	<p>class Solution:
+    def minimizedMaximum(self, n: int, quantities: List[int]) -&gt; int:
+        # Binary search to find the minimum possible maximum quantity per store
+        left, right = 1, max(quantities)</p>
+
+        def canDistribute(maxQuantity: int) -&gt; bool:
+            # Calculate the number of stores needed if maxQuantity is the maximum each store can have
+            stores_needed = sum(ceil(q / maxQuantity) for q in quantities)
+            return stores_needed &lt;= n
+
+        while left &lt; right:
+            mid = (left + right) // 2
+            if canDistribute(mid):
+                right = mid  # Try for a smaller maximum
+            else:
+                left = mid + 1  # Increase the maximum quantity
+
+        return left

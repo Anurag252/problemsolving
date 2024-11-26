@@ -1,47 +1,47 @@
 	<p>class Solution:
-    def getSum(self, a: int, b: int) -> int:
-        if a < 0 or b < 0:
+    def getSum(self, a: int, b: int) -&gt; int:
+        if a &lt; 0 or b &lt; 0:
             return a + b
         c = 0
         result = 0
         times = 0</p>
 
-        while (a > 0 or b > 0) :
+        while (a &gt; 0 or b &gt; 0) :
             times = times + 1
             t1 = a &amp; 1
             t2 = b &amp; 1
-            a = a >> 1
-            b = b >> 1
+            a = a &gt;&gt; 1
+            b = b &gt;&gt; 1
             (t, c) = self.calculate_bitsum(t1, t2, c)
             print(t,c,&#8220;<span class="caps">ASD</span>&#8221;)
-            result = result << 1
+            result = result &lt;&lt; 1
             result = result | t
         if c == 1:
             times = times+1
-            result = result << 1
+            result = result &lt;&lt; 1
             result = result | c
         result = self.inverse(result, times)
         return result
 
-    def invert(self, a :int, count : int) -> int:
+    def invert(self, a :int, count : int) -&gt; int:
         t = pow(2,12) &#8211; 1
         res = a &amp; t
         return ~ res
 
-    def inverse(self, result: int, times : int) -> int :
+    def inverse(self, result: int, times : int) -&gt; int :
         new_result = 0
-        while times > 0 :
+        while times &gt; 0 :
             times = times &#8211; 1
             print(result, &#8220;A&#8221;)
-            new_result = new_result << 1
+            new_result = new_result &lt;&lt; 1
             t = result &amp; 1
             new_result = new_result | t
-            result = result >> 1
+            result = result &gt;&gt; 1
             print(new_result)
         return new_result
 
 
-    def calculate_bitsum(self, a :int, b : int, c_in :int) -> (int, int):
+    def calculate_bitsum(self, a :int, b : int, c_in :int) -&gt; (int, int):
         sum_bit = (a ^ b) ^ c_in
 
         # Calculate carry bit

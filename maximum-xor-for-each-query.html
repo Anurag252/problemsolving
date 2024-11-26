@@ -1,0 +1,18 @@
+	<p>class Solution:
+    def getMaximumXor(self, nums: List[int], maximumBit: int) -&gt; List[int]:
+        largestnum = 2 ** maximumBit &#8211; 1
+        res = []</p>
+
+
+        a =[nums<sup class="footnote" id="fnrev2d65c7830d13437d875182f9d5c8be4c-1"><a href="#fn2d65c7830d13437d875182f9d5c8be4c-1">0</a></sup>]
+
+        for idx, k in enumerate(nums):
+            if idx == 0:
+                continue
+            a.append(a[-1] ^ k)
+
+
+        for l in a:
+            res.append(largestnum &#8211; l)
+        res.reverse()
+        return res

@@ -1,5 +1,5 @@
 	<p>class Solution:
-    def sumGame(self, num: str) -> bool:
+    def sumGame(self, num: str) -&gt; bool:
         half_length = int(len(num)/2) # len is always even
         count_of_unknowns_left = 0
         count_of_unknowns_right = 0
@@ -25,21 +25,21 @@
         if abs(count_of_unknowns_right &#8211; count_of_unknowns_left) % 2 == 1:
             return True # alice always wins
 
-        if lhs > rhs and count_of_unknowns_right > count_of_unknowns_left:
+        if lhs &gt; rhs and count_of_unknowns_right &gt; count_of_unknowns_left:
             diff_sum = lhs-rhs
             count_of_unknown = count_of_unknowns_right &#8211; count_of_unknowns_left
 
-        if lhs < rhs and count_of_unknowns_right < count_of_unknowns_left:
+        if lhs &lt; rhs and count_of_unknowns_right &lt; count_of_unknowns_left:
             diff_sum = rhs-lhs
             count_of_unknown =  count_of_unknowns_left &#8211; count_of_unknowns_right
         print(diff_sum, count_of_unknown)
-        if diff_sum > 0 and count_of_unknown > 0:
-            return int((count_of_unknown + 1)/2) * 9 > diff_sum or  int((count_of_unknown)/2) * 9 < diff_sum# >= for 9? test case
+        if diff_sum &gt; 0 and count_of_unknown &gt; 0:
+            return int((count_of_unknown + 1)/2) * 9 &gt; diff_sum or  int((count_of_unknown)/2) * 9 &lt; diff_sum# &gt;= for 9? test case
 
         return True # alice always wins
 
 
-    def calculate_sum(self, nums : str) -> int:
+    def calculate_sum(self, nums : str) -&gt; int:
         print(nums)
         sum = 0
         for k in nums:
@@ -51,9 +51,9 @@
 
 	<p>	<ol start="14">
 		<li>= 2?</li>
-	</ol>
-#x + y = 14
-#sum(x) + sum(y) = k
-#sum(x) > k // alice wins
-#sum(x) < k for all x between 0 to 9 then bob wins
-#num+1/2</p>
+	</ol><br />
+#x + y = 14<br />
+#sum(x) + sum(y) = k<br />
+#sum(x) &gt; k // alice wins<br />
+#sum(x) &lt; k for all x between 0 to 9 then bob wins<br />
+#num+1/2 </p>

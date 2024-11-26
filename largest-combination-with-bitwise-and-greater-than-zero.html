@@ -1,0 +1,14 @@
+	<p>class Solution:
+    def largestCombination(self, candidates: List[int]) -&gt; int:
+        res = [0] * 24
+        t = 1
+        for i in range(1,25):
+            for k in candidates:
+                if k &amp; t != 0:
+                    res[i-1] += 1
+            t = t &lt;&lt; 1
+        return max(res)</p>
+
+
+
+        

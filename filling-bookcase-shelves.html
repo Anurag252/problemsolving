@@ -1,7 +1,7 @@
 	<p>class Solution:
     def __init__(self):
         self.a = {}
-    def minHeightShelves(self, books: List[List[int]], shelfWidth: int) -> int:</p>
+    def minHeightShelves(self, books: List[List[int]], shelfWidth: int) -&gt; int:</p>
 
         r = &#8220;&#8221;.join(str(books))
         if r in self.a:
@@ -12,9 +12,9 @@
         i = 0
         for k in books:
 
-            if total + k<sup class="footnote" id="fnrev78217fd7a1814754a67830ab0812fde0-1"><a href="#fn78217fd7a1814754a67830ab0812fde0-1">0</a></sup> <= shelfWidth:
-                t.append(k<sup class="footnote" id="fnrev78217fd7a1814754a67830ab0812fde0-2"><a href="#fn78217fd7a1814754a67830ab0812fde0-2">1</a></sup>)
-                total += k<sup class="footnote"><a href="#fn78217fd7a1814754a67830ab0812fde0-1">0</a></sup>
+            if total + k<sup class="footnote" id="fnrev3355ff2aad5b4c4daf12dc48c6b3f202-1"><a href="#fn3355ff2aad5b4c4daf12dc48c6b3f202-1">0</a></sup> &lt;= shelfWidth:
+                t.append(k<sup class="footnote" id="fnrev3355ff2aad5b4c4daf12dc48c6b3f202-2"><a href="#fn3355ff2aad5b4c4daf12dc48c6b3f202-2">1</a></sup>)
+                total += k<sup class="footnote"><a href="#fn3355ff2aad5b4c4daf12dc48c6b3f202-1">0</a></sup>
                 result = min(result, max(t) +  self.minHeightShelves( books[i+1:], shelfWidth))
             else:
                 break
@@ -22,3 +22,8 @@
         #print(books, result)
         self.a&#174; = 0 if result == 1000000 else result
         return self.a&#174;
+
+
+
+
+        

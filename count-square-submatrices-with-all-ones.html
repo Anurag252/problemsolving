@@ -1,0 +1,25 @@
+	<p>from typing import List</p>
+
+	<p>class Solution:
+    def countSquares(self, matrix: List[List[int]]) -&gt; int:
+        row_bound = len(matrix)
+        col_bound = len(matrix<sup class="footnote" id="fnrev2bdfa80db5b449b0864b7933c38e4aa5-1"><a href="#fn2bdfa80db5b449b0864b7933c38e4aa5-1">0</a></sup>)</p>
+
+        # Create DP matrix initialized to zero
+        dp = [<sup class="footnote"><a href="#fn2bdfa80db5b449b0864b7933c38e4aa5-1">0</a></sup> * col_bound for _ in range(row_bound)]
+        count = 0
+
+        for i in range(row_bound):
+            for j in range(col_bound):
+                # Only consider if matrix[i][j] is 1
+                if matrix[i][j]  1:
+                    if i  0 or j == 0:  # Base case for first row/column
+                        dp[i][j] = 1
+                    else:
+                        # Minimum of top, left, and top-left + 1
+                        dp[i][j] = min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) + 1
+
+                    # Add to count of squares
+                    count += dp[i][j]
+
+        return count

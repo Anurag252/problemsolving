@@ -1,9 +1,9 @@
 	<p>class Solution:
-    def smallestRangeI(self, nums: List[int], k: int) -> int:
+    def smallestRangeI(self, nums: List[int], k: int) -&gt; int:
         min_num = min(nums)
         max_num = max(nums)
         mean_num = (max_num &#8211; min_num )/2
-        if mean_num < k:
+        if mean_num &lt; k:
             return 0
         else:
             return max_num &#8211; k &#8211; min_num &#8211; k</p>

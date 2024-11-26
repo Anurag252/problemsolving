@@ -1,0 +1,23 @@
+	<p>class Solution:
+    def countUnguarded(self, m: int, n: int, guards: List[List[int]], walls: List[List[int]]) -&gt; int:
+        grid = [<sup class="footnote" id="fnrev992262eba3ad43f48bca0997e47d8c2a-1"><a href="#fn992262eba3ad43f48bca0997e47d8c2a-1">0</a></sup> * n for _ in range(m)]</p>
+
+        # Mark guards and walls
+        for r, c in guards:
+            grid&#174;[c] = 1  # Guard
+        for r, c in walls:
+            grid&#174;[c] = 2  # Wall
+
+        # Directions for guard coverage: up, down, left, right
+        directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+
+        # Expand guard coverage
+        for r, c in guards:
+            for dr, dc in directions:
+                nr, nc = r + dr, c + dc
+                while 0 &lt;= nr &lt; m and 0 &lt;= nc &lt; n and grid[nr][nc] != 2 and grid[nr][nc] != 1:
+                    grid[nr][nc] = 3  # Guarded
+                    nr, nc = nr + dr, nc + dc
+
+        # Count unguarded cells
+        return sum(cell == 0 for row in grid for cell in row)

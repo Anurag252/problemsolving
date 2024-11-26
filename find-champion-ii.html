@@ -1,0 +1,19 @@
+	<p>class Solution:
+    def findChampion(self, n: int, edges: List[List[int]]) -&gt; int:
+        teams = [0] * n</p>
+
+        for k in edges:
+            teams[k<sup class="footnote" id="fnrev797a8af3647942d08c7de9be2778ec31-1"><a href="#fn797a8af3647942d08c7de9be2778ec31-1">1</a></sup>] = 1
+        #print(teams)
+        result = -1
+        for i, k in enumerate(teams):
+            if k  0 and result  -1:
+                result = i
+
+            elif k == 0 and result != -1:
+                return -1
+
+        return result
+
+
+        

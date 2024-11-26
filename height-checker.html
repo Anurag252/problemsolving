@@ -1,7 +1,7 @@
 	<p>int comp (const void * elem1, const void * elem2) ;<br />
 int heightChecker(int* heights, int heightsSize) {
     int new_height[heightsSize];// = malloc(heightsSize*sizeof(int));
-    for (int i = 0 ; i < heightsSize; i ++){
+    for (int i = 0 ; i &lt; heightsSize; i ++){
         new_height[i] = heights[i];
     }</p>
 
@@ -9,7 +9,7 @@ int heightChecker(int* heights, int heightsSize) {
 
     int result = 0;
 
-    for (int i = 0 ; i < heightsSize; i ++){
+    for (int i = 0 ; i &lt; heightsSize; i ++){
         printf(&#8220;%d %d\n&#8221;, new_height[i], heights[i]);
         if (new_height[i] != heights[i]) {
             result = result + 1;
@@ -23,7 +23,7 @@ int heightChecker(int* heights, int heightsSize) {
 {
     int f = <strong>((int</strong>)elem1);
     int s = <strong>((int</strong>)elem2);
-    if (f > s) return  1;
-    if (f < s) return -1;
+    if (f &gt; s) return  1;
+    if (f &lt; s) return -1;
     return 0;<br />
 }</p>

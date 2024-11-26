@@ -1,0 +1,12 @@
+	<p>class Solution:
+    def minAddToMakeValid(self, s: str) -&gt; int:
+        arr = []
+        for k in s:
+            if k  ")" and len(arr) > 0 and  arr[-1]  <a href="">(</a>
+                arr.pop()
+            else:
+                arr.append(k)
+        return len(arr)</p>
+
+
+    #&#8221;()))((&#8221;

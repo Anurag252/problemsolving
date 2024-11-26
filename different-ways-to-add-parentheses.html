@@ -1,0 +1,38 @@
+	<p>from typing import List</p>
+
+	<p>class Solution:
+    def __init__(self):
+        self.cache = {}</p>
+
+    def diffWaysToCompute(self, expression: str) -&gt; List[int]:
+        # If the result is already cached, return it
+        if expression in self.cache:
+            return self.cache[expression]
+
+        # This will store all the possible results
+        res = []
+
+        # Traverse the expression and evaluate based on operators
+        for i, c in enumerate(expression):
+            if c in <a href="">+-*</a>
+                # Divide the problem into left and right parts
+                left = self.diffWaysToCompute(expression[:i])
+                right = self.diffWaysToCompute(expression[i+1:])
+
+                # Calculate all combinations of left and right parts with the current operator
+                for l in left:
+                    for r in right:
+                        if c  "+":
+                            res.append(l + r)
+                        elif c  <a href="">-</a>
+                            res.append(l &#8211; r)
+                        elif c == <a href="">*</a>
+                            res.append(l * r)
+
+        # Base case: if there are no operators, return the number itself
+        if not res:
+            res = [int(expression)]
+
+        # Cache the result
+        self.cache[expression] = res
+        return res

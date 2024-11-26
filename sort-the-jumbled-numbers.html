@@ -1,12 +1,12 @@
 	<p>class Solution:
-    def sortJumbled(self, mapping: List[int], nums: List[int]) -> List[int]:</p>
+    def sortJumbled(self, mapping: List[int], nums: List[int]) -&gt; List[int]:</p>
 
         def srt(x):
             result = 0
             mul = 1
             if x == 0:
-                return mapping<sup class="footnote" id="fnrev01513343da0248dabe362a9584ca371f-1"><a href="#fn01513343da0248dabe362a9584ca371f-1">0</a></sup>
-            while x > 0:
+                return mapping<sup class="footnote" id="fnreve96b849fada5426ea1ec8aa1a463bf79-1"><a href="#fne96b849fada5426ea1ec8aa1a463bf79-1">0</a></sup>
+            while x &gt; 0:
                 y = x%10
                 result = result + mul*mapping[y]
                 mul = mul * 10
@@ -14,3 +14,6 @@
             return result
         nums=sorted(nums,reverse=False, key=srt)
         return nums
+
+
+        

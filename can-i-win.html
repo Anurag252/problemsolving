@@ -5,21 +5,21 @@
         self.dict1 = []
         self.cache = {}
 
-    def canIWin(self, maxChoosableInteger: int, desiredTotal: int) -> bool:
+    def canIWin(self, maxChoosableInteger: int, desiredTotal: int) -&gt; bool:
         self.dict1 = [&#8220;0&#8221;]* (maxChoosableInteger+1)
-        self.dict1<sup class="footnote" id="fnrev2fbff20a12d74a8fa08ae0fa271ed446-1"><a href="#fn2fbff20a12d74a8fa08ae0fa271ed446-1">0</a></sup> = &#8220;1&#8220;
-        if (maxChoosableInteger * (maxChoosableInteger + 1)) // 2 < desiredTotal:
+        self.dict1<sup class="footnote" id="fnrev544b6cd18a55495b8162bd0164189670-1"><a href="#fn544b6cd18a55495b8162bd0164189670-1">0</a></sup> = &#8220;1&#8220;
+        if (maxChoosableInteger * (maxChoosableInteger + 1)) // 2 &lt; desiredTotal:
             return False
-        if desiredTotal <= 0:
+        if desiredTotal &lt;= 0:
             return True
         return self.MoveByA(maxChoosableInteger, desiredTotal)
 
-    def MoveByA(self, maxChoosableInteger: int, desiredTotal: int) -> bool:
+    def MoveByA(self, maxChoosableInteger: int, desiredTotal: int) -&gt; bool:
         key = f&#8221;{desiredTotal}#{&#8216;,&#8217;.join(self.dict1)}&#8221;
 
         if key in self.cache:
             return self.cache[key]
-        if desiredTotal <= 0:
+        if desiredTotal &lt;= 0:
             return False # B won
 
         if &#8220;0&#8221; not in self.dict1:
@@ -41,12 +41,12 @@
         self.cache[key] = False
         return False
 
-    def MoveByB(self, maxChoosableInteger: int, desiredTotal: int) -> bool:
+    def MoveByB(self, maxChoosableInteger: int, desiredTotal: int) -&gt; bool:
         key = f&#8221;{desiredTotal}#{&#8216;,&#8217;.join(self.dict1)}&#8220;
         if key in self.cache:
             return self.cache[key]
 
-        if desiredTotal <= 0:
+        if desiredTotal &lt;= 0:
             return False # A won
 
         if &#8220;0&#8221; not in self.dict1:
@@ -67,3 +67,6 @@
 
         self.cache[key] = False
         return False
+
+
+        

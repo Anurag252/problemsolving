@@ -2,20 +2,20 @@
     def __init__(self):
         self.dt = {}</p>
 
-    def myPow(self, x: float, n: int) -> float:
+    def myPow(self, x: float, n: int) -&gt; float:
         multiplier = 1
-        if n < 0:
+        if n &lt; 0:
             return 1/self.calc(x, -n) 
         return self.calc(x, n) 
 
 
 
-    def calc(self, x: float, n : int) -> int:
+    def calc(self, x: float, n : int) -&gt; int:
         if (str(x) + &#8220;$&#8221; + str(n)) in self.dt:
             return self.dt[str(x) + &#8220;$&#8221; + str(n)]
 
 
-        if n <= 0:
+        if n &lt;= 0:
             return 1
         if n  1:
             return x
@@ -26,3 +26,5 @@
             result = self.calc(x, (n+1)/2) * self.calc(x, (n-1)/2)
         self.dt[str(x) + &#8220;$&#8221; + str(n)] = result
         return result
+
+      

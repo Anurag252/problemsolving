@@ -17,7 +17,7 @@ class TreeN:
 	<p>class Solution:
     def getDirections(
         self, root: TreeNode, startValue: int, destValue: int
-    ) -> str:
+    ) -&gt; str:
         start_path = []
         dest_path = []</p>
 
@@ -30,8 +30,8 @@ class TreeN:
 
         # Find the length of the common path
         while (
-            common_path_length < len(start_path)
-            and common_path_length < len(dest_path)
+            common_path_length &lt; len(start_path)
+            and common_path_length &lt; len(dest_path)
             and start_path[common_path_length] == dest_path[common_path_length]
         ):
             common_path_length += 1
@@ -44,7 +44,7 @@ class TreeN:
 
         return &#8220;&#8221;.join(directions)
 
-    def _find_path(self, node: TreeNode, target: int, path: List[str]) -> bool:
+    def _find_path(self, node: TreeNode, target: int, path: List[str]) -&gt; bool:
         if node is None:
             return False
 
@@ -64,3 +64,8 @@ class TreeN:
         path.pop()  # Remove last character
 
         return False
+
+
+
+
+        

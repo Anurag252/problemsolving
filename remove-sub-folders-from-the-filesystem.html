@@ -1,0 +1,23 @@
+	<p>class Solution:
+    def removeSubfolders(self, folder: List[str]) -&gt; List[str]:</p>
+
+        folder.sort(key = lambda x : len(x))
+
+        mp = {}
+        ls = []
+        for k in folder:
+            i = 1
+            t = k.split(&#8216;/&#8217;)[1:]
+            print(t)
+            found = False
+            while i &lt; len(t) and &#8220;-&#8221;.join(t[:-i]) not in mp:
+                i += 1
+            print(i, len(t), &#8220;i&#8221;)
+            if i != len(t):
+                continue
+            else:
+                mp[&#8220;-&#8221;.join(t)] = k
+        #print(mp, list(mp.values()))
+        return list(mp.values())
+
+        

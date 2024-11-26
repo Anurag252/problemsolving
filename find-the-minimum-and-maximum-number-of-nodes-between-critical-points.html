@@ -11,42 +11,42 @@
 int</strong> nodesBetweenCriticalPoints(struct ListNode* head, int* returnSize) {
     int* arr1 = malloc(2 * sizeof(int));
     *returnSize = 2;
-    if (head  NULL || head->next  NULL || head -> next -> next == <span class="caps">NULL</span>) {
-        arr1<sup class="footnote" id="fnrevea8ed3385a7e45c59a3bcfcee98e0668-1"><a href="#fnea8ed3385a7e45c59a3bcfcee98e0668-1">0</a></sup> = -1;
-        arr1<sup class="footnote" id="fnrevea8ed3385a7e45c59a3bcfcee98e0668-2"><a href="#fnea8ed3385a7e45c59a3bcfcee98e0668-2">1</a></sup> = -1;
+    if (head  NULL || head->next  <span class="caps">NULL</span> || head -&gt; next -&gt; next == <span class="caps">NULL</span>) {
+        arr1<sup class="footnote" id="fnrev2ed3c58be47b450cae433900cc4e2496-1"><a href="#fn2ed3c58be47b450cae433900cc4e2496-1">0</a></sup> = -1;
+        arr1<sup class="footnote" id="fnrev2ed3c58be47b450cae433900cc4e2496-2"><a href="#fn2ed3c58be47b450cae433900cc4e2496-2">1</a></sup> = -1;
         return arr1;
     }
     struct ListNode* first = head;
-    struct ListNode* second = head->next;
-    struct ListNode* third = head->next -> next;
+    struct ListNode* second = head-&gt;next;
+    struct ListNode* third = head-&gt;next -&gt; next;
     int* arr = malloc(100000 * sizeof(int));
     int size = 0;
     int index = 0;
-    while(third != NULL) {
-        if ((first->val > second->val &&amp; second->val < third->val) || 
-        (first->val < second->val &&amp; second->val > third->val)) {
+    while(third != <span class="caps">NULL</span>) {
+        if ((first-&gt;val &gt; second-&gt;val &amp;&amp; second-&gt;val &lt; third-&gt;val) || 
+        (first-&gt;val &lt; second-&gt;val &amp;&amp; second-&gt;val &gt; third-&gt;val)) {
             arr[size] = index;
             size ++ ;</p>
 
         }
         index ++ ;
-        first = first ->next;
-        second = second -> next;
-        third = third -> next;
+        first = first -&gt;next;
+        second = second -&gt; next;
+        third = third -&gt; next;
     }
     int diff = 100000;
-    for (int i = 0 ; i < size-1; i ++){
-        if (diff > (arr[i+1] &#8211; arr[i])) {
+    for (int i = 0 ; i &lt; size-1; i ++){
+        if (diff &gt; (arr[i+1] &#8211; arr[i])) {
             diff = (arr[i+1] &#8211; arr[i]);
         }
     }
-    if (size < 2) {
-        arr1<sup class="footnote"><a href="#fnea8ed3385a7e45c59a3bcfcee98e0668-1">0</a></sup> = -1;
-        arr1<sup class="footnote"><a href="#fnea8ed3385a7e45c59a3bcfcee98e0668-2">1</a></sup> = -1;
+    if (size &lt; 2) {
+        arr1<sup class="footnote"><a href="#fn2ed3c58be47b450cae433900cc4e2496-1">0</a></sup> = -1;
+        arr1<sup class="footnote"><a href="#fn2ed3c58be47b450cae433900cc4e2496-2">1</a></sup> = -1;
         return arr1;
     }
-    arr1<sup class="footnote"><a href="#fnea8ed3385a7e45c59a3bcfcee98e0668-1">0</a></sup> = diff;
-    arr1<sup class="footnote"><a href="#fnea8ed3385a7e45c59a3bcfcee98e0668-2">1</a></sup> = arr[size-1] &#8211; arr<sup class="footnote"><a href="#fnea8ed3385a7e45c59a3bcfcee98e0668-1">0</a></sup>;
+    arr1<sup class="footnote"><a href="#fn2ed3c58be47b450cae433900cc4e2496-1">0</a></sup> = diff;
+    arr1<sup class="footnote"><a href="#fn2ed3c58be47b450cae433900cc4e2496-2">1</a></sup> = arr[size-1] &#8211; arr<sup class="footnote"><a href="#fn2ed3c58be47b450cae433900cc4e2496-1">0</a></sup>;
     return arr1;
 
 	<p>}</p>

@@ -1,7 +1,7 @@
 	<p>class Solution:
     import heapq as hq</p>
 
-    def reorganizeString(self, s: str) -> str:
+    def reorganizeString(self, s: str) -&gt; str:
         result = [None] * len(s)
         h = []
         map_str = {
@@ -34,16 +34,16 @@
 
 
 
-    def fill_next(self, i : int, v : int, k : str ,result : List) -> (int, int):
-        while(i < len(result) and v > 0):
+    def fill_next(self, i : int, v : int, k : str ,result : List) -&gt; (int, int):
+        while(i &lt; len(result) and v &gt; 0):
             if result[i] == None and result[i-1] != k:
                 result[i] = k
                 v = v &#8211; 1
             i = i + 1
         return (i, v)
 
-    def fill_first(self, i : int, v : int, k : str ,result : List) -> (int, int):
-        while(i < len(result) and v > 0):
+    def fill_first(self, i : int, v : int, k : str ,result : List) -&gt; (int, int):
+        while(i &lt; len(result) and v &gt; 0):
             result[i] = k
             v = v &#8211; 1
             i = i + 2

@@ -1,0 +1,52 @@
+	<p>class Solution:
+    def minimumSteps(self, s: str) -&gt; int:</p>
+
+        arr = list(map(int, s))
+
+        #print(arr)
+        result = 0
+        j = len(arr) &#8211; 1
+
+        while(j &gt;= 0 and arr[j] == 1):
+                j -= 1
+        # off by 1
+        j += 1
+
+        temp = j-1
+        occ = 0
+        count = 0
+        while(temp &gt;= 0):
+            if arr[temp] == 1:
+                result += (count &#8211; occ)
+                occ += 1
+            temp -= 1
+
+            count += 1
+        return result
+
+
+
+	<p>#result += (pos &#8211; occ &#8211; 1)</p>
+
+        &#8216;&#8217;&#8216;
+        00000 101010 11111 011010
+              101001
+              100011
+
+	<p>1 + 4-1-1 + 6-2-1</p>
+
+              101001
+              100101
+              100011
+              010011
+              001011
+              000111
+
+              000111
+        101
+        011
+        10 -&gt; 01
+        01 
+        110 -&gt; 101, 011
+        &#8216;&#8217;&#8216;
+        

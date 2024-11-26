@@ -1,5 +1,5 @@
 	<p>class Solution:
-    def stoneGameVI(self, aliceValues: List[int], bobValues: List[int]) -> int:
+    def stoneGameVI(self, aliceValues: List[int], bobValues: List[int]) -&gt; int:
         new_list = []
         for k,l in zip(aliceValues, bobValues):
             new_list.append((k , l))
@@ -11,13 +11,15 @@
         is_odd = True
         for k in new_list:
             if is_odd:
-                a= a + k<sup class="footnote" id="fnrev3849ceadaedd43998adc23c4da349008-1"><a href="#fn3849ceadaedd43998adc23c4da349008-1">0</a></sup>
+                a= a + k<sup class="footnote" id="fnrev9bcd2596ec194a4482aec4e5de68f190-1"><a href="#fn9bcd2596ec194a4482aec4e5de68f190-1">0</a></sup>
                 is_odd = False
             else:
-                b = b + k<sup class="footnote" id="fnrev3849ceadaedd43998adc23c4da349008-2"><a href="#fn3849ceadaedd43998adc23c4da349008-2">1</a></sup>
+                b = b + k<sup class="footnote" id="fnrev9bcd2596ec194a4482aec4e5de68f190-2"><a href="#fn9bcd2596ec194a4482aec4e5de68f190-2">1</a></sup>
                 is_odd = True
-        if a > b:
+        if a &gt; b:
             return 1
-        if a < b :
+        if a &lt; b :
             return -1
         return 0</p>
+
+        

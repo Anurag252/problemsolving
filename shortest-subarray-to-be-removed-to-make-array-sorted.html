@@ -1,0 +1,16 @@
+	<p>class Solution:
+    def findLengthOfShortestSubarray(self, arr: List[int]) -&gt; int:
+        right = len(arr) &#8211; 1
+        while right &gt; 0 and arr[right] &gt;= arr[right &#8211; 1]:
+            right -= 1</p>
+
+        ans = right
+        left = 0
+        while left &lt; right and (left == 0 or arr[left &#8211; 1] &lt;= arr[left]):
+            # find next valid number after arr[left]
+            while right &lt; len(arr) and arr[left] &gt; arr[right]:
+                right += 1
+            # save length of removed subarray
+            ans = min(ans, right &#8211; left &#8211; 1)
+            left += 1
+        return ans

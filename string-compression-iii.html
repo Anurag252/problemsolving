@@ -1,0 +1,25 @@
+	<p>class Solution:
+    def compressedString(self, word: str) -&gt; str:</p>
+
+        curr = word<sup class="footnote" id="fnrevd47e181e6ccc416f819f9d95e0c24552-1"><a href="#fnd47e181e6ccc416f819f9d95e0c24552-1">0</a></sup>
+        count = 0
+        res = &#8220;&#8221;
+
+        for idx, k in enumerate(word):
+            if k == curr:
+                count += 1
+
+            if count == 9:
+                res += (str(count) + curr)
+                count = 0
+                if idx + 1 &lt; len(word):
+                    curr = word[idx+1]
+                    continue
+            if k != curr:
+                res += (str(count) + curr)
+                count = 1
+                curr = k
+            #print(res)
+        if count &gt; 0:
+            res += (str(count) + curr)
+        return res

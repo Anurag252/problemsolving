@@ -1,0 +1,30 @@
+	<p>class Solution:
+    def findKthBit(self, n: int, k: int) -&gt; str:</p>
+
+
+        def reverse(s):
+            return s[::-1]
+
+        def inverse(s):
+            l = [0] * len(s)
+            for idx, k in enumerate(list(s)):
+                if k == <a href="">0</a>
+                    l[idx] = &#8220;1&#8220;
+                else:
+                    l[idx] = &#8220;0&#8220;
+            return &#8220;&#8221;.join(l)
+
+
+
+        @cache
+        def recurse(n)-&gt; str:
+            if n == 1:
+                return &#8220;0&#8221;
+
+            return recurse(n-1) + &#8220;1&#8221; + reverse(inverse(recurse(n-1)))
+        m = recurse(n)
+        #print(m)
+        return m[k-1]
+
+
+        

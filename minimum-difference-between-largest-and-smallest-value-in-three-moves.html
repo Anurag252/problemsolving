@@ -5,7 +5,7 @@
 }</p>
 
 	<p>int <acronym title="int a, int b"><span class="caps">MIN</span></acronym>{
-    if (a < b){
+    if (a &lt; b){
         return a;
     }
     return b;<br />
@@ -14,11 +14,11 @@
 	<p>int minDifference(int* nums, int numsSize) {
    qsort(nums, numsSize, sizeof(int), compare);</p>
 
-    if (numsSize <= 4){
+    if (numsSize &lt;= 4){
         return 0;
     }
     int result = <span class="caps">INT</span>_MAX;
-    for (int i = 0 ; i + numsSize -4 < numsSize; i ++){
+    for (int i = 0 ; i + numsSize -4 &lt; numsSize; i ++){
         result = <acronym title="result, nums[i] &#8211; nums[i + numsSize -4]"><span class="caps">MIN</span></acronym>;
     }
     return result;

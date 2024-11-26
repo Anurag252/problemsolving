@@ -1,12 +1,12 @@
 	<p>class Solution:
     def __init__(self):
         self.cache = {}
-    def getMoneyAmount(self, n: int, start : int = 1, end : int = 200) -> int:
+    def getMoneyAmount(self, n: int, start : int = 1, end : int = 200) -&gt; int:
         least_amount = 1000000
         key = str(n) + &#8220;#&#8221; + str(start)
         if key in self.cache:
             return self.cache[key]
-        if start > n:
+        if start &gt; n:
             self.cache[key] = -1
             return -1 # unfavourable guesses
         if start  n:
@@ -27,4 +27,10 @@
         return least_amount</p>
 
 
-    #min(m + max(   1 to m-1 -> m1, m+1 , n -> m2)) for all m between 1 to n.
+    #min(m + max(   1 to m-1 -&gt; m1, m+1 , n -&gt; m2)) for all m between 1 to n. 
+
+
+
+
+
+        

@@ -1,19 +1,19 @@
 	<p>class Solution:
-    def maxProbability(self, n: int, edges: List[List[int]], succProb: List[float], start_node: int, end_node: int) -> float:
+    def maxProbability(self, n: int, edges: List[List[int]], succProb: List[float], start_node: int, end_node: int) -&gt; float:
         matrix = {}
         result = {}</p>
 
         # Build the adjacency list
         for k, l in zip(edges, succProb):
-            if k<sup class="footnote" id="fnrevf37379175324478baf91f18edd86a276-1"><a href="#fnf37379175324478baf91f18edd86a276-1">0</a></sup> not in matrix:
-                matrix[k<sup class="footnote"><a href="#fnf37379175324478baf91f18edd86a276-1">0</a></sup>] = [(k<sup class="footnote" id="fnrevf37379175324478baf91f18edd86a276-2"><a href="#fnf37379175324478baf91f18edd86a276-2">1</a></sup>, l)]
+            if k<sup class="footnote" id="fnrev0c6904317bb74aec98dfce4b9b0b20fd-1"><a href="#fn0c6904317bb74aec98dfce4b9b0b20fd-1">0</a></sup> not in matrix:
+                matrix[k<sup class="footnote"><a href="#fn0c6904317bb74aec98dfce4b9b0b20fd-1">0</a></sup>] = [(k<sup class="footnote" id="fnrev0c6904317bb74aec98dfce4b9b0b20fd-2"><a href="#fn0c6904317bb74aec98dfce4b9b0b20fd-2">1</a></sup>, l)]
             else:
-                matrix[k<sup class="footnote"><a href="#fnf37379175324478baf91f18edd86a276-1">0</a></sup>].append((k<sup class="footnote"><a href="#fnf37379175324478baf91f18edd86a276-2">1</a></sup>, l))
+                matrix[k<sup class="footnote"><a href="#fn0c6904317bb74aec98dfce4b9b0b20fd-1">0</a></sup>].append((k<sup class="footnote"><a href="#fn0c6904317bb74aec98dfce4b9b0b20fd-2">1</a></sup>, l))
 
-            if k<sup class="footnote"><a href="#fnf37379175324478baf91f18edd86a276-2">1</a></sup> not in matrix:
-                matrix[k<sup class="footnote"><a href="#fnf37379175324478baf91f18edd86a276-2">1</a></sup>] = [(k<sup class="footnote"><a href="#fnf37379175324478baf91f18edd86a276-1">0</a></sup>, l)]
+            if k<sup class="footnote"><a href="#fn0c6904317bb74aec98dfce4b9b0b20fd-2">1</a></sup> not in matrix:
+                matrix[k<sup class="footnote"><a href="#fn0c6904317bb74aec98dfce4b9b0b20fd-2">1</a></sup>] = [(k<sup class="footnote"><a href="#fn0c6904317bb74aec98dfce4b9b0b20fd-1">0</a></sup>, l)]
             else:
-                matrix[k<sup class="footnote"><a href="#fnf37379175324478baf91f18edd86a276-2">1</a></sup>].append((k<sup class="footnote"><a href="#fnf37379175324478baf91f18edd86a276-1">0</a></sup>, l))
+                matrix[k<sup class="footnote"><a href="#fn0c6904317bb74aec98dfce4b9b0b20fd-2">1</a></sup>].append((k<sup class="footnote"><a href="#fn0c6904317bb74aec98dfce4b9b0b20fd-1">0</a></sup>, l))
 
         visited = set()
         global q  # Declare q as a global variable
@@ -22,12 +22,12 @@
 
         def test():
             global q  # Declare q as global inside the function to use the global variable
-            while len(q) > 0:
+            while len(q) &gt; 0:
                 t = heapq.heappop(q)
 
                 # Convert back the probability to positive
-                current_prob = -t<sup class="footnote"><a href="#fnf37379175324478baf91f18edd86a276-1">0</a></sup>
-                current_node = t<sup class="footnote"><a href="#fnf37379175324478baf91f18edd86a276-2">1</a></sup>
+                current_prob = -t<sup class="footnote"><a href="#fn0c6904317bb74aec98dfce4b9b0b20fd-1">0</a></sup>
+                current_node = t<sup class="footnote"><a href="#fn0c6904317bb74aec98dfce4b9b0b20fd-2">1</a></sup>
 
                 # If we&#8217;ve reached the end node, return the probability
                 if current_node == end_node:
@@ -42,12 +42,12 @@
                     continue
 
                 for k in matrix[current_node]:
-                    new_prob = current_prob * k<sup class="footnote"><a href="#fnf37379175324478baf91f18edd86a276-2">1</a></sup>
-                    if new_prob > result.get(k<sup class="footnote"><a href="#fnf37379175324478baf91f18edd86a276-1">0</a></sup>, 0):
-                        result[k<sup class="footnote"><a href="#fnf37379175324478baf91f18edd86a276-1">0</a></sup>] = new_prob
-                        heapq.heappush(q, (-new_prob, k<sup class="footnote"><a href="#fnf37379175324478baf91f18edd86a276-1">0</a></sup>))  # Push with negative probability to maintain max-heap
+                    new_prob = current_prob * k<sup class="footnote"><a href="#fn0c6904317bb74aec98dfce4b9b0b20fd-2">1</a></sup>
+                    if new_prob &gt; result.get(k<sup class="footnote"><a href="#fn0c6904317bb74aec98dfce4b9b0b20fd-1">0</a></sup>, 0):
+                        result[k<sup class="footnote"><a href="#fn0c6904317bb74aec98dfce4b9b0b20fd-1">0</a></sup>] = new_prob
+                        heapq.heappush(q, (-new_prob, k<sup class="footnote"><a href="#fn0c6904317bb74aec98dfce4b9b0b20fd-1">0</a></sup>))  # Push with negative probability to maintain max-heap
 
             return 0  # Return 0 if end_node is not reachable
 
         # Call the helper function and return its result
-        return test()
+        return test()   

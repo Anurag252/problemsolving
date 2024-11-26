@@ -1,13 +1,16 @@
 	<p>class Solution:
-    def findComplement(self, num: int) -> int:
+    def findComplement(self, num: int) -&gt; int:
         result = 0
         i = 0
-        while num > 0:
+        while num &gt; 0:
             t = num &amp; 1
-            num = num >> 1
+            num = num &gt;&gt; 1
             t = not t
             for k in range(i):
-                t = t << 1
+                t = t &lt;&lt; 1
             result = result | t
             i += 1
         return result</p>
+
+
+        

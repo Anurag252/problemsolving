@@ -1,7 +1,7 @@
 	<p>class Solution:
     def __init__(self):
         self.cache = {}
-    def minSteps(self, n: int, lastchar : str = &#8220;&#8221;, screen = &#8220;A&#8221;) -> int:
+    def minSteps(self, n: int, lastchar : str = &#8220;&#8221;, screen = &#8220;A&#8221;) -&gt; int:
         if (lastchar, screen) in self.cache:
             return self.cache[(lastchar, screen)]
         if n  len(screen) :
@@ -18,4 +18,5 @@
             v =  min(1 + self.minSteps(n, lastchar, screen +  lastchar), 
                 2 + self.minSteps(n, screen, screen +  screen))
             self.cache[(lastchar, screen)] = v
-            return v</p>
+            return v
+        </p>

@@ -1,0 +1,71 @@
+	<p>class MyCircularDeque:</p>
+
+    def __init__(self, k: int):
+        self.arr = []
+        self.size = k
+
+
+    def insertFront(self, value: int) -&gt; bool:
+        if len(self.arr) + 1 &lt;= self.size:
+            self.arr = [value] + self.arr
+            return True
+        else:
+            return False
+
+    def insertLast(self, value: int) -&gt; bool:
+        if len(self.arr) + 1 &lt;= self.size:
+            self.arr.append(value)
+            return True
+        else:
+            return False
+
+
+    def deleteFront(self) -&gt; bool:
+        if len(self.arr) &#8211; 1 &gt;= 0:
+            self.arr.pop(0)
+            return True
+        else:
+            return False
+
+
+    def deleteLast(self) -&gt; bool:
+        if len(self.arr) &#8211; 1 &gt;= 0:
+            self.arr.pop()
+            return True
+        else:
+            return False
+
+
+    def getFront(self) -&gt; int:
+        if len(self.arr) &gt; 0:
+            return self.arr<sup class="footnote" id="fnreva6567bb9be0b4e139b5ad84b9c75873e-1"><a href="#fna6567bb9be0b4e139b5ad84b9c75873e-1">0</a></sup>
+        else:
+            return -1
+
+
+    def getRear(self) -&gt; int:
+        if len(self.arr) &gt; 0:
+            return self.arr[-1]
+        else:
+            return -1  
+
+    def isEmpty(self) -&gt; bool:
+        return len(self.arr) == 0
+
+    def isFull(self) -&gt; bool:
+        return self.size == len(self.arr)
+
+
+
+	<ol>
+		<li>Your MyCircularDeque object will be instantiated and called as such:</li>
+		<li>obj = MyCircularDeque(k)</li>
+		<li>param_1 = obj.insertFront(value)</li>
+		<li>param_2 = obj.insertLast(value)</li>
+		<li>param_3 = obj.deleteFront()</li>
+		<li>param_4 = obj.deleteLast()</li>
+		<li>param_5 = obj.getFront()</li>
+		<li>param_6 = obj.getRear()</li>
+		<li>param_7 = obj.isEmpty()</li>
+		<li>param_8 = obj.isFull()</li>
+	</ol>

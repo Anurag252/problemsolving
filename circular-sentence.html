@@ -1,0 +1,15 @@
+	<p>class Solution:
+    def isCircularSentence(self, s: str) -&gt; bool:</p>
+
+        arr = s.split(&#8217; &#8216;)
+
+        prev = arr[-1][-1]
+
+        for k in arr:
+            if k<sup class="footnote" id="fnrev7ab921b4600c4120b49026d59bf8eb9e-1"><a href="#fn7ab921b4600c4120b49026d59bf8eb9e-1">0</a></sup> != prev:
+                return False
+            prev = k[-1]
+        return True
+
+
+        

@@ -1,7 +1,7 @@
 	<p>class Solution:
-    def sortArray(self, nums: List[int]) -> List[int]:
+    def sortArray(self, nums: List[int]) -&gt; List[int]:
         # Base case for recursion
-        if len(nums) <= 1:
+        if len(nums) &lt;= 1:
             return nums</p>
 
         # Divide the array into two halves
@@ -12,13 +12,13 @@
         # Merge the two sorted halves
         return self.merge(left, right)
 
-    def merge(self, left: List[int], right: List[int]) -> List[int]:
+    def merge(self, left: List[int], right: List[int]) -&gt; List[int]:
         result = []
         i = j = 0
 
         # Merge the two sorted lists into a single sorted list
-        while i < len(left) and j < len(right):
-            if left[i] < right[j]:
+        while i &lt; len(left) and j &lt; len(right):
+            if left[i] &lt; right[j]:
                 result.append(left[i])
                 i += 1
             else:

@@ -1,0 +1,27 @@
+	<p>class Solution:
+    def minimumMountainRemovals(self, nums: List[int]) -&gt; int:
+        N = len(nums)</p>
+
+        lis_length = [1] * N
+        lds_length = [1] * N
+
+        # Stores the length of longest increasing subsequence that ends at i.
+        for i in range(N):
+            for j in range(i):
+                if nums[i] &gt; nums[j]:
+                    lis_length[i] = max(lis_length[i], lis_length[j] + 1)
+
+        # Stores the length of longest decreasing subsequence that starts at i.
+        for i in range(N &#8211; 1, -1, -1):
+            for j in range(i + 1, N):
+                if nums[i] &gt; nums[j]:
+                    lds_length[i] = max(lds_length[i], lds_length[j] + 1)
+
+        min_removals = float(&#8220;inf&#8221;)
+        for i in range(N):
+            if lis_length[i] &gt; 1 and lds_length[i] &gt; 1:
+                min_removals = min(
+                    min_removals, N &#8211; lis_length[i] &#8211; lds_length[i] + 1
+                )
+
+        return min_removals
