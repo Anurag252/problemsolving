@@ -4,7 +4,7 @@ class Solution:
 
         for k in edges:
             teams[k[1]] = 1
-        print(teams)
+        #print(teams)
         result = -1
         for i, k in enumerate(teams):
             if k == 0 and result == -1:
