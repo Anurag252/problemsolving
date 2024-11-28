@@ -1,0 +1,30 @@
+	<p>from heapq import heappush, heappop<br />
+from typing import List</p>
+
+	<p>class Solution:
+    def minimumObstacles(self, grid: List[List[int]]) -&gt; int:
+        rows, cols = len(grid), len(grid<sup class="footnote" id="fnrevc09d67354dba4721ad7e2561ea54cf44-1"><a href="#fnc09d67354dba4721ad7e2561ea54cf44-1">0</a></sup>)
+        directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
+        costs = [[float(&#8216;inf&#8217;)] * cols for _ in range(rows)]
+        pq = [(0, 0, 0)]  # (cost, x, y)</p>
+
+        while pq:
+            cost, x, y = heappop(pq)
+
+            # If already visited with a cheaper cost, skip
+            if costs[x][y] &lt;= cost:
+                continue
+            costs[x][y] = cost
+
+            # If we reach the target, return the cost
+            if x  rows - 1 and y  cols &#8211; 1:
+                return cost
+
+            # Explore neighbors
+            for dx, dy in directions:
+                nx, ny = x + dx, y + dy
+                if 0 &lt;= nx &lt; rows and 0 &lt;= ny &lt; cols:
+                    heappush(pq, (cost + grid[nx][ny], nx, ny))
+
+        # If the target is unreachable (edge case)
+        return -1
