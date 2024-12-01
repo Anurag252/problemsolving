@@ -1,0 +1,27 @@
+	<p>class Solution:
+    def checkIfExist(self, arr: List[int]) -&gt; bool:
+        arr.sort()</p>
+
+        left = 0
+        right = len(arr) &#8211; 1
+        while(left &lt; right):
+            if arr[left]  0:
+                left += 1
+            s = 2 * arr[left]
+            i = bisect.bisect_left(arr[left:], s)
+            if left + i < len(arr) and arr[left+i]  s:
+                return True
+
+            if arr[left] % 2  0:
+                s = arr[left] // 2
+                i = bisect.bisect_left(arr[left:], s)
+                if left + i < len(arr) and arr[left+i]  s:
+                    return True
+
+
+            left += 1
+        return False
+
+
+
+        
