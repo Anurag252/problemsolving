@@ -37,15 +37,9 @@ class Trie:
        
         if temp == None:
             temp = self.root
-            if len(s) == 1:
-                #print(temp.count)
-                for k in temp.count:
-                    if k[1] == s:
-                        return k[0]
-                return -1
-                #return min(temp.count) if s[0] in temp.mp  and len(temp.count) > 0 else -1 #and temp[s[0]].end
+            #return min(temp.count) if s[0] in temp.mp  and len(temp.count) > 0 else -1 #and temp[s[0]].end
 
-        print(s, temp.mp, temp.count)
+        #print(s, temp.mp, temp.count)
         #isending = False
         if len(s) == 1 and s[0] in temp.mp:
                 #print(temp.count)
