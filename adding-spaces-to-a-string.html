@@ -1,0 +1,14 @@
+	<p>class Solution:
+    def addSpaces(self, s: str, spaces: List[int]) -&gt; str:
+        res = [&#8220;&#8221;] * (len(s) + len(spaces))
+        added_spaces = 0
+        mp = set(spaces)</p>
+
+
+        for idx, k in enumerate(s):
+            if idx in mp:
+                res[idx + added_spaces] = &#8220; &#8220;
+                added_spaces += 1
+            res[idx + added_spaces] = k
+        return &#8220;&#8221;.join(res)
+        
