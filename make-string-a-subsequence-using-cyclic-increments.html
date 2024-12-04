@@ -1,0 +1,32 @@
+	<p>class Solution:
+    def canMakeSubsequence(self, s1: str, s2: str) -&gt; bool:
+        arr = [&#8216;a&#8217;,&#8216;b&#8217;,&#8216;c&#8217;,&#8216;d&#8217;,&#8216;e&#8217;,&#8216;f&#8217;,&#8216;g&#8217;,&#8216;h&#8217;,&#8216;i&#8217;,&#8216;j&#8217;,&#8216;k&#8217;,&#8216;l&#8217;,&#8216;m&#8217;,&#8216;n&#8217;,&#8216;o&#8217;,&#8216;p&#8217;,&#8216;q&#8217;,&#8216;r&#8217;,&#8216;s&#8217;,&#8216;t&#8217;,&#8216;u&#8217;,&#8216;v&#8217;,&#8216;w&#8217;,&#8216;x&#8217;,&#8216;y&#8217;,&#8216;z&#8217;,&#8216;a&#8217;]</p>
+
+        idx1 = 0
+        idx2 = 0
+        while(True):
+            #print(s1, s2)
+
+            if s1[idx1:]  s2[idx2:]:
+                return True
+            if len(s2[idx2:])  0:
+                return True
+            if len(s1[idx1:]) &lt; len(s2[idx2:]):
+                return False
+            k1 = s1[idx1]
+            k2 = s2[idx2]
+
+
+            if k1 != k2 and arr[ord(k1) &#8211; 97 + 1] != arr[ord(k2) &#8211; 97]:
+                    idx1 += 1
+                    continue # skip the char
+
+            if k1  k2  :
+                    idx1 += 1
+                    idx2 += 1
+                    continue
+                #print(arr[ord(k1) - 97 + 1] , arr[ord(k2) - 97])
+            if arr[ord(k1) - 97 + 1]  arr[ord(k2) &#8211; 97] :
+                    idx1 += 1
+                    idx2 += 1
+                    continue
