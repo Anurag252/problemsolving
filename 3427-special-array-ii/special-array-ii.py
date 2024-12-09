@@ -15,7 +15,7 @@ class Solution:
         for k in arr2:
             temp += k
             arr1.append(temp)
-        print(arr1, arr2, arr)
+        #print(arr1, arr2, arr)
         result = []
         for k in queries:
             if arr1[k[1]] - arr1[k[0]] == k[1] - k[0]:
