@@ -1,0 +1,64 @@
+	<p>class Solution:
+    def maximumLength(self, s: str) -&gt; int:
+        f = {}
+        i = 0
+        while(i &lt; len(s)):
+            j = i + 1
+            while j &lt; len(s) and s[j]  s[i]:
+                j += 1
+            if s[i] in f:
+                if len(f[s[i]]) >= 3:
+                    if f[s[i]][0]   min(f[s[i]]):
+                        f[s[i]]<sup class="footnote" id="fnrev6542a72f0ae545c18c86b526726a9f9b-1"><a href="#fn6542a72f0ae545c18c86b526726a9f9b-1">0</a></sup> = j &#8211; i
+                    elif f[s[i]]<sup class="footnote" id="fnrev6542a72f0ae545c18c86b526726a9f9b-2"><a href="#fn6542a72f0ae545c18c86b526726a9f9b-2">1</a></sup>   min(f[s[i]]):
+                        f[s[i]][1] = j - i
+                    else:
+                        f[s[i]][2] = j - i
+                else:
+                    f[s[i]].append(j - i)
+            else :
+                f[s[i]] = []
+                f[s[i]].append(j - i)
+            i = j
+        print(f)
+        res = -1
+        for v in f.values():
+            if sum(v) >= 3:
+                res = max(1, res)
+                v.sort()
+                if len(v)  3 and v<sup class="footnote"><a href="#fn6542a72f0ae545c18c86b526726a9f9b-2">1</a></sup> &lt; v<sup class="footnote" id="fnrev6542a72f0ae545c18c86b526726a9f9b-3"><a href="#fn6542a72f0ae545c18c86b526726a9f9b-3">2</a></sup>:
+                    res = max(res, max(v<sup class="footnote"><a href="#fn6542a72f0ae545c18c86b526726a9f9b-3">2</a></sup>-2, v<sup class="footnote"><a href="#fn6542a72f0ae545c18c86b526726a9f9b-2">1</a></sup>))
+                elif len(v)  2 and v[0] < v[1]:
+                    res = max(res, max(v[1]-2, v[0]))
+                elif len(v)  1 :
+                    res = max(res, v<sup class="footnote"><a href="#fn6542a72f0ae545c18c86b526726a9f9b-1">0</a></sup>-2)
+                else :
+                    print(v)
+                    if len(v) &gt;= 3 and len(set(v))  1:
+                        res = max(res, max(v))
+                        continue
+                    if len(v) >= 3 and len(set(v))  2:
+                        res = max(res, max(v)-1)
+                        continue
+                    if len(v) &lt; 3 and len(set(v))  1:
+                        res = max(res, max(v)-1)
+                        continue
+                    if len(v) < 3 and len(set(v))  2:
+                        res = max(res, max(v)-1)
+                        continue
+                #ans is always max(v) &#8211; 1 0r max(v)-2</p>
+
+        return res
+
+
+
+
+
+
+	<p>&#8220;&#8221;&#8220;
+        4 -3 + 1
+        min(num of continuos occurence) &#8211;  3 + 1
+        aaaa aaa aa
+        aa 
+        4,3,2
+        &#8220;&#8221;&#8220;</p>
