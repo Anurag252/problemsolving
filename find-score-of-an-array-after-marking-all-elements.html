@@ -1,0 +1,19 @@
+	<p>class Solution:
+    def findScore(self, nums: List[int]) -&gt; int:
+        s = set()</p>
+
+        h = []
+
+        for idx, k in enumerate(nums):
+            heapq.heappush(h, (k, idx))
+        score = 0
+        while(len(h) &gt; 0):
+            item = heapq.heappop(h)
+            if item<sup class="footnote" id="fnrev61570d3de712431c9ce96c0a70d4c83a-1"><a href="#fn61570d3de712431c9ce96c0a70d4c83a-1">1</a></sup> not in s:
+                s.add(item<sup class="footnote"><a href="#fn61570d3de712431c9ce96c0a70d4c83a-1">1</a></sup>)
+                s.add(item<sup class="footnote"><a href="#fn61570d3de712431c9ce96c0a70d4c83a-1">1</a></sup> + 1)
+                s.add(item<sup class="footnote"><a href="#fn61570d3de712431c9ce96c0a70d4c83a-1">1</a></sup> &#8211; 1)
+                score += item<sup class="footnote" id="fnrev61570d3de712431c9ce96c0a70d4c83a-2"><a href="#fn61570d3de712431c9ce96c0a70d4c83a-2">0</a></sup>
+        return score
+
+        
