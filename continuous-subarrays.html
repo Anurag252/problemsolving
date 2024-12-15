@@ -1,74 +1,39 @@
 	<p>class Solution:
-    def continuousSubarrays(self, nums: List[int]) -&gt; int:
-        # Map to maintain sorted frequency map of current window
-        freq = {}
-        left = right = 0
-        count = 0  # Total count of valid subarrays</p>
+    def continuousSubarrays(self, nums: List[int]) -&gt; int:</p>
 
-        while right &lt; len(nums):
-            # Add current element to frequency map
-            freq[nums[right]] = freq.get(nums[right], 0) + 1
-
-            # While window violates the condition |nums[i] &#8211; nums[j]| â¤ 2
-            # Shrink window from left
-            while max(freq) &#8211; min(freq) &gt; 2:
-                # Remove leftmost element from frequency map
-                freq[nums[left]] -= 1
-                if freq[nums[left]] == 0:
-                    del freq[nums[left]]
-                left += 1
-
-            # Add count of all valid subarrays ending at right
-            count += right &#8211; left + 1
-            right += 1
-
-        return count
-
-
-	<p>&#8220;&#8221;&#8220;
         left = 0
         right = 0
-        arr = []
-        result = 0</p>
+        arr = {}
+        result = 0
 
 
 
         def valid_range(n, arr):
-            if len(arr)  0:
-                arr.append(n)
+
+            if len(arr) == 0:
+                arr[n] = 1
                 return True
-            if len(arr)  1:
-                if arr<sup class="footnote" id="fnrev98f9b4eb77864e5790b65afe456f8272-1"><a href="#fn98f9b4eb77864e5790b65afe456f8272-1">0</a></sup> + 2 &lt;= n or arr<sup class="footnote"><a href="#fn98f9b4eb77864e5790b65afe456f8272-1">0</a></sup> &#8211; 2 &lt;= n:
-                    arr.append(n)
-                    arr.sort()
-                    return True
+            #print(arr1, arr1<sup class="footnote" id="fnrevbc46000194ba42409869832d40a78913-1"><a href="#fnbc46000194ba42409869832d40a78913-1">0</a></sup>, arr1[-1])
+            if max(arr.keys()) &#8211; n &lt;= 2 and  n &#8211; min(arr.keys()) &lt;= 2:
+                if n in arr:
+                    arr[n] += 1
                 else:
-                    return False
-            if len(arr) == 2:
-                return n in arr
-
-        def not_valid(left , right ,  arr):
-
-            while(right &gt; left):
-
-
-
-
-        def add(t):
-            count = 0
-            for k in range(t+1):
-                count += k
-            return count
+                    arr[n] = 1
+                return True
+            return False 
 
         while(left &lt; len(nums) and right &lt; len(nums)):
-            print(left, right, arr)
+            #print(left, right, arr)
             if valid_range(nums[right], arr):
+                result += right &#8211; left + 1
                 right += 1
             else:
-                result += add(right &#8211; left)
-                arr = []
-                while(not_valid(left, right, arr)):
-                    left += 1
+                #result += add(right &#8211; left)
+                #print(nums[left], arr.index(nums[left]))
+                arr[nums[left]] -= 1
+                if arr[nums[left]] == 0:
+                    del arr[nums[left]]
+                left += 1
+        #print(arr, left, right)
+        #result += add(right &#8211; left)
         return result
-
-        &#8220;&#8221;&#8220;
