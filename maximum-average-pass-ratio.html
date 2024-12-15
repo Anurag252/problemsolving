@@ -1,0 +1,39 @@
+	<p>class Solution:
+    def maxAverageRatio(self, classes: List[List[int]], extraStudents: int) -&gt; float:
+        if len(classes) == 0:
+            return 0
+        h = []
+        for idx, k in enumerate(classes):
+            heapq.heappush(h, ( -(k<sup class="footnote" id="fnrev8f011adc754b48e69af022c953d8d236-1"><a href="#fn8f011adc754b48e69af022c953d8d236-1">1</a></sup> &#8211; k<sup class="footnote" id="fnrev8f011adc754b48e69af022c953d8d236-2"><a href="#fn8f011adc754b48e69af022c953d8d236-2">0</a></sup>) / (k<sup class="footnote"><a href="#fn8f011adc754b48e69af022c953d8d236-1">1</a></sup> * k<sup class="footnote"><a href="#fn8f011adc754b48e69af022c953d8d236-1">1</a></sup> + k<sup class="footnote"><a href="#fn8f011adc754b48e69af022c953d8d236-1">1</a></sup>), idx ))</p>
+
+        &#8220;&#8221;&#8220;
+        a/b
+        a + 1/b + 1
+        a/b &#8211; (a + 1)/(b + 1)
+        ab +a &#8211; ab -b / (bb + b)
+
+        (b-a) / (bb +b)
+        &#8220;&#8221;&#8220;
+
+        while(extraStudents &gt; 0):
+            #h.sort(key=lambda x : -(x<sup class="footnote"><a href="#fn8f011adc754b48e69af022c953d8d236-1">1</a></sup> &#8211; x<sup class="footnote"><a href="#fn8f011adc754b48e69af022c953d8d236-2">0</a></sup>) / (x<sup class="footnote"><a href="#fn8f011adc754b48e69af022c953d8d236-1">1</a></sup> * x<sup class="footnote"><a href="#fn8f011adc754b48e69af022c953d8d236-1">1</a></sup> + x<sup class="footnote"><a href="#fn8f011adc754b48e69af022c953d8d236-1">1</a></sup>))
+            item1, idx = heapq.heappop(h)
+            #print(h)
+            classes[idx]<sup class="footnote"><a href="#fn8f011adc754b48e69af022c953d8d236-2">0</a></sup> += 1
+            classes[idx]<sup class="footnote"><a href="#fn8f011adc754b48e69af022c953d8d236-1">1</a></sup> += 1
+            heapq.heappush(h, (-(classes[idx]<sup class="footnote"><a href="#fn8f011adc754b48e69af022c953d8d236-1">1</a></sup> &#8211; classes[idx]<sup class="footnote"><a href="#fn8f011adc754b48e69af022c953d8d236-2">0</a></sup>) / (classes[idx]<sup class="footnote"><a href="#fn8f011adc754b48e69af022c953d8d236-1">1</a></sup> * classes[idx]<sup class="footnote"><a href="#fn8f011adc754b48e69af022c953d8d236-1">1</a></sup> + classes[idx]<sup class="footnote"><a href="#fn8f011adc754b48e69af022c953d8d236-1">1</a></sup>) , idx))
+            extraStudents -= 1
+        result = 0
+
+        for k in h:
+            result += (classes[k<sup class="footnote"><a href="#fn8f011adc754b48e69af022c953d8d236-1">1</a></sup>]<sup class="footnote"><a href="#fn8f011adc754b48e69af022c953d8d236-2">0</a></sup>/classes[k<sup class="footnote"><a href="#fn8f011adc754b48e69af022c953d8d236-1">1</a></sup>]<sup class="footnote"><a href="#fn8f011adc754b48e69af022c953d8d236-1">1</a></sup> * 100)
+        #print(h, result)
+        return (result / len(h)) / 100
+
+
+        # at each level find the max change that can occur by adding one student
+&#8220;&#8221;&#8220;
+        0.5 0.6 1
+        0.66 0.6 1
+        0.5 0.66
+        &#8220;&#8221;&#8220;
