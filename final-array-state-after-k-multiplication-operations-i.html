@@ -1,0 +1,16 @@
+	<p>class Solution:
+    def getFinalState(self, nums: List[int], k: int, multiplier: int) -&gt; List[int]:
+        h = []</p>
+
+        for idx, m in enumerate(nums):
+            heapq.heappush(h, (m, idx))
+
+        while(k &gt; 0):
+            (item, idx) = heapq.heappop(h)
+            heapq.heappush(h, (item * multiplier , idx))
+            k -= 1
+        h.sort(key= lambda x : x<sup class="footnote" id="fnrevb4b59a6a2aa641bca1d17512cf5f4cd9-1"><a href="#fnb4b59a6a2aa641bca1d17512cf5f4cd9-1">1</a></sup>)
+        return list(map(lambda x : x<sup class="footnote" id="fnrevb4b59a6a2aa641bca1d17512cf5f4cd9-2"><a href="#fnb4b59a6a2aa641bca1d17512cf5f4cd9-2">0</a></sup>, h))
+
+
+        
