@@ -13,10 +13,8 @@ class Solution:
             
             while(stack and result[stack[-1]] >= k):
                 t = stack.pop(-1)
-                print(t, result[t],k)
                 result[t] -= k
             stack.append(idx)
-            print(prices[stack[-1]])
         return result
 
 
