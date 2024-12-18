@@ -5,27 +5,27 @@
         for k,l,m in zip(positions, healths, directions):
             arr.append((k,l,m))</p>
 
-        arr.sort(reverse=False, key=lambda x : x<sup class="footnote" id="fnrev3181894c0cd847258f2385f64bbdd077-1"><a href="#fn3181894c0cd847258f2385f64bbdd077-1">0</a></sup>)
+        arr.sort(reverse=False, key=lambda x : x<sup class="footnote" id="fnrev9bd04e1130ba469181087dd2635952bc-1"><a href="#fn9bd04e1130ba469181087dd2635952bc-1">0</a></sup>)
 
         for k in arr:
             stack.append(k)
-            while len(stack) &gt; 1 and (stack[-1]<sup class="footnote" id="fnrev3181894c0cd847258f2385f64bbdd077-2"><a href="#fn3181894c0cd847258f2385f64bbdd077-2">2</a></sup>  'L' and stack[-2][2]  &#8216;R&#8217;):
+            while len(stack) &gt; 1 and (stack[-1]<sup class="footnote" id="fnrev9bd04e1130ba469181087dd2635952bc-2"><a href="#fn9bd04e1130ba469181087dd2635952bc-2">2</a></sup>  'L' and stack[-2][2]  &#8216;R&#8217;):
                 a = stack.pop()
                 b = stack.pop()
-                if a<sup class="footnote" id="fnrev3181894c0cd847258f2385f64bbdd077-3"><a href="#fn3181894c0cd847258f2385f64bbdd077-3">1</a></sup> &gt; b<sup class="footnote"><a href="#fn3181894c0cd847258f2385f64bbdd077-3">1</a></sup>:
-                    stack.append((a<sup class="footnote"><a href="#fn3181894c0cd847258f2385f64bbdd077-1">0</a></sup>, a<sup class="footnote"><a href="#fn3181894c0cd847258f2385f64bbdd077-3">1</a></sup>-1, a<sup class="footnote"><a href="#fn3181894c0cd847258f2385f64bbdd077-2">2</a></sup>))
-                elif a<sup class="footnote"><a href="#fn3181894c0cd847258f2385f64bbdd077-3">1</a></sup> &lt; b<sup class="footnote"><a href="#fn3181894c0cd847258f2385f64bbdd077-3">1</a></sup>:
-                    stack.append((b<sup class="footnote"><a href="#fn3181894c0cd847258f2385f64bbdd077-1">0</a></sup>, b<sup class="footnote"><a href="#fn3181894c0cd847258f2385f64bbdd077-3">1</a></sup>-1, b<sup class="footnote"><a href="#fn3181894c0cd847258f2385f64bbdd077-2">2</a></sup>))
+                if a<sup class="footnote" id="fnrev9bd04e1130ba469181087dd2635952bc-3"><a href="#fn9bd04e1130ba469181087dd2635952bc-3">1</a></sup> &gt; b<sup class="footnote"><a href="#fn9bd04e1130ba469181087dd2635952bc-3">1</a></sup>:
+                    stack.append((a<sup class="footnote"><a href="#fn9bd04e1130ba469181087dd2635952bc-1">0</a></sup>, a<sup class="footnote"><a href="#fn9bd04e1130ba469181087dd2635952bc-3">1</a></sup>-1, a<sup class="footnote"><a href="#fn9bd04e1130ba469181087dd2635952bc-2">2</a></sup>))
+                elif a<sup class="footnote"><a href="#fn9bd04e1130ba469181087dd2635952bc-3">1</a></sup> &lt; b<sup class="footnote"><a href="#fn9bd04e1130ba469181087dd2635952bc-3">1</a></sup>:
+                    stack.append((b<sup class="footnote"><a href="#fn9bd04e1130ba469181087dd2635952bc-1">0</a></sup>, b<sup class="footnote"><a href="#fn9bd04e1130ba469181087dd2635952bc-3">1</a></sup>-1, b<sup class="footnote"><a href="#fn9bd04e1130ba469181087dd2635952bc-2">2</a></sup>))
 
         result = [None] * len(stack)
         dic = {}
         for k in stack:
-            dic[k<sup class="footnote"><a href="#fn3181894c0cd847258f2385f64bbdd077-1">0</a></sup>] = (k<sup class="footnote"><a href="#fn3181894c0cd847258f2385f64bbdd077-3">1</a></sup>, k<sup class="footnote"><a href="#fn3181894c0cd847258f2385f64bbdd077-2">2</a></sup>)
+            dic[k<sup class="footnote"><a href="#fn9bd04e1130ba469181087dd2635952bc-1">0</a></sup>] = (k<sup class="footnote"><a href="#fn9bd04e1130ba469181087dd2635952bc-3">1</a></sup>, k<sup class="footnote"><a href="#fn9bd04e1130ba469181087dd2635952bc-2">2</a></sup>)
 
         i = 0
         for k in positions:
             if k in dic:
-                result[i] = dic[k]<sup class="footnote"><a href="#fn3181894c0cd847258f2385f64bbdd077-1">0</a></sup>
+                result[i] = dic[k]<sup class="footnote"><a href="#fn9bd04e1130ba469181087dd2635952bc-1">0</a></sup>
                 i  = i + 1
         return result
 
