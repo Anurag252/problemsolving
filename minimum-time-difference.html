@@ -3,7 +3,7 @@
         result = []
         for k in timePoints:
             hour = k.split(&#8220;:<a href="">)[0]
-            minute = k.split(</a>&#8221;)<sup class="footnote" id="fnrev7468e326bd2b442682e066142201f3ea-1"><a href="#fn7468e326bd2b442682e066142201f3ea-1">1</a></sup>
+            minute = k.split(</a>&#8221;)<sup class="footnote" id="fnrev022d16e7a8604e74ac4b171264d960dd-1"><a href="#fn022d16e7a8604e74ac4b171264d960dd-1">1</a></sup>
             total = int(hour) * 60 + int(minute)
             result.append(total)</p>
 
@@ -15,7 +15,7 @@
             diff = min(diff, result[start] &#8211; result[start-1])
             start += 1
 
-        diff = min(diff, result<sup class="footnote" id="fnrev7468e326bd2b442682e066142201f3ea-2"><a href="#fn7468e326bd2b442682e066142201f3ea-2">0</a></sup> + 1440 &#8211; result[-1])
+        diff = min(diff, result<sup class="footnote" id="fnrev022d16e7a8604e74ac4b171264d960dd-2"><a href="#fn022d16e7a8604e74ac4b171264d960dd-2">0</a></sup> + 1440 &#8211; result[-1])
         return diff
 
         
