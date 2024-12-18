@@ -1,0 +1,21 @@
+	<p>class Solution:
+    def finalPrices(self, prices: List[int]) -&gt; List[int]:
+        #find next smaller element to the right
+        # if we take next greater element on the left &#8211; does not work
+        # keep adding elements till you find a smaller element
+        # once you find a smaller element, pop till last discounted element 
+        result = []
+        disc = set()
+        for idx, k in enumerate(prices):
+            i = len(result) &#8211; 1
+            while(i &gt;= 0):
+                if result[i]<sup class="footnote" id="fnrevba080c847b2647329e9c9ddd7394b56c-1"><a href="#fnba080c847b2647329e9c9ddd7394b56c-1">1</a></sup> in disc:
+                    i -= 1
+                    continue
+                if result[i]<sup class="footnote" id="fnrevba080c847b2647329e9c9ddd7394b56c-2"><a href="#fnba080c847b2647329e9c9ddd7394b56c-2">0</a></sup> &#8211; k &gt;= 0:
+                    result[i] = (result[i]<sup class="footnote"><a href="#fnba080c847b2647329e9c9ddd7394b56c-2">0</a></sup> &#8211; k, result[i]<sup class="footnote"><a href="#fnba080c847b2647329e9c9ddd7394b56c-1">1</a></sup>)
+                    disc.add(result[i]<sup class="footnote"><a href="#fnba080c847b2647329e9c9ddd7394b56c-1">1</a></sup>)
+                i -= 1
+            result.append((k, idx))
+            #print(result, disc)
+        return list(map(lambda x : x<sup class="footnote"><a href="#fnba080c847b2647329e9c9ddd7394b56c-2">0</a></sup>, result))</p>
