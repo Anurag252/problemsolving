@@ -1,0 +1,28 @@
+	<p>class Solution:
+    def maxChunksToSorted(self, arr: List[int]) -&gt; int:</p>
+
+        def partition(arr):
+            arr1 = copy.deepcopy(arr)
+            arr1.sort()
+            if len(arr)  0:
+                return (0, arr)
+            if len(arr)  1:
+                return (1, arr)
+
+            result = 1
+
+
+            for idx, k in enumerate(arr):
+                if len(arr[0:idx+1])  0 or len(arr[idx+1:])  0:
+                    continue
+
+                a,b = partition(arr[0:idx+1])
+                c,d = partition(arr[idx+1:])
+                if b + d == arr1 :
+                    #print(arr1, a,c)
+                    result = max(result,a + c)
+            return (result, arr1)
+        return partition(arr)<sup class="footnote" id="fnrev5239591624b94c27b6ff5f61e2c8e707-1"><a href="#fn5239591624b94c27b6ff5f61e2c8e707-1">0</a></sup>
+
+
+        
