@@ -57,8 +57,8 @@
         #print(data)
         arr = data.split(&#8220;#&#8221;)
 
-        inorder = arr<sup class="footnote" id="fnreva2b029d4a0984ce0b1170a94dcc842fb-1"><a href="#fna2b029d4a0984ce0b1170a94dcc842fb-1">0</a></sup>
-        preorder = arr<sup class="footnote" id="fnreva2b029d4a0984ce0b1170a94dcc842fb-2"><a href="#fna2b029d4a0984ce0b1170a94dcc842fb-2">1</a></sup>
+        inorder = arr<sup class="footnote" id="fnrev159074792ebd4bc39d81ed19cb99599c-1"><a href="#fn159074792ebd4bc39d81ed19cb99599c-1">0</a></sup>
+        preorder = arr<sup class="footnote" id="fnrev159074792ebd4bc39d81ed19cb99599c-2"><a href="#fn159074792ebd4bc39d81ed19cb99599c-2">1</a></sup>
         return self.build_tree(inorder, preorder)
 
     def build_tree(self, inorder: str, preorder: str) -&gt; TreeNode:
@@ -66,12 +66,12 @@
             return None
         inord = inorder.split(&#8216;,&#8217;)
         preord = preorder.split(&#8216;,&#8217;)
-        root = TreeNode(preord<sup class="footnote"><a href="#fna2b029d4a0984ce0b1170a94dcc842fb-1">0</a></sup>)
-        left_inorder = filter(lambda a: int(a) &lt; int(preord<sup class="footnote"><a href="#fna2b029d4a0984ce0b1170a94dcc842fb-1">0</a></sup>), inord)
-        right_inorder = filter(lambda a: int(a) &gt; int(preord<sup class="footnote"><a href="#fna2b029d4a0984ce0b1170a94dcc842fb-1">0</a></sup>), inord)
+        root = TreeNode(preord<sup class="footnote"><a href="#fn159074792ebd4bc39d81ed19cb99599c-1">0</a></sup>)
+        left_inorder = filter(lambda a: int(a) &lt; int(preord<sup class="footnote"><a href="#fn159074792ebd4bc39d81ed19cb99599c-1">0</a></sup>), inord)
+        right_inorder = filter(lambda a: int(a) &gt; int(preord<sup class="footnote"><a href="#fn159074792ebd4bc39d81ed19cb99599c-1">0</a></sup>), inord)
 
-        left_preorder = filter(lambda a: int(a) &lt; int(preord<sup class="footnote"><a href="#fna2b029d4a0984ce0b1170a94dcc842fb-1">0</a></sup>), preord)
-        right_preorder = filter(lambda a: int(a) &gt; int(preord<sup class="footnote"><a href="#fna2b029d4a0984ce0b1170a94dcc842fb-1">0</a></sup>), preord)
+        left_preorder = filter(lambda a: int(a) &lt; int(preord<sup class="footnote"><a href="#fn159074792ebd4bc39d81ed19cb99599c-1">0</a></sup>), preord)
+        right_preorder = filter(lambda a: int(a) &gt; int(preord<sup class="footnote"><a href="#fn159074792ebd4bc39d81ed19cb99599c-1">0</a></sup>), preord)
 
         #print(left_inorder, right_inorder, left_preorder, right_preorder)
 
