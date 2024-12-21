@@ -1,38 +1,61 @@
-from typing import List
+class Tree:
+    def __init__(self, root):
+        self.root = root
+
+class Node:
+    def __init__(self,val, left= None, right=None):
+        self.val = val
+        self.left= left
+        self.right= right
+        self.sum = 0
+
+
 
 class Solution:
     def maxKDivisibleComponents(self, n: int, edges: List[List[int]], values: List[int], k: int) -> int:
-        # Build an adjacency list for the graph
-        graph = {i: [] for i in range(n)}
-        for u, v in edges:
-            graph[u].append(v)
-            graph[v].append(u)
+        # find the leaf node equale to k
+        # then find the lvl 1 tree sum equale to k
+        # find all trees lvl 2
+
+        new_edges = {i: [] for i in range(n)}
+        for m in edges:
+            if m[0] not in new_edges:
+                new_edges[m[0]] = []
+            new_edges[m[0]].append(m[1])
+
+            if m[1] not in new_edges:
+                new_edges[m[1]] = []
+            new_edges[m[1]].append(m[0])
+        print(new_edges)
+
+        count = {}
+        def traverse(m, s):
+
+            s.add(m)
+            if m not in new_edges:
+               
+                if (values[m] % k) == 0:
+                    count["sum"] += 1
+                    return 0
+                return values[m]
+            fin = 0
+            for n in new_edges[m]:
+                if n not in s :
+                    c = traverse(n, s)
+                    if (c)  % k == 0:
+                        count["sum"] += 1
+                        c = 0
+                    fin += c
+            return fin + values[m]
+
+                    
+
+
+        ans = 0
+        count["sum"] = 0
+        s= set()
+        if traverse(0, s) % k == 0:
+            count["sum"] += 1
+        return count["sum"]
         
-        # Track visited nodes
-        visited = set()
-        count = 0  # Track the number of k-divisible components
 
-        def dfs(node):
-            visited.add(node)
-            subtree_sum = values[node]
-
-            # Traverse all neighbors
-            for neighbor in graph[node]:
-                if neighbor not in visited:
-                    child_sum = dfs(neighbor)
-                    if child_sum % k == 0:
-                        nonlocal count
-                        count += 1
-                    else:
-                        subtree_sum += child_sum
-            
-            return subtree_sum
-
-        # Start DFS from any node (e.g., 0)
-        total_sum = dfs(0)
-
-        # If the entire tree sum is divisible by k, count it as a component
-        if total_sum % k == 0:
-            count += 1
-
-        return count
