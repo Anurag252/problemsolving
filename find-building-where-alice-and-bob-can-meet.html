@@ -1,0 +1,38 @@
+	<p>class Solution:
+    def leftmostBuildingQueries(self, heights, queries):
+        mono_stack = []
+        result = [-1 for _ in range(len(queries))]
+        new_queries = [[] for _ in range(len(heights))]
+        for i in range(len(queries)):
+            a = queries[i]<sup class="footnote" id="fnrevdc2751bab84c4a98ab93cf829557ba0f-1"><a href="#fndc2751bab84c4a98ab93cf829557ba0f-1">0</a></sup>
+            b = queries[i]<sup class="footnote" id="fnrevdc2751bab84c4a98ab93cf829557ba0f-2"><a href="#fndc2751bab84c4a98ab93cf829557ba0f-2">1</a></sup>
+            if a &gt; b:
+                a, b = b, a
+            if heights[b] &gt; heights[a] or a == b:
+                result[i] = b
+            else:
+                new_queries[b].append((heights[a], i))</p>
+
+        for i in range(len(heights) &#8211; 1, -1, -1):
+            mono_stack_size = len(mono_stack)
+            for a, b in new_queries[i]:
+                position = self.search(a, mono_stack)
+                if position &lt; mono_stack_size and position &gt;= 0:
+                    result[b] = mono_stack[position]<sup class="footnote"><a href="#fndc2751bab84c4a98ab93cf829557ba0f-2">1</a></sup>
+            while mono_stack and mono_stack[-1]<sup class="footnote"><a href="#fndc2751bab84c4a98ab93cf829557ba0f-1">0</a></sup> &lt;= heights[i]:
+                mono_stack.pop()
+            mono_stack.append((heights[i], i))
+        return result
+
+    def search(self, height, mono_stack):
+        left = 0
+        right = len(mono_stack) &#8211; 1
+        ans = -1
+        while left &lt;= right:
+            mid = (left + right) // 2
+            if mono_stack[mid]<sup class="footnote"><a href="#fndc2751bab84c4a98ab93cf829557ba0f-1">0</a></sup> &gt; height:
+                ans = max(ans, mid)
+                left = mid + 1
+            else:
+                right = mid &#8211; 1
+        return ans
