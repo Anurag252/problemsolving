@@ -1,0 +1,32 @@
+	<ol>
+		<li>Definition for a binary tree node.</li>
+		<li>class TreeNode:</li>
+		<li>def __init__(self, val=0, left=None, right=None):</li>
+		<li>self.val = val</li>
+		<li>self.left = left</li>
+		<li>self.right = right<br />
+class Solution:
+    def largestValues(self, root: Optional[TreeNode]) -&gt; List[int]:</li>
+	</ol>
+
+        res =[]
+        <span class="caps">INF</span> = &#8211; 2 ** 32
+
+        def recurse(q, res):
+            temp = []
+            mx = INF
+            while(q):
+                item = q.pop(0)
+                mx = max(mx, item.val)
+                if item.left:
+                    temp.append(item.left)
+
+                if item.right:
+                    temp.append(item.right)
+            if mx != <span class="caps">INF</span>:
+                res.append(mx)
+            if temp:
+                recurse(temp, res)
+        if root != None:
+            recurse([root], res)
+        return res
