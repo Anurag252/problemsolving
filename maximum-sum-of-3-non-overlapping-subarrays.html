@@ -1,0 +1,49 @@
+	<p>from typing import List</p>
+
+	<p>class Solution:
+    def maxSumOfThreeSubarrays(self, nums: List[int], k: int) -&gt; List[int]:
+        # Step 1: Calculate the sums of all subarrays of size k
+        n = len(nums)
+        h = [0] * (n &#8211; k + 1)
+        curr_sum = sum(nums[:k])
+        h<sup class="footnote" id="fnrev808469b6ee7749c7b29599e3e0716800-1"><a href="#fn808469b6ee7749c7b29599e3e0716800-1">0</a></sup> = curr_sum
+        for i in range(k, n):
+            curr_sum += nums[i] &#8211; nums[i &#8211; k]
+            h[i &#8211; k + 1] = curr_sum</p>
+
+        # Step 2: DP to find max sums for 1, 2, and 3 subarrays
+        dp = [<sup class="footnote"><a href="#fn808469b6ee7749c7b29599e3e0716800-1">0</a></sup> * 4 for _ in range(len(h) + 1)]
+        idx = [[-1] * 4 for _ in range(len(h) + 1)]
+
+        for i in range(1, len(h) + 1):
+            for j in range(1, 4):
+                # Don&#8217;t take the current subarray
+                if dp[i &#8211; 1][j] &gt;= dp[i &#8211; k][j &#8211; 1] + h[i &#8211; 1]:
+                    dp[i][j] = dp[i &#8211; 1][j]
+                    idx[i][j] = idx[i &#8211; 1][j]
+                else:
+                    # Take the current subarray
+                    dp[i][j] = dp[i &#8211; k][j &#8211; 1] + h[i &#8211; 1]
+                    idx[i][j] = i &#8211; 1
+
+        # Step 3: Backtrack to find the indices
+        result = []
+        j = 3
+        i = len(h)
+        while j &gt; 0:
+            if idx[i][j] != -1:
+                result.append(idx[i][j])
+                i = idx[i][j] &#8211; k + 1
+            j -= 1
+
+        return result[::-1]
+
+
+	<p>&#8220;&#8221;&#8220;
+        T[i,3] = max(T[i-k,2] + S[i], T[i-1, 3]) 
+        T[i,2] = (T[i-k]+ s[i], T[i-1, 2])
+        T[i] = max(T[i-1] , S[i])
+        &#8220;&#8221;&#8220;</p>
+
+
+        
