@@ -1,0 +1,52 @@
+	<p>class Solution:
+    def numWays(self, words: List[str], target: str) -&gt; int:</p>
+
+        freq = {}
+        l = len(words<sup class="footnote" id="fnrev43056f493b3b4ed2b916fdd16b60e613-1"><a href="#fn43056f493b3b4ed2b916fdd16b60e613-1">0</a></sup>)
+        i = 0
+        while(i &lt; l):
+            s = {}
+            for k in words:
+                if k[i] in s:
+                    s[k[i]] += 1
+                else:
+                    s[k[i]] = 1
+            freq[i] = s
+            i += 1
+        print(freq)
+
+        # time complexity 
+        # n words m length each = n * m
+        # T[i,j,k] = 1 + T[i,j-1,k-1] if a[j] == target[k] in any string
+
+        dp = [[0 for _ in range(len(target) + 1)] for _ in range(l + 1)]
+        print(dp)
+        # Base case: If the target length is 0, there&#8217;s exactly 1 way to match it
+        for i in range(l + 1):
+            dp[i]<sup class="footnote"><a href="#fn43056f493b3b4ed2b916fdd16b60e613-1">0</a></sup> = 1
+        for i in range(1, l + 1):  # Iterate over columns in `freq`
+            for j in range(1, len(target) + 1):  # Iterate over characters in `target`
+        # Carry over the previous value (skip the current column)
+                dp[i][j] = dp[i &#8211; 1][j]
+
+        # If the current character matches and exists in freq[i &#8211; 1]
+                if target[j &#8211; 1] in freq[i &#8211; 1]:
+                    dp[i][j] += dp[i &#8211; 1][j &#8211; 1] * freq[i &#8211; 1][target[j &#8211; 1]]
+
+            dp[i][j] %= (10 ** 9 + 7)  # Keep values modulo 10^9 + 7
+        return dp[l][len(target)]
+
+
+
+        @cache
+        def recurse(idx, target, occ):
+            if len(target) == 0:
+                return occ
+            result = 0
+            i = idx
+            while(i &lt; l):
+                if target<sup class="footnote"><a href="#fn43056f493b3b4ed2b916fdd16b60e613-1">0</a></sup> in freq[i]:
+                    result += recurse(i+1, target[1:], occ * freq[i][target<sup class="footnote"><a href="#fn43056f493b3b4ed2b916fdd16b60e613-1">0</a></sup>])
+                i += 1
+            return result
+        return recurse(0,target, 1) % (10 ** 9 + 7)
