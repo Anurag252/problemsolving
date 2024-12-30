@@ -21,8 +21,10 @@ class Solution:
                 continue
             if i >= low+1:
                 T[i] += T[i-zero] + T[i-one]
+                T[i] = T[i] % (10 ** 9 + 7)
                 continue
             T[i] += T[i-zero] + T[i-one]
+            T[i] = T[i] % (10 ** 9 + 7)
         return sum(T[low:high+2]) % (10 ** 9 + 7)
             
 
