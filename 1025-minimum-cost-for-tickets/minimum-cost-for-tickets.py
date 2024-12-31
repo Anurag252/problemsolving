@@ -25,7 +25,6 @@ class Solution:
             else:
                 T[i] = (T[i-1] if i-1 >= 0 else 0)
         T= T[min(days):max(days) + 1]
-        print(T)
         return T[-1]
 
 
