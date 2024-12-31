@@ -16,6 +16,18 @@ class Solution:
         for i, k in enumerate(days):
             freq[k] = i
 
+        T = [0] * 366
+
+        for k, i in enumerate(range(min(days), max(days) + 1)):
+            
+            if i in freq:
+                T[i] = (min(costs[0] + T[i-1] if i- 1 >= 0 else costs[0] , costs[1] + T[i-7] if i-7 >= 0 else costs[1], costs[2] + T[i-30] if i-30 >= 0 else costs[2]))
+            else:
+                T[i] = (T[i-1] if i-1 >= 0 else 0)
+        T= T[min(days):max(days) + 1]
+        print(T)
+        return T[-1]
+
 
         m = max(days)
         @cache
