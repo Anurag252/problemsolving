@@ -1,11 +1,16 @@
 	<p>class Solution:
     def mincostTickets(self, days: List[int], costs: List[int]) -&gt; int:
         &#8220;&#8221;&#8220;
-        T[i] = min(T[i-1], T[i-6], T[i-29], ) if i in days
+        T[i] = min(T[i-1] + a, T[i-7] + b,T[i-30] + c,T[i]) if i in days 
+             = 
         = a + cost( max(i, k + 1))
         = b + cost(max(i + 6, k + 1))
         = c + cost(max(i + 29, k + 1))
+         T[i,d] = min(a + T[d-1], b + T[d-7], c + T[d-30])
+                    T[d-1]
         &#8220;&#8221;&#8220;</p>
+
+
 
         freq = {}
         for i, k in enumerate(days):
@@ -15,13 +20,11 @@
         m = max(days)
         @cache
         def recurse(i, p):
-            if p &gt; m or i &gt; len(days):
+            if p &gt; m :
                 return 0
             if p not in freq:
                 return recurse(i,p+1)
-            if p in freq:
-                i = freq[p]
-            return min(costs<sup class="footnote" id="fnrev4f80992f59da4bc2bf8dd703fdc2220f-1"><a href="#fn4f80992f59da4bc2bf8dd703fdc2220f-1">0</a></sup> +  recurse(i ,p+1) , costs<sup class="footnote" id="fnrev4f80992f59da4bc2bf8dd703fdc2220f-2"><a href="#fn4f80992f59da4bc2bf8dd703fdc2220f-2">1</a></sup> + recurse( i,p + 7), costs<sup class="footnote" id="fnrev4f80992f59da4bc2bf8dd703fdc2220f-3"><a href="#fn4f80992f59da4bc2bf8dd703fdc2220f-3">2</a></sup> + recurse( i,p + 30))
-        return recurse(0, days<sup class="footnote"><a href="#fn4f80992f59da4bc2bf8dd703fdc2220f-1">0</a></sup>)
+            return min(costs<sup class="footnote" id="fnrevba2ab8d7eaff487ca2b4bc789da30664-1"><a href="#fnba2ab8d7eaff487ca2b4bc789da30664-1">0</a></sup> +  recurse(i ,p+1) , costs<sup class="footnote" id="fnrevba2ab8d7eaff487ca2b4bc789da30664-2"><a href="#fnba2ab8d7eaff487ca2b4bc789da30664-2">1</a></sup> + recurse( i,p + 7), costs<sup class="footnote" id="fnrevba2ab8d7eaff487ca2b4bc789da30664-3"><a href="#fnba2ab8d7eaff487ca2b4bc789da30664-3">2</a></sup> + recurse( i,p + 30))
+        return recurse(0, days<sup class="footnote"><a href="#fnba2ab8d7eaff487ca2b4bc789da30664-1">0</a></sup>)
 
         
