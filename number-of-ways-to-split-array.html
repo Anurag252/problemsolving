@@ -1,0 +1,11 @@
+	<p>class Solution:
+    def waysToSplitArray(self, nums: List[int]) -&gt; int:
+        s = sum(nums)
+        res = 0
+        temp = 0
+        for k in nums[:-1]:
+            temp += k
+            if temp &gt;= (s &#8211; temp):
+                res += 1
+        return res
+        </p>

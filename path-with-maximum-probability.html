@@ -5,15 +5,15 @@
 
         # Build the adjacency list
         for k, l in zip(edges, succProb):
-            if k<sup class="footnote" id="fnrev2eab904114c74912956c6caf4c962367-1"><a href="#fn2eab904114c74912956c6caf4c962367-1">0</a></sup> not in matrix:
-                matrix[k<sup class="footnote"><a href="#fn2eab904114c74912956c6caf4c962367-1">0</a></sup>] = [(k<sup class="footnote" id="fnrev2eab904114c74912956c6caf4c962367-2"><a href="#fn2eab904114c74912956c6caf4c962367-2">1</a></sup>, l)]
+            if k<sup class="footnote" id="fnrevef89cfd495f44b25bcdbfe50a7554ab3-1"><a href="#fnef89cfd495f44b25bcdbfe50a7554ab3-1">0</a></sup> not in matrix:
+                matrix[k<sup class="footnote"><a href="#fnef89cfd495f44b25bcdbfe50a7554ab3-1">0</a></sup>] = [(k<sup class="footnote" id="fnrevef89cfd495f44b25bcdbfe50a7554ab3-2"><a href="#fnef89cfd495f44b25bcdbfe50a7554ab3-2">1</a></sup>, l)]
             else:
-                matrix[k<sup class="footnote"><a href="#fn2eab904114c74912956c6caf4c962367-1">0</a></sup>].append((k<sup class="footnote"><a href="#fn2eab904114c74912956c6caf4c962367-2">1</a></sup>, l))
+                matrix[k<sup class="footnote"><a href="#fnef89cfd495f44b25bcdbfe50a7554ab3-1">0</a></sup>].append((k<sup class="footnote"><a href="#fnef89cfd495f44b25bcdbfe50a7554ab3-2">1</a></sup>, l))
 
-            if k<sup class="footnote"><a href="#fn2eab904114c74912956c6caf4c962367-2">1</a></sup> not in matrix:
-                matrix[k<sup class="footnote"><a href="#fn2eab904114c74912956c6caf4c962367-2">1</a></sup>] = [(k<sup class="footnote"><a href="#fn2eab904114c74912956c6caf4c962367-1">0</a></sup>, l)]
+            if k<sup class="footnote"><a href="#fnef89cfd495f44b25bcdbfe50a7554ab3-2">1</a></sup> not in matrix:
+                matrix[k<sup class="footnote"><a href="#fnef89cfd495f44b25bcdbfe50a7554ab3-2">1</a></sup>] = [(k<sup class="footnote"><a href="#fnef89cfd495f44b25bcdbfe50a7554ab3-1">0</a></sup>, l)]
             else:
-                matrix[k<sup class="footnote"><a href="#fn2eab904114c74912956c6caf4c962367-2">1</a></sup>].append((k<sup class="footnote"><a href="#fn2eab904114c74912956c6caf4c962367-1">0</a></sup>, l))
+                matrix[k<sup class="footnote"><a href="#fnef89cfd495f44b25bcdbfe50a7554ab3-2">1</a></sup>].append((k<sup class="footnote"><a href="#fnef89cfd495f44b25bcdbfe50a7554ab3-1">0</a></sup>, l))
 
         visited = set()
         global q  # Declare q as a global variable
@@ -26,8 +26,8 @@
                 t = heapq.heappop(q)
 
                 # Convert back the probability to positive
-                current_prob = -t<sup class="footnote"><a href="#fn2eab904114c74912956c6caf4c962367-1">0</a></sup>
-                current_node = t<sup class="footnote"><a href="#fn2eab904114c74912956c6caf4c962367-2">1</a></sup>
+                current_prob = -t<sup class="footnote"><a href="#fnef89cfd495f44b25bcdbfe50a7554ab3-1">0</a></sup>
+                current_node = t<sup class="footnote"><a href="#fnef89cfd495f44b25bcdbfe50a7554ab3-2">1</a></sup>
 
                 # If we&#8217;ve reached the end node, return the probability
                 if current_node == end_node:
@@ -42,10 +42,10 @@
                     continue
 
                 for k in matrix[current_node]:
-                    new_prob = current_prob * k<sup class="footnote"><a href="#fn2eab904114c74912956c6caf4c962367-2">1</a></sup>
-                    if new_prob &gt; result.get(k<sup class="footnote"><a href="#fn2eab904114c74912956c6caf4c962367-1">0</a></sup>, 0):
-                        result[k<sup class="footnote"><a href="#fn2eab904114c74912956c6caf4c962367-1">0</a></sup>] = new_prob
-                        heapq.heappush(q, (-new_prob, k<sup class="footnote"><a href="#fn2eab904114c74912956c6caf4c962367-1">0</a></sup>))  # Push with negative probability to maintain max-heap
+                    new_prob = current_prob * k<sup class="footnote"><a href="#fnef89cfd495f44b25bcdbfe50a7554ab3-2">1</a></sup>
+                    if new_prob &gt; result.get(k<sup class="footnote"><a href="#fnef89cfd495f44b25bcdbfe50a7554ab3-1">0</a></sup>, 0):
+                        result[k<sup class="footnote"><a href="#fnef89cfd495f44b25bcdbfe50a7554ab3-1">0</a></sup>] = new_prob
+                        heapq.heappush(q, (-new_prob, k<sup class="footnote"><a href="#fnef89cfd495f44b25bcdbfe50a7554ab3-1">0</a></sup>))  # Push with negative probability to maintain max-heap
 
             return 0  # Return 0 if end_node is not reachable
 
