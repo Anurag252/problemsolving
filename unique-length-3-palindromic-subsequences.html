@@ -1,0 +1,35 @@
+	<p>class Solution:
+    def countPalindromicSubsequence(self, s: str) -&gt; int:
+        arr = [(-1,-1)] * 26</p>
+
+        st = set()
+        pref = []
+        suff = []
+        for k in s:
+            st.add(k)
+            pref.append(len(st))
+        st = set()
+        for k in s[::-1]:
+            st.add(k)
+            suff.append(len(st))
+        #suff.reverse()
+
+        for idx, k in enumerate(s):
+            if arr[ord(k) &#8211; ord(&#8216;a&#8217;)] == (-1,-1):
+                arr[ord(k) &#8211; ord(&#8216;a&#8217;)] = (idx, -1)
+            else:
+                arr[ord(k) &#8211; ord(&#8216;a&#8217;)] = (arr[ord(k) &#8211; ord(&#8216;a&#8217;)]<sup class="footnote" id="fnrev80af617cb77846c383eafb0977ae5fe8-1"><a href="#fn80af617cb77846c383eafb0977ae5fe8-1">0</a></sup>, idx)
+        print(arr, suff, pref)
+        # there may a problem of duplicates &#8211; will not  be
+        res = 0
+        for (k0, k1) in arr:
+            if k0 &gt;= 0 and k1 &gt;= 0 and k1 &gt; k0 + 1:
+                st = set()
+                for m in s[k0+1:k1]:
+                    st.add(m)
+                res += (len(st))
+        return res
+
+
+
+        
