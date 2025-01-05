@@ -1,0 +1,42 @@
+	<p>class Solution:
+    def shiftingLetters(self, s: str, shifts: List[List[int]]) -&gt; str:
+        arr = [&#8216;a&#8217;,&#8216;b&#8217;,&#8216;c&#8217;,&#8216;d&#8217;,&#8216;e&#8217;,&#8216;f&#8217;,&#8216;g&#8217;,&#8216;h&#8217;,&#8216;i&#8217;,&#8216;j&#8217;,&#8216;k&#8217;,&#8216;l&#8217;,&#8216;m&#8217;,&#8216;n&#8217;,&#8216;o&#8217;,&#8216;p&#8217;,&#8216;q&#8217;,&#8216;r&#8217;,&#8216;s&#8217;,&#8216;t&#8217;,&#8216;u&#8217;,&#8216;v&#8217;,&#8216;w&#8217;,&#8216;x&#8217;,&#8216;y&#8217;,&#8216;z&#8217;]</p>
+
+        arr1 = [0] * (len(s)+1)
+        s1 = []
+
+        shifts.sort(key=lambda x : (x<sup class="footnote" id="fnrev9d06b5e40b8a428d967a1c1d8962c294-1"><a href="#fn9d06b5e40b8a428d967a1c1d8962c294-1">0</a></sup>, x<sup class="footnote" id="fnrev9d06b5e40b8a428d967a1c1d8962c294-2"><a href="#fn9d06b5e40b8a428d967a1c1d8962c294-2">1</a></sup>) )
+        print(shifts)
+        a = -1
+        b = -1
+        curr = 0
+
+        for (k0, k1,k2) in shifts:
+            arr1[k0] += (1 if k2 &gt; 0 else -1)
+            arr1[k1+1] += (-1 if k2 &gt; 0 else 1)
+
+            &#8220;&#8221;&#8220;
+            if k2 == 0:
+                for m in range(k0,k1+1):
+                    arr1[m] -= 1
+            else:
+                for m in range(k0,k1+1):
+                    arr1[m] += 1
+            &#8220;&#8221;&#8220;
+        pref = []
+        temp = 0
+        for a in arr1:
+            temp += a
+            pref.append(temp)
+
+
+        def repl(idm, idx, curr):
+            return arr[(idx + pref[idm]) % 26]
+        curr = 0
+        for idm, k in enumerate(s):
+            idx = ord(k) &#8211; ord(&#8216;a&#8217;)
+            s1.append(repl(idm, idx, curr))
+        return &#8220;&#8221;.join(s1)
+
+
+        
