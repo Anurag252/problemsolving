@@ -6,7 +6,9 @@ class Solution:
         let's say 1, 3 
         x-1, x-3 is the dist 
         similarly in revrse arr n-x-1th elem find 1s and their sum
-        
+        x1 . x2 . x3 . x4 . x4 .. xn
+        xn - x1 + xn - x2 + xn- x3 ..
+        nXn - (x1+x2+x3)
 
         """
         pref = []
