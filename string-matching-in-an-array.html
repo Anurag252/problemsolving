@@ -1,0 +1,47 @@
+	<p>class Trie:
+    def __init__(self):
+        self.dict = {}</p>
+
+    def traverse_recurse(self, root, s):
+        if len(s) == 0:
+            return
+        if s<sup class="footnote" id="fnrevc1a5c75d499e48c3986af5674cc88e6d-1"><a href="#fnc1a5c75d499e48c3986af5674cc88e6d-1">0</a></sup> in root:
+                self.traverse_recurse(root[s<sup class="footnote"><a href="#fnc1a5c75d499e48c3986af5674cc88e6d-1">0</a></sup>], s[1:])
+        else:
+            root[s<sup class="footnote"><a href="#fnc1a5c75d499e48c3986af5674cc88e6d-1">0</a></sup>] = {}
+            self.traverse_recurse(root[s<sup class="footnote"><a href="#fnc1a5c75d499e48c3986af5674cc88e6d-1">0</a></sup>], s[1:])
+
+    def traverse(self, root, s) -&gt; bool:
+        if len(s) == 0:
+            return True
+        if s<sup class="footnote"><a href="#fnc1a5c75d499e48c3986af5674cc88e6d-1">0</a></sup> in root:
+            return self.traverse(root[s<sup class="footnote"><a href="#fnc1a5c75d499e48c3986af5674cc88e6d-1">0</a></sup>], s[1:])
+        else:
+            return False
+
+    def insert(self, s):
+        root = self.dict
+        self.traverse_recurse(root, s)
+
+    def contains(self, s) -&gt; bool:
+        root = self.dict
+        return self.traverse(root, s)
+
+
+
+
+
+	<p>class Solution:
+    def stringMatching(self, words: List[str]) -&gt; List[str]:</p>
+
+        t = Trie()
+
+        words.sort(key = lambda x: -len(x))
+        res = []
+        for k in words:
+            if t.contains(k):
+                res.append(k)
+            for i in range(0, len(k)):
+                t.insert(k[i:])
+        return res
+        
