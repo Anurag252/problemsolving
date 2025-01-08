@@ -12,8 +12,8 @@ int</strong> nodesBetweenCriticalPoints(struct ListNode* head, int* returnSize) 
     int* arr1 = malloc(2 * sizeof(int));
     *returnSize = 2;
     if (head  NULL || head->next  <span class="caps">NULL</span> || head -&gt; next -&gt; next == <span class="caps">NULL</span>) {
-        arr1<sup class="footnote" id="fnrevc55652bd04da47eb9538d7ec892b826c-1"><a href="#fnc55652bd04da47eb9538d7ec892b826c-1">0</a></sup> = -1;
-        arr1<sup class="footnote" id="fnrevc55652bd04da47eb9538d7ec892b826c-2"><a href="#fnc55652bd04da47eb9538d7ec892b826c-2">1</a></sup> = -1;
+        arr1<sup class="footnote" id="fnrev09a0a4759d37457095860234970e6c4b-1"><a href="#fn09a0a4759d37457095860234970e6c4b-1">0</a></sup> = -1;
+        arr1<sup class="footnote" id="fnrev09a0a4759d37457095860234970e6c4b-2"><a href="#fn09a0a4759d37457095860234970e6c4b-2">1</a></sup> = -1;
         return arr1;
     }
     struct ListNode* first = head;
@@ -41,12 +41,12 @@ int</strong> nodesBetweenCriticalPoints(struct ListNode* head, int* returnSize) 
         }
     }
     if (size &lt; 2) {
-        arr1<sup class="footnote"><a href="#fnc55652bd04da47eb9538d7ec892b826c-1">0</a></sup> = -1;
-        arr1<sup class="footnote"><a href="#fnc55652bd04da47eb9538d7ec892b826c-2">1</a></sup> = -1;
+        arr1<sup class="footnote"><a href="#fn09a0a4759d37457095860234970e6c4b-1">0</a></sup> = -1;
+        arr1<sup class="footnote"><a href="#fn09a0a4759d37457095860234970e6c4b-2">1</a></sup> = -1;
         return arr1;
     }
-    arr1<sup class="footnote"><a href="#fnc55652bd04da47eb9538d7ec892b826c-1">0</a></sup> = diff;
-    arr1<sup class="footnote"><a href="#fnc55652bd04da47eb9538d7ec892b826c-2">1</a></sup> = arr[size-1] &#8211; arr<sup class="footnote"><a href="#fnc55652bd04da47eb9538d7ec892b826c-1">0</a></sup>;
+    arr1<sup class="footnote"><a href="#fn09a0a4759d37457095860234970e6c4b-1">0</a></sup> = diff;
+    arr1<sup class="footnote"><a href="#fn09a0a4759d37457095860234970e6c4b-2">1</a></sup> = arr[size-1] &#8211; arr<sup class="footnote"><a href="#fn09a0a4759d37457095860234970e6c4b-1">0</a></sup>;
     return arr1;
 
 	<p>}</p>
