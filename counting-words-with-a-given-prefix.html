@@ -1,0 +1,40 @@
+	<p>class Trie:
+    def __init__(self):
+        self.dict = {}</p>
+
+    def insert_traverse(self, root,  a):
+        if len(a) == 0:
+            return
+        if a<sup class="footnote" id="fnrev92eaa69a3b0e4e47a164dd115419fef2-1"><a href="#fn92eaa69a3b0e4e47a164dd115419fef2-1">0</a></sup> in root:
+            root[a<sup class="footnote"><a href="#fn92eaa69a3b0e4e47a164dd115419fef2-1">0</a></sup>] = (root[a<sup class="footnote"><a href="#fn92eaa69a3b0e4e47a164dd115419fef2-1">0</a></sup>]<sup class="footnote"><a href="#fn92eaa69a3b0e4e47a164dd115419fef2-1">0</a></sup>, root[a<sup class="footnote"><a href="#fn92eaa69a3b0e4e47a164dd115419fef2-1">0</a></sup>]<sup class="footnote" id="fnrev92eaa69a3b0e4e47a164dd115419fef2-2"><a href="#fn92eaa69a3b0e4e47a164dd115419fef2-2">1</a></sup> + 1)
+            self.insert_traverse(root[a<sup class="footnote"><a href="#fn92eaa69a3b0e4e47a164dd115419fef2-1">0</a></sup>]<sup class="footnote"><a href="#fn92eaa69a3b0e4e47a164dd115419fef2-1">0</a></sup>, a[1:])
+        else:
+            root[a<sup class="footnote"><a href="#fn92eaa69a3b0e4e47a164dd115419fef2-1">0</a></sup>] = ({}, 1)
+            self.insert_traverse(root[a<sup class="footnote"><a href="#fn92eaa69a3b0e4e47a164dd115419fef2-1">0</a></sup>]<sup class="footnote"><a href="#fn92eaa69a3b0e4e47a164dd115419fef2-1">0</a></sup>, a[1:])
+
+
+    def insert(self, a):
+        root = self.dict
+        self.insert_traverse(root, a)
+
+    def traverse(self, root, a):
+        if len(a) == 1:
+            return root[a]<sup class="footnote"><a href="#fn92eaa69a3b0e4e47a164dd115419fef2-2">1</a></sup> if a in root else 0
+        if a<sup class="footnote"><a href="#fn92eaa69a3b0e4e47a164dd115419fef2-1">0</a></sup> in root:
+            return self.traverse(root[a<sup class="footnote"><a href="#fn92eaa69a3b0e4e47a164dd115419fef2-1">0</a></sup>]<sup class="footnote"><a href="#fn92eaa69a3b0e4e47a164dd115419fef2-1">0</a></sup>, a[1:])
+        else:
+            return 0
+
+    def find(self, a):
+        root = self.dict
+        return self.traverse(root, a)
+
+	<p>class Solution:
+    def prefixCount(self, words: List[str], pref: str) -&gt; int:
+        t = Trie()
+        for k in words:
+            t.insert(k)</p>
+
+        return t.find(pref)
+
+        
