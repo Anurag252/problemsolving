@@ -18,11 +18,11 @@
         for k in s:
             if k not in root.dt:
                 root.dt[k] = (set(), Node())
-                root.dt[k]<sup class="footnote" id="fnrev616853c5d4004941b4f09e75cb9715c6-1"><a href="#fn616853c5d4004941b4f09e75cb9715c6-1">0</a></sup>.add(id)
+                root.dt[k]<sup class="footnote" id="fnrevc48e572de6c348f88c701a1336e51796-1"><a href="#fnc48e572de6c348f88c701a1336e51796-1">0</a></sup>.add(id)
             else:
-                root.dt[k]<sup class="footnote"><a href="#fn616853c5d4004941b4f09e75cb9715c6-1">0</a></sup>.add(id)
+                root.dt[k]<sup class="footnote"><a href="#fnc48e572de6c348f88c701a1336e51796-1">0</a></sup>.add(id)
         #root.print1()
-        self.insert_traverse(root.dt[s<sup class="footnote"><a href="#fn616853c5d4004941b4f09e75cb9715c6-1">0</a></sup>]<sup class="footnote" id="fnrev616853c5d4004941b4f09e75cb9715c6-2"><a href="#fn616853c5d4004941b4f09e75cb9715c6-2">1</a></sup>, s[1:], id)
+        self.insert_traverse(root.dt[s<sup class="footnote"><a href="#fnc48e572de6c348f88c701a1336e51796-1">0</a></sup>]<sup class="footnote" id="fnrevc48e572de6c348f88c701a1336e51796-2"><a href="#fnc48e572de6c348f88c701a1336e51796-2">1</a></sup>, s[1:], id)
 
 
     def insert(self, s, id):
@@ -32,9 +32,9 @@
     def traverse_compare(self, root, s1, n):
         if len(s1) == 0:
             return n
-        if s1<sup class="footnote"><a href="#fn616853c5d4004941b4f09e75cb9715c6-1">0</a></sup> in root.dt:
-            print(root.dt[s1<sup class="footnote"><a href="#fn616853c5d4004941b4f09e75cb9715c6-1">0</a></sup>]<sup class="footnote"><a href="#fn616853c5d4004941b4f09e75cb9715c6-1">0</a></sup>)
-            return self.traverse_compare(root.dt[s1<sup class="footnote"><a href="#fn616853c5d4004941b4f09e75cb9715c6-1">0</a></sup>]<sup class="footnote"><a href="#fn616853c5d4004941b4f09e75cb9715c6-2">1</a></sup>, s1[1:], root.dt[s1<sup class="footnote"><a href="#fn616853c5d4004941b4f09e75cb9715c6-1">0</a></sup>]<sup class="footnote"><a href="#fn616853c5d4004941b4f09e75cb9715c6-1">0</a></sup>)
+        if s1<sup class="footnote"><a href="#fnc48e572de6c348f88c701a1336e51796-1">0</a></sup> in root.dt:
+            print(root.dt[s1<sup class="footnote"><a href="#fnc48e572de6c348f88c701a1336e51796-1">0</a></sup>]<sup class="footnote"><a href="#fnc48e572de6c348f88c701a1336e51796-1">0</a></sup>)
+            return self.traverse_compare(root.dt[s1<sup class="footnote"><a href="#fnc48e572de6c348f88c701a1336e51796-1">0</a></sup>]<sup class="footnote"><a href="#fnc48e572de6c348f88c701a1336e51796-2">1</a></sup>, s1[1:], root.dt[s1<sup class="footnote"><a href="#fnc48e572de6c348f88c701a1336e51796-1">0</a></sup>]<sup class="footnote"><a href="#fnc48e572de6c348f88c701a1336e51796-1">0</a></sup>)
         return None
 
     def compare(self, s1):
@@ -55,7 +55,7 @@
 
             for i, m in enumerate(tempb):
                 bmax[i] = max(bmax[i], tempb[i])
-
+        print(bmax)
 
         res = []
         for a in A:
