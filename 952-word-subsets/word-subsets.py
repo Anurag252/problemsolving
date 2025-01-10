@@ -55,7 +55,7 @@ class Solution:
             
             for i, m in enumerate(tempb):
                 bmax[i] = max(bmax[i], tempb[i])
-        print(bmax)
+
 
         res = []
         for a in A:
