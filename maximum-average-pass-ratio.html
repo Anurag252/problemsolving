@@ -4,7 +4,7 @@
             return 0
         h = []
         for idx, k in enumerate(classes):
-            heapq.heappush(h, ( -(k<sup class="footnote" id="fnrev4f0b0b5aa4614040a64c76be150c85f2-1"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-1">1</a></sup> &#8211; k<sup class="footnote" id="fnrev4f0b0b5aa4614040a64c76be150c85f2-2"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-2">0</a></sup>) / (k<sup class="footnote"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-1">1</a></sup> * k<sup class="footnote"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-1">1</a></sup> + k<sup class="footnote"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-1">1</a></sup>), idx ))</p>
+            heapq.heappush(h, ( -(k<sup class="footnote" id="fnrev84f175e14bf741cbad30dda2c10e6996-1"><a href="#fn84f175e14bf741cbad30dda2c10e6996-1">1</a></sup> &#8211; k<sup class="footnote" id="fnrev84f175e14bf741cbad30dda2c10e6996-2"><a href="#fn84f175e14bf741cbad30dda2c10e6996-2">0</a></sup>) / (k<sup class="footnote"><a href="#fn84f175e14bf741cbad30dda2c10e6996-1">1</a></sup> * k<sup class="footnote"><a href="#fn84f175e14bf741cbad30dda2c10e6996-1">1</a></sup> + k<sup class="footnote"><a href="#fn84f175e14bf741cbad30dda2c10e6996-1">1</a></sup>), idx ))</p>
 
         &#8220;&#8221;&#8220;
         a/b
@@ -16,17 +16,17 @@
         &#8220;&#8221;&#8220;
 
         while(extraStudents &gt; 0):
-            #h.sort(key=lambda x : -(x<sup class="footnote"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-1">1</a></sup> &#8211; x<sup class="footnote"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-2">0</a></sup>) / (x<sup class="footnote"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-1">1</a></sup> * x<sup class="footnote"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-1">1</a></sup> + x<sup class="footnote"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-1">1</a></sup>))
+            #h.sort(key=lambda x : -(x<sup class="footnote"><a href="#fn84f175e14bf741cbad30dda2c10e6996-1">1</a></sup> &#8211; x<sup class="footnote"><a href="#fn84f175e14bf741cbad30dda2c10e6996-2">0</a></sup>) / (x<sup class="footnote"><a href="#fn84f175e14bf741cbad30dda2c10e6996-1">1</a></sup> * x<sup class="footnote"><a href="#fn84f175e14bf741cbad30dda2c10e6996-1">1</a></sup> + x<sup class="footnote"><a href="#fn84f175e14bf741cbad30dda2c10e6996-1">1</a></sup>))
             item1, idx = heapq.heappop(h)
             #print(h)
-            classes[idx]<sup class="footnote"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-2">0</a></sup> += 1
-            classes[idx]<sup class="footnote"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-1">1</a></sup> += 1
-            heapq.heappush(h, (-(classes[idx]<sup class="footnote"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-1">1</a></sup> &#8211; classes[idx]<sup class="footnote"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-2">0</a></sup>) / (classes[idx]<sup class="footnote"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-1">1</a></sup> * classes[idx]<sup class="footnote"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-1">1</a></sup> + classes[idx]<sup class="footnote"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-1">1</a></sup>) , idx))
+            classes[idx]<sup class="footnote"><a href="#fn84f175e14bf741cbad30dda2c10e6996-2">0</a></sup> += 1
+            classes[idx]<sup class="footnote"><a href="#fn84f175e14bf741cbad30dda2c10e6996-1">1</a></sup> += 1
+            heapq.heappush(h, (-(classes[idx]<sup class="footnote"><a href="#fn84f175e14bf741cbad30dda2c10e6996-1">1</a></sup> &#8211; classes[idx]<sup class="footnote"><a href="#fn84f175e14bf741cbad30dda2c10e6996-2">0</a></sup>) / (classes[idx]<sup class="footnote"><a href="#fn84f175e14bf741cbad30dda2c10e6996-1">1</a></sup> * classes[idx]<sup class="footnote"><a href="#fn84f175e14bf741cbad30dda2c10e6996-1">1</a></sup> + classes[idx]<sup class="footnote"><a href="#fn84f175e14bf741cbad30dda2c10e6996-1">1</a></sup>) , idx))
             extraStudents -= 1
         result = 0
 
         for k in h:
-            result += (classes[k<sup class="footnote"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-1">1</a></sup>]<sup class="footnote"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-2">0</a></sup>/classes[k<sup class="footnote"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-1">1</a></sup>]<sup class="footnote"><a href="#fn4f0b0b5aa4614040a64c76be150c85f2-1">1</a></sup> * 100)
+            result += (classes[k<sup class="footnote"><a href="#fn84f175e14bf741cbad30dda2c10e6996-1">1</a></sup>]<sup class="footnote"><a href="#fn84f175e14bf741cbad30dda2c10e6996-2">0</a></sup>/classes[k<sup class="footnote"><a href="#fn84f175e14bf741cbad30dda2c10e6996-1">1</a></sup>]<sup class="footnote"><a href="#fn84f175e14bf741cbad30dda2c10e6996-1">1</a></sup> * 100)
         #print(h, result)
         return (result / len(h)) / 100
 
