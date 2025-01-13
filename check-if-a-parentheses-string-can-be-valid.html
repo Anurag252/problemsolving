@@ -1,0 +1,42 @@
+	<p>class Solution:
+    def canBeValid(self, s: str, locked: str) -&gt; bool:
+        length = len(s)
+        # If length of string is odd, return false.
+        if length % 2  1:
+            return False
+        open_brackets = 0
+        unlocked_count = 0
+        # Iterate through the string to handle '(' and ')'.
+        for i in range(length):
+            if locked[i]  <a href="">0</a>
+                unlocked_count += 1
+            elif s[i]  "(":
+                open_brackets += 1
+            elif s[i]  <a href="">)</a>
+                if open_brackets &gt; 0:
+                    open_brackets -= 1
+                elif unlocked_count &gt; 0:
+                    unlocked_count -= 1
+                else:
+                    return False</p>
+
+        # Match remaining open brackets with unlocked characters.
+        balance_count = 0
+        for i in range(length &#8211; 1, -1, -1):
+            if locked[i]  "0":
+                balance_count -= 1
+                unlocked_count -= 1
+            elif s[i]  <a href="">(</a>
+                balance_count += 1
+                open_brackets -= 1
+            elif s[i]  ")":
+                balance_count -= 1
+            if balance_count > 0:
+                return False
+            if unlocked_count  0 and open_brackets == 0:
+                break
+
+        if open_brackets &gt; 0:
+            return False
+
+        return True
