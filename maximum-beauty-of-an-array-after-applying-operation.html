@@ -5,7 +5,7 @@
 
         for m in nums:
             arr.append((m-k,m+k))
-        arr.sort(key=lambda x: x<sup class="footnote" id="fnrevf36f72addb2544e59c2a8c78761b76f6-1"><a href="#fnf36f72addb2544e59c2a8c78761b76f6-1">0</a></sup>)
+        arr.sort(key=lambda x: x<sup class="footnote" id="fnrevdef48d8296f84bc49f6fad4841020b43-1"><a href="#fndef48d8296f84bc49f6fad4841020b43-1">0</a></sup>)
         #print(arr)
 
         res = 0
@@ -15,7 +15,7 @@
             while(left &lt; right):
                 mid = ceil((left + right) / 2)
                 #print(left, right, mid)
-                if arr[mid]<sup class="footnote"><a href="#fnf36f72addb2544e59c2a8c78761b76f6-1">0</a></sup> &lt;= m<sup class="footnote" id="fnrevf36f72addb2544e59c2a8c78761b76f6-2"><a href="#fnf36f72addb2544e59c2a8c78761b76f6-2">1</a></sup> :
+                if arr[mid]<sup class="footnote"><a href="#fndef48d8296f84bc49f6fad4841020b43-1">0</a></sup> &lt;= m<sup class="footnote" id="fnrevdef48d8296f84bc49f6fad4841020b43-2"><a href="#fndef48d8296f84bc49f6fad4841020b43-2">1</a></sup> :
                     left = mid
                 else :
                     right = mid -1
