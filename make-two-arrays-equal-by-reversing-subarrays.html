@@ -2,11 +2,11 @@
     def canBeEqual(self, target: List[int], arr: List[int]) -&gt; bool:
         #print(target, arr)
         return sorted(target)  sorted(arr)
-        if len(target)  1 and target<sup class="footnote" id="fnrevbf291d00de25441d9d4590db7eecab90-1"><a href="#fnbf291d00de25441d9d4590db7eecab90-1">0</a></sup> == arr<sup class="footnote"><a href="#fnbf291d00de25441d9d4590db7eecab90-1">0</a></sup>:
+        if len(target)  1 and target<sup class="footnote" id="fnrevfac90f23a0f641549c4824b587d7c0b8-1"><a href="#fnfac90f23a0f641549c4824b587d7c0b8-1">0</a></sup> == arr<sup class="footnote"><a href="#fnfac90f23a0f641549c4824b587d7c0b8-1">0</a></sup>:
             return True</p>
 
         for k in range(len(arr)):
-            if arr[k] == target<sup class="footnote"><a href="#fnbf291d00de25441d9d4590db7eecab90-1">0</a></sup>:
+            if arr[k] == target<sup class="footnote"><a href="#fnfac90f23a0f641549c4824b587d7c0b8-1">0</a></sup>:
                 if self.canBeEqual(target[1:], (list(reversed(arr[0:k+1])) + arr[k+1:])[1:] ):
                     return True
         return False
