@@ -27,16 +27,52 @@ func dfs_row(row int, col int, grid [][]int, found bool) (int ) {
 
 func countServers(grid [][]int) int {
 
-    res := 0
+    res := make(map[string]bool, 0)
+    
+    first_match_row := make(map[int][]string)
+    first_match_col := make(map[int][]string)
     //mp := make(map[int]int, 0)
     for i , _ := range grid {
         for j , _ := range grid[0] {
-            if grid[i][j] == 1 {
-                res += dfs_row(i,j,grid, false)
-            }
             
+            if grid[i][j] == 1 {
+                _, ok1 := first_match_row[i]
+                _, ok2 := first_match_col[j]
+
+                if !ok1 {
+                    first_match_row[i] = make([]string, 0)
+                }
+                 if !ok2 {
+                    first_match_col[j] = make([]string, 0)
+                }
+
+                first_match_row[i] = append(first_match_row[i], strconv.Itoa(i)+"$"+ strconv.Itoa(j))
+                first_match_col[j] = append(first_match_col[j], strconv.Itoa(i)+"$"+ strconv.Itoa(j))
+                
+                //fmt.Println(i,j,res,first_match_row, first_match_col, row, col, ok1, ok2)
+            }
         }
     }
+
+    for _,v := range first_match_row {
+        if len(v) == 1 {
+            continue
+        }
+        for _, v1 := range v {
+            res[v1] = true
+        }
+    }
+
+    for _,v := range first_match_col {
+        if len(v) == 1 {
+            continue
+        }
+        for _, v1 := range v {
+            res[v1] = true
+        }
+    }
+
+     
     
-    return res
+    return len(res)
 }
