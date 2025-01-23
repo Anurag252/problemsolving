@@ -5,17 +5,17 @@
     def traverse_recurse(self, root, s):
         if len(s) == 0:
             return
-        if s<sup class="footnote" id="fnrev8d942f1d42a441f0976c5bd0344005b6-1"><a href="#fn8d942f1d42a441f0976c5bd0344005b6-1">0</a></sup> in root:
-                self.traverse_recurse(root[s<sup class="footnote"><a href="#fn8d942f1d42a441f0976c5bd0344005b6-1">0</a></sup>], s[1:])
+        if s<sup class="footnote" id="fnrevbdecb373f01c4da092d03912940eb2cc-1"><a href="#fnbdecb373f01c4da092d03912940eb2cc-1">0</a></sup> in root:
+                self.traverse_recurse(root[s<sup class="footnote"><a href="#fnbdecb373f01c4da092d03912940eb2cc-1">0</a></sup>], s[1:])
         else:
-            root[s<sup class="footnote"><a href="#fn8d942f1d42a441f0976c5bd0344005b6-1">0</a></sup>] = {}
-            self.traverse_recurse(root[s<sup class="footnote"><a href="#fn8d942f1d42a441f0976c5bd0344005b6-1">0</a></sup>], s[1:])
+            root[s<sup class="footnote"><a href="#fnbdecb373f01c4da092d03912940eb2cc-1">0</a></sup>] = {}
+            self.traverse_recurse(root[s<sup class="footnote"><a href="#fnbdecb373f01c4da092d03912940eb2cc-1">0</a></sup>], s[1:])
 
     def traverse(self, root, s) -&gt; bool:
         if len(s) == 0:
             return True
-        if s<sup class="footnote"><a href="#fn8d942f1d42a441f0976c5bd0344005b6-1">0</a></sup> in root:
-            return self.traverse(root[s<sup class="footnote"><a href="#fn8d942f1d42a441f0976c5bd0344005b6-1">0</a></sup>], s[1:])
+        if s<sup class="footnote"><a href="#fnbdecb373f01c4da092d03912940eb2cc-1">0</a></sup> in root:
+            return self.traverse(root[s<sup class="footnote"><a href="#fnbdecb373f01c4da092d03912940eb2cc-1">0</a></sup>], s[1:])
         else:
             return False
 
