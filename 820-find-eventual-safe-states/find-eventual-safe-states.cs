@@ -1,81 +1,51 @@
-public class Solution {
-    HashSet<int> black = new HashSet<int>();    
-    HashSet<int> dangerNode = new HashSet<int>();
-    public IList<int> EventualSafeNodes(int[][] graph) {
-       
+public class Solution 
+{
+    enum Marking
+    {
+        Unvisited = 0,
+        Temporary = 1,
+        Visited = 2
+    }    
+    
+    public IList<int> EventualSafeNodes(int[][] graph) 
+    {
+        Marking[] markings = new Marking[graph.Length];
         List<int> result = new List<int>();
         
-        for(int i = 0; i < graph.Length ; i ++)
+        for(int i = 0; i < graph.Length; i++)
         {
-            if(dangerNode.Contains(i))
+            if(!detectCycle(graph, i, markings))
             {
-                continue;
-            }
-            if(black.Contains(i))
-            {
-                result.Add(i);
-                continue;
-            }
-            HashSet<int> hs = new HashSet<int>();
-            //Console.WriteLine();
-            bool hasnoCycle = DFS(graph, i, hs);
-            
-            if(hasnoCycle)
-            {
-                result.Add(i);
+                result.Add(i);        
             }
         }
         
         return result;
-        
-        
     }
     
-    public bool DFS(int[][] dt, int source, HashSet<int> grey)
+    private bool detectCycle(int[][] graph, int node, Marking[] markings)
     {
-        //Console.WriteLine(source);
-        if( (dt[source].Length == 0) )
-        {
-            black.Add(source);
-            return true;
-        }
-        
-        
-        if(black.Contains(source))
+        if(markings[node] == Marking.Temporary)
         {
             return true;
         }
         
-        if(grey.Contains(source))
+        if(markings[node] == Marking.Visited)
         {
-            dangerNode.Add(source);
-            //black.Add(source);
             return false;
         }
         
-        grey.Add(source);
+        markings[node] = Marking.Temporary;
         
-        for(int i = 0 ; i < dt[source].Length ; i ++)
-        {
-            
-            
-            bool hascycle = DFS(dt,dt[source][i], grey);
-            if(!hascycle)
-            {       
-                dangerNode.Add(source);
-                //black.Add(source);
-                return false;                
-            }
-            else
+        foreach(int neighbour in graph[node])
+        {   
+            if(detectCycle(graph, neighbour, markings))
             {
-                //black.Add(source);
-                grey.Remove(dt[source][i]);
-            }
-        }
-          
-        black.Add(source);
-        return true;
+                return true;
+            }            
+        }       
+        
+        markings[node] = Marking.Visited;
+        return false;        
     }
-    
-   
 }
