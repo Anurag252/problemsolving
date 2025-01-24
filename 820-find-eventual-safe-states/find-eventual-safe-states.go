@@ -78,41 +78,6 @@ func eventualSafeNodes(graph [][]int) []int {
 
 }
 
-func dfs(source int, graph [][]int, safe map[int]bool, visited map[int]bool, unsafe map[int]bool) bool {
-    // Check if the node is already determined to be safe
-    if _, ok := safe[source]; ok {
-        return true
-    }
-
-    // Check if the node is already determined to be unsafe
-    if _, ok := unsafe[source]; ok {
-        return false
-    }
-
-    // If the node is already in the current DFS path, it means we found a cycle
-    if _, ok := visited[source]; ok {
-        unsafe[source] = true // Mark as unsafe due to a cycle
-        return false
-    }
-
-    // Mark the node as visited in the current DFS path
-    visited[source] = true
-
-    // Recur for all neighbors
-    for _, neighbor := range graph[source] {
-        if !dfs(neighbor, graph, safe, visited, unsafe) {
-            unsafe[source] = true // If any neighbor is unsafe, this node is also unsafe
-            return false
-        }
-    }
-
-    // If all neighbors are safe, mark this node as safe
-    safe[source] = true
-    delete(visited, source) // Remove the node from the current DFS path
-    return true
-}
-/*
-
 func dfs(source int , graph [][]int, safe map[int]bool, visited map[int]bool, unsafe map[int]bool ) bool {
     //fmt.Println(source, graph, safe, visited)
     _, ok := safe[source]
@@ -127,7 +92,7 @@ func dfs(source int , graph [][]int, safe map[int]bool, visited map[int]bool, un
 
     _, ok = visited[source]
     if ok {
-        
+        unsafe[source] = true
         return false
     }
 
@@ -135,9 +100,11 @@ func dfs(source int , graph [][]int, safe map[int]bool, visited map[int]bool, un
 
     for _, k := range graph[source] {
         if !dfs(k, graph, safe, visited, unsafe) {
+            unsafe[source] = true 
             return false
         }
     }
+    safe[source] = true
     delete(visited, source)
     return true
-}*/
+}
