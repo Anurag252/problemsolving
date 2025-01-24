@@ -6,7 +6,7 @@ func eventualSafeNodes(graph [][]int) []int {
     // start a q - add terminal nodes
     // for each terminal node, find the nodes pointing to it 
     // for every node see that it points only to terminal node by having the entry of terminal nodes in a map
-    //  
+    //  so DFS with cycle detection worked 
 
     terminalNodes := make(map[int]bool, 0)
     unsafe := make(map[int]bool)
@@ -56,14 +56,7 @@ func eventualSafeNodes(graph [][]int) []int {
         }
         visited := make(map[int]bool)
         //fmt.Println("here", visited)
-        ok = dfs(i, graph, safe, visited, unsafe)
-        if ! ok {
-            for _, k1 := range dest[i] {
-                unsafe[k1] = true
-            }
-        } else {
-            safe[i] = true
-        }
+        dfs(i, graph, safe, visited, unsafe)
 
     }
     res := make([]int,0)
