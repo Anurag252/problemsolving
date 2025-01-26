@@ -2,14 +2,14 @@
     def __init__(self):
         self.cache = {}
     def maxPoints(self, points: List[List[int]]) -&gt; int:
-        n, m = len(points), len(points<sup class="footnote" id="fnrev03c76874ba1d4ca28a04d9128aef9027-1"><a href="#fn03c76874ba1d4ca28a04d9128aef9027-1">0</a></sup>)
+        n, m = len(points), len(points<sup class="footnote" id="fnrevbe707bfad119456281a26d810ef24328-1"><a href="#fnbe707bfad119456281a26d810ef24328-1">0</a></sup>)
         cache = {}</p>
 
         def precompute_max_arrays(dp_row):
             max_left = [0] * m
             max_right = [0] * m
 
-            max_left<sup class="footnote"><a href="#fn03c76874ba1d4ca28a04d9128aef9027-1">0</a></sup> = dp_row<sup class="footnote"><a href="#fn03c76874ba1d4ca28a04d9128aef9027-1">0</a></sup>
+            max_left<sup class="footnote"><a href="#fnbe707bfad119456281a26d810ef24328-1">0</a></sup> = dp_row<sup class="footnote"><a href="#fnbe707bfad119456281a26d810ef24328-1">0</a></sup>
             for c in range(1, m):
                 max_left&#169; = max(max_left[c &#8211; 1], dp_row&#169; + c)
 
