@@ -6,13 +6,13 @@
         n = len(nums)
         h = [0] * (n &#8211; k + 1)
         curr_sum = sum(nums[:k])
-        h<sup class="footnote" id="fnrev049b9be9d1df4f2da9b758279e384807-1"><a href="#fn049b9be9d1df4f2da9b758279e384807-1">0</a></sup> = curr_sum
+        h<sup class="footnote" id="fnrev98e261085cd04929a8d84b9436010c6e-1"><a href="#fn98e261085cd04929a8d84b9436010c6e-1">0</a></sup> = curr_sum
         for i in range(k, n):
             curr_sum += nums[i] &#8211; nums[i &#8211; k]
             h[i &#8211; k + 1] = curr_sum</p>
 
         # Step 2: DP to find max sums for 1, 2, and 3 subarrays
-        dp = [<sup class="footnote"><a href="#fn049b9be9d1df4f2da9b758279e384807-1">0</a></sup> * 4 for _ in range(len(h) + 1)]
+        dp = [<sup class="footnote"><a href="#fn98e261085cd04929a8d84b9436010c6e-1">0</a></sup> * 4 for _ in range(len(h) + 1)]
         idx = [[-1] * 4 for _ in range(len(h) + 1)]
 
         for i in range(1, len(h) + 1):
