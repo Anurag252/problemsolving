@@ -9,43 +9,43 @@
         overlap = []
 
         for  idx1, k in enumerate(self.cal):
-            if k<sup class="footnote" id="fnrev54a461187eaa41288966fe1811c9a348-1"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup> &lt;= start and start &lt; k<sup class="footnote" id="fnrev54a461187eaa41288966fe1811c9a348-2"><a href="#fn54a461187eaa41288966fe1811c9a348-2">1</a></sup>:
+            if k<sup class="footnote" id="fnrev055c81b82f0c4944abd7a63605eb9ad1-1"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup> &lt;= start and start &lt; k<sup class="footnote" id="fnrev055c81b82f0c4944abd7a63605eb9ad1-2"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-2">1</a></sup>:
                 s = start
-                e = min(end, k<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-2">1</a></sup>)
+                e = min(end, k<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-2">1</a></sup>)
                 for idx2,l in enumerate(self.cal):
-                    if l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup> &lt;= s and s &lt; l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-2">1</a></sup> and idx1 != idx2:
-                        #print(start, end, l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup>, l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-2">1</a></sup>, s , e)
+                    if l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup> &lt;= s and s &lt; l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-2">1</a></sup> and idx1 != idx2:
+                        #print(start, end, l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup>, l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-2">1</a></sup>, s , e)
                         return False
-                    if l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup> &lt; e and e &lt;= l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-2">1</a></sup> and idx1 != idx2:
-                        #print(start, end, l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup>, l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-2">1</a></sup>, s , e)
+                    if l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup> &lt; e and e &lt;= l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-2">1</a></sup> and idx1 != idx2:
+                        #print(start, end, l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup>, l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-2">1</a></sup>, s , e)
                         return False
-                    if l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup> &lt; e and l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup> &gt;= s and idx1 != idx2:
+                    if l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup> &lt; e and l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup> &gt;= s and idx1 != idx2:
                         return False
 
-            elif k<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup> &lt; end and end &lt;= k<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-2">1</a></sup>:
-                s = max(k<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup>,start)
+            elif k<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup> &lt; end and end &lt;= k<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-2">1</a></sup>:
+                s = max(k<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup>,start)
                 e = end
                 for idx2,l in enumerate(self.cal):
-                    if l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup> &lt;= s and s &lt; l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-2">1</a></sup> and idx1 != idx2:
-                        #print(start, end, l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup>, l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-2">1</a></sup>, s , e)
+                    if l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup> &lt;= s and s &lt; l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-2">1</a></sup> and idx1 != idx2:
+                        #print(start, end, l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup>, l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-2">1</a></sup>, s , e)
                         return False
-                    if l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup> &lt; e and e &lt;= l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-2">1</a></sup> and idx1 != idx2:
-                        #print(start, end, l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup>, l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-2">1</a></sup>, s , e)
+                    if l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup> &lt; e and e &lt;= l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-2">1</a></sup> and idx1 != idx2:
+                        #print(start, end, l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup>, l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-2">1</a></sup>, s , e)
                         return False
-                    if l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup> &lt; e and l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup> &gt;= s and idx1 != idx2:
+                    if l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup> &lt; e and l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup> &gt;= s and idx1 != idx2:
                         return False
 
-            elif k<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup> &lt; end and k<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup> &gt;= start:
-                s = k<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup>
-                e = k<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-2">1</a></sup>
+            elif k<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup> &lt; end and k<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup> &gt;= start:
+                s = k<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup>
+                e = k<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-2">1</a></sup>
                 for idx2,l in enumerate(self.cal):
-                    if l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup> &lt;= s and s &lt; l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-2">1</a></sup> and idx1 != idx2:
-                        #print(start, end, l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup>, l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-2">1</a></sup>, s , e)
+                    if l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup> &lt;= s and s &lt; l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-2">1</a></sup> and idx1 != idx2:
+                        #print(start, end, l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup>, l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-2">1</a></sup>, s , e)
                         return False
-                    if l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup> &lt; e and e &lt;= l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-2">1</a></sup> and idx1 != idx2:
-                        #print(start, end, l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup>, l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-2">1</a></sup>, s , e)
+                    if l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup> &lt; e and e &lt;= l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-2">1</a></sup> and idx1 != idx2:
+                        #print(start, end, l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup>, l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-2">1</a></sup>, s , e)
                         return False
-                    if l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup> &lt; e and l<sup class="footnote"><a href="#fn54a461187eaa41288966fe1811c9a348-1">0</a></sup> &gt;= s and idx1 != idx2:
+                    if l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup> &lt; e and l<sup class="footnote"><a href="#fn055c81b82f0c4944abd7a63605eb9ad1-1">0</a></sup> &gt;= s and idx1 != idx2:
                         return False
 
         self.cal.append((start, end))
