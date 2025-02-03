@@ -15,10 +15,10 @@ func longestMonotonicSubarray(nums []int) int {
     res = max(res, l)
     prev = -1
     l = 0
-    slices.Reverse(nums)
+    
     //fmt.Println(nums)
     for _ , k := range nums {
-        if prev < k {
+        if prev > k {
             l += 1
             prev = k
         } else {
