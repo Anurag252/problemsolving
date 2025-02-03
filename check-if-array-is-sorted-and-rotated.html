@@ -1,0 +1,20 @@
+	<p>class Solution:
+    def check(self, nums: List[int]) -&gt; bool:
+        inflextion = False
+        for idx, k in enumerate(nums):
+            if idx == 0:
+                continue
+            if k &lt; nums[idx-1] and  inflextion:
+                return False
+            if k &gt;= nums[idx-1] and not inflextion:
+                continue
+            else :
+                inflextion = True</p>
+
+        if inflextion and nums[-1] &gt; nums<sup class="footnote" id="fnrev8ae8e7b3fb3748cfad4f8a8b04911afc-1"><a href="#fn8ae8e7b3fb3748cfad4f8a8b04911afc-1">0</a></sup>:
+            return False
+        return True
+
+
+
+        
