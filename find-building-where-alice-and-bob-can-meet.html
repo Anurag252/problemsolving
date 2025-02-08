@@ -4,8 +4,8 @@
         result = [-1 for _ in range(len(queries))]
         new_queries = [[] for _ in range(len(heights))]
         for i in range(len(queries)):
-            a = queries[i]<sup class="footnote" id="fnrev27560837823c41709143d038ef8236e1-1"><a href="#fn27560837823c41709143d038ef8236e1-1">0</a></sup>
-            b = queries[i]<sup class="footnote" id="fnrev27560837823c41709143d038ef8236e1-2"><a href="#fn27560837823c41709143d038ef8236e1-2">1</a></sup>
+            a = queries[i]<sup class="footnote" id="fnrevf4fa9971de8f43b3ac9d8b764c0b2a81-1"><a href="#fnf4fa9971de8f43b3ac9d8b764c0b2a81-1">0</a></sup>
+            b = queries[i]<sup class="footnote" id="fnrevf4fa9971de8f43b3ac9d8b764c0b2a81-2"><a href="#fnf4fa9971de8f43b3ac9d8b764c0b2a81-2">1</a></sup>
             if a &gt; b:
                 a, b = b, a
             if heights[b] &gt; heights[a] or a == b:
@@ -18,8 +18,8 @@
             for a, b in new_queries[i]:
                 position = self.search(a, mono_stack)
                 if position &lt; mono_stack_size and position &gt;= 0:
-                    result[b] = mono_stack[position]<sup class="footnote"><a href="#fn27560837823c41709143d038ef8236e1-2">1</a></sup>
-            while mono_stack and mono_stack[-1]<sup class="footnote"><a href="#fn27560837823c41709143d038ef8236e1-1">0</a></sup> &lt;= heights[i]:
+                    result[b] = mono_stack[position]<sup class="footnote"><a href="#fnf4fa9971de8f43b3ac9d8b764c0b2a81-2">1</a></sup>
+            while mono_stack and mono_stack[-1]<sup class="footnote"><a href="#fnf4fa9971de8f43b3ac9d8b764c0b2a81-1">0</a></sup> &lt;= heights[i]:
                 mono_stack.pop()
             mono_stack.append((heights[i], i))
         return result
@@ -30,7 +30,7 @@
         ans = -1
         while left &lt;= right:
             mid = (left + right) // 2
-            if mono_stack[mid]<sup class="footnote"><a href="#fn27560837823c41709143d038ef8236e1-1">0</a></sup> &gt; height:
+            if mono_stack[mid]<sup class="footnote"><a href="#fnf4fa9971de8f43b3ac9d8b764c0b2a81-1">0</a></sup> &gt; height:
                 ans = max(ans, mid)
                 left = mid + 1
             else:
