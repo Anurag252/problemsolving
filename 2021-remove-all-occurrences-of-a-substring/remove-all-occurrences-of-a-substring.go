@@ -19,12 +19,12 @@ func removeOccurrences(s string, part string) string {
 
 
     st := make([]string, 0)
-
+    h := hash(part)
     for _, k := range s {
         if len(st) >= len(part) {
             last := st[len(st) - len(part):]
             //fmt.Println(last, st)
-            if hash(strings.Join(last, "")) == hash(part) {
+            if hash(strings.Join(last, "")) == h {
                 st = st[:len(st) - len(part)]
             } 
         }
