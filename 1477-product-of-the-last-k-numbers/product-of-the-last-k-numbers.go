@@ -3,7 +3,7 @@ import "math/big"
 type ProductOfNumbers struct {
     arr []*big.Int
     curr *big.Int
-    mp map[int]bool
+    lastindex int
 }
 
 
@@ -11,7 +11,8 @@ func Constructor() ProductOfNumbers {
     return ProductOfNumbers{
         arr : make([]*big.Int, 0),
         curr : big.NewInt(1),
-        mp : make(map[int]bool),
+        lastindex: -1,
+        //mp : make(map[int]bool),
     }
 }
 
@@ -26,7 +27,7 @@ func Div(x, y *big.Int) *big.Int {
 
 func (this *ProductOfNumbers) Add(num int)  {
     if num == 0 {
-        this.mp[len(this.arr)] = true // inc by 1
+        this.lastindex = len(this.arr)
         num = 1
     }
 
@@ -36,24 +37,17 @@ func (this *ProductOfNumbers) Add(num int)  {
 
 
 func (this *ProductOfNumbers) GetProduct(k int) int {
-    //fmt.Println(this.arr, k, this.mp)
-
-    for i := range k {
-
-        t := len(this.arr) - 1 - i
-        _, ok := this.mp[t]
-        if ok {
-            return 0
-        }
+    //fmt.Println(this.arr, k, this.lastindex)
+    if (len(this.arr) - 1)  - (k - 1) <= this.lastindex {
+        return 0
     }
-
     if len(this.arr)-1-k >= 0 {
         t := Div(this.arr[len(this.arr)-1] , this.arr[len(this.arr)-1-k])
         return int(t.Int64())
     } else {
          return int(this.arr[len(this.arr)-1].Int64())
     }
-     // assume list has k numbers
+     // assume list always has k numbers
    
     
 }
