@@ -2,7 +2,9 @@ func punishmentNumber(n int) int {
     // we can do n + T(n-1)
     // for each n -> square it, then split it and see if thi sums up. This can be done in 
     // 6 (log n2) iterations for each n
-    // nlogn
+    // n2logn
+    // m times 
+    // n2^logn
     if n == 1 {
         return 1
     }
