@@ -2,7 +2,7 @@
 func getHappyString(n int, k int) string {
     str := []string{"a", "b", "c"}
     // list of n is a appended to n-1 list with restrictions
-    res := calc(str, n) //T[n] = 2*T[n-1] or  4*T[n-2] or 8*T[n-3] ..., T[n-1] = 2*T[n-2] -> 2^n
+    res := calc(str, n) //T[n] = 2n*T[n-1] or  4n*T[n-2] or 8n*T[n-3] ..., T[n-1] = 2*T[n-2] -> n2^n
     // 2^10 is 1024
     //sort.Strings(res) // klogk -> saw from discussion that sorting maybe skipped as well as backtracking builds strings in correct order
     if len(res) > k - 1 {
