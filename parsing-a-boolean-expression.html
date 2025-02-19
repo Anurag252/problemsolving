@@ -42,13 +42,13 @@
                 result = result and self.parseBoolExpr(k)
             return result
 
-        if expression<sup class="footnote" id="fnrevb083f88a06d744a5ba3481de28fd37e6-1"><a href="#fnb083f88a06d744a5ba3481de28fd37e6-1">0</a></sup> == <a href="">|</a>
+        if expression<sup class="footnote" id="fnrev91d9179a417c4554985a6e43dbb3945f-1"><a href="#fn91d9179a417c4554985a6e43dbb3945f-1">0</a></sup> == <a href="">|</a>
             result = False
             for k in expr:
                 result = result or self.parseBoolExpr(k)
             return result
 
-        if expression<sup class="footnote"><a href="#fnb083f88a06d744a5ba3481de28fd37e6-1">0</a></sup> == <a href="">!</a>
+        if expression<sup class="footnote"><a href="#fn91d9179a417c4554985a6e43dbb3945f-1">0</a></sup> == <a href="">!</a>
             inner = expression[2:-1]
             result = not self.parseBoolExpr(inner)
             return result
