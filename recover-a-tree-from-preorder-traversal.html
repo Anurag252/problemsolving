@@ -1,0 +1,38 @@
+	<p>class Solution:
+    def __init__(self):
+        self.index = 0</p>
+
+    def recoverFromPreorder(self, traversal: str) -&gt; TreeNode:
+        return self.helper(traversal, 0)
+
+    def helper(self, traversal, depth):
+        if self.index &gt;= len(traversal):
+            return None
+
+        dash_count = 0
+        while (
+            self.index + dash_count &lt; len(traversal)
+            and traversal[self.index + dash_count] == &#8220;-&#8220;
+        ):
+            dash_count += 1
+
+        # If the number of dashes doesn&#8217;t match the current depth, return null
+        if dash_count != depth:
+            return None
+
+        self.index += dash_count
+
+        # Extract the node value
+        value = 0
+        while self.index &lt; len(traversal) and traversal[self.index].isdigit():
+            value = value * 10 + int(traversal[self.index])
+            self.index += 1
+
+        # Create the current node
+        node = TreeNode(value)
+
+        # Recursively build the left and right subtrees
+        node.left = self.helper(traversal, depth + 1)
+        node.right = self.helper(traversal, depth + 1)
+
+        return node
