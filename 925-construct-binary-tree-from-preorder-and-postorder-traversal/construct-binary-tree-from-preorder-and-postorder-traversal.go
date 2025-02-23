@@ -44,7 +44,7 @@ func recurse(root **TreeNode, preorder []int, postorder []int) {
     newroot := a[0]
     for i, k := range b {
         if k == newroot {
-            recurse(&((*root).Left), a[:i+1]  , b[:i+1])
+            recurse(&((*root).Left), a[:i+1]  , b[:i+1]) // This is crazy
             recurse(&((*root).Right), a[i+1:]  , b[i+1:])
             return
         }
