@@ -4,14 +4,14 @@
         position.sort()</p>
 
         def count(d):
-            ans, curr = 1, position<sup class="footnote" id="fnrev430f05a19442441296a481fa5a39ed80-1"><a href="#fn430f05a19442441296a481fa5a39ed80-1">0</a></sup>
+            ans, curr = 1, position<sup class="footnote" id="fnreva2846681af384fc6a19c7e78ab4094d0-1"><a href="#fna2846681af384fc6a19c7e78ab4094d0-1">0</a></sup>
             for i in range(1, n):
                 if position[i] &#8211; curr &gt;= d:
                     ans += 1
                     curr = position[i]
             return ans
 
-        l, r = 0, position[-1] &#8211; position<sup class="footnote"><a href="#fn430f05a19442441296a481fa5a39ed80-1">0</a></sup>
+        l, r = 0, position[-1] &#8211; position<sup class="footnote"><a href="#fna2846681af384fc6a19c7e78ab4094d0-1">0</a></sup>
         while l &lt; r:
             mid = r &#8211; (r &#8211; l) // 2
             if count(mid) &gt;= m:
