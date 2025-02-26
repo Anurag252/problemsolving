@@ -8,10 +8,6 @@ class Solution:
         # and then find  index j at max distt from it and find absolute.
         # 2,-3,-2,-6,-3,-5
         # 
-        has_zero = False
-        if 0 in nums:
-            has_zero = True
-
         pref_sum = []
         temp = 0
         for k in nums:
@@ -30,10 +26,7 @@ class Solution:
         #print(pref_sum, max_arr, min_arr)
         res = 0
         for i, k in enumerate(pref_sum):
-            if not has_zero:
                 res = max(res, abs(k - max_arr[i]) , abs(k - min_arr[i]), abs(k))
-            else:
-                res = max(res, abs(k - max_arr[i]) , abs(k - min_arr[i]),abs(k) )
         return res
 
 
