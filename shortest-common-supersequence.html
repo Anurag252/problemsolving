@@ -12,7 +12,7 @@
         m, n = len(str1), len(str2)</p>
 
         # Step 1: Compute <span class="caps">LCS</span> table
-        T = [<sup class="footnote" id="fnrev1575189f23d347f3a07ac6f1b622a73c-1"><a href="#fn1575189f23d347f3a07ac6f1b622a73c-1">0</a></sup> * (n + 1) for _ in range(m + 1)]
+        T = [<sup class="footnote" id="fnrevdc3540bfa1144248a83fd0cb535477ed-1"><a href="#fndc3540bfa1144248a83fd0cb535477ed-1">0</a></sup> * (n + 1) for _ in range(m + 1)]
 
         for i in range(1, m + 1):
             for j in range(1, n + 1):
@@ -24,7 +24,8 @@
         # Step 2: Backtrack to get LCS
         i, j = m, n
         lcs = []
-
+        # this is very imp as I got this incorrect , <span class="caps">LCS</span> needs back tracking 
+        # a simple max_len &#8211; adoes not work
         while i &gt; 0 and j &gt; 0:
             if str1[i &#8211; 1] == str2[j &#8211; 1]:
                 lcs.append(str1[i &#8211; 1])
