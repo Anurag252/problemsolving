@@ -24,7 +24,8 @@ class Solution:
         # Step 2: Backtrack to get LCS
         i, j = m, n
         lcs = []
-        
+        # this is very imp as I got this incorrect , LCS needs back tracking 
+        # a simple max_len - adoes not work
         while i > 0 and j > 0:
             if str1[i - 1] == str2[j - 1]:
                 lcs.append(str1[i - 1])
