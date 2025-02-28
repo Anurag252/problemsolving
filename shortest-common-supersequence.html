@@ -1,0 +1,59 @@
+	<p>class Solution:
+    def shortestCommonSupersequence(self, str1: str, str2: str) -&gt; str:
+        # it is possible that s1 is sub sequence of s2 
+        # then s2 is ans
+        # a sub string of s1 is subsequence of s2
+        # then shortest would be s1`+common+s2`
+        # how to check if something s a subseq -&gt; 
+        # T[i,j] = T[i-1,j-1] if a[i] == a[j]
+        #        = False
+        # in the arr find the longest True or 1 occurence
+        # and attach the remaining chars at start or end, many ans possible
+        m, n = len(str1), len(str2)</p>
+
+        # Step 1: Compute <span class="caps">LCS</span> table
+        T = [<sup class="footnote" id="fnrev1575189f23d347f3a07ac6f1b622a73c-1"><a href="#fn1575189f23d347f3a07ac6f1b622a73c-1">0</a></sup> * (n + 1) for _ in range(m + 1)]
+
+        for i in range(1, m + 1):
+            for j in range(1, n + 1):
+                if str1[i &#8211; 1] == str2[j &#8211; 1]:
+                    T[i][j] = 1 + T[i &#8211; 1][j &#8211; 1]
+                else:
+                    T[i][j] = max(T[i &#8211; 1][j], T[i][j &#8211; 1])
+
+        # Step 2: Backtrack to get LCS
+        i, j = m, n
+        lcs = []
+
+        while i &gt; 0 and j &gt; 0:
+            if str1[i &#8211; 1] == str2[j &#8211; 1]:
+                lcs.append(str1[i &#8211; 1])
+                i -= 1
+                j -= 1
+            elif T[i &#8211; 1][j] &gt;= T[i][j &#8211; 1]:
+                i -= 1
+            else:
+                j -= 1
+
+        lcs.reverse()
+        lcs = &#8216;&#8217;.join(lcs)
+
+        # Step 3: Construct <span class="caps">SCS</span> using <span class="caps">LCS</span> as anchor
+        i, j = 0, 0
+        scs = []
+
+        for c in lcs:
+            while i &lt; len(str1) and str1[i] != c:
+                scs.append(str1[i])
+                i += 1
+            while j &lt; len(str2) and str2[j] != c:
+                scs.append(str2[j])
+                j += 1
+            scs.append&#169;
+            i += 1
+            j += 1
+
+        scs.append(str1[i:])
+        scs.append(str2[j:])
+
+        return &#8216;&#8217;.join(scs)
