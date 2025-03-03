@@ -1,0 +1,23 @@
+	<p>class Solution:
+    def mergeArrays(self, nums1: List[List[int]], nums2: List[List[int]]) -&gt; List[List[int]]:
+        mp = {}</p>
+
+        mx = 0
+
+        for k in nums1:
+            mp[k<sup class="footnote" id="fnrev56581e9ef87c465a94adbabd65fbc3e1-1"><a href="#fn56581e9ef87c465a94adbabd65fbc3e1-1">0</a></sup>] = k<sup class="footnote" id="fnrev56581e9ef87c465a94adbabd65fbc3e1-2"><a href="#fn56581e9ef87c465a94adbabd65fbc3e1-2">1</a></sup>
+            mx = max(mx, k<sup class="footnote"><a href="#fn56581e9ef87c465a94adbabd65fbc3e1-1">0</a></sup>)
+
+        for k in nums2:
+            if k<sup class="footnote"><a href="#fn56581e9ef87c465a94adbabd65fbc3e1-1">0</a></sup> not in mp:
+                mp[k<sup class="footnote"><a href="#fn56581e9ef87c465a94adbabd65fbc3e1-1">0</a></sup>] = k<sup class="footnote"><a href="#fn56581e9ef87c465a94adbabd65fbc3e1-2">1</a></sup>
+            else:
+                mp[k<sup class="footnote"><a href="#fn56581e9ef87c465a94adbabd65fbc3e1-1">0</a></sup>] += k<sup class="footnote"><a href="#fn56581e9ef87c465a94adbabd65fbc3e1-2">1</a></sup>
+            mx = max(mx, k<sup class="footnote"><a href="#fn56581e9ef87c465a94adbabd65fbc3e1-1">0</a></sup>)
+
+        res = []
+
+        for k in range(1,mx+1):
+            if k in mp:
+                res.append([k, mp[k]])
+        return res
