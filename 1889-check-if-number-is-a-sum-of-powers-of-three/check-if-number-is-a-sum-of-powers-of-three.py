@@ -27,7 +27,7 @@ class Solution:
             cache[n] = False
             return False
         res = recurse(n, mp)
-        print(cache)
+        #print(cache)
         return res
 
         
