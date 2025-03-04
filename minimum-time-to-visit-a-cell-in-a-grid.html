@@ -1,17 +1,17 @@
 	<p>class Solution:
     def minimumTime(self, grid: List[List[int]]) -&gt; int:
         # If both initial moves require more than 1 second, impossible to proceed
-        if grid<sup class="footnote" id="fnrev59ade0d7b37347ffb3e6137c44b17bc3-1"><a href="#fn59ade0d7b37347ffb3e6137c44b17bc3-1">0</a></sup><sup class="footnote" id="fnrev59ade0d7b37347ffb3e6137c44b17bc3-2"><a href="#fn59ade0d7b37347ffb3e6137c44b17bc3-2">1</a></sup> &gt; 1 and grid<sup class="footnote"><a href="#fn59ade0d7b37347ffb3e6137c44b17bc3-2">1</a></sup><sup class="footnote"><a href="#fn59ade0d7b37347ffb3e6137c44b17bc3-1">0</a></sup> &gt; 1:
+        if grid<sup class="footnote" id="fnrevb93203188579442daae7f86e2d643b70-1"><a href="#fnb93203188579442daae7f86e2d643b70-1">0</a></sup><sup class="footnote" id="fnrevb93203188579442daae7f86e2d643b70-2"><a href="#fnb93203188579442daae7f86e2d643b70-2">1</a></sup> &gt; 1 and grid<sup class="footnote"><a href="#fnb93203188579442daae7f86e2d643b70-2">1</a></sup><sup class="footnote"><a href="#fnb93203188579442daae7f86e2d643b70-1">0</a></sup> &gt; 1:
             return -1</p>
 
-        rows, cols = len(grid), len(grid<sup class="footnote"><a href="#fn59ade0d7b37347ffb3e6137c44b17bc3-1">0</a></sup>)
+        rows, cols = len(grid), len(grid<sup class="footnote"><a href="#fnb93203188579442daae7f86e2d643b70-1">0</a></sup>)
         # Possible movements: down, up, right, left
         directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
         visited = set()
 
         # Priority queue stores (time, row, col)
         # Ordered by minimum time to reach each cell
-        pq = [(grid<sup class="footnote"><a href="#fn59ade0d7b37347ffb3e6137c44b17bc3-1">0</a></sup><sup class="footnote"><a href="#fn59ade0d7b37347ffb3e6137c44b17bc3-1">0</a></sup>, 0, 0)]
+        pq = [(grid<sup class="footnote"><a href="#fnb93203188579442daae7f86e2d643b70-1">0</a></sup><sup class="footnote"><a href="#fnb93203188579442daae7f86e2d643b70-1">0</a></sup>, 0, 0)]
 
         while pq:
             time, row, col = heapq.heappop(pq)
