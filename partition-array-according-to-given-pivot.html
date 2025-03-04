@@ -1,0 +1,31 @@
+	<p>class Solution:
+    def pivotArray(self, nums: List[int], pivot: int) -&gt; List[int]:
+        less = []
+        grt =[]
+        pvt = []
+        res =[]</p>
+
+        for k in nums:
+            if k &lt; pivot :
+                less.append(k)
+            if k &gt; pivot:
+                grt.append(k)
+            if k == pivot:
+                pvt.append(k)
+
+        for k in less:
+            res.append(k)
+
+        for k in pvt:
+            res.append(k)
+
+
+        for k in grt:
+            res.append(k)
+
+        return res
+
+
+
+
+        
