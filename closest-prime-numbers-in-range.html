@@ -1,0 +1,52 @@
+	<p>class Solution:
+    def closestPrimes(self, left: int, right: int) -&gt; List[int]:</p>
+
+        last = -1
+        res = [-1,-1]
+        diff = math.pow(10, 6)
+        def all_primes(divisors):
+            for i in range (2, 1000):
+                prime = True
+                for j in range(2,i):
+                    if i % j == 0:
+                        prime= False
+                        break 
+                if prime:
+                    divisors.append(i)
+
+        divisors = []
+        all_primes(divisors)
+        def isPrime(k):
+            if k  1:
+                return False
+            if k  2:
+                return True
+            t = math.floor(math.sqrt(k))
+            for m in divisors:
+                if m &gt; t + 1:
+                    divisors.append(k)
+                    return True
+                if k % m  0:
+                    return False
+            divisors.append(k)
+            return True
+            for i in range(2, math.floor(math.sqrt(k)) + 1):
+                if k % i  0:
+                    return False
+            return True
+
+        for k in range(left, right+1):
+            if isPrime(k) :
+                if last == -1 :
+                    last = k
+                    continue
+                else:
+                    if k &#8211; last &lt; diff:
+                        diff = k &#8211; last
+                        res<sup class="footnote" id="fnrevdf757982c61341cb8bf31af72776fe33-1"><a href="#fndf757982c61341cb8bf31af72776fe33-1">0</a></sup> = last
+                        res<sup class="footnote" id="fnrevdf757982c61341cb8bf31af72776fe33-2"><a href="#fndf757982c61341cb8bf31af72776fe33-2">1</a></sup> = k
+                    last = k
+        return res
+
+
+        
