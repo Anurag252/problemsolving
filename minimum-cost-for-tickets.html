@@ -21,7 +21,7 @@
         for k, i in enumerate(range(min(days), max(days) + 1)):
 
             if i in freq:
-                T[i] = (min(costs<sup class="footnote" id="fnrevaffd72f63c60443ead9e4f98e785c267-1"><a href="#fnaffd72f63c60443ead9e4f98e785c267-1">0</a></sup> + T[i-1] if i- 1 &gt;= 0 else costs<sup class="footnote"><a href="#fnaffd72f63c60443ead9e4f98e785c267-1">0</a></sup> , costs<sup class="footnote" id="fnrevaffd72f63c60443ead9e4f98e785c267-2"><a href="#fnaffd72f63c60443ead9e4f98e785c267-2">1</a></sup> + T[i-7] if i-7 &gt;= 0 else costs<sup class="footnote"><a href="#fnaffd72f63c60443ead9e4f98e785c267-2">1</a></sup>, costs<sup class="footnote" id="fnrevaffd72f63c60443ead9e4f98e785c267-3"><a href="#fnaffd72f63c60443ead9e4f98e785c267-3">2</a></sup> + T[i-30] if i-30 &gt;= 0 else costs<sup class="footnote"><a href="#fnaffd72f63c60443ead9e4f98e785c267-3">2</a></sup>))
+                T[i] = (min(costs<sup class="footnote" id="fnrev9a3020ea9a6f4c61a3e742f0aeaca34c-1"><a href="#fn9a3020ea9a6f4c61a3e742f0aeaca34c-1">0</a></sup> + T[i-1] if i- 1 &gt;= 0 else costs<sup class="footnote"><a href="#fn9a3020ea9a6f4c61a3e742f0aeaca34c-1">0</a></sup> , costs<sup class="footnote" id="fnrev9a3020ea9a6f4c61a3e742f0aeaca34c-2"><a href="#fn9a3020ea9a6f4c61a3e742f0aeaca34c-2">1</a></sup> + T[i-7] if i-7 &gt;= 0 else costs<sup class="footnote"><a href="#fn9a3020ea9a6f4c61a3e742f0aeaca34c-2">1</a></sup>, costs<sup class="footnote" id="fnrev9a3020ea9a6f4c61a3e742f0aeaca34c-3"><a href="#fn9a3020ea9a6f4c61a3e742f0aeaca34c-3">2</a></sup> + T[i-30] if i-30 &gt;= 0 else costs<sup class="footnote"><a href="#fn9a3020ea9a6f4c61a3e742f0aeaca34c-3">2</a></sup>))
             else:
                 T[i] = (T[i-1] if i-1 &gt;= 0 else 0)
         T= T[min(days):max(days) + 1]
@@ -35,7 +35,7 @@
                 return 0
             if p not in freq:
                 return recurse(i,p+1)
-            return min(costs<sup class="footnote"><a href="#fnaffd72f63c60443ead9e4f98e785c267-1">0</a></sup> +  recurse(i ,p+1) , costs<sup class="footnote"><a href="#fnaffd72f63c60443ead9e4f98e785c267-2">1</a></sup> + recurse( i,p + 7), costs<sup class="footnote"><a href="#fnaffd72f63c60443ead9e4f98e785c267-3">2</a></sup> + recurse( i,p + 30))
-        return recurse(0, days<sup class="footnote"><a href="#fnaffd72f63c60443ead9e4f98e785c267-1">0</a></sup>)
+            return min(costs<sup class="footnote"><a href="#fn9a3020ea9a6f4c61a3e742f0aeaca34c-1">0</a></sup> +  recurse(i ,p+1) , costs<sup class="footnote"><a href="#fn9a3020ea9a6f4c61a3e742f0aeaca34c-2">1</a></sup> + recurse( i,p + 7), costs<sup class="footnote"><a href="#fn9a3020ea9a6f4c61a3e742f0aeaca34c-3">2</a></sup> + recurse( i,p + 30))
+        return recurse(0, days<sup class="footnote"><a href="#fn9a3020ea9a6f4c61a3e742f0aeaca34c-1">0</a></sup>)
 
         

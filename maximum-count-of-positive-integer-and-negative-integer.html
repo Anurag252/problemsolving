@@ -1,0 +1,37 @@
+	<p>class Solution:
+    def maximumCount(self, nums: List[int]) -&gt; int:</p>
+
+        if len(nums) == 1:
+            return 1 if nums<sup class="footnote" id="fnrev547f6b74f7e34c3b80ba3874937352dc-1"><a href="#fn547f6b74f7e34c3b80ba3874937352dc-1">0</a></sup> != 0 else 0
+        res = 0
+        left = 0
+        right = len(nums)-1
+        while(left + 1 &lt; right):
+
+            mid = (left + right) // 2
+            if nums[mid]  0:
+                while( mid < len(nums) and nums[mid]  0):
+                    mid += 1
+                right = mid
+                mid -= 1
+                while(mid &gt;= 0 and nums[mid] == 0):
+                    mid -= 1
+                left = mid
+                break
+
+            if nums[mid] &lt; 0:
+                left = mid
+            else:
+                right = mid
+
+
+        if right  len(nums) - 1 and nums[right] < 0: 
+            return left + 1 + 1
+        if left  0 and nums[left] &gt; 0:
+            return len(nums) &#8211; right + 1
+
+        return max(left + 1, len(nums) &#8211; right)
+
+
+
+        
