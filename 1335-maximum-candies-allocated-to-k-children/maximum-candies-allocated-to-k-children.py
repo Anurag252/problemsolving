@@ -43,7 +43,7 @@ class Solution:
                 res = mid
             else:
                 right = mid - 1
-            print(left, right, mid)
+            #print(left, right, mid)
     
         if test(candies, left, k)[0]:
             res = left
