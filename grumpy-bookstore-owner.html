@@ -8,7 +8,7 @@
     int suffix_sum[customersSize];
 
     // Calculate prefix sum
-    prefix_sum<sup class="footnote" id="fnrev848abf1c72ad4d488cf2eb300010ad56-1"><a href="#fn848abf1c72ad4d488cf2eb300010ad56-1">0</a></sup> = grumpy<sup class="footnote"><a href="#fn848abf1c72ad4d488cf2eb300010ad56-1">0</a></sup>  0 ? customers[0] : 0;
+    prefix_sum<sup class="footnote" id="fnrev635b55912de847a9a006938db807cb16-1"><a href="#fn635b55912de847a9a006938db807cb16-1">0</a></sup> = grumpy<sup class="footnote"><a href="#fn635b55912de847a9a006938db807cb16-1">0</a></sup>  0 ? customers[0] : 0;
     for (int i = 1; i < customersSize; i++) {
         prefix_sum[i] = prefix_sum[i - 1] + (grumpy[i]  0 ? customers[i] : 0);
     }
