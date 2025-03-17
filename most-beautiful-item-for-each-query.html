@@ -17,11 +17,11 @@
             left, right = 0, len(max_beauty) &#8211; 1
             while left &lt;= right:
                 mid = left + (right &#8211; left) // 2
-                if max_beauty[mid]<sup class="footnote" id="fnrevaa501f6790f84d06959e2a6a18b4056b-1"><a href="#fnaa501f6790f84d06959e2a6a18b4056b-1">0</a></sup> &lt;= price_limit:
+                if max_beauty[mid]<sup class="footnote" id="fnrev03be879c8a724d708f9d3b0e17184317-1"><a href="#fn03be879c8a724d708f9d3b0e17184317-1">0</a></sup> &lt;= price_limit:
                     left = mid + 1
                 else:
                     right = mid &#8211; 1
-            return max_beauty[right]<sup class="footnote" id="fnrevaa501f6790f84d06959e2a6a18b4056b-2"><a href="#fnaa501f6790f84d06959e2a6a18b4056b-2">1</a></sup> if right &gt;= 0 else 0
+            return max_beauty[right]<sup class="footnote" id="fnrev03be879c8a724d708f9d3b0e17184317-2"><a href="#fn03be879c8a724d708f9d3b0e17184317-2">1</a></sup> if right &gt;= 0 else 0
 
         # Answer each query using binary search on max_beauty
         ans = []
