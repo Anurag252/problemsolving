@@ -5,12 +5,12 @@
     def insert_traverse(self, root,  a):
         if len(a) == 0:
             return
-        if a<sup class="footnote" id="fnrevdafa707f4f2941859e5356d262e8b08c-1"><a href="#fndafa707f4f2941859e5356d262e8b08c-1">0</a></sup> in root:
-            root[a<sup class="footnote"><a href="#fndafa707f4f2941859e5356d262e8b08c-1">0</a></sup>] = (root[a<sup class="footnote"><a href="#fndafa707f4f2941859e5356d262e8b08c-1">0</a></sup>]<sup class="footnote"><a href="#fndafa707f4f2941859e5356d262e8b08c-1">0</a></sup>, root[a<sup class="footnote"><a href="#fndafa707f4f2941859e5356d262e8b08c-1">0</a></sup>]<sup class="footnote" id="fnrevdafa707f4f2941859e5356d262e8b08c-2"><a href="#fndafa707f4f2941859e5356d262e8b08c-2">1</a></sup> + 1)
-            self.insert_traverse(root[a<sup class="footnote"><a href="#fndafa707f4f2941859e5356d262e8b08c-1">0</a></sup>]<sup class="footnote"><a href="#fndafa707f4f2941859e5356d262e8b08c-1">0</a></sup>, a[1:])
+        if a<sup class="footnote" id="fnrev661caeb253e24edcb3727f3467bbc8f7-1"><a href="#fn661caeb253e24edcb3727f3467bbc8f7-1">0</a></sup> in root:
+            root[a<sup class="footnote"><a href="#fn661caeb253e24edcb3727f3467bbc8f7-1">0</a></sup>] = (root[a<sup class="footnote"><a href="#fn661caeb253e24edcb3727f3467bbc8f7-1">0</a></sup>]<sup class="footnote"><a href="#fn661caeb253e24edcb3727f3467bbc8f7-1">0</a></sup>, root[a<sup class="footnote"><a href="#fn661caeb253e24edcb3727f3467bbc8f7-1">0</a></sup>]<sup class="footnote" id="fnrev661caeb253e24edcb3727f3467bbc8f7-2"><a href="#fn661caeb253e24edcb3727f3467bbc8f7-2">1</a></sup> + 1)
+            self.insert_traverse(root[a<sup class="footnote"><a href="#fn661caeb253e24edcb3727f3467bbc8f7-1">0</a></sup>]<sup class="footnote"><a href="#fn661caeb253e24edcb3727f3467bbc8f7-1">0</a></sup>, a[1:])
         else:
-            root[a<sup class="footnote"><a href="#fndafa707f4f2941859e5356d262e8b08c-1">0</a></sup>] = ({}, 1)
-            self.insert_traverse(root[a<sup class="footnote"><a href="#fndafa707f4f2941859e5356d262e8b08c-1">0</a></sup>]<sup class="footnote"><a href="#fndafa707f4f2941859e5356d262e8b08c-1">0</a></sup>, a[1:])
+            root[a<sup class="footnote"><a href="#fn661caeb253e24edcb3727f3467bbc8f7-1">0</a></sup>] = ({}, 1)
+            self.insert_traverse(root[a<sup class="footnote"><a href="#fn661caeb253e24edcb3727f3467bbc8f7-1">0</a></sup>]<sup class="footnote"><a href="#fn661caeb253e24edcb3727f3467bbc8f7-1">0</a></sup>, a[1:])
 
 
     def insert(self, a):
@@ -19,9 +19,9 @@
 
     def traverse(self, root, a):
         if len(a) == 1:
-            return root[a]<sup class="footnote"><a href="#fndafa707f4f2941859e5356d262e8b08c-2">1</a></sup> if a in root else 0
-        if a<sup class="footnote"><a href="#fndafa707f4f2941859e5356d262e8b08c-1">0</a></sup> in root:
-            return self.traverse(root[a<sup class="footnote"><a href="#fndafa707f4f2941859e5356d262e8b08c-1">0</a></sup>]<sup class="footnote"><a href="#fndafa707f4f2941859e5356d262e8b08c-1">0</a></sup>, a[1:])
+            return root[a]<sup class="footnote"><a href="#fn661caeb253e24edcb3727f3467bbc8f7-2">1</a></sup> if a in root else 0
+        if a<sup class="footnote"><a href="#fn661caeb253e24edcb3727f3467bbc8f7-1">0</a></sup> in root:
+            return self.traverse(root[a<sup class="footnote"><a href="#fn661caeb253e24edcb3727f3467bbc8f7-1">0</a></sup>]<sup class="footnote"><a href="#fn661caeb253e24edcb3727f3467bbc8f7-1">0</a></sup>, a[1:])
         else:
             return 0
 
