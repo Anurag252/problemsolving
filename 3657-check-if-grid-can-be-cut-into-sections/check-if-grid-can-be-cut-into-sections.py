@@ -14,7 +14,7 @@ class Solution:
         def merge_intervals(arr):
             
             arr.sort(key= lambda x: x[0])
-            print(arr)
+            #print(arr)
 
             start = -1
             end = -1
@@ -28,7 +28,7 @@ class Solution:
                 else:
                     end = max(k[1], end)
 
-            print(count)
+            #print(count)
             return count >= 3
         return merge_intervals(x_rect) or merge_intervals(y_rect)
 
