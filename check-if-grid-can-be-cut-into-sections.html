@@ -1,0 +1,42 @@
+	<p>class Solution:
+    def checkValidCuts(self, n: int, rectangles: List[List[int]]) -&gt; bool:
+        # find at least 3 non overlapping rectangles
+        # [0,2] , [2,4], [2,3], [4,5]
+        # merge intervals and find at least 3 , nore than 3 also ok ? looks yes</p>
+
+        x_rect = []
+        y_rect = []
+
+        for k in rectangles:
+            x_rect.append([k<sup class="footnote" id="fnrev72c9fa848e6e4156b7c928249730fff4-1"><a href="#fn72c9fa848e6e4156b7c928249730fff4-1">1</a></sup>,k<sup class="footnote" id="fnrev72c9fa848e6e4156b7c928249730fff4-2"><a href="#fn72c9fa848e6e4156b7c928249730fff4-2">3</a></sup>])
+            y_rect.append([k<sup class="footnote" id="fnrev72c9fa848e6e4156b7c928249730fff4-3"><a href="#fn72c9fa848e6e4156b7c928249730fff4-3">0</a></sup>,k<sup class="footnote" id="fnrev72c9fa848e6e4156b7c928249730fff4-4"><a href="#fn72c9fa848e6e4156b7c928249730fff4-4">2</a></sup>])
+
+        def merge_intervals(arr):
+
+            arr.sort(key= lambda x: x<sup class="footnote"><a href="#fn72c9fa848e6e4156b7c928249730fff4-3">0</a></sup>)
+            print(arr)
+
+            start = -1
+            end = -1
+            count = 0
+
+            for k in arr:
+                if end &lt;= k<sup class="footnote"><a href="#fn72c9fa848e6e4156b7c928249730fff4-3">0</a></sup>:
+                    count += 1
+                    start = k<sup class="footnote"><a href="#fn72c9fa848e6e4156b7c928249730fff4-3">0</a></sup>
+                    end = k<sup class="footnote"><a href="#fn72c9fa848e6e4156b7c928249730fff4-1">1</a></sup>
+                else:
+                    end = max(k<sup class="footnote"><a href="#fn72c9fa848e6e4156b7c928249730fff4-1">1</a></sup>, end)
+
+            print(count)
+            return count &gt;= 3
+        return merge_intervals(x_rect) or merge_intervals(y_rect)
+
+
+
+
+
+
+
+
+        
