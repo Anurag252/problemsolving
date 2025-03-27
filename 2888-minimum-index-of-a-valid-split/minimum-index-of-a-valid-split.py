@@ -7,13 +7,12 @@ class Solution:
             if k not in temp:
                 temp[k] = 0
             temp[k] += 1
-        print(temp)
+        
         for k in temp:
             if count < temp[k]:
                 dominant = k
                 count = temp[k]
-        print(dominant)
-
+        
         nc = 0
         for i, k in enumerate(nums):
             if k == dominant:
