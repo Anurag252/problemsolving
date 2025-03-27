@@ -23,7 +23,7 @@
         adjList = {i: [] for i in range(numCourses)}
 
         for edge in prerequisites:
-            adjList[edge<sup class="footnote" id="fnrevc9c0838bd967458c95fdcbe18faa2083-1"><a href="#fnc9c0838bd967458c95fdcbe18faa2083-1">0</a></sup>].append(edge<sup class="footnote" id="fnrevc9c0838bd967458c95fdcbe18faa2083-2"><a href="#fnc9c0838bd967458c95fdcbe18faa2083-2">1</a></sup>)
+            adjList[edge<sup class="footnote" id="fnrev5d926f13a90e4069932a9e7179734afe-1"><a href="#fn5d926f13a90e4069932a9e7179734afe-1">0</a></sup>].append(edge<sup class="footnote" id="fnrev5d926f13a90e4069932a9e7179734afe-2"><a href="#fn5d926f13a90e4069932a9e7179734afe-2">1</a></sup>)
 
         result = []
 
@@ -31,7 +31,7 @@
             # Reset the visited array for each query
             visited = [False] * numCourses
             result.append(
-                self.isPrerequisite(adjList, visited, query<sup class="footnote"><a href="#fnc9c0838bd967458c95fdcbe18faa2083-1">0</a></sup>, query<sup class="footnote"><a href="#fnc9c0838bd967458c95fdcbe18faa2083-2">1</a></sup>)
+                self.isPrerequisite(adjList, visited, query<sup class="footnote"><a href="#fn5d926f13a90e4069932a9e7179734afe-1">0</a></sup>, query<sup class="footnote"><a href="#fn5d926f13a90e4069932a9e7179734afe-2">1</a></sup>)
             )
 
         return result
