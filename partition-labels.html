@@ -1,0 +1,32 @@
+	<p>class Solution:
+    def partitionLabels(self, s: str) -&gt; List[int]:
+        # create a map of char and last index
+        # take a start elem
+        # loop till start &lt; end , end = max(cend, mp[char])
+        # when start == end , add end &#8211; start + 1 to arr and then start = end + 1
+        # do this till start &lt; len(s)</p>
+
+        mp = {}
+
+        for id, k in enumerate(s):
+            mp[k] = id
+
+        start = 0
+        end = 0
+        curr = 0
+        res = []
+        while(start &lt;= end) :
+            if curr  len(s):
+                return res 
+            end = max(end, mp[s[curr]])
+            if curr  end:
+                res.append(end &#8211; start + 1)
+                start = end + 1
+                curr = end
+                end += 1
+            curr += 1
+        return res
+
+
+
+        
