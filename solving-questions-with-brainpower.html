@@ -1,0 +1,12 @@
+	<p>class Solution:
+    def mostPoints(self, questions: List[List[int]]) -&gt; int:
+        n = len(questions)
+        dp = [0] * (n + 1)  # dp[i] = max points starting from i</p>
+
+        for i in range(n &#8211; 1, -1, -1):
+            points, skip = questions[i]
+            take = points + (dp[i + skip + 1] if i + skip + 1 &lt; n else 0)
+            skip = dp[i + 1]
+            dp[i] = max(take, skip)
+
+        return dp<sup class="footnote" id="fnreve997d20a91a14b7da9b4aa232ab3f0f7-1"><a href="#fne997d20a91a14b7da9b4aa232ab3f0f7-1">0</a></sup>
