@@ -1,23 +1,33 @@
 	<p>class Solution:
     def maximumTripletValue(self, nums: List[int]) -&gt; int:
-        pos = [0] * len(nums)</p>
+        pos = [0] * len(nums)
+        pos1 = [0] * len(nums)
+        mn = [0] * len(nums)</p>
 
         temp1 = 0
         temp2 = 0
+        temp3 = 1000
         for i, k in enumerate(nums[::-1]):
             if temp1 &lt; k:
                 temp1 = k
             pos[len(nums) &#8211; i-1] = temp1
 
-        #print(pos, neg)
+        for i, k in enumerate(nums):
+            if temp2 &lt; k:
+                temp2 = k
+            pos1[i] = temp2
+
+        for i, k in enumerate(nums[::-1]):
+            if temp3 &gt; k:
+                temp3 = k
+            mn[len(nums) &#8211; i-1] = temp3
+
+        print(pos, pos1, mn)
         mx = 0
-        for i , k1 in enumerate(nums):
-            if i + 1 &gt;= len(nums):
-                continue
-            for j, k2 in enumerate(nums[i+1:]):
-                if i+1 + j+1 &lt; len(nums):
-                    #print(i,j)
-                    mx = max(mx, (k1 &#8211; k2) * pos[i+1 + j+1])
+
+        for i , k in enumerate(nums):
+            if i &#8211; 1 &gt;= 0 and i + 1 &lt; len(nums):
+                mx = max(mx, (pos1[i-1] &#8211; k) * pos[i+1])
         return mx
 
         
