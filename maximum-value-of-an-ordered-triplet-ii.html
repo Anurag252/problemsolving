@@ -1,0 +1,12 @@
+	<p>class Solution:
+    def maximumTripletValue(self, nums: List[int]) -&gt; int:
+        mx , diff , prod = 0, 0, 0</p>
+
+        for i, k in enumerate(nums):
+            prod = max(prod, diff * k)
+            diff = max(diff, mx &#8211; k)
+            mx = max(mx, k)
+
+        return prod
+
+        
