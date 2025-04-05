@@ -1,0 +1,49 @@
+	<ol>
+		<li>Definition for a binary tree node.</li>
+		<li>class TreeNode:</li>
+		<li>def __init__(self, val=0, left=None, right=None):</li>
+		<li>self.val = val</li>
+		<li>self.left = left</li>
+		<li>self.right = right</li>
+	</ol>
+
+	<p>class Solution:
+    def lcaDeepestLeaves(self, root: Optional[TreeNode]) -&gt; Optional[TreeNode]:
+        # Step 1: Level-order traversal to get the deepest level nodes
+        lvl = [root]</p>
+
+        def test(lvl):
+            temp = []
+            prev = []
+            while lvl:
+                r = lvl.pop()
+                prev.append&#174;
+                if r.left is not None:
+                    temp.append(r.left)
+                if r.right is not None:
+                    temp.append(r.right)
+            if temp:
+                return test(temp)
+            else:
+                return prev
+
+        prev = test(lvl)  # deepest leaves
+        prev_set = set(prev)  # for faster lookup
+        total = len(prev_set)
+        res = None
+
+        # Step 2: <span class="caps">DFS</span> to find <span class="caps">LCA</span> of deepest leaves
+        def dfs(node):
+            nonlocal res
+            if node is None:
+                return 0
+            left = dfs(node.left)
+            right = dfs(node.right)
+            self_count = 1 if node in prev_set else 0
+            count = left + right + self_count
+            if count == total and res is None:
+                res = node
+            return count
+
+        dfs(root)
+        return res
