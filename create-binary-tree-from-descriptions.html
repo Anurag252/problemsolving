@@ -11,20 +11,20 @@ class Solution:
         root = {}
         r = 0
         for k in descriptions:
-            if k<sup class="footnote" id="fnrev83912347ad96426987fcc154f04a0dae-1"><a href="#fn83912347ad96426987fcc154f04a0dae-1">0</a></sup> not in root:
-                root[k<sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-1">0</a></sup>] = 0</li>
+            if k<sup class="footnote" id="fnrev2a9dc8d3da464b14b4d248d10202e4e4-1"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-1">0</a></sup> not in root:
+                root[k<sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-1">0</a></sup>] = 0</li>
 	</ol>
 
-            if k<sup class="footnote" id="fnrev83912347ad96426987fcc154f04a0dae-2"><a href="#fn83912347ad96426987fcc154f04a0dae-2">1</a></sup> in root:
-                root[k<sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-2">1</a></sup>]  = root[k<sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-2">1</a></sup>] + 1
+            if k<sup class="footnote" id="fnrev2a9dc8d3da464b14b4d248d10202e4e4-2"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-2">1</a></sup> in root:
+                root[k<sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-2">1</a></sup>]  = root[k<sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-2">1</a></sup>] + 1
             else:
-                root[k<sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-2">1</a></sup>]  =  1
+                root[k<sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-2">1</a></sup>]  =  1
 
-            if k<sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-1">0</a></sup> in dic:
+            if k<sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-1">0</a></sup> in dic:
 
-                dic[k<sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-1">0</a></sup>].append((k<sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-2">1</a></sup>, k<sup class="footnote" id="fnrev83912347ad96426987fcc154f04a0dae-3"><a href="#fn83912347ad96426987fcc154f04a0dae-3">2</a></sup>))
+                dic[k<sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-1">0</a></sup>].append((k<sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-2">1</a></sup>, k<sup class="footnote" id="fnrev2a9dc8d3da464b14b4d248d10202e4e4-3"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-3">2</a></sup>))
             else:
-                dic[k<sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-1">0</a></sup>] = [(k<sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-2">1</a></sup>, k<sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-3">2</a></sup>)]
+                dic[k<sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-1">0</a></sup>] = [(k<sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-2">1</a></sup>, k<sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-3">2</a></sup>)]
 
         for k in root:
             if root[k] == 0:
@@ -38,16 +38,16 @@ class Solution:
             if elem not in dic:
                 return t
             if len(dic[elem]) &gt;= 1:
-                if dic[elem]<sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-1">0</a></sup><sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-2">1</a></sup> == 1:
-                    t.left = recurse(dic[elem]<sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-1">0</a></sup><sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-1">0</a></sup>)
+                if dic[elem]<sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-1">0</a></sup><sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-2">1</a></sup> == 1:
+                    t.left = recurse(dic[elem]<sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-1">0</a></sup><sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-1">0</a></sup>)
                 else:
-                    t.right = recurse(dic[elem]<sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-1">0</a></sup><sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-1">0</a></sup>)
+                    t.right = recurse(dic[elem]<sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-1">0</a></sup><sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-1">0</a></sup>)
 
             if len(dic[elem])  2:
                 if dic[elem][1][1]  1:
-                    t.left = recurse(dic[elem]<sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-2">1</a></sup><sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-1">0</a></sup>)
+                    t.left = recurse(dic[elem]<sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-2">1</a></sup><sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-1">0</a></sup>)
                 else:
-                    t.right = recurse(dic[elem]<sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-2">1</a></sup><sup class="footnote"><a href="#fn83912347ad96426987fcc154f04a0dae-1">0</a></sup>)
+                    t.right = recurse(dic[elem]<sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-2">1</a></sup><sup class="footnote"><a href="#fn2a9dc8d3da464b14b4d248d10202e4e4-1">0</a></sup>)
             return t
         return recurse&#174;
 
