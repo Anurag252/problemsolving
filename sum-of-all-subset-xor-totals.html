@@ -1,0 +1,26 @@
+	<p>class Solution:
+    def subsetXORSum(self, nums: List[int]) -&gt; int:
+        # xor -&gt; 0 if same else 1
+        t = 0
+        def all_subsets(i):
+            if i == len(nums)-1:
+                return [[nums[i]]]
+            res = []
+            for s in all_subsets(i+1):
+                if s != None:
+                    res.append(copy.deepcopy(s))
+                    s.append(nums[i])
+                    res.append(s)
+            res.append([nums[i]])</p>
+
+            return res
+        s = all_subsets(0)
+        m = 0
+        for t in s:
+            l = t<sup class="footnote" id="fnrevbe75247d690f4c5ab3b99264ed68200c-1"><a href="#fnbe75247d690f4c5ab3b99264ed68200c-1">0</a></sup>
+            for k in t[1:]:
+                l ^= k
+            m += l
+        return m
+
+        

@@ -3,7 +3,7 @@ from typing import List</p>
 
 	<p>class Solution:
     def minimumObstacles(self, grid: List[List[int]]) -&gt; int:
-        rows, cols = len(grid), len(grid<sup class="footnote" id="fnrev7d70e53e66ae42a499d01f791d179355-1"><a href="#fn7d70e53e66ae42a499d01f791d179355-1">0</a></sup>)
+        rows, cols = len(grid), len(grid<sup class="footnote" id="fnrev63bdce5908f2411983fa0815359ed0f8-1"><a href="#fn63bdce5908f2411983fa0815359ed0f8-1">0</a></sup>)
         directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
         costs = [[float(&#8216;inf&#8217;)] * cols for _ in range(rows)]
         pq = [(0, 0, 0)]  # (cost, x, y)</p>
