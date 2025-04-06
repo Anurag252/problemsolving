@@ -1,0 +1,49 @@
+	<p>class Solution:
+    def largestDivisibleSubset(self, nums: List[int]) -&gt; List[int]:
+        nums.sort()
+        if len(nums) == 1:
+            return nums</p>
+
+        res = [(0,0)] * len(nums)
+        mx = 0
+        for i, k in enumerate(nums):
+            t = 0
+            p = 0
+            for j in range(0,i+1):
+                if k % nums[j] == 0:
+                    if j != i and res[j]<sup class="footnote" id="fnrev41c5bece03264d769fc29e9ffed68403-1"><a href="#fn41c5bece03264d769fc29e9ffed68403-1">0</a></sup> + 1 &gt; t:
+                        p = max(p, j)
+                    t = max(res[j]<sup class="footnote"><a href="#fn41c5bece03264d769fc29e9ffed68403-1">0</a></sup> + 1, t) 
+                    mx = max(t,mx)
+
+            res[i] = (t,p)
+        print(res, mx)
+        if mx  1:
+            return [nums[0]]
+        ans = [0] * mx
+        index = 0
+        for i, k in enumerate(res):
+            if k[0]  mx:
+                # found max
+                index = k<sup class="footnote" id="fnrev41c5bece03264d769fc29e9ffed68403-2"><a href="#fn41c5bece03264d769fc29e9ffed68403-2">1</a></sup>
+                ans[-1] = nums[i]
+
+                break
+        print(index)
+        def rec(ans, index, i):
+            if i == 0:
+                ans[i] = nums[index]
+                return
+            ans[i] = nums[index]
+            rec(ans, res[index]<sup class="footnote"><a href="#fn41c5bece03264d769fc29e9ffed68403-2">1</a></sup>, i &#8211; 1)
+        rec(ans, index, len(ans)-2)
+        return ans
+
+
+
+
+        return res
+        # T[n] = max(T[n-i]) for all i if k[i] % k[n-i] == 0
+        # 
+
+        
