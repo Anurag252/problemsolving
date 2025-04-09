@@ -1,0 +1,26 @@
+	<p>class Solution:
+    def minOperations(self, nums: List[int], k: int) -&gt; int:
+        # keep fetching the largest elements and keep changing them to 
+        # h
+        # at the end res is num of unique elements &gt; k</p>
+
+        s = set(nums)
+        count = 0
+        c = 0
+        if k &gt; min(nums):
+            return -1
+        for m in nums:
+            if m  k:
+                c += 1
+        if c  len(nums):
+            return 0
+
+        for m in s:
+            if m &gt; k:
+                count += 1
+
+
+
+        return count if count &gt; 0 else -1
+
+        
