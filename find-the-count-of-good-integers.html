@@ -1,0 +1,28 @@
+	<p>class Solution:
+    def countGoodIntegers(self, n: int, k: int) -&gt; int:
+        dictionary = set()
+        base = 10 ** ((n &#8211; 1) // 2)
+        skip = n &amp; 1
+        # Enumerate the number of palindrome numbers of n digits
+        for i in range(base, base * 10):
+            s = str(i)
+            s += s[::-1][skip:]
+            palindromicInteger = int(s)
+            # If the current palindrome number is a k-palindromic integer
+            if palindromicInteger % k == 0:
+                sorted_s = &#8220;&#8221;.join(sorted(s))
+                dictionary.add(sorted_s)</p>
+
+        fac = [factorial(i) for i in range(n + 1)]
+        ans = 0
+        for s in dictionary:
+            cnt = [0] * 10
+            for c in s:
+                cnt[int&#169;] += 1
+            # Calculate permutations and combinations
+            tot = (n &#8211; cnt<sup class="footnote" id="fnrevc98b60ed2b994e2e94713b06eb37bbea-1"><a href="#fnc98b60ed2b994e2e94713b06eb37bbea-1">0</a></sup>) * fac[n &#8211; 1]
+            for x in cnt:
+                tot //= fac[x]
+            ans += tot
+
+        return ans
