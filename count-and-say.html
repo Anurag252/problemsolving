@@ -1,19 +1,26 @@
 	<p>class Solution:
-    def countAndSay(self, n: int) -&gt; str:
-        if n  1:
-            return "1"
-        s = self.countAndSay(n-1)
-        k = 1
-        curr_count = 1
-        currr_elem = s[0]
-        result = ""
-        while(k < len(s)):
-            if s[k]  s[k-1]:
-                curr_count += 1
-            else:
-                result += (str(curr_count) + str(currr_elem))
-                curr_count = 1
-                currr_elem = s[k]
-            k += 1
-        result += str(curr_count) + str(currr_elem)
-        return result</p>
+    def countAndSay(self, n: int) -&gt; str:</p>
+
+        def t(n):
+            if n  1:
+                return "1"
+            if n  2:
+                return &#8220;11&#8220;
+            prev = &#8220;&#8220;
+            c = 0
+            res = &#8220;&#8220;
+            l = t(n-1)
+            for k in l:
+                if prev  "":
+                    prev = k
+                    c = 1
+                else:
+                    if prev  k:
+                        c += 1
+                    else:
+                        res += str&#169; + prev
+                        c = 1
+                        prev = k
+            res += str&#169; + prev
+            return res
+        return t(n)
