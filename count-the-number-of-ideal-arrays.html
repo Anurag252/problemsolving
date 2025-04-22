@@ -1,0 +1,41 @@
+	<p><span class="caps">MOD</span> = 10**9 + 7<br />
+MAX_N = 10**4 + 10<br />
+MAX_P = 15  # At most 15 prime factors</p>
+
+	<p>sieve = [0] * <span class="caps">MAX</span>_N  # Smallest prime factor</p>
+
+	<p>for i in range(2, <span class="caps">MAX</span>_N):
+    if sieve[i] == 0:
+        for j in range(i, <span class="caps">MAX</span>_N, i):
+            sieve[j] = i</p>
+
+	<p>ps = [[] for _ in range(<span class="caps">MAX</span>_N)]</p>
+
+	<p>for i in range(2, <span class="caps">MAX</span>_N):
+    x = i
+    while x &gt; 1:
+        p = sieve[x]
+        cnt = 0
+        while x % p == 0:
+            x //= p
+            cnt += 1
+        ps[i].append(cnt)</p>
+
+	<p>c = [<sup class="footnote" id="fnrevfb2d58fc3e5a499a84cd9a1643ff8753-1"><a href="#fnfb2d58fc3e5a499a84cd9a1643ff8753-1">0</a></sup> * (<span class="caps">MAX</span>_P + 1) for _ in range(<span class="caps">MAX</span>_N + <span class="caps">MAX</span>_P)]</p>
+
+	<p>c<sup class="footnote"><a href="#fnfb2d58fc3e5a499a84cd9a1643ff8753-1">0</a></sup><sup class="footnote"><a href="#fnfb2d58fc3e5a499a84cd9a1643ff8753-1">0</a></sup> = 1<br />
+for i in range(1, <span class="caps">MAX</span>_N + <span class="caps">MAX</span>_P):
+    c[i]<sup class="footnote"><a href="#fnfb2d58fc3e5a499a84cd9a1643ff8753-1">0</a></sup> = 1
+    for j in range(1, min(i, <span class="caps">MAX</span>_P) + 1):
+        c[i][j] = (c[i &#8211; 1][j] + c[i &#8211; 1][j &#8211; 1]) % <span class="caps">MOD</span></p>
+
+
+	<p>class Solution:
+    def idealArrays(self, n: int, maxValue: int) -&gt; int:
+        ans = 0
+        for x in range(1, maxValue + 1):
+            mul = 1
+            for p in ps[x]:
+                mul = mul * c[n + p &#8211; 1][p] % MOD
+            ans = (ans + mul) % MOD
+        return ans</p>
