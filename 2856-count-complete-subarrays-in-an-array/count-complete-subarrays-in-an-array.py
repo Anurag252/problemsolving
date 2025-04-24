@@ -8,7 +8,6 @@ class Solution:
             for j , l in enumerate(nums[i:]):
                 a.add(l)
                 if len(a) == unique:
-                    print(a, i + j , i)
                     res += (len(nums) - j - i)
                     break
         return res
