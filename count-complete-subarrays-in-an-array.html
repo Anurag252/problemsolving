@@ -1,0 +1,19 @@
+	<p>class Solution:
+    def countCompleteSubarrays(self, nums: List[int]) -&gt; int:
+        s = set(nums)
+        unique = len(s)
+        res = 0
+        for i , k in enumerate(nums):
+            a = set()
+            for j , l in enumerate(nums[i:]):
+                a.add(l)
+                if len(a) == unique:
+                    print(a, i + j , i)
+                    res += (len(nums) &#8211; j &#8211; i)
+                    break
+        return res</p>
+
+
+
+
+        
