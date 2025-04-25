@@ -1,0 +1,48 @@
+	<p>class Solution:
+    def countInterestingSubarrays(self, nums: List[int], modulo: int, k: int) -&gt; int:
+        # in a subarr, find all indexes where % is k
+        # then if the number of such elements i multiple of k -&gt; interesting
+        # so basically 5 , multiples of 5
+        # 6 multiples of 6 and so on
+        # make all multiples as -1
+        # prepare an arr of ints with indexes of -1 occurences
+        # then subarray would be newarr[k + 1] &#8211; newarr[k]
+        prefix = 0
+        freq = defaultdict(int)
+        freq<sup class="footnote" id="fnrev33c42e18bf1b48a8905cb5957cbf9445-1"><a href="#fn33c42e18bf1b48a8905cb5957cbf9445-1">0</a></sup> = 1  # to count subarrays starting at index 0
+        res = 0</p>
+
+        for num in nums:
+            if num % modulo == k:
+                prefix += 1
+
+            # we want previous prefix sums that satisfy:
+            # (prefix &#8211; prev) % modulo  k
+            # => prev % modulo  (prefix &#8211; k + modulo) % modulo
+            target = (prefix &#8211; k) % modulo
+            res += freq[target]
+            freq[prefix % modulo] += 1
+
+        return res
+        prepare = []
+        for i, m in enumerate(nums):
+            if m % modulo == k:
+                prepare.append(i)
+        res = 0
+
+
+        print(prepare)
+        for i, m in enumerate(prepare):
+            if (i ) % modulo == k and i &#8211; 1 &gt;= 0:
+                res += prepare[i] &#8211; prepare[i-1]
+
+        if len(prepare) == 1:
+            res += len(nums)  &#8211; prepare<sup class="footnote"><a href="#fn33c42e18bf1b48a8905cb5957cbf9445-1">0</a></sup>
+
+        return res
+
+
+
+
+
+        
