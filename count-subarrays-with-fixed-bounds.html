@@ -29,40 +29,7 @@
                     res += min(founda, foundb) &#8211; left
 
         return res
-        for i, k in enumerate(nums):
-            if k &lt; minK:
-                nums[i] = 0
-            if k &gt; maxK:
-                nums[i] = 0
 
-
-        left = 0
-        right = 0
-        founda = False
-        foundb = False
-        res = 0
-        nums = [0] + nums + [0]
-        while(right &gt;= left and left &lt; len(nums) and right &lt; len(nums)):
-
-            if nums[right] == minK:
-                founda = True
-
-            if nums[right] == minK:
-                foundb = True
-
-            if nums[right] == 0 and right &gt; left:
-                print(&#8220;a&#8221;, right, left)
-                res += right &#8211; left &#8211; 1
-                left = right
-                founda = False
-                foundb = False
-                continue
-
-            if nums[left] == 0:
-                right += 1
-                continue
-
-        return res 
 
 
 
