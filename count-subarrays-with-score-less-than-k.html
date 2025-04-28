@@ -1,0 +1,44 @@
+	<p>class Solution:
+    def countSubarrays(self, nums: List[int], k: int) -&gt; int:</p>
+
+        left = 0
+        s = sum(nums)
+        total = 0
+        res = 0
+
+        for right in range(len(nums)):
+            total += nums[right]
+
+            while left &lt;= right and total * (right &#8211; left + 1) &gt;= k:
+                total -= nums[left]
+                left += 1
+
+            res += (right &#8211; left + 1)
+
+        return res
+
+
+
+        right = len(nums) &#8211; 1
+
+        while(left &lt; len(nums)):
+            if s * (right &#8211; left + 1) &gt;= k: # still large
+                s -= nums[right]
+                right -= 1
+                if right &lt; 0:
+                    left += 1
+                    s = left
+                    right = left
+            else:
+                # found max &lt; k
+
+                res += right &#8211; left + 1 # nums of subarray
+                s -= nums[left]
+                left += 1
+                while(s * (right &#8211; left + 1) &lt;= k and right &lt; len(nums)-1):
+                    right += 1
+                    s += nums[right]
+        return res
+
+
+        
