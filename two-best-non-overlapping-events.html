@@ -1,19 +1,19 @@
 	<p>class Solution:
     def maxTwoEvents(self, events: List[List[int]]) -&gt; int:
-        events.sort(key= lambda x : (x<sup class="footnote" id="fnrev5f2161a7a50346978739f53b7c631403-1"><a href="#fn5f2161a7a50346978739f53b7c631403-1">0</a></sup>,x<sup class="footnote" id="fnrev5f2161a7a50346978739f53b7c631403-2"><a href="#fn5f2161a7a50346978739f53b7c631403-2">1</a></sup>) )</p>
+        events.sort(key= lambda x : (x<sup class="footnote" id="fnrevb5f805aab5934fe788f261f163acc865-1"><a href="#fnb5f805aab5934fe788f261f163acc865-1">0</a></sup>,x<sup class="footnote" id="fnrevb5f805aab5934fe788f261f163acc865-2"><a href="#fnb5f805aab5934fe788f261f163acc865-2">1</a></sup>) )</p>
 
         arr = [0]
         temp = 0
         events.reverse()
         for k in events:
-            temp = max(temp, k<sup class="footnote" id="fnrev5f2161a7a50346978739f53b7c631403-3"><a href="#fn5f2161a7a50346978739f53b7c631403-3">2</a></sup>)
+            temp = max(temp, k<sup class="footnote" id="fnrevb5f805aab5934fe788f261f163acc865-3"><a href="#fnb5f805aab5934fe788f261f163acc865-3">2</a></sup>)
             arr.append(temp)
         events.reverse()
         arr.reverse()
 
 
         def good(idx, mid):
-            if events[idx]<sup class="footnote"><a href="#fn5f2161a7a50346978739f53b7c631403-2">1</a></sup> &lt; events[mid]<sup class="footnote"><a href="#fn5f2161a7a50346978739f53b7c631403-1">0</a></sup>:
+            if events[idx]<sup class="footnote"><a href="#fnb5f805aab5934fe788f261f163acc865-2">1</a></sup> &lt; events[mid]<sup class="footnote"><a href="#fnb5f805aab5934fe788f261f163acc865-1">0</a></sup>:
                 return True
             return False
 
@@ -36,9 +36,9 @@
             #if left  len(events)-1 or left  idx:
                 #continue
             if right == len(events) &#8211; 1 :
-                ans = max(ans , k<sup class="footnote"><a href="#fn5f2161a7a50346978739f53b7c631403-3">2</a></sup> )
+                ans = max(ans , k<sup class="footnote"><a href="#fnb5f805aab5934fe788f261f163acc865-3">2</a></sup> )
             else:
-                ans = max(ans , k<sup class="footnote"><a href="#fn5f2161a7a50346978739f53b7c631403-3">2</a></sup> + arr[left])
+                ans = max(ans , k<sup class="footnote"><a href="#fnb5f805aab5934fe788f261f163acc865-3">2</a></sup> + arr[left])
             print(idx, ans, left)
         return ans
 
