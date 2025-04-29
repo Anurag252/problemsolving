@@ -5,17 +5,22 @@ class Solution:
         s = sum(nums)
         total = 0
         res = 0
+        right = 0
 
-        for right in range(len(nums)):
-            total += nums[right]
-            
-            while left <= right and total * (right - left + 1) >= k:
-                total -= nums[left]
-                left += 1
-            
-            res += (right - left + 1)
-        
+        while(left < len(nums)):
+            while right < len(nums) and (total + nums[right]) * (right - left + 1) < k:
+                total += nums[right]
+                right += 1
+
+            # After expansion, [left, right-1] are all valid
+            res += right - left
+
+            # Move left forward
+            total -= nums[left]
+            left += 1
         return res
+
+        
 
 
 
