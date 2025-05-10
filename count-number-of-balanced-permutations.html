@@ -1,0 +1,94 @@
+	<p>class Solution:
+    def countBalancedPermutations(self, num: str) -&gt; int:
+        <span class="caps">MOD</span> = 10**9 + 7
+        tot, n = 0, len(num)
+        cnt = [0] * 10
+        for ch in num:
+            d = int(ch)
+            cnt[d] += 1
+            tot += d
+        if tot % 2 != 0:
+            return 0</p>
+
+        target = tot // 2
+        max_odd = (n + 1) // 2
+        f = [<sup class="footnote" id="fnrev12e760ac9c594c83a61cb6f99533620e-1"><a href="#fn12e760ac9c594c83a61cb6f99533620e-1">0</a></sup> * (max_odd + 1) for _ in range(target + 1)]
+        f<sup class="footnote"><a href="#fn12e760ac9c594c83a61cb6f99533620e-1">0</a></sup><sup class="footnote"><a href="#fn12e760ac9c594c83a61cb6f99533620e-1">0</a></sup> = 1
+        psum = tot_sum = 0
+        for i in range(10):
+            # Sum of the number of the first i digits
+            psum += cnt[i]
+            # Sum of the first i numbers
+            tot_sum += i * cnt[i]
+            for odd_cnt in range(
+                min(psum, max_odd), max(0, psum &#8211; (n &#8211; max_odd)) &#8211; 1, -1
+            ):
+                # The number of bits that need to be filled in even numbered positions
+                even_cnt = psum &#8211; odd_cnt
+                for curr in range(
+                    min(tot_sum, target), max(0, tot_sum &#8211; target) &#8211; 1, -1
+                ):
+                    res = 0
+                    for j in range(
+                        max(0, cnt[i] &#8211; even_cnt), min(cnt[i], odd_cnt) + 1
+                    ):
+                        if i * j &gt; curr:
+                            break
+                        # The current digit is filled with j positions at odd positions, and cnt[i] &#8211; j positions at even positions
+                        ways = (
+                            comb(odd_cnt, j) * comb(even_cnt, cnt[i] &#8211; j) % MOD
+                        )
+                        res = (
+                            res + ways * f[curr &#8211; i * j][odd_cnt &#8211; j] % MOD
+                        ) % MOD
+                    f[curr][odd_cnt] = res % <span class="caps">MOD</span>
+
+        return f[target][max_odd]
+
+
+	<p>&#8220;&#8221;&#8220;</p>
+
+
+
+	<p>class Solution:
+    def countBalancedPermutations(self, num: str) -&gt; int:</p>
+
+        def check(num):
+            even = 0
+            odd = 0
+            for i, k in enumerate(num):
+                if i % 2  0:
+                    even += int(k)
+                else:
+                    odd += int(k)
+            #print(even, odd)
+            return even  odd
+
+
+
+
+        s = set()
+
+        @cache
+        def test(prev , next):
+            #print(prev, next)
+            if next == &#8220;&#8221; :
+                if check(prev):
+                    #print(prev, &#8220;ancd&#8221;)
+                    s.add(prev)
+                else:
+                    return 0
+            res = 0
+            for i, k in enumerate(next):
+                if i &#8211; 1 &gt;= 0 and i + 1 &lt; len(next):
+                    test(prev + k, next[:i] + next[i+1:])
+                if  i &#8211; 1 &lt; 0:
+                    test(prev + k,  next[i+1:])
+                if i + 1 &gt;= len(next):
+                    test(prev + k, next[:i])
+
+        test(&#8220;&#8221;, num)
+        return len(s)
+
+
+	<p>&#8220;&#8221;&#8220;  </p>
