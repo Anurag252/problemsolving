@@ -1,0 +1,31 @@
+	<p>class Solution:
+    def minSum(self, nums1: List[int], nums2: List[int]) -&gt; int:</p>
+
+        num_of_zeros_a = 0
+        num_of_zeros_b = 0
+
+        for k in nums1:
+            if k == 0:
+                num_of_zeros_a += 1
+
+        for k in nums2:
+            if k == 0:
+                num_of_zeros_b += 1
+
+        &#8220;&#8221;&#8220;
+            its not possible if one side is &gt; and other side does not have 0
+        &#8220;&#8221;&#8220;
+        if num_of_zeros_b  0 and num_of_zeros_a  0 and sum(nums1) != sum(nums2):
+            return -1
+
+        if sum(nums1) + num_of_zeros_a &gt; sum(nums2) + num_of_zeros_b:
+            if num_of_zeros_b  0 and num_of_zeros_a > 0:
+                return -1
+            return sum(nums1) + num_of_zeros_a
+        else:
+            if num_of_zeros_a  0 and num_of_zeros_b &gt; 0:
+                return -1
+            return sum(nums2) + num_of_zeros_b
+
+
+        
