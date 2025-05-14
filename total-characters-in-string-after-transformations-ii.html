@@ -1,0 +1,68 @@
+	<p><span class="caps">MOD</span> = 10**9 + 7<br />
+L = 26</p>
+
+
+	<p>class Mat:
+    def __init__(self, copy_from: &#8220;Mat&#8221; = None) -&gt; None:
+        self.a: List[List[int]] = [<sup class="footnote" id="fnrev1291a3c2c5864ff282db0150c5d067f2-1"><a href="#fn1291a3c2c5864ff282db0150c5d067f2-1">0</a></sup> * L for _ in range(L)]
+        if copy_from:
+            for i in range(L):
+                for j in range(L):
+                    self.a[i][j] = copy_from.a[i][j]</p>
+
+    def __mul__(self, other: &#8220;Mat&#8221;) -&gt; <a href="">Mat</a>
+        result = Mat()
+        for i in range(L):
+            for j in range(L):
+                for k in range(L):
+                    result.a[i][j] = (
+                        result.a[i][j] + self.a[i][k] * other.a[k][j]
+                    ) % MOD
+        return result
+
+
+	<ol>
+		<li>identity matrix<br />
+def I() -&gt; Mat:
+    m = Mat()
+    for i in range(L):
+        m.a[i][i] = 1
+    return m</li>
+	</ol>
+
+
+	<ol>
+		<li>matrix exponentiation by squaring<br />
+def quickmul(x: Mat, y: int) -&gt; Mat:
+    ans = I()
+    cur = x
+    while y:
+        if y &amp; 1:
+            ans = ans * cur
+        cur = cur * cur
+        y &gt;&gt;= 1
+    return ans</li>
+	</ol>
+
+
+	<p>class Solution:
+    def lengthAfterTransformations(
+        self, s: str, t: int, nums: List[int]
+    ) -&gt; int:
+        T = Mat()
+        for i in range(26):
+            for j in range(1, nums[i] + 1):
+                T.a[(i + j) % 26][i] = 1</p>
+
+        res = quickmul(T, t)
+
+        f = [0] * 26
+        for ch in s:
+            f[ord(ch) &#8211; ord(&#8220;a&#8221;)] += 1
+
+        ans = 0
+        for i in range(26):
+            for j in range(26):
+                ans = (ans + res.a[i][j] * f[j]) % <span class="caps">MOD</span>
+
+        return ans
