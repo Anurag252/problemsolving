@@ -1,0 +1,30 @@
+	<p>class Solution:
+    def getLongestSubsequence(self, words: List[str], groups: List[int]) -&gt; List[str]:
+        &#8220;&#8221;&#8220;
+        T[n] = max(T[n-i] + 1) if grp[n-i] != grp[n]</p>
+
+        &#8220;&#8221;&#8220;
+        T = [1] * len(words)
+        res = []
+        if len(words) == 1:
+            return [words<sup class="footnote" id="fnrevd093c7c9be154c54bde96c063a988c12-1"><a href="#fnd093c7c9be154c54bde96c063a988c12-1">0</a></sup>]
+
+        for i, k1 in enumerate(words):
+            for j , k2 in enumerate(words[:i]):
+                if groups[i] != groups[j]:
+                    if T[j] + 1 &gt; T[i]:
+                        T[i] = max(T[i], T[j] + 1)
+        prev = 1
+        res.append(words<sup class="footnote"><a href="#fnd093c7c9be154c54bde96c063a988c12-1">0</a></sup>)
+        for i, k in enumerate(T[1:]):
+            if k == prev + 1:
+                prev = k
+                res.append(words[i+1])
+        return res
+
+
+
+
+
+
+        
