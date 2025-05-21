@@ -20,16 +20,16 @@
         if len(s)  0:
             return
         set_end = False
-        if s<sup class="footnote" id="fnrev09bf0fbdfb484c318e42c7b1a778c9a8-1"><a href="#fn09bf0fbdfb484c318e42c7b1a778c9a8-1">0</a></sup> in temp.mp:
-            temp.count.append((count, s<sup class="footnote"><a href="#fn09bf0fbdfb484c318e42c7b1a778c9a8-1">0</a></sup>))
-            temp = temp.mp[s<sup class="footnote"><a href="#fn09bf0fbdfb484c318e42c7b1a778c9a8-1">0</a></sup>]
+        if s<sup class="footnote" id="fnrev5e76930061474c80b51df1a7ed8d255f-1"><a href="#fn5e76930061474c80b51df1a7ed8d255f-1">0</a></sup> in temp.mp:
+            temp.count.append((count, s<sup class="footnote"><a href="#fn5e76930061474c80b51df1a7ed8d255f-1">0</a></sup>))
+            temp = temp.mp[s<sup class="footnote"><a href="#fn5e76930061474c80b51df1a7ed8d255f-1">0</a></sup>]
             self.insert(s[1:], temp, count)
 
         else:
-            temp.mp[s<sup class="footnote"><a href="#fn09bf0fbdfb484c318e42c7b1a778c9a8-1">0</a></sup>] = Node()
-            temp.curr = s<sup class="footnote"><a href="#fn09bf0fbdfb484c318e42c7b1a778c9a8-1">0</a></sup>
-            temp.count.append((count, s<sup class="footnote"><a href="#fn09bf0fbdfb484c318e42c7b1a778c9a8-1">0</a></sup>))
-            temp = temp.mp[s<sup class="footnote"><a href="#fn09bf0fbdfb484c318e42c7b1a778c9a8-1">0</a></sup>]
+            temp.mp[s<sup class="footnote"><a href="#fn5e76930061474c80b51df1a7ed8d255f-1">0</a></sup>] = Node()
+            temp.curr = s<sup class="footnote"><a href="#fn5e76930061474c80b51df1a7ed8d255f-1">0</a></sup>
+            temp.count.append((count, s<sup class="footnote"><a href="#fn5e76930061474c80b51df1a7ed8d255f-1">0</a></sup>))
+            temp = temp.mp[s<sup class="footnote"><a href="#fn5e76930061474c80b51df1a7ed8d255f-1">0</a></sup>]
             print(temp)
             self.insert(s[1:], temp, count)
 
@@ -37,7 +37,7 @@
 
         if temp == None:
             temp = self.root
-            #return min(temp.count) if s<sup class="footnote"><a href="#fn09bf0fbdfb484c318e42c7b1a778c9a8-1">0</a></sup> in temp.mp  and len(temp.count) &gt; 0 else -1 #and temp[s<sup class="footnote"><a href="#fn09bf0fbdfb484c318e42c7b1a778c9a8-1">0</a></sup>].end
+            #return min(temp.count) if s<sup class="footnote"><a href="#fn5e76930061474c80b51df1a7ed8d255f-1">0</a></sup> in temp.mp  and len(temp.count) &gt; 0 else -1 #and temp[s<sup class="footnote"><a href="#fn5e76930061474c80b51df1a7ed8d255f-1">0</a></sup>].end
 
         #print(s, temp.mp, temp.count)
         #isending = False
@@ -45,11 +45,11 @@
                 #print(temp.count)
                 for k in temp.count:
                     if k[1]  s:
-                        return k<sup class="footnote"><a href="#fn09bf0fbdfb484c318e42c7b1a778c9a8-1">0</a></sup>
+                        return k<sup class="footnote"><a href="#fn5e76930061474c80b51df1a7ed8d255f-1">0</a></sup>
                 return -1
 
-        if s<sup class="footnote"><a href="#fn09bf0fbdfb484c318e42c7b1a778c9a8-1">0</a></sup> in temp.mp:
-            return self.isprefix(s[1:], temp.mp[s<sup class="footnote"><a href="#fn09bf0fbdfb484c318e42c7b1a778c9a8-1">0</a></sup>]) 
+        if s<sup class="footnote"><a href="#fn5e76930061474c80b51df1a7ed8d255f-1">0</a></sup> in temp.mp:
+            return self.isprefix(s[1:], temp.mp[s<sup class="footnote"><a href="#fn5e76930061474c80b51df1a7ed8d255f-1">0</a></sup>]) 
         else:
             return -1
 
