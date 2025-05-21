@@ -1,0 +1,59 @@
+	<p>class Solution:
+    def setZeroes(self, matrix: List[List[int]]) -&gt; None:
+        &#8220;&#8221;&#8220;
+        Do not return anything, modify matrix in-place instead.
+        &#8220;&#8221;&#8220;</p>
+
+
+        def changer(i , j , matrix, t):
+            if i &gt;= len(matrix) or j &gt;= len(matrix<sup class="footnote" id="fnrev9435b4517f6245839b92c90cc155b054-1"><a href="#fn9435b4517f6245839b92c90cc155b054-1">0</a></sup>) or i &lt; 0 or j &lt; 0 :
+                return 
+            if matrix[i][j] != 0:
+                matrix[i][j] = t
+            changer(i &#8211; 1, j , matrix, t)
+
+
+
+        def changef(i , j , matrix, t):
+            if i &gt;= len(matrix) or j &gt;= len(matrix<sup class="footnote"><a href="#fn9435b4517f6245839b92c90cc155b054-1">0</a></sup>) or i &lt; 0 or j &lt; 0 :
+                return 
+            if matrix[i][j] != 0:
+                matrix[i][j] = t
+            changef(i + 1, j , matrix, t)
+
+        def changecolr(i,  j , matrix, t):
+            if i &gt;= len(matrix) or j &gt;= len(matrix<sup class="footnote"><a href="#fn9435b4517f6245839b92c90cc155b054-1">0</a></sup>) or i &lt; 0 or j &lt; 0 :
+                return
+            if matrix[i][j] != 0:
+                matrix[i][j] = t
+            changecolr(i , j &#8211; 1 , matrix, t)
+
+        def changecolf(i,  j , matrix, t):
+            if i &gt;= len(matrix) or j &gt;= len(matrix<sup class="footnote"><a href="#fn9435b4517f6245839b92c90cc155b054-1">0</a></sup>) or i &lt; 0 or j &lt; 0 :
+                return
+            if matrix[i][j] != 0:
+                matrix[i][j] = t
+            changecolf(i , j + 1 , matrix, t)
+
+
+        for i, k in enumerate(matrix):
+            for j, l in enumerate(matrix[i]):
+                if l == 0:
+                    changer(i , j , matrix, &#8220;s&#8221;)
+                    changef(i , j , matrix, &#8220;s&#8221;)
+                    changecolr(i , j , matrix, &#8220;s&#8221;)
+                    changecolf(i , j , matrix, &#8220;s&#8221;)
+
+
+        for i, k in enumerate(matrix):
+            for j, l in enumerate(matrix[i]):
+                if l == <a href="">s</a>
+                    matrix[i][j] = 0
+
+
+
+
+
+
+
+        
