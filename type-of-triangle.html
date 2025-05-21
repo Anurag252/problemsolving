@@ -1,13 +1,13 @@
 	<p>class Solution:
     def triangleType(self, nums: List[int]) -&gt; str:
         nums.sort()
-        if nums<sup class="footnote" id="fnreve17c09122efe4ad38cf3749051b073db-1"><a href="#fne17c09122efe4ad38cf3749051b073db-1">0</a></sup> + nums<sup class="footnote" id="fnreve17c09122efe4ad38cf3749051b073db-2"><a href="#fne17c09122efe4ad38cf3749051b073db-2">1</a></sup> &lt;= nums<sup class="footnote" id="fnreve17c09122efe4ad38cf3749051b073db-3"><a href="#fne17c09122efe4ad38cf3749051b073db-3">2</a></sup>:
+        if nums<sup class="footnote" id="fnreveaae876b789e4926ae8d34e01f0a84cb-1"><a href="#fneaae876b789e4926ae8d34e01f0a84cb-1">0</a></sup> + nums<sup class="footnote" id="fnreveaae876b789e4926ae8d34e01f0a84cb-2"><a href="#fneaae876b789e4926ae8d34e01f0a84cb-2">1</a></sup> &lt;= nums<sup class="footnote" id="fnreveaae876b789e4926ae8d34e01f0a84cb-3"><a href="#fneaae876b789e4926ae8d34e01f0a84cb-3">2</a></sup>:
             return &#8220;none&#8221;</p>
 
-        if nums<sup class="footnote"><a href="#fne17c09122efe4ad38cf3749051b073db-1">0</a></sup>  nums[1]  nums<sup class="footnote"><a href="#fne17c09122efe4ad38cf3749051b073db-3">2</a></sup>:
+        if nums<sup class="footnote"><a href="#fneaae876b789e4926ae8d34e01f0a84cb-1">0</a></sup>  nums[1]  nums<sup class="footnote"><a href="#fneaae876b789e4926ae8d34e01f0a84cb-3">2</a></sup>:
             return &#8220;equilateral&#8221;
 
-        if nums<sup class="footnote"><a href="#fne17c09122efe4ad38cf3749051b073db-1">0</a></sup>  nums[1] or nums[1]  nums<sup class="footnote"><a href="#fne17c09122efe4ad38cf3749051b073db-3">2</a></sup> or nums<sup class="footnote"><a href="#fne17c09122efe4ad38cf3749051b073db-1">0</a></sup> == nums<sup class="footnote"><a href="#fne17c09122efe4ad38cf3749051b073db-3">2</a></sup>:
+        if nums<sup class="footnote"><a href="#fneaae876b789e4926ae8d34e01f0a84cb-1">0</a></sup>  nums[1] or nums[1]  nums<sup class="footnote"><a href="#fneaae876b789e4926ae8d34e01f0a84cb-3">2</a></sup> or nums<sup class="footnote"><a href="#fneaae876b789e4926ae8d34e01f0a84cb-1">0</a></sup> == nums<sup class="footnote"><a href="#fneaae876b789e4926ae8d34e01f0a84cb-3">2</a></sup>:
             return &#8220;isosceles&#8221;
 
         return &#8220;scalene&#8220;

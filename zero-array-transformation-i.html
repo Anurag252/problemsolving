@@ -1,0 +1,29 @@
+	<p>class Solution:
+    def isZeroArray(self, nums: List[int], queries: List[List[int]]) -&gt; bool:
+        &#8220;&#8221;&#8220;
+        every element has x numbers of reductions 
+        to find the number of reductions, process all elements and find the number of reductions
+        it will be slow if we just apply the chnages one by one
+        another way could be put -1 at the start and + 1 at the end</p>
+
+        &#8220;&#8221;&#8220;
+        arr = [0] * len(nums)
+
+        for k in queries:
+            arr[k<sup class="footnote" id="fnrevaee3af28d0b94a5c9a7fcef86f8f6783-1"><a href="#fnaee3af28d0b94a5c9a7fcef86f8f6783-1">0</a></sup>] += 1
+            if k<sup class="footnote" id="fnrevaee3af28d0b94a5c9a7fcef86f8f6783-2"><a href="#fnaee3af28d0b94a5c9a7fcef86f8f6783-2">1</a></sup> + 1 &lt; len(nums):
+                arr[k<sup class="footnote"><a href="#fnaee3af28d0b94a5c9a7fcef86f8f6783-2">1</a></sup> + 1] -= 1
+
+
+        subs = 0
+        for i , k in enumerate(nums):
+            subs += arr[i]
+            if nums[i] != 0:
+                nums[i] -= min(nums[i], subs)
+
+
+        print(nums, arr)
+        for k in nums:
+            if k != 0:
+                return False
+        return True
