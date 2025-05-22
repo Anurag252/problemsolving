@@ -11,9 +11,9 @@
             p = 0
             for j in range(0,i+1):
                 if k % nums[j] == 0:
-                    if j != i and res[j]<sup class="footnote" id="fnrevaad4aee5899b42bba26c0168e5b4d9b4-1"><a href="#fnaad4aee5899b42bba26c0168e5b4d9b4-1">0</a></sup> + 1 &gt; t:
+                    if j != i and res[j]<sup class="footnote" id="fnrevd8813196785d4516a31100d5b4e40407-1"><a href="#fnd8813196785d4516a31100d5b4e40407-1">0</a></sup> + 1 &gt; t:
                         p = max(p, j)
-                    t = max(res[j]<sup class="footnote"><a href="#fnaad4aee5899b42bba26c0168e5b4d9b4-1">0</a></sup> + 1, t) 
+                    t = max(res[j]<sup class="footnote"><a href="#fnd8813196785d4516a31100d5b4e40407-1">0</a></sup> + 1, t) 
                     mx = max(t,mx)
 
             res[i] = (t,p)
@@ -25,7 +25,7 @@
         for i, k in enumerate(res):
             if k[0]  mx:
                 # found max
-                index = k<sup class="footnote" id="fnrevaad4aee5899b42bba26c0168e5b4d9b4-2"><a href="#fnaad4aee5899b42bba26c0168e5b4d9b4-2">1</a></sup>
+                index = k<sup class="footnote" id="fnrevd8813196785d4516a31100d5b4e40407-2"><a href="#fnd8813196785d4516a31100d5b4e40407-2">1</a></sup>
                 ans[-1] = nums[i]
 
                 break
@@ -35,7 +35,7 @@
                 ans[i] = nums[index]
                 return
             ans[i] = nums[index]
-            rec(ans, res[index]<sup class="footnote"><a href="#fnaad4aee5899b42bba26c0168e5b4d9b4-2">1</a></sup>, i &#8211; 1)
+            rec(ans, res[index]<sup class="footnote"><a href="#fnd8813196785d4516a31100d5b4e40407-2">1</a></sup>, i &#8211; 1)
         rec(ans, index, len(ans)-2)
         return ans
 
