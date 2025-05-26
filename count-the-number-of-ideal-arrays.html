@@ -21,11 +21,11 @@ MAX_P = 15  # At most 15 prime factors</p>
             cnt += 1
         ps[i].append(cnt)</p>
 
-	<p>c = [<sup class="footnote" id="fnrev1a757ec6b29f4c4f99d61d238b816c6d-1"><a href="#fn1a757ec6b29f4c4f99d61d238b816c6d-1">0</a></sup> * (<span class="caps">MAX</span>_P + 1) for _ in range(<span class="caps">MAX</span>_N + <span class="caps">MAX</span>_P)]</p>
+	<p>c = [<sup class="footnote" id="fnrevd383fe23e2a540a6a264c199c7037cb0-1"><a href="#fnd383fe23e2a540a6a264c199c7037cb0-1">0</a></sup> * (<span class="caps">MAX</span>_P + 1) for _ in range(<span class="caps">MAX</span>_N + <span class="caps">MAX</span>_P)]</p>
 
-	<p>c<sup class="footnote"><a href="#fn1a757ec6b29f4c4f99d61d238b816c6d-1">0</a></sup><sup class="footnote"><a href="#fn1a757ec6b29f4c4f99d61d238b816c6d-1">0</a></sup> = 1<br />
+	<p>c<sup class="footnote"><a href="#fnd383fe23e2a540a6a264c199c7037cb0-1">0</a></sup><sup class="footnote"><a href="#fnd383fe23e2a540a6a264c199c7037cb0-1">0</a></sup> = 1<br />
 for i in range(1, <span class="caps">MAX</span>_N + <span class="caps">MAX</span>_P):
-    c[i]<sup class="footnote"><a href="#fn1a757ec6b29f4c4f99d61d238b816c6d-1">0</a></sup> = 1
+    c[i]<sup class="footnote"><a href="#fnd383fe23e2a540a6a264c199c7037cb0-1">0</a></sup> = 1
     for j in range(1, min(i, <span class="caps">MAX</span>_P) + 1):
         c[i][j] = (c[i &#8211; 1][j] + c[i &#8211; 1][j &#8211; 1]) % <span class="caps">MOD</span></p>
 
