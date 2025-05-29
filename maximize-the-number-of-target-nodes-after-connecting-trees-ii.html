@@ -1,0 +1,32 @@
+	<p>class Solution:
+    def maxTargetNodes(
+        self, edges1: List[List[int]], edges2: List[List[int]]
+    ) -&gt; List[int]:
+        def dfs(node, parent, depth, children, color):
+            res = 1 &#8211; depth % 2
+            color[node] = depth % 2
+            for child in children[node]:
+                if child == parent:
+                    continue
+                res += dfs(child, node, depth + 1, children, color)
+            return res</p>
+
+        def build(edges, color):
+            n = len(edges) + 1
+            children = [[] for _ in range(n)]
+            for u, v in edges:
+                children[u].append(v)
+                children[v].append(u)
+            res = dfs(0, -1, 0, children, color)
+            return [res, n &#8211; res]
+
+        n = len(edges1) + 1
+        m = len(edges2) + 1
+        color1 = [0] * n
+        color2 = [0] * m
+        count1 = build(edges1, color1)
+        count2 = build(edges2, color2)
+        res = [0] * n
+        for i in range(n):
+            res[i] = count1[color1[i]] + max(count2<sup class="footnote" id="fnrev6c95d02df3cf43af9b879458701a3acb-1"><a href="#fn6c95d02df3cf43af9b879458701a3acb-1">0</a></sup>, count2<sup class="footnote" id="fnrev6c95d02df3cf43af9b879458701a3acb-2"><a href="#fn6c95d02df3cf43af9b879458701a3acb-2">1</a></sup>)
+        return res
