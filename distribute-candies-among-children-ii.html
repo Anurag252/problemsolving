@@ -1,0 +1,58 @@
+	<p>class Solution:
+    def distributeCandies(self, n: int, limit: int) -&gt; int:</p>
+
+
+        &#8220;&#8221;&#8220;
+        maybe maths way is faster
+        first child can get candies in 0,1,2,3&#8230;. min(limit,n) ways
+        second child can get candies in 0,1,2,3&#8230;. min(limit,n) &#8211; k ways
+        x+y+z = n
+        x &lt; limit, y &lt; limit, z = n &#8211; x &#8211; y (&lt; limit)
+        min z is from (n &#8211; 2*limit to limit) other two have max 
+        z is from n &#8211; 2*limit to limit ,  x and y 
+        for every val, x is y &#8211; limit as min to limit as max
+        &#8220;&#8221;&#8220;
+        res = 0
+        for z in range(max(0, n &#8211; 2 * limit), min(limit, n) + 1):
+            remaining = n &#8211; z
+            x_min = max(0, remaining &#8211; limit)
+            x_max = min(limit, remaining)
+            res += max(0, x_max &#8211; x_min + 1)
+        return res
+        res = 0
+        for z in range(n &#8211; 2*limit, limit + 1):
+            res += (2*limit &#8211; z-1)
+        return res
+
+
+
+        @cache
+        def distribute(candies, a,b,c, limit):
+            if candies &lt; 0:
+                return 0
+            if candies  0:
+                return 1
+            if a and b and c:
+                return 0 # everyone got candies but their sum is not n
+            count = 0
+            if a  False:
+                for i in range(0,limit+1):
+                    count += distribute(candies &#8211; i, True, False, False, limit)
+                return count
+
+            if b == False:
+                for i in range(0,limit+1):
+                    count += distribute(candies &#8211; i, True, True, False, limit)
+                return count
+
+            if c == False:
+                for i in range(0,limit+1):
+                    count += distribute(candies &#8211; i, True, True, True, limit)
+                return count
+
+        return distribute(n, False, False, False, limit)
+
+
+
+
+        
