@@ -1,0 +1,47 @@
+from typing import List
+
+class Solution:
+    def maxCandies(
+        self,
+        status: List[int],
+        candies: List[int],
+        keys: List[List[int]],
+        containedBoxes: List[List[int]],
+        initialBoxes: List[int]
+    ) -> int:
+        
+        n = len(status)
+        has_box = [False] * n
+        has_key = [False] * n
+        visited = [False] * n
+
+        for box in initialBoxes:
+            has_box[box] = True
+
+        def dfs(box: int) -> int:
+            if visited[box]:
+                return 0
+            if status[box] == 0 and not has_key[box]:
+                return 0
+
+            visited[box] = True
+            total = candies[box]
+
+            for key in keys[box]:
+                has_key[key] = True
+                if has_box[key] and not visited[key]:
+                    total += dfs(key)
+
+            for inner in containedBoxes[box]:
+                has_box[inner] = True
+                if (status[inner] == 1 or has_key[inner]) and not visited[inner]:
+                    total += dfs(inner)
+
+            return total
+
+        total_candies = 0
+        for box in initialBoxes:
+            if status[box] == 1 or has_key[box]:
+                total_candies += dfs(box)
+
+        return total_candies
