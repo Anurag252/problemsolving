@@ -15,34 +15,33 @@
         has_key = [False] * n
         visited = [False] * n
 
-        # Mark which boxes we have from the beginning
         for box in initialBoxes:
             has_box[box] = True
 
+        def dfs(box: int) -&gt; int:
+            if visited[box]:
+                return 0
+            if status[box] == 0 and not has_key[box]:
+                return 0
+
+            visited[box] = True
+            total = candies[box]
+
+            for key in keys[box]:
+                has_key[key] = True
+                if has_box[key] and not visited[key]:
+                    total += dfs(key)
+
+            for inner in containedBoxes[box]:
+                has_box[inner] = True
+                if (status[inner] == 1 or has_key[inner]) and not visited[inner]:
+                    total += dfs(inner)
+
+            return total
+
         total_candies = 0
+        for box in initialBoxes:
+            if status[box] == 1 or has_key[box]:
+                total_candies += dfs(box)
 
-        def try_open_boxes():
-            nonlocal total_candies
-            changed = True
-            while changed:
-                changed = False
-                for i in range(n):
-                    # Only visit boxes we have, haven&#8217;t opened, and are now openable
-                    if has_box[i] and not visited[i] and (status[i] == 1 or has_key[i]):
-                        visited[i] = True
-                        total_candies += candies[i]
-                        changed = True
-
-                        # Collect keys
-                        for k in keys[i]:
-                            if not has_key[k]:
-                                has_key[k] = True
-                                # we may now be able to open a box we skipped earlier
-
-                        # Collect boxes
-                        for b in containedBoxes[i]:
-                            if not has_box[b]:
-                                has_box[b] = True
-
-        try_open_boxes()
         return total_candies
