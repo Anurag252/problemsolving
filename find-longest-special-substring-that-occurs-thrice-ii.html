@@ -9,8 +9,8 @@
             if s[i] in f:
                 if len(f[s[i]]) >= 3:
                     if f[s[i]][0]   min(f[s[i]]):
-                        f[s[i]]<sup class="footnote" id="fnrev9842eb25ce9e40db9f7d6c650bfc1559-1"><a href="#fn9842eb25ce9e40db9f7d6c650bfc1559-1">0</a></sup> = j &#8211; i
-                    elif f[s[i]]<sup class="footnote" id="fnrev9842eb25ce9e40db9f7d6c650bfc1559-2"><a href="#fn9842eb25ce9e40db9f7d6c650bfc1559-2">1</a></sup>   min(f[s[i]]):
+                        f[s[i]]<sup class="footnote" id="fnrevffc96e87f85847ed80246d2b8824e2e6-1"><a href="#fnffc96e87f85847ed80246d2b8824e2e6-1">0</a></sup> = j &#8211; i
+                    elif f[s[i]]<sup class="footnote" id="fnrevffc96e87f85847ed80246d2b8824e2e6-2"><a href="#fnffc96e87f85847ed80246d2b8824e2e6-2">1</a></sup>   min(f[s[i]]):
                         f[s[i]][1] = j - i
                     else:
                         f[s[i]][2] = j - i
@@ -26,12 +26,12 @@
             if sum(v) >= 3:
                 res = max(1, res)
                 v.sort()
-                if len(v)  3 and v<sup class="footnote"><a href="#fn9842eb25ce9e40db9f7d6c650bfc1559-2">1</a></sup> &lt; v<sup class="footnote" id="fnrev9842eb25ce9e40db9f7d6c650bfc1559-3"><a href="#fn9842eb25ce9e40db9f7d6c650bfc1559-3">2</a></sup>:
-                    res = max(res, max(v<sup class="footnote"><a href="#fn9842eb25ce9e40db9f7d6c650bfc1559-3">2</a></sup>-2, v<sup class="footnote"><a href="#fn9842eb25ce9e40db9f7d6c650bfc1559-2">1</a></sup>))
+                if len(v)  3 and v<sup class="footnote"><a href="#fnffc96e87f85847ed80246d2b8824e2e6-2">1</a></sup> &lt; v<sup class="footnote" id="fnrevffc96e87f85847ed80246d2b8824e2e6-3"><a href="#fnffc96e87f85847ed80246d2b8824e2e6-3">2</a></sup>:
+                    res = max(res, max(v<sup class="footnote"><a href="#fnffc96e87f85847ed80246d2b8824e2e6-3">2</a></sup>-2, v<sup class="footnote"><a href="#fnffc96e87f85847ed80246d2b8824e2e6-2">1</a></sup>))
                 elif len(v)  2 and v[0] < v[1]:
                     res = max(res, max(v[1]-2, v[0]))
                 elif len(v)  1 :
-                    res = max(res, v<sup class="footnote"><a href="#fn9842eb25ce9e40db9f7d6c650bfc1559-1">0</a></sup>-2)
+                    res = max(res, v<sup class="footnote"><a href="#fnffc96e87f85847ed80246d2b8824e2e6-1">0</a></sup>-2)
                 else :
                     print(v)
                     if len(v) &gt;= 3 and len(set(v))  1:
