@@ -21,8 +21,8 @@
     def build_adj_list(self, size, edges):
         adj_list = [[] for _ in range(size)]
         for edge in edges:
-            adj_list[edge<sup class="footnote" id="fnrev98aa7b7d2b50430c817171b979a32a32-1"><a href="#fn98aa7b7d2b50430c817171b979a32a32-1">0</a></sup>].append(edge<sup class="footnote" id="fnrev98aa7b7d2b50430c817171b979a32a32-2"><a href="#fn98aa7b7d2b50430c817171b979a32a32-2">1</a></sup>)
-            adj_list[edge<sup class="footnote"><a href="#fn98aa7b7d2b50430c817171b979a32a32-2">1</a></sup>].append(edge<sup class="footnote"><a href="#fn98aa7b7d2b50430c817171b979a32a32-1">0</a></sup>)
+            adj_list[edge<sup class="footnote" id="fnrevc83cf283c92f42c4bfb5d673219c636d-1"><a href="#fnc83cf283c92f42c4bfb5d673219c636d-1">0</a></sup>].append(edge<sup class="footnote" id="fnrevc83cf283c92f42c4bfb5d673219c636d-2"><a href="#fnc83cf283c92f42c4bfb5d673219c636d-2">1</a></sup>)
+            adj_list[edge<sup class="footnote"><a href="#fnc83cf283c92f42c4bfb5d673219c636d-2">1</a></sup>].append(edge<sup class="footnote"><a href="#fnc83cf283c92f42c4bfb5d673219c636d-1">0</a></sup>)
         return adj_list
 
     def find_diameter(self, n, adj_list):
