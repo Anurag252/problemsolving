@@ -22,9 +22,6 @@ class Solution:
         for m, k in enumerate(words):
             if k == mn:
                 idxs.append(m)
-        
-
-        print(mn, idxs)
 
         # smaller case is still pending
         # in case numFriends grps 
@@ -36,7 +33,6 @@ class Solution:
                 res.append(words[idx: idx + len(words)-numFriends + 1])
             else :
                 res.append(words[idx:])
-        print(res)
         res.sort()
         return res[-1]
 
