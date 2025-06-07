@@ -5,7 +5,7 @@
 
 
         for i,k in enumerate(arrays):
-            heapq.heappush(start_elem, (k<sup class="footnote" id="fnrev4e60b909d8434a2fb35efe3fc87a9509-1"><a href="#fn4e60b909d8434a2fb35efe3fc87a9509-1">0</a></sup>,i))
+            heapq.heappush(start_elem, (k<sup class="footnote" id="fnrev0aa9139d0d2e470d95be9a1b7c354b1f-1"><a href="#fn0aa9139d0d2e470d95be9a1b7c354b1f-1">0</a></sup>,i))
 
         for i,k in enumerate(arrays):
             heapq.heappush(end_elem, (-1 * k[len(k)-1],i) ) 
@@ -17,15 +17,15 @@
             a = heapq.heappop(start_elem)
             b = heapq.heappop(end_elem)
             #print(a,b)
-            if a<sup class="footnote" id="fnrev4e60b909d8434a2fb35efe3fc87a9509-2"><a href="#fn4e60b909d8434a2fb35efe3fc87a9509-2">1</a></sup> != b<sup class="footnote"><a href="#fn4e60b909d8434a2fb35efe3fc87a9509-2">1</a></sup> and is_first:
-                return abs(a<sup class="footnote"><a href="#fn4e60b909d8434a2fb35efe3fc87a9509-1">0</a></sup> + b<sup class="footnote"><a href="#fn4e60b909d8434a2fb35efe3fc87a9509-1">0</a></sup>)
+            if a<sup class="footnote" id="fnrev0aa9139d0d2e470d95be9a1b7c354b1f-2"><a href="#fn0aa9139d0d2e470d95be9a1b7c354b1f-2">1</a></sup> != b<sup class="footnote"><a href="#fn0aa9139d0d2e470d95be9a1b7c354b1f-2">1</a></sup> and is_first:
+                return abs(a<sup class="footnote"><a href="#fn0aa9139d0d2e470d95be9a1b7c354b1f-1">0</a></sup> + b<sup class="footnote"><a href="#fn0aa9139d0d2e470d95be9a1b7c354b1f-1">0</a></sup>)
             else: 
                 if is_first:
-                    min_elem = a<sup class="footnote"><a href="#fn4e60b909d8434a2fb35efe3fc87a9509-1">0</a></sup>
-                    max_elem = b<sup class="footnote"><a href="#fn4e60b909d8434a2fb35efe3fc87a9509-1">0</a></sup>
+                    min_elem = a<sup class="footnote"><a href="#fn0aa9139d0d2e470d95be9a1b7c354b1f-1">0</a></sup>
+                    max_elem = b<sup class="footnote"><a href="#fn0aa9139d0d2e470d95be9a1b7c354b1f-1">0</a></sup>
                     is_first = False
                 else:
-                    return max(abs(min_elem + b<sup class="footnote"><a href="#fn4e60b909d8434a2fb35efe3fc87a9509-1">0</a></sup>), abs(max_elem + a<sup class="footnote"><a href="#fn4e60b909d8434a2fb35efe3fc87a9509-1">0</a></sup> ))
+                    return max(abs(min_elem + b<sup class="footnote"><a href="#fn0aa9139d0d2e470d95be9a1b7c354b1f-1">0</a></sup>), abs(max_elem + a<sup class="footnote"><a href="#fn0aa9139d0d2e470d95be9a1b7c354b1f-1">0</a></sup> ))
 
         return 0
 
