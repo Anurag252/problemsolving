@@ -2,7 +2,6 @@
     def lexicalOrder(self, n: int) -&gt; List[int]:</p>
 
         def recurse(m):
-            print(m)
             if m &gt; n :
                 return
             res = [m]
@@ -10,7 +9,6 @@
                 t = recurse(m * (10) + i)
                 if t != None:
                     res += t
-            print(res)
             return res
         a = []
         for m in range(1,10):   
