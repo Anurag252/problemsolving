@@ -1,21 +1,13 @@
 class Solution:
     def lexicalOrder(self, n: int) -> List[int]:
-
-        def recurse(m):
-            print(m)
-            if m > n :
-                return
-            res = [m]
-            for i in range(0,10):
-                t = recurse(m * (10) + i)
-                if t != None:
-                    res += t
-            print(res)
-            return res
-        a = []
-        for m in range(1,10):   
-            l = recurse(m)
-            if l != None:
-                a += l
-        return a
-        
+        result = []
+        current = 1
+        for _ in range(n):
+            result.append(current)
+            if current * 10 <= n:
+                current *= 10
+            else:
+                while current % 10 == 9 or current + 1 > n:
+                    current //= 10
+                current += 1
+        return result
