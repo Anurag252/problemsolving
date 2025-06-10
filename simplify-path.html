@@ -1,0 +1,22 @@
+	<p>class Solution:
+    def simplifyPath(self, path: str) -&gt; str:
+        arr = path.split(&#8216;/&#8217;)
+        st = [&#8220;&#8221;]</p>
+
+        for k in arr:
+            if k  "" or k  <a href="">.</a>
+                continue
+            if k  ".." and len(st)  0:
+                continue
+            if k  "..":
+                st.pop(-1)
+                continue
+            st.append(k)
+        print(st)
+        if len(st) > 0 and st[0] != "":
+            st = [""] + st
+        if len(st)  1:
+            return &#8220;/&#8221; # still just one element 
+        return &#8220;/&#8221;.join(st) if len(st) &gt; 0  else &#8220;/&#8221;
+
+        
