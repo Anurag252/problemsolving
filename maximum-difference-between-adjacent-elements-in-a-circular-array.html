@@ -1,0 +1,6 @@
+	<p>class Solution:
+    def maxAdjacentDistance(self, nums: List[int]) -&gt; int:
+        diff = 0
+        for i, k in enumerate(nums):
+            diff = max(diff, abs(nums[i-1] &#8211; nums[i]))
+        return diff</p>
