@@ -1,0 +1,22 @@
+	<p>from typing import List<br />
+from functools import cache</p>
+
+	<p>class Solution:
+        def minimizeMax(self, A: List[int], p: int) -&gt; int:
+            A.sort()
+            n = len(A)
+            left, right = 0, A[-1] &#8211; A<sup class="footnote" id="fnrev4dd9d858c51849c5bf64a654d42c6e0a-1"><a href="#fn4dd9d858c51849c5bf64a654d42c6e0a-1">0</a></sup>
+            while left &lt; right:
+                mid = (left + right) // 2
+                k = 0
+                i = 1
+                while i &lt; n:
+                    if A[i] &#8211; A[i &#8211; 1] &lt;= mid:
+                        k += 1
+                        i += 1
+                    i += 1
+                if k &gt;= p:
+                    right = mid
+                else:
+                    left = mid + 1
+            return left</p>
