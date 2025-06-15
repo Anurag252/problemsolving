@@ -1,0 +1,33 @@
+	<p>class Solution:
+    def maxDiff(self, num: int) -&gt; int:
+        l = list(str(num))
+        first = 0
+        last = 0
+        for  index,k in enumerate(l):
+            if k != &#8216;9&#8217;:
+                first = index
+                break
+        for  index,k in enumerate(l):
+            if k != &#8216;1&#8217; and k != &#8216;0&#8217;:
+                last = index
+                break
+        high = []
+        low = []
+        for index, k in enumerate(l):
+            if k == l[first]:
+                high.append(&#8216;9&#8217;)
+            else:
+                high.append(k)</p>
+
+        for index, k in enumerate(l):
+            if k == l[last]:
+                if last != 0:
+                    low.append(&#8216;0&#8217;)
+                else:
+                    low.append(&#8216;1&#8217;)
+            else:
+                low.append(k)
+        print(low, high, first, last)
+        return int(&#8220;&#8221;.join(high)) &#8211; int(&#8220;&#8221;.join(low))
+
+        
