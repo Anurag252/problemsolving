@@ -27,7 +27,6 @@ class Solution:
                     low.append('1')
             else:
                 low.append(k)
-        print(low, high, first, last)
         return int("".join(high)) - int("".join(low))
         
         
