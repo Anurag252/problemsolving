@@ -4,7 +4,7 @@
         a = 0
         b = 0
         for i in range(0, len(board)):
-            for j in range(0, len(board<sup class="footnote" id="fnrev4d56c49bc607488bbd33fc50389a0c7f-1"><a href="#fn4d56c49bc607488bbd33fc50389a0c7f-1">0</a></sup>)):
+            for j in range(0, len(board<sup class="footnote" id="fnreve5ae7b65a9474c7784eabae287d04f07-1"><a href="#fne5ae7b65a9474c7784eabae287d04f07-1">0</a></sup>)):
                 if board[i][j] == 0:
                     a = i
                     b = j
@@ -22,7 +22,7 @@
             board[i][j], board&#169;[d] = board&#169;[d], board[i][j]
 
         def recurse(board, i , j, moves):
-            v = tuple(board<sup class="footnote"><a href="#fn4d56c49bc607488bbd33fc50389a0c7f-1">0</a></sup> + board<sup class="footnote" id="fnrev4d56c49bc607488bbd33fc50389a0c7f-2"><a href="#fn4d56c49bc607488bbd33fc50389a0c7f-2">1</a></sup>)
+            v = tuple(board<sup class="footnote"><a href="#fne5ae7b65a9474c7784eabae287d04f07-1">0</a></sup> + board<sup class="footnote" id="fnreve5ae7b65a9474c7784eabae287d04f07-2"><a href="#fne5ae7b65a9474c7784eabae287d04f07-2">1</a></sup>)
             if v in s and s[v] &lt;= moves:
                 return
             result = INF
@@ -37,10 +37,10 @@
 
             dir = [(-1,0), (1,0), (0,1), (0 , -1)]
             for k in dir:
-                if 0 &lt;= i + k<sup class="footnote"><a href="#fn4d56c49bc607488bbd33fc50389a0c7f-1">0</a></sup> &lt; 2 and 0 &lt;= j + k<sup class="footnote"><a href="#fn4d56c49bc607488bbd33fc50389a0c7f-2">1</a></sup> &lt; 3:
-                    swap(board, i , j , i + k<sup class="footnote"><a href="#fn4d56c49bc607488bbd33fc50389a0c7f-1">0</a></sup> , j + k<sup class="footnote"><a href="#fn4d56c49bc607488bbd33fc50389a0c7f-2">1</a></sup>)
-                    recurse(board,i+k<sup class="footnote"><a href="#fn4d56c49bc607488bbd33fc50389a0c7f-1">0</a></sup>, j+ k [1], moves + 1 )
-                    swap(board,  i + k<sup class="footnote"><a href="#fn4d56c49bc607488bbd33fc50389a0c7f-1">0</a></sup>, j + k<sup class="footnote"><a href="#fn4d56c49bc607488bbd33fc50389a0c7f-2">1</a></sup>, i ,j)
+                if 0 &lt;= i + k<sup class="footnote"><a href="#fne5ae7b65a9474c7784eabae287d04f07-1">0</a></sup> &lt; 2 and 0 &lt;= j + k<sup class="footnote"><a href="#fne5ae7b65a9474c7784eabae287d04f07-2">1</a></sup> &lt; 3:
+                    swap(board, i , j , i + k<sup class="footnote"><a href="#fne5ae7b65a9474c7784eabae287d04f07-1">0</a></sup> , j + k<sup class="footnote"><a href="#fne5ae7b65a9474c7784eabae287d04f07-2">1</a></sup>)
+                    recurse(board,i+k<sup class="footnote"><a href="#fne5ae7b65a9474c7784eabae287d04f07-1">0</a></sup>, j+ k [1], moves + 1 )
+                    swap(board,  i + k<sup class="footnote"><a href="#fne5ae7b65a9474c7784eabae287d04f07-1">0</a></sup>, j + k<sup class="footnote"><a href="#fne5ae7b65a9474c7784eabae287d04f07-2">1</a></sup>, i ,j)
 
         recurse(board, a, b, 0)
         #print(s[tuple([1,2,3,4,5,0])])
