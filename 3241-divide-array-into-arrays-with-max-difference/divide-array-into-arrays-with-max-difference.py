@@ -6,7 +6,6 @@ class Solution:
         """
         n = len(nums)
         nums.sort()
-        print(nums)
         res = []
         mul = 0
         for k1 in range(0, n//3):
