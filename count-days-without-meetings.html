@@ -1,7 +1,7 @@
 	<p>class Solution:
     def countDays(self, days: int, meetings: List[List[int]]) -&gt; int:</p>
 
-        meetings.sort(key=lambda x : (x<sup class="footnote" id="fnrev47cb09fe13c9466ea6d5b0397e955224-1"><a href="#fn47cb09fe13c9466ea6d5b0397e955224-1">0</a></sup>, x<sup class="footnote" id="fnrev47cb09fe13c9466ea6d5b0397e955224-2"><a href="#fn47cb09fe13c9466ea6d5b0397e955224-2">1</a></sup>))
+        meetings.sort(key=lambda x : (x<sup class="footnote" id="fnrev0d0385ae2d524d8c980affa7a7e3004a-1"><a href="#fn0d0385ae2d524d8c980affa7a7e3004a-1">0</a></sup>, x<sup class="footnote" id="fnrev0d0385ae2d524d8c980affa7a7e3004a-2"><a href="#fn0d0385ae2d524d8c980affa7a7e3004a-2">1</a></sup>))
         print(meetings)
 
         count = -1
@@ -9,12 +9,12 @@
         end = 0
         for k in meetings:
             print(start, end, count)
-            if end &lt; k<sup class="footnote"><a href="#fn47cb09fe13c9466ea6d5b0397e955224-1">0</a></sup>:
+            if end &lt; k<sup class="footnote"><a href="#fn0d0385ae2d524d8c980affa7a7e3004a-1">0</a></sup>:
                 count += (end &#8211; start + 1)
-                start = k<sup class="footnote"><a href="#fn47cb09fe13c9466ea6d5b0397e955224-1">0</a></sup>
-                end = k<sup class="footnote"><a href="#fn47cb09fe13c9466ea6d5b0397e955224-2">1</a></sup>
+                start = k<sup class="footnote"><a href="#fn0d0385ae2d524d8c980affa7a7e3004a-1">0</a></sup>
+                end = k<sup class="footnote"><a href="#fn0d0385ae2d524d8c980affa7a7e3004a-2">1</a></sup>
             else:
-                end = max(k<sup class="footnote"><a href="#fn47cb09fe13c9466ea6d5b0397e955224-2">1</a></sup>, end)
+                end = max(k<sup class="footnote"><a href="#fn0d0385ae2d524d8c980affa7a7e3004a-2">1</a></sup>, end)
         print(start, end, count)
         count += (end &#8211; start + 1)
         return days &#8211; count
