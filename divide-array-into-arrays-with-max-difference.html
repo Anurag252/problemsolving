@@ -6,14 +6,13 @@
         &#8220;&#8221;&#8220;
         n = len(nums)
         nums.sort()
-        print(nums)
         res = []
         mul = 0
         for k1 in range(0, n//3):
             arr = []
             for m in range(0,3):
                 arr.append(nums[mul + m])
-            if arr[-1] &#8211; arr<sup class="footnote" id="fnrev4409e9ce2f8f4bb09498c9a5b901ad91-1"><a href="#fn4409e9ce2f8f4bb09498c9a5b901ad91-1">0</a></sup> &gt; k:
+            if arr[-1] &#8211; arr<sup class="footnote" id="fnrev7ff89d642a0247c99fa5259240c99444-1"><a href="#fn7ff89d642a0247c99fa5259240c99444-1">0</a></sup> &gt; k:
                 return []
             res.append(arr)
             mul += 3
