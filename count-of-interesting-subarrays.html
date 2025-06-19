@@ -9,7 +9,7 @@
         # then subarray would be newarr[k + 1] &#8211; newarr[k]
         prefix = 0
         freq = defaultdict(int)
-        freq<sup class="footnote" id="fnrevb1b6bd039b984bc4af248318c3495c6a-1"><a href="#fnb1b6bd039b984bc4af248318c3495c6a-1">0</a></sup> = 1  # to count subarrays starting at index 0
+        freq<sup class="footnote" id="fnrev4f3162147ffe4bb9bac8bb844ad6f6e0-1"><a href="#fn4f3162147ffe4bb9bac8bb844ad6f6e0-1">0</a></sup> = 1  # to count subarrays starting at index 0
         res = 0</p>
 
         for num in nums:
@@ -37,7 +37,7 @@
                 res += prepare[i] &#8211; prepare[i-1]
 
         if len(prepare) == 1:
-            res += len(nums)  &#8211; prepare<sup class="footnote"><a href="#fnb1b6bd039b984bc4af248318c3495c6a-1">0</a></sup>
+            res += len(nums)  &#8211; prepare<sup class="footnote"><a href="#fn4f3162147ffe4bb9bac8bb844ad6f6e0-1">0</a></sup>
 
         return res
 

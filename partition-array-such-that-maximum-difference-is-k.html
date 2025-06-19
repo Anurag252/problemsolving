@@ -1,0 +1,37 @@
+	<p>class Solution:
+    def partitionArray(self, nums: List[int], k: int) -&gt; int:
+        &#8220;&#8221;&#8220;
+        what if we went greedy, for every subsequence keep taking all
+        elems , till max and min is satified
+        and leave others
+        is this union find ?
+        find all nodes that at at most k 
+        this approach is n2
+        greedy does not work in case
+        3,5,6,1,2-
+        3,5 | 6 | 1,2
+        5,6 | 3,1,2
+        starting at index i, take longest subsequence, this greedy works
+        /////// missed that sorting already works, I assumed soring will
+        ////// only work for grps, rest was fine
+        &#8220;&#8221;&#8220;
+        nums.sort()
+        grps = 1
+        curr_min, curr_max = nums<sup class="footnote" id="fnrev7030fa446e1b4f54beb2c062a1f1f268-1"><a href="#fn7030fa446e1b4f54beb2c062a1f1f268-1">0</a></sup>, nums<sup class="footnote"><a href="#fn7030fa446e1b4f54beb2c062a1f1f268-1">0</a></sup>
+        for k1 in nums:
+            if k1 &#8211; curr_min &lt;= k and k1 &#8211; curr_max &lt;= k:
+                curr_max = k1
+                continue
+            else:
+                grps += 1
+                curr_min = k1
+                curr_max = k1
+        return grps</p>
+
+
+
+
+
+
+
+        
