@@ -60,7 +60,7 @@ class Solution:
             b = suff[nums1]                # delete high freq
             num_of_elements_grt = len(arr) - nums1
             
-            print(nums1, a, b, num_of_elements_grt)
+            #print(nums1, a, b, num_of_elements_grt)
             res = min(res,  a + b - (num_of_elements_grt*(m+k)))
 
         return res
