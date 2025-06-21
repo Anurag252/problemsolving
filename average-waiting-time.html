@@ -4,18 +4,18 @@
         return 0;
     }
     double wait = 0;
-    int freeat = customers<sup class="footnote" id="fnrevc3f0147199d8470bbc2e64ed3ccd70c8-1"><a href="#fnc3f0147199d8470bbc2e64ed3ccd70c8-1">0</a></sup><sup class="footnote"><a href="#fnc3f0147199d8470bbc2e64ed3ccd70c8-1">0</a></sup>;
+    int freeat = customers<sup class="footnote" id="fnreva784e6347a0f43e895869afd5e0ce1b6-1"><a href="#fna784e6347a0f43e895869afd5e0ce1b6-1">0</a></sup><sup class="footnote"><a href="#fna784e6347a0f43e895869afd5e0ce1b6-1">0</a></sup>;
     for (int i = 0 ; i &lt; customersSize ; i ++) {
         //printf(&#8220;%d %d\n&#8221;, freeat, wait);
-        int diff = customers[i]<sup class="footnote" id="fnrevc3f0147199d8470bbc2e64ed3ccd70c8-2"><a href="#fnc3f0147199d8470bbc2e64ed3ccd70c8-2">1</a></sup>;
-        if (freeat &gt; customers[i]<sup class="footnote"><a href="#fnc3f0147199d8470bbc2e64ed3ccd70c8-1">0</a></sup>) {
-            wait = wait + freeat &#8211; customers[i]<sup class="footnote"><a href="#fnc3f0147199d8470bbc2e64ed3ccd70c8-1">0</a></sup> + diff;  
+        int diff = customers[i]<sup class="footnote" id="fnreva784e6347a0f43e895869afd5e0ce1b6-2"><a href="#fna784e6347a0f43e895869afd5e0ce1b6-2">1</a></sup>;
+        if (freeat &gt; customers[i]<sup class="footnote"><a href="#fna784e6347a0f43e895869afd5e0ce1b6-1">0</a></sup>) {
+            wait = wait + freeat &#8211; customers[i]<sup class="footnote"><a href="#fna784e6347a0f43e895869afd5e0ce1b6-1">0</a></sup> + diff;  
         } else {
             // wait time is 
-            freeat = customers[i]<sup class="footnote"><a href="#fnc3f0147199d8470bbc2e64ed3ccd70c8-1">0</a></sup>;
+            freeat = customers[i]<sup class="footnote"><a href="#fna784e6347a0f43e895869afd5e0ce1b6-1">0</a></sup>;
             wait = wait + diff;
         }
-        freeat = freeat + customers[i]<sup class="footnote"><a href="#fnc3f0147199d8470bbc2e64ed3ccd70c8-2">1</a></sup>;
+        freeat = freeat + customers[i]<sup class="footnote"><a href="#fna784e6347a0f43e895869afd5e0ce1b6-2">1</a></sup>;
     }
 
     return (wait)/customersSize;
