@@ -6,7 +6,7 @@
 
 
         def changer(i , j , matrix, t):
-            if i &gt;= len(matrix) or j &gt;= len(matrix<sup class="footnote" id="fnrev018bde6a91d742d096eb123c9d7c4790-1"><a href="#fn018bde6a91d742d096eb123c9d7c4790-1">0</a></sup>) or i &lt; 0 or j &lt; 0 :
+            if i &gt;= len(matrix) or j &gt;= len(matrix<sup class="footnote" id="fnrev8c0f2dba41ab480bbaf77d6578da9f51-1"><a href="#fn8c0f2dba41ab480bbaf77d6578da9f51-1">0</a></sup>) or i &lt; 0 or j &lt; 0 :
                 return 
             if matrix[i][j] != 0:
                 matrix[i][j] = t
@@ -15,21 +15,21 @@
 
 
         def changef(i , j , matrix, t):
-            if i &gt;= len(matrix) or j &gt;= len(matrix<sup class="footnote"><a href="#fn018bde6a91d742d096eb123c9d7c4790-1">0</a></sup>) or i &lt; 0 or j &lt; 0 :
+            if i &gt;= len(matrix) or j &gt;= len(matrix<sup class="footnote"><a href="#fn8c0f2dba41ab480bbaf77d6578da9f51-1">0</a></sup>) or i &lt; 0 or j &lt; 0 :
                 return 
             if matrix[i][j] != 0:
                 matrix[i][j] = t
             changef(i + 1, j , matrix, t)
 
         def changecolr(i,  j , matrix, t):
-            if i &gt;= len(matrix) or j &gt;= len(matrix<sup class="footnote"><a href="#fn018bde6a91d742d096eb123c9d7c4790-1">0</a></sup>) or i &lt; 0 or j &lt; 0 :
+            if i &gt;= len(matrix) or j &gt;= len(matrix<sup class="footnote"><a href="#fn8c0f2dba41ab480bbaf77d6578da9f51-1">0</a></sup>) or i &lt; 0 or j &lt; 0 :
                 return
             if matrix[i][j] != 0:
                 matrix[i][j] = t
             changecolr(i , j &#8211; 1 , matrix, t)
 
         def changecolf(i,  j , matrix, t):
-            if i &gt;= len(matrix) or j &gt;= len(matrix<sup class="footnote"><a href="#fn018bde6a91d742d096eb123c9d7c4790-1">0</a></sup>) or i &lt; 0 or j &lt; 0 :
+            if i &gt;= len(matrix) or j &gt;= len(matrix<sup class="footnote"><a href="#fn8c0f2dba41ab480bbaf77d6578da9f51-1">0</a></sup>) or i &lt; 0 or j &lt; 0 :
                 return
             if matrix[i][j] != 0:
                 matrix[i][j] = t
