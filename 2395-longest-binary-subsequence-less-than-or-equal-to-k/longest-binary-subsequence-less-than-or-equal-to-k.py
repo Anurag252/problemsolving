@@ -18,13 +18,7 @@ class Solution:
             m //= 2
         a = int("".join(map(str, arr[::-1])), 2)
         
-
-        mn = 0
-        for k1 in s:
-            if k1 == "0":
-                mn += 1
         arr1 = []
-        print(a)
         last_indx = len(s)
         for  k1 in s[::-1]:
             last_indx -= 1
@@ -39,7 +33,6 @@ class Solution:
                     arr1.append(k1)
                 else:
                     break
-        print(arr1, last_indx)
         
         z = len(arr1)
         for k1 in s[:last_indx]:
