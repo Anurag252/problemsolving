@@ -1,0 +1,23 @@
+	<p>class Solution:
+    def maxSubsequence(self, nums: List[int], k: int) -&gt; List[int]:
+        &#8220;&#8221;&#8220;
+        an element x is part of largest subseq of len k-1 ending at curr &#8211; i
+        T[i,k] = max(T[ i-x, k &#8211; 1] + a[i]) for all x so that sum (T[i-x], k-1)
+        then just traverse back
+        &#8220;&#8221;&#8220;
+        arr = []
+        for i in range(len(nums)):
+            if len(arr) &lt; k:
+                arr.append(nums[i])
+            else :
+                temp = 100000
+                idx = -1
+                for j, n in enumerate(arr):
+                    if temp &gt; n:
+                        temp = n
+                        idx = j
+                if temp &lt; nums[i]:
+                    arr.pop(idx)
+                    arr.append(nums[i])
+                    #print(arr)
+        return arr</p>
