@@ -1,0 +1,26 @@
+	<p>class Solution:
+    def numSubseq(self, nums: List[int], target: int) -&gt; int:
+        &#8220;&#8221;&#8220;
+        I conclude that sorting works and order does not matter 
+        &#8220;&#8221;&#8220;
+        nums.sort()
+        <span class="caps">MOD</span> = pow(10,9) + 7</p>
+
+        left = 0
+        right = len(nums) &#8211; 1
+        res = 0
+        while(left &lt;= right):
+            if nums[left] + nums[right] &gt; target:
+                right -= 1 # inc left will only increase sum
+            elif nums[left] + nums[right] &lt;= target:
+                a = pow(2, right &#8211; left) % MOD
+                res += a
+                res = res % MOD
+                left += 1
+        return res % <span class="caps">MOD</span>
+
+
+
+
+
+        
