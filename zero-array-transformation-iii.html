@@ -1,16 +1,16 @@
 	<p>class Solution:
     def maxRemoval(self, nums: List[int], queries: List[List[int]]) -&gt; int:
-        queries.sort(key=lambda x: x<sup class="footnote" id="fnrev3be53b67b41f4f47acabe798b20cb144-1"><a href="#fn3be53b67b41f4f47acabe798b20cb144-1">0</a></sup>)
+        queries.sort(key=lambda x: x<sup class="footnote" id="fnrev67c89e0935134d5d9f27191a2cbfb65c-1"><a href="#fn67c89e0935134d5d9f27191a2cbfb65c-1">0</a></sup>)
         heap = []
         deltaArray = [0] * (len(nums) + 1)
         operations = 0
         j = 0
         for i, num in enumerate(nums):
             operations += deltaArray[i]
-            while j &lt; len(queries) and queries[j]<sup class="footnote"><a href="#fn3be53b67b41f4f47acabe798b20cb144-1">0</a></sup> == i:
-                heappush(heap, -queries[j]<sup class="footnote" id="fnrev3be53b67b41f4f47acabe798b20cb144-2"><a href="#fn3be53b67b41f4f47acabe798b20cb144-2">1</a></sup>)
+            while j &lt; len(queries) and queries[j]<sup class="footnote"><a href="#fn67c89e0935134d5d9f27191a2cbfb65c-1">0</a></sup> == i:
+                heappush(heap, -queries[j]<sup class="footnote" id="fnrev67c89e0935134d5d9f27191a2cbfb65c-2"><a href="#fn67c89e0935134d5d9f27191a2cbfb65c-2">1</a></sup>)
                 j += 1
-            while operations &lt; num and heap and -heap<sup class="footnote"><a href="#fn3be53b67b41f4f47acabe798b20cb144-1">0</a></sup> &gt;= i:
+            while operations &lt; num and heap and -heap<sup class="footnote"><a href="#fn67c89e0935134d5d9f27191a2cbfb65c-1">0</a></sup> &gt;= i:
                 operations += 1
                 deltaArray[-heappop(heap) + 1] -= 1
             if operations &lt; num:
