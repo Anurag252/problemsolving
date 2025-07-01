@@ -1,0 +1,10 @@
+	<p>class Solution:
+    def possibleStringCount(self, word: str) -&gt; int:
+        possibility = 1
+        for i, k in enumerate(word):
+            if i &lt; len(word)-1 and word[i+1] == k:
+                possibility += 1</p>
+
+        return possibility
+
+        
