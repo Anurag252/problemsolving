@@ -25,7 +25,7 @@
         print(mp)
         arr = list(set(nums))
         arr.sort()
-        prev = arr<sup class="footnote" id="fnrev30aaa2f1d1aa4cfebf9de35bb892a096-1"><a href="#fn30aaa2f1d1aa4cfebf9de35bb892a096-1">0</a></sup>
+        prev = arr<sup class="footnote" id="fnrevcbb1507f9a5f4317b293f0ed3c70e956-1"><a href="#fncbb1507f9a5f4317b293f0ed3c70e956-1">0</a></sup>
         for i, k in enumerate(arr):
             print(i, k , ans, mp[prev], mp[k])
             if k &#8211; prev == 1:
@@ -60,23 +60,23 @@
 
         res = 0
         ans = 0
-        prev = arr<sup class="footnote"><a href="#fn30aaa2f1d1aa4cfebf9de35bb892a096-1">0</a></sup><sup class="footnote" id="fnrev30aaa2f1d1aa4cfebf9de35bb892a096-2"><a href="#fn30aaa2f1d1aa4cfebf9de35bb892a096-2">1</a></sup>
+        prev = arr<sup class="footnote"><a href="#fncbb1507f9a5f4317b293f0ed3c70e956-1">0</a></sup><sup class="footnote" id="fnrevcbb1507f9a5f4317b293f0ed3c70e956-2"><a href="#fncbb1507f9a5f4317b293f0ed3c70e956-2">1</a></sup>
         prev_new = 0
 
         prev_indx = 0
         print(arr)
         for i, k in enumerate(arr):
             print(prev_new, prev, prev_indx, res, ans)
-            if prev != k<sup class="footnote"><a href="#fn30aaa2f1d1aa4cfebf9de35bb892a096-2">1</a></sup> and prev == arr[prev_new]<sup class="footnote"><a href="#fn30aaa2f1d1aa4cfebf9de35bb892a096-2">1</a></sup>:
+            if prev != k<sup class="footnote"><a href="#fncbb1507f9a5f4317b293f0ed3c70e956-2">1</a></sup> and prev == arr[prev_new]<sup class="footnote"><a href="#fncbb1507f9a5f4317b293f0ed3c70e956-2">1</a></sup>:
                 prev_new = i
-            if k<sup class="footnote"><a href="#fn30aaa2f1d1aa4cfebf9de35bb892a096-2">1</a></sup> &#8211; prev &lt;= 1 and prev_indx &gt;= k<sup class="footnote"><a href="#fn30aaa2f1d1aa4cfebf9de35bb892a096-1">0</a></sup>:
-                prev_indx = k<sup class="footnote"><a href="#fn30aaa2f1d1aa4cfebf9de35bb892a096-1">0</a></sup>
+            if k<sup class="footnote"><a href="#fncbb1507f9a5f4317b293f0ed3c70e956-2">1</a></sup> &#8211; prev &lt;= 1 and prev_indx &gt;= k<sup class="footnote"><a href="#fncbb1507f9a5f4317b293f0ed3c70e956-1">0</a></sup>:
+                prev_indx = k<sup class="footnote"><a href="#fncbb1507f9a5f4317b293f0ed3c70e956-1">0</a></sup>
                 res += 1
             else:
                 ans = max(ans, res)
                 res = 0
-                prev = arr[prev_new]<sup class="footnote"><a href="#fn30aaa2f1d1aa4cfebf9de35bb892a096-2">1</a></sup>
-                prev_indx = k<sup class="footnote"><a href="#fn30aaa2f1d1aa4cfebf9de35bb892a096-1">0</a></sup>
+                prev = arr[prev_new]<sup class="footnote"><a href="#fncbb1507f9a5f4317b293f0ed3c70e956-2">1</a></sup>
+                prev_indx = k<sup class="footnote"><a href="#fncbb1507f9a5f4317b293f0ed3c70e956-1">0</a></sup>
 
         return ans
 
