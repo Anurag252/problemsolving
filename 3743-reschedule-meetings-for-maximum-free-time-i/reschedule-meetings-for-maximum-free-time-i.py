@@ -1,15 +1,33 @@
+from typing import List
+
 class Solution:
-    def maxFreeTime(
-        self, eventTime: int, k: int, startTime: List[int], endTime: List[int]
-    ) -> int:
+    def maxFreeTime(self, eventTime: int, k: int, startTime: List[int], endTime: List[int]) -> int:
         n = len(startTime)
-        res = 0
-        t = 0
-        for i in range(n):
-            t += endTime[i] - startTime[i]
-            left = 0 if i <= k - 1 else endTime[i - k]
-            right = eventTime if i == n - 1 else startTime[i + 1]
-            res = max(res, right - left - t)
-            if i >= k - 1:
-                t -= endTime[i - k + 1] - startTime[i - k + 1]
-        return res
+        gaps = []
+
+        # Gap before first meeting
+        gaps.append(startTime[0] - 0)
+
+        # Gaps between meetings
+        for i in range(1, n):
+            gaps.append(startTime[i] - endTime[i - 1])
+
+        # Gap after last meeting
+        gaps.append(eventTime - endTime[-1])
+
+        # Sliding window over gaps
+        max_total = 0
+        total = 0
+        left = 0
+
+        for right in range(len(gaps)):
+            total += gaps[right]
+
+            # If merges needed > k, shrink window
+            while right - left > k:
+                total -= gaps[left]
+                left += 1
+
+            max_total = max(max_total, total)
+
+        return max_total
