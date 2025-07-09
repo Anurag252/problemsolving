@@ -1,0 +1,15 @@
+	<p>class Solution:
+    def maxFreeTime(
+        self, eventTime: int, k: int, startTime: List[int], endTime: List[int]
+    ) -&gt; int:
+        n = len(startTime)
+        res = 0
+        t = 0
+        for i in range(n):
+            t += endTime[i] &#8211; startTime[i]
+            left = 0 if i &lt;= k &#8211; 1 else endTime[i &#8211; k]
+            right = eventTime if i == n &#8211; 1 else startTime[i + 1]
+            res = max(res, right &#8211; left &#8211; t)
+            if i &gt;= k &#8211; 1:
+                t -= endTime[i &#8211; k + 1] &#8211; startTime[i &#8211; k + 1]
+        return res</p>
