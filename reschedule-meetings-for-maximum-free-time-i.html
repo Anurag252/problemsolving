@@ -1,33 +1,52 @@
-	<p>from typing import List</p>
-
 	<p>class Solution:
     def maxFreeTime(self, eventTime: int, k: int, startTime: List[int], endTime: List[int]) -&gt; int:
-        n = len(startTime)
-        gaps = []</p>
+        &#8220;&#8221;&#8220;
+        the longest free time can be achived if they are all togather
+        also to maintain the order, find the smallest empty gaps and reduce it further -&gt; no this may not work
+        then find largest empty gaps and increase it 
+        y greedy works &#8211; say increasing largest by x  does not yield the largest time, then it means inc 2nd largest by x yields ? which cannot be true as if x &gt; y, then x + 3 &gt; y + 3
+            maybe we take all free spaces and then start moving empty spaces to larger one k times
+            start by reducing largest meeting 
+        # this greedy did not work as it was possible to move left or right side as well, rather take k window and 
+        find me maximum output
+        &#8220;&#8221;&#8220;
+        duration = []
+        start_time = 0
+        end_time = 0
+        for i, (start, end) in enumerate(zip(startTime, endTime)):
+            duration.append((i,start-end_time))
+            start_time = start
+            end_time = end
+        duration.append((i+1, eventTime &#8211; endTime[-1]))</p>
 
-        # Gap before first meeting
-        gaps.append(startTime<sup class="footnote" id="fnrev6ef8edf631644e1fb378cadec344a988-1"><a href="#fn6ef8edf631644e1fb378cadec344a988-1">0</a></sup> &#8211; 0)
-
-        # Gaps between meetings
-        for i in range(1, n):
-            gaps.append(startTime[i] &#8211; endTime[i &#8211; 1])
-
-        # Gap after last meeting
-        gaps.append(eventTime &#8211; endTime[-1])
-
-        # Sliding window over gaps
-        max_total = 0
         total = 0
         left = 0
+        right = 0
+        print(duration)
+        while(right &#8211; left &lt; k + 1) and right &lt; len(duration):
+                total += duration[right]<sup class="footnote" id="fnrev19cf41636f784d6fb6f4ae3b5d6367c6-1"><a href="#fn19cf41636f784d6fb6f4ae3b5d6367c6-1">1</a></sup>
+                right += 1
+        max_total = total
 
-        for right in range(len(gaps)):
-            total += gaps[right]
-
-            # If merges needed &gt; k, shrink window
-            while right &#8211; left &gt; k:
-                total -= gaps[left]
-                left += 1
-
+        # Slide the window
+        while right &lt; len(duration):
+            total -= duration[left]<sup class="footnote"><a href="#fn19cf41636f784d6fb6f4ae3b5d6367c6-1">1</a></sup>
+            total += duration[right]<sup class="footnote"><a href="#fn19cf41636f784d6fb6f4ae3b5d6367c6-1">1</a></sup>
+            left += 1
+            right += 1
             max_total = max(max_total, total)
 
         return max_total
+
+
+
+
+
+
+
+
+
+
+
+
+        return duration<sup class="footnote" id="fnrev19cf41636f784d6fb6f4ae3b5d6367c6-2"><a href="#fn19cf41636f784d6fb6f4ae3b5d6367c6-2">0</a></sup> + total   if len(duration) &gt; 0 else 0
