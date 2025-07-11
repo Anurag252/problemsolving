@@ -1,0 +1,30 @@
+	<p>class Solution:
+    def maxFreeTime(
+        self, eventTime: int, startTime: list[int], endTime: list[int]
+    ) -&gt; int:
+        n = len(startTime)
+        q = [False] * n
+        t1 = 0
+        t2 = 0
+        for i in range(n):
+            if endTime[i] &#8211; startTime[i] &lt;= t1:
+                q[i] = True
+            t1 = max(t1, startTime[i] &#8211; (0 if i == 0 else endTime[i &#8211; 1]))</p>
+
+            if endTime[n &#8211; i &#8211; 1] &#8211; startTime[n &#8211; i &#8211; 1] &lt;= t2:
+                q[n &#8211; i &#8211; 1] = True
+            t2 = max(
+                t2,
+                (eventTime if i == 0 else startTime[n &#8211; i])
+                &#8211; endTime[n &#8211; i &#8211; 1],
+            )
+
+        res = 0
+        for i in range(n):
+            left = 0 if i  0 else endTime[i - 1]
+            right = eventTime if i  n &#8211; 1 else startTime[i + 1]
+            if q[i]:
+                res = max(res, right &#8211; left)
+            else:
+                res = max(res, right &#8211; left &#8211; (endTime[i] &#8211; startTime[i]))
+        return res
