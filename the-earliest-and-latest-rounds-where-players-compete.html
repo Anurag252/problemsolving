@@ -1,0 +1,43 @@
+	<p>class Solution:
+    def earliestAndLatest(
+        self, n: int, firstPlayer: int, secondPlayer: int
+    ) -&gt; List[int]:
+        @cache
+        def dp(n: int, f: int, s: int) -&gt; (int, int):
+            if f + s == n + 1:
+                return (1, 1)</p>
+
+            # F(n,f,s)=F(n,n+1-s,n+1-f)
+            if f + s &gt; n + 1:
+                return dp(n, n + 1 &#8211; s, n + 1 &#8211; f)
+
+            earliest, latest = float(&#8220;inf&#8221;), float(&#8220;-inf&#8221;)
+            n_half = (n + 1) // 2
+
+            if s &lt;= n_half:
+                # s On the left or in the middle
+                for i in range(f):
+                    for j in range(s &#8211; f):
+                        x, y = dp(n_half, i + 1, i + j + 2)
+                        earliest = min(earliest, x)
+                        latest = max(latest, y)
+            else:
+                # s on the right
+                # s&#8216;
+                s_prime = n + 1 &#8211; s
+                mid = (n &#8211; 2 * s_prime + 1) // 2
+                for i in range(f):
+                    for j in range(s_prime &#8211; f):
+                        x, y = dp(n_half, i + 1, i + j + mid + 2)
+                        earliest = min(earliest, x)
+                        latest = max(latest, y)
+
+            return (earliest + 1, latest + 1)
+
+        # F(n,f,s) = F(n,s,f)
+        if firstPlayer &gt; secondPlayer:
+            firstPlayer, secondPlayer = secondPlayer, firstPlayer
+
+        earliest, latest = dp(n, firstPlayer, secondPlayer)
+        dp.cache_clear()
+        return [earliest, latest]

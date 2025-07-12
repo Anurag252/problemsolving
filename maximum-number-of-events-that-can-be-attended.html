@@ -1,15 +1,15 @@
 	<p>class Solution:
     def maxEvents(self, events: List[List[int]]) -&gt; int:
         n = len(events)
-        max_day = max(event<sup class="footnote" id="fnrevb9813d8b5fb3486b8b3db2e74ae65529-1"><a href="#fnb9813d8b5fb3486b8b3db2e74ae65529-1">1</a></sup> for event in events)
+        max_day = max(event<sup class="footnote" id="fnreva204fbba27ff4b06911aa02ce0e4e706-1"><a href="#fna204fbba27ff4b06911aa02ce0e4e706-1">1</a></sup> for event in events)
         events.sort()
         pq = []
         ans, j = 0, 0
         for i in range(1, max_day + 1):
-            while j &lt; n and events[j]<sup class="footnote" id="fnrevb9813d8b5fb3486b8b3db2e74ae65529-2"><a href="#fnb9813d8b5fb3486b8b3db2e74ae65529-2">0</a></sup> &lt;= i:
-                heapq.heappush(pq, events[j]<sup class="footnote"><a href="#fnb9813d8b5fb3486b8b3db2e74ae65529-1">1</a></sup>)
+            while j &lt; n and events[j]<sup class="footnote" id="fnreva204fbba27ff4b06911aa02ce0e4e706-2"><a href="#fna204fbba27ff4b06911aa02ce0e4e706-2">0</a></sup> &lt;= i:
+                heapq.heappush(pq, events[j]<sup class="footnote"><a href="#fna204fbba27ff4b06911aa02ce0e4e706-1">1</a></sup>)
                 j += 1
-            while pq and pq<sup class="footnote"><a href="#fnb9813d8b5fb3486b8b3db2e74ae65529-2">0</a></sup> &lt; i:
+            while pq and pq<sup class="footnote"><a href="#fna204fbba27ff4b06911aa02ce0e4e706-2">0</a></sup> &lt; i:
                 heapq.heappop(pq)
             if pq:
                 heapq.heappop(pq)
