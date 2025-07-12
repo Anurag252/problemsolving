@@ -1,23 +1,23 @@
-	<p>bool isPalindrome(int x) {
-    int k = 1;
-    while(x/k &gt;= 10){
-        k = k * 10;
-    }
-    if (x &lt; 0) {
-        return false;
-    }
-    int l = 10;
-    int y = x;
-    //printf(&#8220;%d %d&#8221;, x/k, y%l);
-    while(k &gt;= 1 &amp;&amp; y &gt;= 1 &amp;&amp; x/k == y%l ){
-        x = x % k;
-        k = k /10;
-        y = y / 10;
-    }</p>
+	<p>class Solution:
+    def isPalindrome(self, x: int) -&gt; bool:
+        if x &lt; 0 or x != ceil(x):
+            return False
+        if x == 0:
+            return True
+        inverted_num = 0
+        orig = x
+        m = 1
+        n = pow(10,int(log(x,10)))
+        while(x &gt;= 0 and n &gt;= 1):</p>
 
-    if (x == 0) {
-        return true;
-    }
-    return false;
+            l = int(x / n)
+            print(l,inverted_num, n,m,x)
+            inverted_num = inverted_num + l*m
+            x = int(x % n)
+            n = int(n / 10)
+            m = m * 10
+        return inverted_num == orig
 
-	<p>}</p>
+
+
+        
