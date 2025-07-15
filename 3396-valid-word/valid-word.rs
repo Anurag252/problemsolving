@@ -7,7 +7,6 @@ impl Solution {
         let mut consonant = false;
         for mut k in word.chars(){
             let m = k.to_ascii_lowercase() as u8;
-            println!("{}", m);
             if !((m >= 48 && m <= 57 ) || (m >= 97 && m <= 122) ){
                 return false;
             } 
