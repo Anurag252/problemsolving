@@ -26,7 +26,7 @@
                 f_new[j] = g[j &#8211; 1]
                 if j &#8211; freq[i] &#8211; 1 &gt;= 0:
                     f_new[j] = (f_new[j] &#8211; g[j &#8211; freq[i] &#8211; 1]) % mod
-            g_new = [f_new<sup class="footnote" id="fnrev31db0272a18949cf87908911556b0982-1"><a href="#fn31db0272a18949cf87908911556b0982-1">0</a></sup>] + [0] * (k &#8211; 1)
+            g_new = [f_new<sup class="footnote" id="fnrevea05e8df49264d6c842a75a596eda952-1"><a href="#fnea05e8df49264d6c842a75a596eda952-1">0</a></sup>] + [0] * (k &#8211; 1)
             for j in range(1, k):
                 g_new[j] = (g_new[j &#8211; 1] + f_new[j]) % mod
             f, g = f_new, g_new
