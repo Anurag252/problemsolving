@@ -10,14 +10,14 @@
 	<p>class Solution:
     def minTimeToReach(self, moveTime: List[List[int]]) -&gt; int:
         n = len(moveTime)
-        m = len(moveTime<sup class="footnote" id="fnreva6ccf17895b444fdbfb5705dbfd731af-1"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-1">0</a></sup>)
+        m = len(moveTime<sup class="footnote" id="fnrevc1845ffdebac4e579f388688bd1cf3d8-1"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-1">0</a></sup>)
         inf = float(&#8220;inf&#8221;)
         d = [[inf] * m for _ in range(n)]
-        v = [<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-1">0</a></sup> * m for _ in range(n)]</p>
+        v = [<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-1">0</a></sup> * m for _ in range(n)]</p>
 
         dirs = [(1, 0), (-1, 0), (0, 1), (0, -1)]
 
-        d<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-1">0</a></sup><sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-1">0</a></sup> = 0
+        d<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-1">0</a></sup><sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-1">0</a></sup> = 0
         q = []
         heapq.heappush(q, State(0, 0, 0))
 
@@ -41,7 +41,7 @@
         h = [(0,0)]
         t = 0
         row = len(moveTime)
-        col = len(moveTime<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-1">0</a></sup>)
+        col = len(moveTime<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-1">0</a></sup>)
         visited = set([0, 0])
         odd = True
 
@@ -51,21 +51,21 @@
             while(h):
                 print(t, h)
                 index = h.pop(0)
-                if index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-1">0</a></sup>  row-1 and index[1]  col-1:
+                if index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-1">0</a></sup>  row-1 and index[1]  col-1:
                     return t
-                if t &lt; moveTime[index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-1">0</a></sup>][index<sup class="footnote" id="fnreva6ccf17895b444fdbfb5705dbfd731af-2"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-2">1</a></sup>]:
-                    t1 = min(t1, moveTime[index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-1">0</a></sup>][index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-2">1</a></sup>])
+                if t &lt; moveTime[index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-1">0</a></sup>][index<sup class="footnote" id="fnrevc1845ffdebac4e579f388688bd1cf3d8-2"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-2">1</a></sup>]:
+                    t1 = min(t1, moveTime[index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-1">0</a></sup>][index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-2">1</a></sup>])
                     temp.append(index)
                 else:
                     visited.add(index)
-                    if index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-2">1</a></sup> + 1 &lt; col and (index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-1">0</a></sup>, index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-2">1</a></sup> + 1) not in visited:
-                        temp.append((index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-1">0</a></sup>, index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-2">1</a></sup> + 1))
-                    if index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-1">0</a></sup> + 1 &lt; row and (index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-1">0</a></sup> + 1, index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-2">1</a></sup>) not in visited:
-                        temp.append((index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-1">0</a></sup> + 1, index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-2">1</a></sup>))
-                    if index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-2">1</a></sup> &#8211; 1 &gt;= 0 and (index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-1">0</a></sup>, index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-2">1</a></sup> &#8211; 1) not in visited:
-                        temp.append((index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-1">0</a></sup>, index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-2">1</a></sup> &#8211; 1))
-                    if index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-1">0</a></sup> &#8211; 1 &gt;= 0 and (index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-1">0</a></sup> &#8211; 1, index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-2">1</a></sup>) not in visited:
-                        temp.append((index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-1">0</a></sup> &#8211; 1, index<sup class="footnote"><a href="#fna6ccf17895b444fdbfb5705dbfd731af-2">1</a></sup> ))
+                    if index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-2">1</a></sup> + 1 &lt; col and (index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-1">0</a></sup>, index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-2">1</a></sup> + 1) not in visited:
+                        temp.append((index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-1">0</a></sup>, index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-2">1</a></sup> + 1))
+                    if index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-1">0</a></sup> + 1 &lt; row and (index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-1">0</a></sup> + 1, index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-2">1</a></sup>) not in visited:
+                        temp.append((index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-1">0</a></sup> + 1, index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-2">1</a></sup>))
+                    if index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-2">1</a></sup> &#8211; 1 &gt;= 0 and (index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-1">0</a></sup>, index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-2">1</a></sup> &#8211; 1) not in visited:
+                        temp.append((index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-1">0</a></sup>, index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-2">1</a></sup> &#8211; 1))
+                    if index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-1">0</a></sup> &#8211; 1 &gt;= 0 and (index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-1">0</a></sup> &#8211; 1, index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-2">1</a></sup>) not in visited:
+                        temp.append((index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-1">0</a></sup> &#8211; 1, index<sup class="footnote"><a href="#fnc1845ffdebac4e579f388688bd1cf3d8-2">1</a></sup> ))
             if t1 == 1000000:
                 t1 = 0
             if odd:
