@@ -35,18 +35,26 @@ class Solution:
 
         T = [[0 for _ in range(k)] for _ in range(len(nums))]
 
-        count = 1  # every number is a valid subsequence of length 1
 
-        for i in range(len(nums)):
-            for j in range(i):
-                mod = (nums[i] + nums[j]) % k
-                if T[j][mod] > 0:
-                    T[i][mod] = max(T[i][mod], T[j][mod] + 1)
+        
+        count = 0
+        for i in range(len(T)):
+            for m in range(i):
+                temp = 2
+                mod = (nums[i] + nums[m]) % k
+                if T[m][mod] > 0:
+                    temp = max(temp, T[m][mod] + 1)
+                    T[i][mod] = temp
                 else:
-                    T[i][mod] = max(T[i][mod], 2)  # first valid pair
+                    T[i][mod] = 2
             count = max(count, max(T[i]))
-
         return count
+
+
+
+            
+
+
 
 
         original = [(-1,0)] * k
