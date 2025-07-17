@@ -1,0 +1,10 @@
+	<p>class Solution:
+    def maximumLength(self, nums: List[int], k: int) -&gt; int:
+        dp = [<sup class="footnote" id="fnrevcff14436517e4a6b91b0470ea3ab0046-1"><a href="#fncff14436517e4a6b91b0470ea3ab0046-1">0</a></sup> * k for _ in range(k)]
+        res = 0
+        for num in nums:
+            num %= k
+            for prev in range(k):
+                dp[prev][num] = dp[num][prev] + 1
+                res = max(res, dp[prev][num])
+        return res</p>
