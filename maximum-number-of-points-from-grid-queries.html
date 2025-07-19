@@ -3,7 +3,7 @@
 
 	<p>class Solution:
     def maxPoints(self, grid: List[List[int]], queries: List[int]) -&gt; List[int]:
-        row_count, col_count = len(grid), len(grid<sup class="footnote" id="fnrev84e396c2ac32480bba32987f3862684f-1"><a href="#fn84e396c2ac32480bba32987f3862684f-1">0</a></sup>)
+        row_count, col_count = len(grid), len(grid<sup class="footnote" id="fnrev7ae1181f6d3f47af8dd8f3daa9c122a8-1"><a href="#fn7ae1181f6d3f47af8dd8f3daa9c122a8-1">0</a></sup>)
         result = [0] * len(queries)
         # Directions for movement (right, down, left, up)
         <span class="caps">DIRECTIONS</span> = [(0, 1), (1, 0), (0, -1), (-1, 0)]</p>
@@ -19,13 +19,13 @@
         # Keeps track of the number of cells processed
         total_points = 0
         # Start from the top-left cell
-        min_heap.put((grid<sup class="footnote"><a href="#fn84e396c2ac32480bba32987f3862684f-1">0</a></sup><sup class="footnote"><a href="#fn84e396c2ac32480bba32987f3862684f-1">0</a></sup>, 0, 0))
-        visited<sup class="footnote"><a href="#fn84e396c2ac32480bba32987f3862684f-1">0</a></sup><sup class="footnote"><a href="#fn84e396c2ac32480bba32987f3862684f-1">0</a></sup> = True
+        min_heap.put((grid<sup class="footnote"><a href="#fn7ae1181f6d3f47af8dd8f3daa9c122a8-1">0</a></sup><sup class="footnote"><a href="#fn7ae1181f6d3f47af8dd8f3daa9c122a8-1">0</a></sup>, 0, 0))
+        visited<sup class="footnote"><a href="#fn7ae1181f6d3f47af8dd8f3daa9c122a8-1">0</a></sup><sup class="footnote"><a href="#fn7ae1181f6d3f47af8dd8f3daa9c122a8-1">0</a></sup> = True
 
         # Process queries in sorted order
         for query_value, query_index in sorted_queries:
             # Expand the cells that are smaller than the current query value
-            while not min_heap.empty() and min_heap.queue<sup class="footnote"><a href="#fn84e396c2ac32480bba32987f3862684f-1">0</a></sup><sup class="footnote"><a href="#fn84e396c2ac32480bba32987f3862684f-1">0</a></sup> &lt; query_value:
+            while not min_heap.empty() and min_heap.queue<sup class="footnote"><a href="#fn7ae1181f6d3f47af8dd8f3daa9c122a8-1">0</a></sup><sup class="footnote"><a href="#fn7ae1181f6d3f47af8dd8f3daa9c122a8-1">0</a></sup> &lt; query_value:
                 cellValue, current_row, current_col = min_heap.get()
 
                 # Increment count of valid cells

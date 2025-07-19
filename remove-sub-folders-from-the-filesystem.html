@@ -1,23 +1,24 @@
 	<p>class Solution:
-    def removeSubfolders(self, folder: List[str]) -&gt; List[str]:</p>
+    def removeSubfolders(self, folder: List[str]) -&gt; List[str]:
+        folder.sort(key=lambda x : len(x))
+        mp = set()
+        for r in folder:
+            f_arr = r.split(&#8216;/&#8217;)
+            p = &#8220;&#8220;
+            include = True
+            for a in f_arr:
+                if a == &#8220;&#8221;:
+                    continue
+                if p + &#8220;/&#8221; + a in mp:
+                    include = False
+                    break
+                p += &#8220;/&#8221; + a
+            if include:
+                mp.add(p)
+        return list(mp)</p>
 
-        folder.sort(key = lambda x : len(x))
 
-        mp = {}
-        ls = []
-        for k in folder:
-            i = 1
-            t = k.split(&#8216;/&#8217;)[1:]
-            print(t)
-            found = False
-            while i &lt; len(t) and &#8220;-&#8221;.join(t[:-i]) not in mp:
-                i += 1
-            print(i, len(t), &#8220;i&#8221;)
-            if i != len(t):
-                continue
-            else:
-                mp[&#8220;-&#8221;.join(t)] = k
-        #print(mp, list(mp.values()))
-        return list(mp.values())
+
+
 
         
