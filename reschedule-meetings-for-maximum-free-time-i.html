@@ -24,14 +24,14 @@
         right = 0
         print(duration)
         while(right &#8211; left &lt; k + 1) and right &lt; len(duration):
-                total += duration[right]<sup class="footnote" id="fnrevcd1cfa9229324f8fbb322dacf57f1281-1"><a href="#fncd1cfa9229324f8fbb322dacf57f1281-1">1</a></sup>
+                total += duration[right]<sup class="footnote" id="fnrev79fd1a24152d42bb89c66a8a61557486-1"><a href="#fn79fd1a24152d42bb89c66a8a61557486-1">1</a></sup>
                 right += 1
         max_total = total
 
         # Slide the window
         while right &lt; len(duration):
-            total -= duration[left]<sup class="footnote"><a href="#fncd1cfa9229324f8fbb322dacf57f1281-1">1</a></sup>
-            total += duration[right]<sup class="footnote"><a href="#fncd1cfa9229324f8fbb322dacf57f1281-1">1</a></sup>
+            total -= duration[left]<sup class="footnote"><a href="#fn79fd1a24152d42bb89c66a8a61557486-1">1</a></sup>
+            total += duration[right]<sup class="footnote"><a href="#fn79fd1a24152d42bb89c66a8a61557486-1">1</a></sup>
             left += 1
             right += 1
             max_total = max(max_total, total)
@@ -49,4 +49,4 @@
 
 
 
-        return duration<sup class="footnote" id="fnrevcd1cfa9229324f8fbb322dacf57f1281-2"><a href="#fncd1cfa9229324f8fbb322dacf57f1281-2">0</a></sup> + total   if len(duration) &gt; 0 else 0
+        return duration<sup class="footnote" id="fnrev79fd1a24152d42bb89c66a8a61557486-2"><a href="#fn79fd1a24152d42bb89c66a8a61557486-2">0</a></sup> + total   if len(duration) &gt; 0 else 0

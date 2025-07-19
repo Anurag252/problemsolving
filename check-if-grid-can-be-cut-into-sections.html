@@ -8,12 +8,12 @@
         y_rect = []
 
         for k in rectangles:
-            x_rect.append([k<sup class="footnote" id="fnrev68875024d3914622a118784f5b7c9b9d-1"><a href="#fn68875024d3914622a118784f5b7c9b9d-1">1</a></sup>,k<sup class="footnote" id="fnrev68875024d3914622a118784f5b7c9b9d-2"><a href="#fn68875024d3914622a118784f5b7c9b9d-2">3</a></sup>])
-            y_rect.append([k<sup class="footnote" id="fnrev68875024d3914622a118784f5b7c9b9d-3"><a href="#fn68875024d3914622a118784f5b7c9b9d-3">0</a></sup>,k<sup class="footnote" id="fnrev68875024d3914622a118784f5b7c9b9d-4"><a href="#fn68875024d3914622a118784f5b7c9b9d-4">2</a></sup>])
+            x_rect.append([k<sup class="footnote" id="fnrevc488ffaa28cb4b64bd67a16b463eaf87-1"><a href="#fnc488ffaa28cb4b64bd67a16b463eaf87-1">1</a></sup>,k<sup class="footnote" id="fnrevc488ffaa28cb4b64bd67a16b463eaf87-2"><a href="#fnc488ffaa28cb4b64bd67a16b463eaf87-2">3</a></sup>])
+            y_rect.append([k<sup class="footnote" id="fnrevc488ffaa28cb4b64bd67a16b463eaf87-3"><a href="#fnc488ffaa28cb4b64bd67a16b463eaf87-3">0</a></sup>,k<sup class="footnote" id="fnrevc488ffaa28cb4b64bd67a16b463eaf87-4"><a href="#fnc488ffaa28cb4b64bd67a16b463eaf87-4">2</a></sup>])
 
         def merge_intervals(arr):
 
-            arr.sort(key= lambda x: x<sup class="footnote"><a href="#fn68875024d3914622a118784f5b7c9b9d-3">0</a></sup>)
+            arr.sort(key= lambda x: x<sup class="footnote"><a href="#fnc488ffaa28cb4b64bd67a16b463eaf87-3">0</a></sup>)
             #print(arr)
 
             start = -1
@@ -21,12 +21,12 @@
             count = 0
 
             for k in arr:
-                if end &lt;= k<sup class="footnote"><a href="#fn68875024d3914622a118784f5b7c9b9d-3">0</a></sup>:
+                if end &lt;= k<sup class="footnote"><a href="#fnc488ffaa28cb4b64bd67a16b463eaf87-3">0</a></sup>:
                     count += 1
-                    start = k<sup class="footnote"><a href="#fn68875024d3914622a118784f5b7c9b9d-3">0</a></sup>
-                    end = k<sup class="footnote"><a href="#fn68875024d3914622a118784f5b7c9b9d-1">1</a></sup>
+                    start = k<sup class="footnote"><a href="#fnc488ffaa28cb4b64bd67a16b463eaf87-3">0</a></sup>
+                    end = k<sup class="footnote"><a href="#fnc488ffaa28cb4b64bd67a16b463eaf87-1">1</a></sup>
                 else:
-                    end = max(k<sup class="footnote"><a href="#fn68875024d3914622a118784f5b7c9b9d-1">1</a></sup>, end)
+                    end = max(k<sup class="footnote"><a href="#fnc488ffaa28cb4b64bd67a16b463eaf87-1">1</a></sup>, end)
 
             #print(count)
             return count &gt;= 3
