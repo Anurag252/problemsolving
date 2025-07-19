@@ -1,23 +1,24 @@
 class Solution:
     def removeSubfolders(self, folder: List[str]) -> List[str]:
+        folder.sort(key=lambda x : len(x))
+        mp = set()
+        for r in folder:
+            f_arr = r.split('/')
+            p = ""
+            include = True
+            for a in f_arr:
+                if a == "":
+                    continue
+                if p + "/" + a in mp:
+                    include = False
+                    break
+                p += "/" + a
+            if include:
+                mp.add(p)
+        return list(mp)
 
-        folder.sort(key = lambda x : len(x))
 
-        mp = {}
-        ls = []
-        for k in folder:
-            i = 1
-            t = k.split('/')[1:]
-            print(t)
-            found = False
-            while i < len(t) and "-".join(t[:-i]) not in mp:
-                i += 1
-            print(i, len(t), "i")
-            if i != len(t):
-                continue
-            else:
-                mp["-".join(t)] = k
-        #print(mp, list(mp.values()))
-        return list(mp.values())
+
+
 
         
