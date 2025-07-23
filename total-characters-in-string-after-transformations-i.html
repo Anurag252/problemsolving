@@ -6,8 +6,8 @@
             cnt[ord(ch) &#8211; ord(&#8220;a&#8221;)] += 1
         for round in range(t):
             nxt = [0] * 26
-            nxt<sup class="footnote" id="fnrev3535debbe2a046c9a48999d2a2a3907a-1"><a href="#fn3535debbe2a046c9a48999d2a2a3907a-1">0</a></sup> = cnt<sup class="footnote" id="fnrev3535debbe2a046c9a48999d2a2a3907a-2"><a href="#fn3535debbe2a046c9a48999d2a2a3907a-2">25</a></sup>
-            nxt<sup class="footnote" id="fnrev3535debbe2a046c9a48999d2a2a3907a-3"><a href="#fn3535debbe2a046c9a48999d2a2a3907a-3">1</a></sup> = (cnt<sup class="footnote"><a href="#fn3535debbe2a046c9a48999d2a2a3907a-2">25</a></sup> + cnt<sup class="footnote"><a href="#fn3535debbe2a046c9a48999d2a2a3907a-1">0</a></sup>) % mod
+            nxt<sup class="footnote" id="fnrev3a866e3fab094558a3077cceb091e892-1"><a href="#fn3a866e3fab094558a3077cceb091e892-1">0</a></sup> = cnt<sup class="footnote" id="fnrev3a866e3fab094558a3077cceb091e892-2"><a href="#fn3a866e3fab094558a3077cceb091e892-2">25</a></sup>
+            nxt<sup class="footnote" id="fnrev3a866e3fab094558a3077cceb091e892-3"><a href="#fn3a866e3fab094558a3077cceb091e892-3">1</a></sup> = (cnt<sup class="footnote"><a href="#fn3a866e3fab094558a3077cceb091e892-2">25</a></sup> + cnt<sup class="footnote"><a href="#fn3a866e3fab094558a3077cceb091e892-1">0</a></sup>) % mod
             for i in range(2, 26):
                 nxt[i] = cnt[i &#8211; 1]
             cnt = nxt
