@@ -1,0 +1,27 @@
+	<p>class Solution:
+    def maxSubarrays(self, n: int, conflictingPairs: List[List[int]]) -&gt; int:
+        bMin1 = [2**31 &#8211; 1] * (n + 1)
+        bMin2 = [2**31 &#8211; 1] * (n + 1)
+        for pair in conflictingPairs:
+            a = min(pair<sup class="footnote" id="fnrevcb7a9961f72b471cbf4c2c8724a800da-1"><a href="#fncb7a9961f72b471cbf4c2c8724a800da-1">0</a></sup>, pair<sup class="footnote" id="fnrevcb7a9961f72b471cbf4c2c8724a800da-2"><a href="#fncb7a9961f72b471cbf4c2c8724a800da-2">1</a></sup>)
+            b = max(pair<sup class="footnote"><a href="#fncb7a9961f72b471cbf4c2c8724a800da-1">0</a></sup>, pair<sup class="footnote"><a href="#fncb7a9961f72b471cbf4c2c8724a800da-2">1</a></sup>)
+            if bMin1[a] &gt; b:
+                bMin2[a] = bMin1[a]
+                bMin1[a] = b
+            elif bMin2[a] &gt; b:
+                bMin2[a] = b
+        res = 0
+        ib1 = n
+        b2 = 0&#215;3FFFFFFF
+        delCount = [0] * (n + 1)
+        for i in range(n, 0, -1):
+            if bMin1[ib1] &gt; bMin1[i]:
+                b2 = min(b2, bMin1[ib1])
+                ib1 = i
+            else:
+                b2 = min(b2, bMin1[i])
+            res += min(bMin1[ib1], n + 1) &#8211; i
+            delCount[ib1] += min(min(b2, bMin2[ib1]), n + 1) &#8211; min(
+                bMin1[ib1], n + 1
+            )
+        return res + max(delCount)</p>

@@ -6,7 +6,7 @@
         # bfs should be ideal</p>
 
 
-        rows, cols = len(moveTime), len(moveTime<sup class="footnote" id="fnrev391020e6052a45998a5645372a176699-1"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup>)
+        rows, cols = len(moveTime), len(moveTime<sup class="footnote" id="fnrevfffb6c52bf5b4a0abda70379072ea754-1"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup>)
         heap = [(0, 0, 0)]  # (time, i, j)
         visited = set()
 
@@ -32,18 +32,18 @@
         @cache
         def test(origin, t, visited):
             visited = set(visited)
-            if origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup>  len(moveTime)-1 and origin[1]  len(moveTime<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup>)-1:
+            if origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup>  len(moveTime)-1 and origin[1]  len(moveTime<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup>)-1:
                 return t 
             visited.add(origin)
             a, b,c,d = float(&#8216;inf&#8217;), float(&#8216;inf&#8217;), float(&#8216;inf&#8217;), float(&#8216;inf&#8217;)
-            if origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup> + 1 &lt; len(moveTime) and (origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup> + 1, origin<sup class="footnote" id="fnrev391020e6052a45998a5645372a176699-2"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup>) not in visited:
-                a = test((origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup> + 1, origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup>), max(t+1, moveTime[origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup> + 1][origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup>] + 1), frozenset(visited))
-            if origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup> + 1 &lt; len(moveTime<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup>) and (origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup> , origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup>+1) not in visited:
-                b = test((origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup>, origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup> + 1), max(t+1, moveTime[origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup>][origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup> + 1] + 1), frozenset(visited))
-            if origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup> &#8211; 1 &gt;= 0 and (origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup> &#8211; 1, origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup>) not in visited:
-                c = test((origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup> &#8211; 1, origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup>), max(t+1, moveTime[origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup> &#8211; 1][origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup>] + 1), frozenset(visited))
-            if origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup> &#8211; 1 &gt;= 0 and (origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup>, origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup>-1) not in visited:
-                d = test((origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup>, origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup> &#8211; 1), max(t+1, moveTime[origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup>][origin<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup> &#8211; 1] + 1), frozenset(visited)) 
+            if origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup> + 1 &lt; len(moveTime) and (origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup> + 1, origin<sup class="footnote" id="fnrevfffb6c52bf5b4a0abda70379072ea754-2"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup>) not in visited:
+                a = test((origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup> + 1, origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup>), max(t+1, moveTime[origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup> + 1][origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup>] + 1), frozenset(visited))
+            if origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup> + 1 &lt; len(moveTime<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup>) and (origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup> , origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup>+1) not in visited:
+                b = test((origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup>, origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup> + 1), max(t+1, moveTime[origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup>][origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup> + 1] + 1), frozenset(visited))
+            if origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup> &#8211; 1 &gt;= 0 and (origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup> &#8211; 1, origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup>) not in visited:
+                c = test((origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup> &#8211; 1, origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup>), max(t+1, moveTime[origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup> &#8211; 1][origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup>] + 1), frozenset(visited))
+            if origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup> &#8211; 1 &gt;= 0 and (origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup>, origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup>-1) not in visited:
+                d = test((origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup>, origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup> &#8211; 1), max(t+1, moveTime[origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup>][origin<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup> &#8211; 1] + 1), frozenset(visited)) 
             visited.remove(origin)
             return min(a,b,c,d)
         return test((0,0), 0, visited)
@@ -58,21 +58,21 @@
                 continue
 
             t += 1
-            if index<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup> + 1 &lt; len(moveTime) :
-                t1 = moveTime[index<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup> + 1][index<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup>]
+            if index<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup> + 1 &lt; len(moveTime) :
+                t1 = moveTime[index<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup> + 1][index<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup>]
                 if t1 &gt; t:
                     temp.append(index)
                 else:
-                    visited.add((index<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup> + 1, index<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup>))
-                    temp.append((index<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup> + 1, index<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup>))
+                    visited.add((index<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup> + 1, index<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup>))
+                    temp.append((index<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup> + 1, index<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup>))
 
-            if index<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup> + 1 &lt; len(moveTime<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup>) :
-                t1 = moveTime[index<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup>][index<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup>+1]
+            if index<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup> + 1 &lt; len(moveTime<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup>) :
+                t1 = moveTime[index<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup>][index<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup>+1]
                 if t1 &gt; t:
                     temp.append(index)
                 else:
-                    visited.add((index<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup>, index<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup> + 1))
-                    temp.append((index<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-1">0</a></sup>, index<sup class="footnote"><a href="#fn391020e6052a45998a5645372a176699-2">1</a></sup> + 1))
+                    visited.add((index<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup>, index<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup> + 1))
+                    temp.append((index<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-1">0</a></sup>, index<sup class="footnote"><a href="#fnfffb6c52bf5b4a0abda70379072ea754-2">1</a></sup> + 1))
         return t
 
 
