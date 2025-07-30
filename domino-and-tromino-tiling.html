@@ -2,11 +2,11 @@
     def numTilings(self, n: int) -&gt; int:
         <span class="caps">MOD</span> = 10**9 + 7
         dp = [0] * (n + 1)
-        dp<sup class="footnote" id="fnrevf266a5f74fe448eaaf4330c0518c0759-1"><a href="#fnf266a5f74fe448eaaf4330c0518c0759-1">0</a></sup> = 1
+        dp<sup class="footnote" id="fnrevcb455e55d44e49c1a6aca43755b7883e-1"><a href="#fncb455e55d44e49c1a6aca43755b7883e-1">0</a></sup> = 1
         if n &gt;= 1:
-            dp<sup class="footnote" id="fnrevf266a5f74fe448eaaf4330c0518c0759-2"><a href="#fnf266a5f74fe448eaaf4330c0518c0759-2">1</a></sup> = 1
+            dp<sup class="footnote" id="fnrevcb455e55d44e49c1a6aca43755b7883e-2"><a href="#fncb455e55d44e49c1a6aca43755b7883e-2">1</a></sup> = 1
         if n &gt;= 2:
-            dp<sup class="footnote" id="fnrevf266a5f74fe448eaaf4330c0518c0759-3"><a href="#fnf266a5f74fe448eaaf4330c0518c0759-3">2</a></sup> = 2</p>
+            dp<sup class="footnote" id="fnrevcb455e55d44e49c1a6aca43755b7883e-3"><a href="#fncb455e55d44e49c1a6aca43755b7883e-3">2</a></sup> = 2</p>
 
         for i in range(3, n + 1):
             dp[i] = (2 * dp[i &#8211; 1] + dp[i &#8211; 3]) % <span class="caps">MOD</span>
