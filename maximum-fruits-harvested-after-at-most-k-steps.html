@@ -1,0 +1,31 @@
+	<p>class Solution:
+    def maxTotalFruits(
+        self, fruits: List[List[int]], startPos: int, k: int
+    ) -&gt; int:
+        n = len(fruits)
+        sum_ = [0] * (n + 1)
+        indices = [0] * n</p>
+
+        for i in range(n):
+            sum_[i + 1] = sum_[i] + fruits[i]<sup class="footnote" id="fnrev51783c49d6f7453caebae413269c522f-1"><a href="#fn51783c49d6f7453caebae413269c522f-1">1</a></sup>
+            indices[i] = fruits[i]<sup class="footnote" id="fnrev51783c49d6f7453caebae413269c522f-2"><a href="#fn51783c49d6f7453caebae413269c522f-2">0</a></sup>
+
+        ans = 0
+        for x in range(k // 2 + 1):
+            # move left x steps, then right (k &#8211; 2x) steps
+            y = k &#8211; 2 * x
+            left = startPos &#8211; x
+            right = startPos + y
+            start = bisect_left(indices, left)
+            end = bisect_right(indices, right)
+            ans = max(ans, sum_[end] &#8211; sum_[start])
+
+            # move right x steps, then left (k &#8211; 2x) steps
+            y = k &#8211; 2 * x
+            left = startPos &#8211; y
+            right = startPos + x
+            start = bisect_left(indices, left)
+            end = bisect_right(indices, right)
+            ans = max(ans, sum_[end] &#8211; sum_[start])
+
+        return ans
