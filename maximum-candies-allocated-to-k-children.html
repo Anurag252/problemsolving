@@ -38,14 +38,14 @@
         res = 0
         while(left  &lt; right):
             mid = (left + right) // 2
-            if test(candies, mid, k)<sup class="footnote" id="fnrevf20b8f57e68b4d04af4c9cd71bbd2999-1"><a href="#fnf20b8f57e68b4d04af4c9cd71bbd2999-1">0</a></sup>:
+            if test(candies, mid, k)<sup class="footnote" id="fnrev646bd44823f34e92b439a3a2d92275bf-1"><a href="#fn646bd44823f34e92b439a3a2d92275bf-1">0</a></sup>:
                 left = mid + 1
                 res = mid
             else:
                 right = mid &#8211; 1
             #print(left, right, mid)
 
-        if test(candies, left, k)<sup class="footnote"><a href="#fnf20b8f57e68b4d04af4c9cd71bbd2999-1">0</a></sup>:
+        if test(candies, left, k)<sup class="footnote"><a href="#fn646bd44823f34e92b439a3a2d92275bf-1">0</a></sup>:
             res = left
         return res
         
