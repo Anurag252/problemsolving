@@ -3,17 +3,17 @@
         pref = []
         temp = 0
         for k in words:
-            if (k<sup class="footnote" id="fnrev97a0bd6105604ee9b3455cf7d279f32d-1"><a href="#fn97a0bd6105604ee9b3455cf7d279f32d-1">0</a></sup>  "a" or k[0]  &#8220;e&#8221; or k<sup class="footnote"><a href="#fn97a0bd6105604ee9b3455cf7d279f32d-1">0</a></sup>  "i" or k[0]  &#8220;o&#8221; or k<sup class="footnote"><a href="#fn97a0bd6105604ee9b3455cf7d279f32d-1">0</a></sup>  "u" ) and \
+            if (k<sup class="footnote" id="fnrev718e03ac7d614da4bb49266b81c233da-1"><a href="#fn718e03ac7d614da4bb49266b81c233da-1">0</a></sup>  "a" or k[0]  &#8220;e&#8221; or k<sup class="footnote"><a href="#fn718e03ac7d614da4bb49266b81c233da-1">0</a></sup>  "i" or k[0]  &#8220;o&#8221; or k<sup class="footnote"><a href="#fn718e03ac7d614da4bb49266b81c233da-1">0</a></sup>  "u" ) and \
                 (k[-1]  &#8220;a&#8221; or k[-1]  "e" or k[-1]  &#8220;i&#8221; or k[-1]  "o" or k[-1]  &#8220;u&#8221;):
                 temp += 1
             pref.append(temp)</p>
 
         res = []
         for q in queries:
-            if q<sup class="footnote"><a href="#fn97a0bd6105604ee9b3455cf7d279f32d-1">0</a></sup> &gt; 0:
-                t = pref[q<sup class="footnote" id="fnrev97a0bd6105604ee9b3455cf7d279f32d-2"><a href="#fn97a0bd6105604ee9b3455cf7d279f32d-2">1</a></sup>] &#8211; pref[q<sup class="footnote"><a href="#fn97a0bd6105604ee9b3455cf7d279f32d-1">0</a></sup>-1]
+            if q<sup class="footnote"><a href="#fn718e03ac7d614da4bb49266b81c233da-1">0</a></sup> &gt; 0:
+                t = pref[q<sup class="footnote" id="fnrev718e03ac7d614da4bb49266b81c233da-2"><a href="#fn718e03ac7d614da4bb49266b81c233da-2">1</a></sup>] &#8211; pref[q<sup class="footnote"><a href="#fn718e03ac7d614da4bb49266b81c233da-1">0</a></sup>-1]
                 res.append(t)
             else:
-                t = pref[q<sup class="footnote"><a href="#fn97a0bd6105604ee9b3455cf7d279f32d-2">1</a></sup>] &#8211; pref[q<sup class="footnote"><a href="#fn97a0bd6105604ee9b3455cf7d279f32d-1">0</a></sup>] + 1 if pref[q<sup class="footnote"><a href="#fn97a0bd6105604ee9b3455cf7d279f32d-1">0</a></sup>] == 1 else pref[q<sup class="footnote"><a href="#fn97a0bd6105604ee9b3455cf7d279f32d-2">1</a></sup>]
+                t = pref[q<sup class="footnote"><a href="#fn718e03ac7d614da4bb49266b81c233da-2">1</a></sup>] &#8211; pref[q<sup class="footnote"><a href="#fn718e03ac7d614da4bb49266b81c233da-1">0</a></sup>] + 1 if pref[q<sup class="footnote"><a href="#fn718e03ac7d614da4bb49266b81c233da-1">0</a></sup>] == 1 else pref[q<sup class="footnote"><a href="#fn718e03ac7d614da4bb49266b81c233da-2">1</a></sup>]
                 res.append(t)
         return res
