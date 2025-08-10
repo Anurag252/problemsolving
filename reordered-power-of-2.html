@@ -1,0 +1,11 @@
+	<p>class Solution:
+    def reorderedPowerOf2(self, n: int) -&gt; bool:
+        def count_digits(x):
+            return &#8216;&#8217;.join(sorted(str(x)))</p>
+
+        target = count_digits(n)
+
+        for i in range(31):
+            if count_digits(1 &lt;&lt; i) == target:
+                return True
+        return False
