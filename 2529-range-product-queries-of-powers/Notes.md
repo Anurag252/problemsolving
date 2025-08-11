@@ -1,0 +1,1 @@
+<h2>range-product-queries-of-powers Notes</h2><hr>[ Time taken: 14 hrs 12 m 16 s ]
