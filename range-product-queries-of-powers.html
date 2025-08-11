@@ -1,0 +1,38 @@
+	<p>class Solution:
+    def productQueries(self, n: int, queries: List[List[int]]) -&gt; List[int]:
+        <span class="caps">MOD</span> = 10**9 + 7</p>
+
+        def recurse(n, res):
+            if n == 0:
+                return True
+            if n &lt; 0:
+                return False
+            b = n.bit_length() &#8211; 1
+            for k in range(b, -1, -1):
+                if recurse(n &#8211; 2**k, res):
+                    res.append(2**k)
+                    return True
+            return False
+
+
+        a = []
+        recurse(n, a)
+
+        # build prefix products modulo MOD
+        prefix = []
+        m = 1
+        for k in a:
+            m = (m * k) % MOD
+            prefix.append(m)
+
+        results = []
+        for l, r in queries:
+            if l == 0:
+                val = prefix&#174;
+            else:
+                # modular inverse needed here for correct mod division
+                # but since Python big int, let&#8217;s do modular inverse with pow
+                val = prefix&#174; * pow(prefix[l-1], <span class="caps">MOD</span>-2, <span class="caps">MOD</span>) % MOD
+            results.append(val)
+
+        return results
