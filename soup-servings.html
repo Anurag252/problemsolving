@@ -8,9 +8,9 @@
                     dp[max(0, i &#8211; 2)][max(0, j &#8211; 2)]
                     + dp[i &#8211; 1][max(0, j &#8211; 3)]) / 4
 
-        dp<sup class="footnote" id="fnrev181582208dff4f38a8ad5238e81f043c-1"><a href="#fn181582208dff4f38a8ad5238e81f043c-1">0</a></sup> = {0: 0.5}
+        dp<sup class="footnote" id="fnrevdbd23cfc05a74eb08e3958f104abfcc0-1"><a href="#fndbd23cfc05a74eb08e3958f104abfcc0-1">0</a></sup> = {0: 0.5}
         for k in range(1, m + 1):
-            dp<sup class="footnote"><a href="#fn181582208dff4f38a8ad5238e81f043c-1">0</a></sup>[k] = 1
+            dp<sup class="footnote"><a href="#fndbd23cfc05a74eb08e3958f104abfcc0-1">0</a></sup>[k] = 1
             dp[k] = {0: 0}
             for j in range(1, k + 1):
                 dp[j][k] = calculate_dp(j, k)

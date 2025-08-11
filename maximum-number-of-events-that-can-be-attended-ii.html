@@ -13,8 +13,8 @@
 
             # Find the nearest available event after attending event 0.
 
-            next_index = bisect_right(starts, events[cur_index]<sup class="footnote" id="fnrev05450759bae34e399f5df25661484462-1"><a href="#fn05450759bae34e399f5df25661484462-1">1</a></sup>)
-            dp[count][cur_index] = max(dfs(cur_index + 1, count), events[cur_index]<sup class="footnote" id="fnrev05450759bae34e399f5df25661484462-2"><a href="#fn05450759bae34e399f5df25661484462-2">2</a></sup> + dfs(next_index, count &#8211; 1))
+            next_index = bisect_right(starts, events[cur_index]<sup class="footnote" id="fnrev1f64fced5f3846ce9e239daa1a843acd-1"><a href="#fn1f64fced5f3846ce9e239daa1a843acd-1">1</a></sup>)
+            dp[count][cur_index] = max(dfs(cur_index + 1, count), events[cur_index]<sup class="footnote" id="fnrev1f64fced5f3846ce9e239daa1a843acd-2"><a href="#fn1f64fced5f3846ce9e239daa1a843acd-2">2</a></sup> + dfs(next_index, count &#8211; 1))
             return dp[count][cur_index]
 
         return dfs(0, k)
