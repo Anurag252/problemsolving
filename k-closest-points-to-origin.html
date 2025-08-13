@@ -4,7 +4,7 @@
         arr = []
         heapq.heapify(arr)
         for item in points:
-            dist = item<sup class="footnote" id="fnrevf6d2c68edb3b441fb6adbbdac56f3cb0-1"><a href="#fnf6d2c68edb3b441fb6adbbdac56f3cb0-1">0</a></sup>*item<sup class="footnote"><a href="#fnf6d2c68edb3b441fb6adbbdac56f3cb0-1">0</a></sup> + item<sup class="footnote" id="fnrevf6d2c68edb3b441fb6adbbdac56f3cb0-2"><a href="#fnf6d2c68edb3b441fb6adbbdac56f3cb0-2">1</a></sup>*item<sup class="footnote"><a href="#fnf6d2c68edb3b441fb6adbbdac56f3cb0-2">1</a></sup>
+            dist = item<sup class="footnote" id="fnrev8ddf7e30d85144d0901209507ffb1b5c-1"><a href="#fn8ddf7e30d85144d0901209507ffb1b5c-1">0</a></sup>*item<sup class="footnote"><a href="#fn8ddf7e30d85144d0901209507ffb1b5c-1">0</a></sup> + item<sup class="footnote" id="fnrev8ddf7e30d85144d0901209507ffb1b5c-2"><a href="#fn8ddf7e30d85144d0901209507ffb1b5c-2">1</a></sup>*item<sup class="footnote"><a href="#fn8ddf7e30d85144d0901209507ffb1b5c-2">1</a></sup>
             heapq.heappush(arr, (dist, item))
         result = []
         for i in range(k):
