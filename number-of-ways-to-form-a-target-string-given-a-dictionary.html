@@ -2,7 +2,7 @@
     def numWays(self, words: List[str], target: str) -&gt; int:</p>
 
         freq = {}
-        l = len(words<sup class="footnote" id="fnrev5cb2271cf1da42cd966b3fd394e98f12-1"><a href="#fn5cb2271cf1da42cd966b3fd394e98f12-1">0</a></sup>)
+        l = len(words<sup class="footnote" id="fnrev21d0f9a8fb8340358ad09285cd6257c0-1"><a href="#fn21d0f9a8fb8340358ad09285cd6257c0-1">0</a></sup>)
         i = 0
         while(i &lt; l):
             s = {}
@@ -23,7 +23,7 @@
         print(dp)
         # Base case: If the target length is 0, there&#8217;s exactly 1 way to match it
         for i in range(l + 1):
-            dp[i]<sup class="footnote"><a href="#fn5cb2271cf1da42cd966b3fd394e98f12-1">0</a></sup> = 1
+            dp[i]<sup class="footnote"><a href="#fn21d0f9a8fb8340358ad09285cd6257c0-1">0</a></sup> = 1
         for i in range(1, l + 1):  # Iterate over columns in `freq`
             for j in range(1, len(target) + 1):  # Iterate over characters in `target`
         # Carry over the previous value (skip the current column)
@@ -45,8 +45,8 @@
             result = 0
             i = idx
             while(i &lt; l):
-                if target<sup class="footnote"><a href="#fn5cb2271cf1da42cd966b3fd394e98f12-1">0</a></sup> in freq[i]:
-                    result += recurse(i+1, target[1:], occ * freq[i][target<sup class="footnote"><a href="#fn5cb2271cf1da42cd966b3fd394e98f12-1">0</a></sup>])
+                if target<sup class="footnote"><a href="#fn21d0f9a8fb8340358ad09285cd6257c0-1">0</a></sup> in freq[i]:
+                    result += recurse(i+1, target[1:], occ * freq[i][target<sup class="footnote"><a href="#fn21d0f9a8fb8340358ad09285cd6257c0-1">0</a></sup>])
                 i += 1
             return result
         return recurse(0,target, 1) % (10 ** 9 + 7)
