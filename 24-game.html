@@ -1,0 +1,57 @@
+	<p>class Solution:
+    def judgePoint24(self, cards: List[int]) -&gt; bool:
+        &#8220;&#8221;&#8220;
+            we start with each number and then make a tree 
+            eqch branch represents + , &#8211; , * , /
+        &#8220;&#8221;&#8220;
+        def calc(arr):
+            #print(arr)
+            if len(arr) == 1 :
+                return [arr<sup class="footnote" id="fnreve6952656a7c1427996746e1f0fb1a3a9-1"><a href="#fne6952656a7c1427996746e1f0fb1a3a9-1">0</a></sup>]</p>
+
+            result = []
+
+            for i, k in enumerate(arr):
+                for j , l in enumerate(arr):
+                    if i == j:
+                        continue
+                    new_arr = []
+
+                    m = k + l
+
+                    new_arr.append(m)
+                    for s in range(0,len(arr)):
+                        if s != i and s != j:
+                            new_arr.append(arr[s])
+                    res = calc(new_arr)
+                    result.append(res)
+
+                    new_arr<sup class="footnote"><a href="#fne6952656a7c1427996746e1f0fb1a3a9-1">0</a></sup> = k &#8211; l
+                    res = calc(new_arr)
+                    result.append(res)
+
+                    if k != 0:
+                        new_arr<sup class="footnote"><a href="#fne6952656a7c1427996746e1f0fb1a3a9-1">0</a></sup> =  float(l) / k
+                        res = calc(new_arr)
+                        result.append(res)
+
+
+                    if l != 0:
+                        new_arr<sup class="footnote"><a href="#fne6952656a7c1427996746e1f0fb1a3a9-1">0</a></sup> = float(k) / l
+                        res = calc(new_arr)
+                        result.append(res)
+
+
+                    new_arr<sup class="footnote"><a href="#fne6952656a7c1427996746e1f0fb1a3a9-1">0</a></sup> = &#8211; k + l
+                    res = calc(new_arr)
+                    result.append(res)
+
+
+                    new_arr<sup class="footnote"><a href="#fne6952656a7c1427996746e1f0fb1a3a9-1">0</a></sup> = k * l
+                    res = calc(new_arr)
+                    result.append(res)
+
+            return [x for xs in result for x in xs]
+
+        <span class="caps">EPS</span> = 1e-6
+        return any(abs(x &#8211; 24) &lt; <span class="caps">EPS</span> for x in calc(cards))
