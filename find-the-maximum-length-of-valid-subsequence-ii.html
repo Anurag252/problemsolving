@@ -60,13 +60,13 @@
         original = [(-1,0)] * k
 
         for j, m in enumerate(nums):
-            original[m%k] = (j if original[m%k]<sup class="footnote" id="fnrev653ebb5751f1448a94eb8d91d68304ba-1"><a href="#fn653ebb5751f1448a94eb8d91d68304ba-1">0</a></sup>  -1 else original[m%k][0], 1 if original[m%k][1]  0 else original[m%k]<sup class="footnote" id="fnrev653ebb5751f1448a94eb8d91d68304ba-2"><a href="#fn653ebb5751f1448a94eb8d91d68304ba-2">1</a></sup>)
+            original[m%k] = (j if original[m%k]<sup class="footnote" id="fnrev593d0ba18d6343cba1ef10e27eb98928-1"><a href="#fn593d0ba18d6343cba1ef10e27eb98928-1">0</a></sup>  -1 else original[m%k][0], 1 if original[m%k][1]  0 else original[m%k]<sup class="footnote" id="fnrev593d0ba18d6343cba1ef10e27eb98928-2"><a href="#fn593d0ba18d6343cba1ef10e27eb98928-2">1</a></sup>)
 
         for j, m in enumerate(nums):
             for i, n in enumerate(original):
-                if (m % k + nums[original[i]<sup class="footnote"><a href="#fn653ebb5751f1448a94eb8d91d68304ba-1">0</a></sup>] % k) % k == i: # we have a match
+                if (m % k + nums[original[i]<sup class="footnote"><a href="#fn593d0ba18d6343cba1ef10e27eb98928-1">0</a></sup>] % k) % k == i: # we have a match
                     print(&#8220;here&#8221;)
-                    original[i] = (j , original[i]<sup class="footnote"><a href="#fn653ebb5751f1448a94eb8d91d68304ba-2">1</a></sup> + 1)
+                    original[i] = (j , original[i]<sup class="footnote"><a href="#fn593d0ba18d6343cba1ef10e27eb98928-2">1</a></sup> + 1)
         result = 0
         print(original)
         for (m,n) in original:
