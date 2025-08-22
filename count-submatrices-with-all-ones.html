@@ -33,13 +33,13 @@
 
 
         for r in range(len(rows)-1, -1, -1):
-            for c in range(len(rows<sup class="footnote" id="fnrev8d55c05343f44600b8148a9f8faeb54e-1"><a href="#fn8d55c05343f44600b8148a9f8faeb54e-1">0</a></sup>)-1, -1, -1):
+            for c in range(len(rows<sup class="footnote" id="fnrevc2a3b6f4ef114419b5ed563f3c1c883a-1"><a href="#fnc2a3b6f4ef114419b5ed563f3c1c883a-1">0</a></sup>)-1, -1, -1):
                 if r + 1 &lt; len(rows) and mat&#174;[c]  1:
                     rows[r][c] = rows[r+1][c] + 1
                 if c + 1 < len(rows[0]) and mat[r][c]  1:
                     cols&#174;[c] = cols&#174;[c+1] + 1
 
-        R, C = len(mat), len(mat<sup class="footnote"><a href="#fn8d55c05343f44600b8148a9f8faeb54e-1">0</a></sup>)
+        R, C = len(mat), len(mat<sup class="footnote"><a href="#fnc2a3b6f4ef114419b5ed563f3c1c883a-1">0</a></sup>)
         res = 0
         # count submatrices
         for r in range&#174;:
@@ -54,7 +54,7 @@
         res = 0
         print(rows, cols)
         for r in range(len(rows)-1, -1, -1):
-            for c in range(len(rows<sup class="footnote"><a href="#fn8d55c05343f44600b8148a9f8faeb54e-1">0</a></sup>)-1, -1, -1):
+            for c in range(len(rows<sup class="footnote"><a href="#fnc2a3b6f4ef114419b5ed563f3c1c883a-1">0</a></sup>)-1, -1, -1):
                 res += rows&#174;[c] * cols&#174;[c]
         return res
 
