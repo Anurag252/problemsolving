@@ -32,7 +32,6 @@ def get_commit_info(file_path):
         ln = result.stdout.strip().split("\n")
         commit_msg = ln[3:]
         commit_date_str = ln[2].replace("Date:","").strip()
-        print(commit_date_str, "---->data<-----")
         commit_date = datetime.strptime(commit_date_str, "%a %b %d %H:%M:%S %Y %z")
         return commit_date, commit_msg
     return None, None
@@ -82,7 +81,6 @@ for root, _, files in os.walk(REPO_DIR):
             solution_file = os.path.join(root, file)
             lang_tag = LANG_MAP[ext]
             commit_date, commit_msg = get_commit_info(solution_file)
-            print(solution_file, "file--------", commit_date, commit_msg)
             if not commit_date:
                 continue
 
