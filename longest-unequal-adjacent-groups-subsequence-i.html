@@ -7,7 +7,7 @@
         T = [1] * len(words)
         res = []
         if len(words) == 1:
-            return [words<sup class="footnote" id="fnreva43955b6e27f4c559481cdfc398b176d-1"><a href="#fna43955b6e27f4c559481cdfc398b176d-1">0</a></sup>]
+            return [words<sup class="footnote" id="fnrev0a3bc9ba44f64aae8f6d4e8aae71b98a-1"><a href="#fn0a3bc9ba44f64aae8f6d4e8aae71b98a-1">0</a></sup>]
 
         for i, k1 in enumerate(words):
             for j , k2 in enumerate(words[:i]):
@@ -15,7 +15,7 @@
                     if T[j] + 1 &gt; T[i]:
                         T[i] = max(T[i], T[j] + 1)
         prev = 1
-        res.append(words<sup class="footnote"><a href="#fna43955b6e27f4c559481cdfc398b176d-1">0</a></sup>)
+        res.append(words<sup class="footnote"><a href="#fn0a3bc9ba44f64aae8f6d4e8aae71b98a-1">0</a></sup>)
         for i, k in enumerate(T[1:]):
             if k == prev + 1:
                 prev = k
