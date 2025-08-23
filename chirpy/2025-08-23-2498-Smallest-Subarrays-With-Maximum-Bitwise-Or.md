@@ -1,11 +1,11 @@
 ---
-title: "2498 Smallest Subarrays With Maximum Bitwise Or"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [rust]
-layout: post
+            title: "2498 Smallest Subarrays With Maximum Bitwise Or"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [rust]
+            layout: post
 ---
-
+            
 ## [Smallest Subarrays With Maximum Bitwise OR](https://leetcode.com/problems/smallest-subarrays-with-maximum-bitwise-or) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a **0-indexed** array nums of length n, consisting of non-negative integers. For each index i from 0 to n - 1, you must determine the size of the **minimum sized** non-empty subarray of nums starting at i (**inclusive**) that has the **maximum** possible **bitwise OR**.
@@ -59,7 +59,11 @@ Therefore, we return [2,1].
 	0 <= nums[i] <= 109
 
 {% raw %}
+
+
 ```rust
+
+
 impl Solution {
     pub fn smallest_subarrays(nums: Vec<i32>) -> Vec<i32> {
         let n = nums.len();
@@ -83,5 +87,8 @@ impl Solution {
         result
     }
 }
-```
+
+
+
 {% endraw %}
+```

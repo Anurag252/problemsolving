@@ -1,11 +1,11 @@
 ---
-title: "375 Guess Number Higher Or Lower Ii"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "375 Guess Number Higher Or Lower Ii"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Guess Number Higher or Lower II](https://leetcode.com/problems/guess-number-higher-or-lower-ii) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 We are playing the Guessing Game. The game will work as follows:
@@ -78,7 +78,11 @@ The worst case is that you pay $1.
 	1 <= n <= 200
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def __init__(self):
         self.cache = {}
@@ -108,6 +112,14 @@ class Solution:
         return least_amount
 
         
-    #min(m + max(   1 to m-1 -> m1, m+1 , n -> m2)) for all m between 1 to n.
-```
+    #min(m + max(   1 to m-1 -> m1, m+1 , n -> m2)) for all m between 1 to n. 
+
+
+
+
+
+        
+
+
 {% endraw %}
+```

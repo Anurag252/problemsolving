@@ -1,11 +1,11 @@
 ---
-title: "1478 Maximum Number Of Events That Can Be Attended"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1478 Maximum Number Of Events That Can Be Attended"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an array of events where events[i] = [startDayi, endDayi]. Every event i starts at startDayi and ends at endDayi.
@@ -49,7 +49,11 @@ Example 2:
 	1 <= startDayi <= endDayi <= 105
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def maxEvents(self, events: List[List[int]]) -> int:
         n = len(events)
@@ -68,5 +72,7 @@ class Solution:
                 ans += 1
 
         return ans
-```
+
+
 {% endraw %}
+```

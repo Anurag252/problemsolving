@@ -1,11 +1,11 @@
 ---
-title: "2217 Step By Step Directions From A Binary Tree Node To Another"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "2217 Step By Step Directions From A Binary Tree Node To Another"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Step-By-Step Directions From a Binary Tree Node to Another](https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given the root of a **binary tree** with n nodes. Each node is uniquely assigned a value from 1 to n. You are also given an integer startValue representing the value of the start node s, and a different integer destValue representing the value of the destination node t.
@@ -54,7 +54,11 @@ Example 2:
 	startValue != destValue
 
 {% raw %}
+
+
 ```python
+
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -119,5 +123,12 @@ class Solution:
         path.pop()  # Remove last character
 
         return False
-```
+
+        
+
+        
+        
+
+
 {% endraw %}
+```

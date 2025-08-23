@@ -1,11 +1,11 @@
 ---
-title: "3683 Find The Lexicographically Largest String From The Box I"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "3683 Find The Lexicographically Largest String From The Box I"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Find the Lexicographically Largest String From the Box I](https://leetcode.com/problems/find-the-lexicographically-largest-string-from-the-box-i) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a string word, and an integer numFriends.
@@ -52,7 +52,11 @@ The only possible split is: "g", "g", "g", and "g".
 	1 <= numFriends <= word.length
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def answerString(self, words: str, numFriends: int) -> str:
         """
@@ -90,5 +94,10 @@ class Solution:
                 res.append(words[idx:])
         res.sort()
         return res[-1]
-```
+
+
+
+
+
 {% endraw %}
+```

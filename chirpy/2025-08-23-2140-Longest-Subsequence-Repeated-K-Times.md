@@ -1,11 +1,11 @@
 ---
-title: "2140 Longest Subsequence Repeated K Times"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "2140 Longest Subsequence Repeated K Times"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Longest Subsequence Repeated k Times](https://leetcode.com/problems/longest-subsequence-repeated-k-times) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 You are given a string s of length n, and an integer k. You are tasked to find the **longest subsequence repeated** k times in string s.
@@ -62,7 +62,11 @@ Example 3:
 	s consists of lowercase English letters.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def longestSubsequenceRepeatedK(self, s: str, k: int) -> str:
         ans = ""
@@ -81,5 +85,7 @@ class Solution:
                 if all(ch in it for ch in nxt * k):
                     q.append(nxt)
         return ans
-```
+
+
 {% endraw %}
+```

@@ -1,11 +1,11 @@
 ---
-title: "2692 Take Gifts From The Richest Pile"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "2692 Take Gifts From The Richest Pile"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Take Gifts From the Richest Pile](https://leetcode.com/problems/take-gifts-from-the-richest-pile) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 You are given an integer array gifts denoting the number of gifts in various piles. Every second, you do the following:
@@ -56,7 +56,11 @@ So, the total gifts remaining are 4.
 	1 <= k <= 103
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def pickGifts(self, gifts: List[int], k: int) -> int:
         q = []
@@ -68,5 +72,9 @@ class Solution:
             heapq.heappush(q, -floor(sqrt(gift)))
             k -= 1
         return -sum(q)
-```
+
+        
+
+
 {% endraw %}
+```

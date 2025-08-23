@@ -1,11 +1,11 @@
 ---
-title: "826 Soup Servings"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [rust]
-layout: post
+            title: "826 Soup Servings"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [rust]
+            layout: post
 ---
-
+            
 ## [Soup Servings](https://leetcode.com/problems/soup-servings) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You have two soups, **A** and **B**, each starting with n mL. On every turn, one of the following four serving operations is chosen *at random*, each with probability 0.25 **independent** of all previous turns:
@@ -63,7 +63,11 @@ So the total probability of A becoming empty first plus half the probability tha
 	0 <= n <= 109
 
 {% raw %}
+
+
 ```rust
+
+
 impl Solution {
     pub fn soup_servings(n: i32) -> f64 {
         if n > 4800 {
@@ -118,5 +122,8 @@ impl Solution {
         a / c + 0.5 * (b / c)
     }
 }
-```
+
+
+
 {% endraw %}
+```

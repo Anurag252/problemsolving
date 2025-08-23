@@ -1,11 +1,11 @@
 ---
-title: "3434 Find The Number Of Distinct Colors Among The Balls"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [go]
-layout: post
+            title: "3434 Find The Number Of Distinct Colors Among The Balls"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [go]
+            layout: post
 ---
-
+            
 ## [Find the Number of Distinct Colors Among the Balls](https://leetcode.com/problems/find-the-number-of-distinct-colors-among-the-balls) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an integer limit and a 2D array queries of size n x 2.
@@ -60,7 +60,11 @@ Example 2:
 	1 <= queries[i][1] <= 109
 
 {% raw %}
+
+
 ```go
+
+
 func queryResults(limit int, queries [][]int) []int {
     balls := make(map[int]int)
     colors := make(map[int]int)
@@ -97,5 +101,7 @@ func queryResults(limit int, queries [][]int) []int {
     
     return res
 }
-```
+
+
 {% endraw %}
+```

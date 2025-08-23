@@ -1,11 +1,11 @@
 ---
-title: "2180 Maximum Number Of Tasks You Can Assign"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [rust]
-layout: post
+            title: "2180 Maximum Number Of Tasks You Can Assign"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [rust]
+            layout: post
 ---
-
+            
 ## [Maximum Number of Tasks You Can Assign](https://leetcode.com/problems/maximum-number-of-tasks-you-can-assign) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 You have n tasks and m workers. Each task has a strength requirement stored in a **0-indexed** integer array tasks, with the ith task requiring tasks[i] strength to complete. The strength of each worker is stored in a **0-indexed** integer array workers, with the jth worker having workers[j] strength. Each worker can only be assigned to a **single** task and must have a strength **greater than or equal** to the task's strength requirement (i.e., workers[j] >= tasks[i]).
@@ -70,7 +70,11 @@ The last pill is not given because it will not make any worker strong enough for
 	0 <= tasks[i], workers[j], strength <= 109
 
 {% raw %}
+
+
 ```rust
+
+
 use std::collections::BTreeMap;
 
 impl Solution {
@@ -127,5 +131,7 @@ impl Solution {
         true
     }
 }
-```
+
+
 {% endraw %}
+```

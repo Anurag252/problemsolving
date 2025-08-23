@@ -1,11 +1,11 @@
 ---
-title: "3627 Find Minimum Time To Reach Last Room I"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "3627 Find Minimum Time To Reach Last Room I"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Find Minimum Time to Reach Last Room I](https://leetcode.com/problems/find-minimum-time-to-reach-last-room-i) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 There is a dungeon with n x m rooms arranged as a grid.
@@ -60,7 +60,11 @@ Example 3:
 	0 <= moveTime[i][j] <= 109
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def minTimeToReach(self, moveTime: List[List[int]]) -> int:
         # idea is that start at end
@@ -137,5 +141,10 @@ class Solution:
                     visited.add((index[0], index[1] + 1))
                     temp.append((index[0], index[1] + 1))
         return t
-```
+
+
+        
+
+
 {% endraw %}
+```

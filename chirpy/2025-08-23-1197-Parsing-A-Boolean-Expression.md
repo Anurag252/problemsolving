@@ -1,11 +1,11 @@
 ---
-title: "1197 Parsing A Boolean Expression"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1197 Parsing A Boolean Expression"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Parsing A Boolean Expression](https://leetcode.com/problems/parsing-a-boolean-expression) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 A **boolean expression** is an expression that evaluates to either true or false. It can be in one of the following shapes:
@@ -65,7 +65,11 @@ Then, evaluate !(f) --> NOT false --> true. We return true.
 	expression[i] is one following characters: '(', ')', '&', '|', '!', 't', 'f', and ','.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def parseBoolExpr(self, expression: str) -> bool:
         if len(expression) == 1:
@@ -120,5 +124,9 @@ class Solution:
             inner = expression[2:-1]
             result = not self.parseBoolExpr(inner)
             return result
-```
+
+        
+
+
 {% endraw %}
+```

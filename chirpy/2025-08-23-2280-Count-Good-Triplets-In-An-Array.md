@@ -1,11 +1,11 @@
 ---
-title: "2280 Count Good Triplets In An Array"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "2280 Count Good Triplets In An Array"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Count Good Triplets in an Array](https://leetcode.com/problems/count-good-triplets-in-an-array) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 You are given two **0-indexed** arrays nums1 and nums2 of length n, both of which are **permutations** of [0, 1, ..., n - 1].
@@ -48,7 +48,11 @@ Example 2:
 	nums1 and nums2 are permutations of [0, 1, ..., n - 1].
 
 {% raw %}
+
+
 ```python
+
+
 class FenwickTree:
     def __init__(self, size):
         self.tree = [0] * (size + 1)
@@ -85,5 +89,7 @@ class Solution:
             right = (n - 1 - pos) - (value - left)
             res += left * right
         return res
-```
+
+
 {% endraw %}
+```

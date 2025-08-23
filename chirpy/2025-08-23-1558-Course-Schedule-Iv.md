@@ -1,11 +1,11 @@
 ---
-title: "1558 Course Schedule Iv"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1558 Course Schedule Iv"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Course Schedule IV](https://leetcode.com/problems/course-schedule-iv) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you **must** take course ai first if you want to take course bi.
@@ -68,7 +68,11 @@ Example 3:
 	ui != vi
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     # Performs DFS and returns true if there's a path between src and target and false otherwise.
     def isPrerequisite(
@@ -106,5 +110,7 @@ class Solution:
             )
 
         return result
-```
+
+
 {% endraw %}
+```

@@ -1,11 +1,11 @@
 ---
-title: "3569 Count Of Substrings Containing Every Vowel And K Consonants Ii"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "3569 Count Of Substrings Containing Every Vowel And K Consonants Ii"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Count of Substrings Containing Every Vowel and K Consonants II](https://leetcode.com/problems/count-of-substrings-containing-every-vowel-and-k-consonants-ii) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a string word and a **non-negative** integer k.
@@ -57,7 +57,11 @@ The substrings with every vowel and one consonant are:
 	0 <= k <= word.length - 5
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def _isVowel(self, c: str) -> bool:
         return c == "a" or c == "e" or c == "i" or c == "o" or c == "u"
@@ -114,5 +118,7 @@ class Solution:
             end += 1
 
         return num_valid_substrings
-```
+
+
 {% endraw %}
+```

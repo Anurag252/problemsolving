@@ -1,11 +1,11 @@
 ---
-title: "73 Set Matrix Zeroes"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "73 Set Matrix Zeroes"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.
@@ -52,7 +52,11 @@ Example 2:
 	Could you devise a constant space solution?
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def setZeroes(self, matrix: List[List[int]]) -> None:
         """
@@ -104,5 +108,15 @@ class Solution:
             for j, l in enumerate(matrix[i]):
                 if l == "s":
                     matrix[i][j] = 0
-```
+                    
+
+
+            
+
+        
+
+        
+
+
 {% endraw %}
+```

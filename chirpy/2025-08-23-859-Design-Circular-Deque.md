@@ -1,11 +1,11 @@
 ---
-title: "859 Design Circular Deque"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "859 Design Circular Deque"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Design Circular Deque](https://leetcode.com/problems/design-circular-deque) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Design your implementation of the circular double-ended queue (deque).
@@ -57,7 +57,11 @@ myCircularDeque.getFront();     // return 4
 	At most 2000 calls will be made to insertFront, insertLast, deleteFront, deleteLast, getFront, getRear, isEmpty, isFull.
 
 {% raw %}
+
+
 ```python
+
+
 class MyCircularDeque:
 
     def __init__(self, k: int):
@@ -127,5 +131,7 @@ class MyCircularDeque:
 # param_6 = obj.getRear()
 # param_7 = obj.isEmpty()
 # param_8 = obj.isFull()
-```
+
+
 {% endraw %}
+```

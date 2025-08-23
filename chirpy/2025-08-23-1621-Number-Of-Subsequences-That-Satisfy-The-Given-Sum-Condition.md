@@ -1,11 +1,11 @@
 ---
-title: "1621 Number Of Subsequences That Satisfy The Given Sum Condition"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1621 Number Of Subsequences That Satisfy The Given Sum Condition"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Number of Subsequences That Satisfy the Given Sum Condition](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an array of integers nums and an integer target.
@@ -59,7 +59,11 @@ Number of valid subsequences (63 - 2 = 61).
 	1 <= target <= 106
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def numSubseq(self, nums: List[int], target: int) -> int:
         """
@@ -80,5 +84,13 @@ class Solution:
                 res = res % MOD
                 left += 1
         return res % MOD
-```
+                
+
+
+            
+
+        
+
+
 {% endraw %}
+```

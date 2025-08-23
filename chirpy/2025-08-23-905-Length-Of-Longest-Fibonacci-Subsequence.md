@@ -1,11 +1,11 @@
 ---
-title: "905 Length Of Longest Fibonacci Subsequence"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "905 Length Of Longest Fibonacci Subsequence"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Length of Longest Fibonacci Subsequence](https://leetcode.com/problems/length-of-longest-fibonacci-subsequence) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 A sequence x1, x2, ..., xn is *Fibonacci-like* if:
@@ -45,7 +45,11 @@ Example 2:
 	1 <= arr[i] < arr[i + 1] <= 109
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def lenLongestFibSubseq(self, arr: List[int]) -> int:
         """
@@ -96,5 +100,20 @@ class Solution:
                 t = recurse(j, k1) 
                 l = max(l, 2 + t) 
         return l if l > 2 else 0
-```
+        
+            
+
+
+                    
+
+
+
+
+
+
+
+        
+
+
 {% endraw %}
+```

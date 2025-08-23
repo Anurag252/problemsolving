@@ -1,11 +1,11 @@
 ---
-title: "3276 Minimum Number Of Pushes To Type Word Ii"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "3276 Minimum Number Of Pushes To Type Word Ii"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Minimum Number of Pushes to Type Word II](https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-ii) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a string word containing lowercase English letters.
@@ -87,7 +87,11 @@ It can be shown that no other mapping can provide a lower cost.
 	word consists of lowercase English letters.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def minimumPushes(self, word: str) -> int:
         d = {}
@@ -106,5 +110,9 @@ class Solution:
             n += 1
         #print(result)
         return result
-```
+        
+        
+
+
 {% endraw %}
+```

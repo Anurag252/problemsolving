@@ -1,11 +1,11 @@
 ---
-title: "1940 Maximum Xor For Each Query"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1940 Maximum Xor For Each Query"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Maximum XOR for Each Query](https://leetcode.com/problems/maximum-xor-for-each-query) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a **sorted** array nums of n non-negative integers and an integer maximumBit. You want to perform the following query n **times**:
@@ -65,7 +65,11 @@ Example 3:
 	nums​​​ is sorted in **ascending** order.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def getMaximumXor(self, nums: List[int], maximumBit: int) -> List[int]:
         largestnum = 2 ** maximumBit - 1
@@ -84,5 +88,9 @@ class Solution:
             res.append(largestnum - l)
         res.reverse()
         return res
-```
+
+
+
+
 {% endraw %}
+```

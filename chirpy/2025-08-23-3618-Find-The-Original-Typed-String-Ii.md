@@ -1,11 +1,11 @@
 ---
-title: "3618 Find The Original Typed String Ii"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "3618 Find The Original Typed String Ii"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Find the Original Typed String II](https://leetcode.com/problems/find-the-original-typed-string-ii) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 Alice is attempting to type a specific string on her computer. However, she tends to be clumsy and **may** press a key for too long, resulting in a character being typed **multiple** times.
@@ -53,7 +53,11 @@ Example 3:
 	1 <= k <= 2000
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def possibleStringCount(self, word: str, k: int) -> int:
         mod = 10**9 + 7
@@ -87,5 +91,7 @@ class Solution:
                 g_new[j] = (g_new[j - 1] + f_new[j]) % mod
             f, g = f_new, g_new
         return (ans - g[k - 1]) % mod
-```
+
+
 {% endraw %}
+```

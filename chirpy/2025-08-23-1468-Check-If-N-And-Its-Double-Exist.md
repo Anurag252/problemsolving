@@ -1,11 +1,11 @@
 ---
-title: "1468 Check If N And Its Double Exist"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1468 Check If N And Its Double Exist"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Check If N and Its Double Exist](https://leetcode.com/problems/check-if-n-and-its-double-exist) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 Given an array arr of integers, check if there exist two indices i and j such that :
@@ -44,7 +44,11 @@ Example 2:
 	-103 <= arr[i] <= 103
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def checkIfExist(self, arr: List[int]) -> bool:
         dic = set()
@@ -60,5 +64,13 @@ class Solution:
             dic.add(k*2)
         
         return False
-```
+
+
+
+            
+
+        
+
+
 {% endraw %}
+```

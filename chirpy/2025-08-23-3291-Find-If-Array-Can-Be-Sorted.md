@@ -1,11 +1,11 @@
 ---
-title: "3291 Find If Array Can Be Sorted"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "3291 Find If Array Can Be Sorted"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Find if Array Can Be Sorted](https://leetcode.com/problems/find-if-array-can-be-sorted) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a **0-indexed** array of **positive** integers nums.
@@ -61,7 +61,11 @@ Example 3:
 	1 <= nums[i] <= 28
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def canSortArray(self, nums: List[int]) -> bool:
         num = copy.deepcopy(nums)
@@ -98,5 +102,12 @@ class Solution:
         num.sort()
         #print(nums)
         return nums == num
-```
+        
+
+
+
+        
+
+
 {% endraw %}
+```

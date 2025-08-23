@@ -1,11 +1,11 @@
 ---
-title: "1694 Make Sum Divisible By P"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1694 Make Sum Divisible By P"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Make Sum Divisible by P](https://leetcode.com/problems/make-sum-divisible-by-p) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given an array of positive integers nums, remove the **smallest** subarray (possibly **empty**) such that the **sum** of the remaining elements is divisible by p. It is **not** allowed to remove the whole array.
@@ -55,7 +55,11 @@ Example 3:
 	1 <= p <= 109
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def minSubarray(self, nums: List[int], p: int) -> int:
         prefix_sum = []
@@ -92,5 +96,13 @@ class Solution:
                     if m < idx:
                         result = min(result, idx-m-1)
         return result if result < 10 ** 5 else -1
-```
+
+
+
+
+
+        
+
+
 {% endraw %}
+```

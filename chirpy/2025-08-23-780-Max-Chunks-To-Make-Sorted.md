@@ -1,11 +1,11 @@
 ---
-title: "780 Max Chunks To Make Sorted"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "780 Max Chunks To Make Sorted"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Max Chunks To Make Sorted](https://leetcode.com/problems/max-chunks-to-make-sorted) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an integer array arr of length n that represents a permutation of the integers in the range [0, n - 1].
@@ -50,7 +50,11 @@ However, splitting into [1, 0], [2], [3], [4] is the highest number of chunks po
 	All the elements of arr are **unique**.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def maxChunksToSorted(self, arr: List[int]) -> int:
 
@@ -76,5 +80,10 @@ class Solution:
                     result = max(result,a + c)
             return (result, arr1)
         return partition(arr)[0]
-```
+
+
+        
+
+
 {% endraw %}
+```

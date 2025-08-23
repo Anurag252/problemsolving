@@ -1,11 +1,11 @@
 ---
-title: "145 Binary Tree Postorder Traversal"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "145 Binary Tree Postorder Traversal"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 Given the root of a binary tree, return *the postorder traversal of its nodes' values*.
@@ -52,7 +52,11 @@ Example 3:
 **Follow up:** Recursive solution is trivial, could you do it iteratively?
 
 {% raw %}
+
+
 ```python
+
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -70,5 +74,9 @@ class Solution:
         self.postorderTraversal(root.right)
         self.cache.append(root.val)
         return self.cache
-```
+
+        
+
+
 {% endraw %}
+```

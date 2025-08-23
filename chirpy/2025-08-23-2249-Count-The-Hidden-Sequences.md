@@ -1,11 +1,11 @@
 ---
-title: "2249 Count The Hidden Sequences"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "2249 Count The Hidden Sequences"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Count the Hidden Sequences](https://leetcode.com/problems/count-the-hidden-sequences) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a **0-indexed** array of n integers differences, which describes the **differences **between each pair of **consecutive **integers of a **hidden** sequence of length (n + 1). More formally, call the hidden sequence hidden, then we have that differences[i] = hidden[i + 1] - hidden[i].
@@ -70,7 +70,11 @@ Example 3:
 	-105 <= lower <= upper <= 105
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def numberOfArrays(self, differences: List[int], lower: int, upper: int) -> int:
         # find the min val the sequence can take at any moment
@@ -91,5 +95,8 @@ class Solution:
         t2 = max(lower - mn, lower)
 
         return t1 - t2 + 1 if t1 - t2 + 1> 0 else 0
-```
+
+
+
 {% endraw %}
+```

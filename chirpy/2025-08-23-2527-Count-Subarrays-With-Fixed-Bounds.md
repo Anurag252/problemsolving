@@ -1,11 +1,11 @@
 ---
-title: "2527 Count Subarrays With Fixed Bounds"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "2527 Count Subarrays With Fixed Bounds"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Count Subarrays With Fixed Bounds](https://leetcode.com/problems/count-subarrays-with-fixed-bounds) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 You are given an integer array nums and two integers minK and maxK.
@@ -49,7 +49,11 @@ Example 2:
 	1 <= nums[i], minK, maxK <= 106
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def countSubarrays(self, nums: List[int], minK: int, maxK: int) -> int:
         # consider the elements mark min and max
@@ -81,5 +85,16 @@ class Solution:
                     res += min(founda, foundb) - left
 
         return res
-```
+        
+
+            
+
+            
+
+            
+
+        
+
+
 {% endraw %}
+```

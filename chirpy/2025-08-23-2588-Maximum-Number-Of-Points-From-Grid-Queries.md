@@ -1,11 +1,11 @@
 ---
-title: "2588 Maximum Number Of Points From Grid Queries"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "2588 Maximum Number Of Points From Grid Queries"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Maximum Number of Points From Grid Queries](https://leetcode.com/problems/maximum-number-of-points-from-grid-queries) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 You are given an m x n integer matrix grid and an array queries of size k.
@@ -55,7 +55,11 @@ Example 2:
 	1 <= grid[i][j], queries[i] <= 106
 
 {% raw %}
+
+
 ```python
+
+
 from queue import PriorityQueue
 
 
@@ -111,5 +115,7 @@ class Solution:
             result[query_index] = total_points
 
         return result
-```
+
+
 {% endraw %}
+```

@@ -1,11 +1,11 @@
 ---
-title: "1196 Filling Bookcase Shelves"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1196 Filling Bookcase Shelves"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Filling Bookcase Shelves](https://leetcode.com/problems/filling-bookcase-shelves) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an array books where books[i] = [thicknessi, heighti] indicates the thickness and height of the ith book. You are also given an integer shelfWidth.
@@ -53,7 +53,11 @@ Example 2:
 	1 <= heighti <= 1000
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def __init__(self):
         self.a = {}
@@ -78,5 +82,12 @@ class Solution:
         #print(books, result)
         self.a[r] = 0 if result == 1000000 else result
         return self.a[r]
-```
+
+            
+
+
+        
+
+
 {% endraw %}
+```

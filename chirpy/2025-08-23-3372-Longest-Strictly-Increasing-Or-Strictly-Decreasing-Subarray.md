@@ -1,11 +1,11 @@
 ---
-title: "3372 Longest Strictly Increasing Or Strictly Decreasing Subarray"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [go]
-layout: post
+            title: "3372 Longest Strictly Increasing Or Strictly Decreasing Subarray"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [go]
+            layout: post
 ---
-
+            
 ## [Longest Strictly Increasing or Strictly Decreasing Subarray](https://leetcode.com/problems/longest-strictly-increasing-or-strictly-decreasing-subarray) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 You are given an array of integers nums. Return *the length of the **longest** subarray of *nums* which is either **strictly increasing** or **strictly decreasing***.
@@ -62,7 +62,11 @@ Hence, we return 3.
 	1 <= nums[i] <= 50
 
 {% raw %}
+
+
 ```go
+
+
 func longestMonotonicSubarray(nums []int) int {
     l := 0
     prev := -1
@@ -95,5 +99,7 @@ func longestMonotonicSubarray(nums []int) int {
     res = max(res, l)
     return res
 }
-```
+
+
 {% endraw %}
+```

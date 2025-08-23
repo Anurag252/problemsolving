@@ -1,11 +1,11 @@
 ---
-title: "1207 Delete Nodes And Return Forest"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1207 Delete Nodes And Return Forest"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Delete Nodes And Return Forest](https://leetcode.com/problems/delete-nodes-and-return-forest) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given the root of a binary tree, each node in the tree has a distinct value.
@@ -45,7 +45,11 @@ Example 2:
 	to_delete contains distinct values between 1 and 1000.
 
 {% raw %}
+
+
 ```python
+
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -77,5 +81,9 @@ class Solution:
         if root not in parent:
             result.append(root)
         return result
-```
+        
+        
+
+
 {% endraw %}
+```

@@ -1,11 +1,11 @@
 ---
-title: "1895 Minimum Number Of Operations To Move All Balls To Each Box"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1895 Minimum Number Of Operations To Move All Balls To Each Box"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You have n boxes. You are given a binary string boxes of length n, where boxes[i] is '0' if the ith box is **empty**, and '1' if it contains **one** ball.
@@ -48,7 +48,11 @@ Example 2:
 	boxes[i] is either '0' or '1'.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def minOperations(self, boxes: str) -> List[int]:
         """
@@ -92,5 +96,14 @@ class Solution:
         2*2-1 + 0
         count * idx - sum
         """
-```
+
+
+
+        
+
+
+        
+
+
 {% endraw %}
+```

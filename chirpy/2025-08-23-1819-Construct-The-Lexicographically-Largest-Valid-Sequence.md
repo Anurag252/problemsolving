@@ -1,11 +1,11 @@
 ---
-title: "1819 Construct The Lexicographically Largest Valid Sequence"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1819 Construct The Lexicographically Largest Valid Sequence"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Construct the Lexicographically Largest Valid Sequence](https://leetcode.com/problems/construct-the-lexicographically-largest-valid-sequence) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given an integer n, find a sequence that satisfies all of the following:
@@ -48,7 +48,11 @@ Example 2:
 	1 <= n <= 20
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def constructDistancedSequence(self, target_number: int) -> List[int]:
         # Initialize the result sequence with size 2*n - 1 filled with 0s
@@ -124,5 +128,7 @@ class Solution:
             is_number_used[number_to_place] = False
 
         return False
-```
+
+
 {% endraw %}
+```

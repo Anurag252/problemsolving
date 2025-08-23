@@ -1,11 +1,11 @@
 ---
-title: "768 Partition Labels"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "768 Partition Labels"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Partition Labels](https://leetcode.com/problems/partition-labels) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a string s. We want to partition the string into as many parts as possible so that each letter appears in at most one part. For example, the string "ababcc" can be partitioned into ["abab", "cc"], but partitions such as ["aba", "bcc"] or ["ab", "ab", "cc"] are invalid.
@@ -46,7 +46,11 @@ Example 2:
 	s consists of lowercase English letters.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def partitionLabels(self, s: str) -> List[int]:
         # create a map of char and last index
@@ -75,5 +79,11 @@ class Solution:
                 end += 1
             curr += 1
         return res
-```
+            
+
+
+        
+
+
 {% endraw %}
+```

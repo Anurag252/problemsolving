@@ -1,11 +1,11 @@
 ---
-title: "3617 Find The Original Typed String I"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "3617 Find The Original Typed String I"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Find the Original Typed String I](https://leetcode.com/problems/find-the-original-typed-string-i) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 Alice is attempting to type a specific string on her computer. However, she tends to be clumsy and **may** press a key for too long, resulting in a character being typed **multiple** times.
@@ -52,7 +52,11 @@ Example 3:
 	word consists only of lowercase English letters.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def possibleStringCount(self, word: str) -> int:
         possibility = 1
@@ -61,5 +65,9 @@ class Solution:
                 possibility += 1
         
         return possibility
-```
+
+        
+
+
 {% endraw %}
+```

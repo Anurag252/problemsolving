@@ -1,11 +1,11 @@
 ---
-title: "2150 Kth Smallest Product Of Two Sorted Arrays"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "2150 Kth Smallest Product Of Two Sorted Arrays"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Kth Smallest Product of Two Sorted Arrays](https://leetcode.com/problems/kth-smallest-product-of-two-sorted-arrays) ![image](https://img.shields.io/badge/Difficulty-Hard-red)Given two **sorted 0-indexed** integer arrays nums1 and nums2 as well as an integer k, return *the *kth* (**1-based**) smallest product of *nums1[i] * nums2[j]* where *0 <= i < nums1.length* and *0 <= j < nums2.length.
 
  
@@ -64,7 +64,11 @@ The 3rd smallest product is -6.
 	nums1 and nums2 are sorted.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def kthSmallestProduct(
         self, nums1: List[int], nums2: List[int], k: int
@@ -112,5 +116,7 @@ class Solution:
             else:
                 right = mid - 1
         return left
-```
+
+
 {% endraw %}
+```

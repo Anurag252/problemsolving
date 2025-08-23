@@ -1,11 +1,11 @@
 ---
-title: "1160 Letter Tile Possibilities"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [go]
-layout: post
+            title: "1160 Letter Tile Possibilities"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [go]
+            layout: post
 ---
-
+            
 ## [Letter Tile Possibilities](https://leetcode.com/problems/letter-tile-possibilities) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You have n  tiles, where each tile has one letter tiles[i] printed on it.
@@ -50,7 +50,11 @@ Example 3:
 	tiles consists of uppercase English letters.
 
 {% raw %}
+
+
 ```go
+
+
 func numTilePossibilities(tiles string) int {
     // ABCD
     // A,B,C,D
@@ -102,5 +106,8 @@ func Perm(s string, prev string, mp map[string]bool) {
         }
     }
 }
-```
+
+
+
 {% endraw %}
+```

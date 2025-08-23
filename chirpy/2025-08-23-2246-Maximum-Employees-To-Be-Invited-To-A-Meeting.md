@@ -1,11 +1,11 @@
 ---
-title: "2246 Maximum Employees To Be Invited To A Meeting"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "2246 Maximum Employees To Be Invited To A Meeting"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Maximum Employees to Be Invited to a Meeting](https://leetcode.com/problems/maximum-employees-to-be-invited-to-a-meeting) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 A company is organizing a meeting and has a list of n employees, waiting to be invited. They have arranged for a large **circular** table, capable of seating **any number** of employees.
@@ -72,7 +72,11 @@ The maximum number of employees that can be invited to the meeting is 4.
 	favorite[i] != i
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def maximumInvitations(self, favorite: List[int]) -> int:
         # Calculate the maximum distance from a given start node
@@ -142,5 +146,7 @@ class Solution:
                     current_person = next_person
 
         return max(longest_cycle, two_cycle_invitations)
-```
+
+
 {% endraw %}
+```

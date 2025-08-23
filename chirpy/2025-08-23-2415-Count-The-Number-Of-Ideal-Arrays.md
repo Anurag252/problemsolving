@@ -1,11 +1,11 @@
 ---
-title: "2415 Count The Number Of Ideal Arrays"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "2415 Count The Number Of Ideal Arrays"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Count the Number of Ideal Arrays](https://leetcode.com/problems/count-the-number-of-ideal-arrays) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 You are given two integers n and maxValue, which are used to describe an **ideal** array.
@@ -60,7 +60,11 @@ There are a total of 9 + 1 + 1 = 11 distinct ideal arrays.
 	1 <= maxValue <= 104
 
 {% raw %}
+
+
 ```python
+
+
 MOD = 10**9 + 7
 MAX_N = 10**4 + 10
 MAX_P = 15  # At most 15 prime factors
@@ -102,5 +106,7 @@ class Solution:
                 mul = mul * c[n + p - 1][p] % MOD
             ans = (ans + mul) % MOD
         return ans
-```
+
+
 {% endraw %}
+```

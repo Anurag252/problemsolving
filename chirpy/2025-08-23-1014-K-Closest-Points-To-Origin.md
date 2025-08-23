@@ -1,11 +1,11 @@
 ---
-title: "1014 K Closest Points To Origin"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1014 K Closest Points To Origin"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given an array of points where points[i] = [xi, yi] represents a point on the **X-Y** plane and an integer k, return the k closest points to the origin (0, 0).
@@ -49,7 +49,11 @@ Example 2:
 	-104 <= xi, yi <= 104
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     import heapq
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
@@ -65,5 +69,8 @@ class Solution:
             result.append(item)
         
         return result
-```
+        
+
+
 {% endraw %}
+```

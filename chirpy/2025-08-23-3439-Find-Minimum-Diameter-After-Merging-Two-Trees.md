@@ -1,11 +1,11 @@
 ---
-title: "3439 Find Minimum Diameter After Merging Two Trees"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "3439 Find Minimum Diameter After Merging Two Trees"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Find Minimum Diameter After Merging Two Trees](https://leetcode.com/problems/find-minimum-diameter-after-merging-two-trees) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 There exist two **undirected **trees with n and m nodes, numbered from 0 to n - 1 and from 0 to m - 1, respectively. You are given two 2D integer arrays edges1 and edges2 of lengths n - 1 and m - 1, respectively, where edges1[i] = [ai, bi] indicates that there is an edge between nodes ai and bi in the first tree and edges2[i] = [ui, vi] indicates that there is an edge between nodes ui and vi in the second tree.
@@ -55,7 +55,11 @@ We can obtain a tree of diameter 5 by connecting node 0 from the first tree with
 	The input is generated such that edges1 and edges2 represent valid trees.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def minimumDiameterAfterMerge(self, edges1, edges2):
         # Calculate the number of nodes for each tree
@@ -113,5 +117,7 @@ class Solution:
                 maximum_distance += 1
 
         return farthest_node, maximum_distance
-```
+
+
 {% endraw %}
+```

@@ -1,11 +1,11 @@
 ---
-title: "1325 Path With Maximum Probability"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1325 Path With Maximum Probability"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Path with Maximum Probability](https://leetcode.com/problems/path-with-maximum-probability) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an undirected weighted graph of n nodes (0-indexed), represented by an edge list where edges[i] = [a, b] is an undirected edge connecting the nodes a and b with a probability of success of traversing that edge succProb[i].
@@ -65,7 +65,11 @@ Example 3:
 	There is at most one edge between every two nodes.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def maxProbability(self, n: int, edges: List[List[int]], succProb: List[float], start_node: int, end_node: int) -> float:
         matrix = {}
@@ -118,6 +122,10 @@ class Solution:
             return 0  # Return 0 if end_node is not reachable
         
         # Call the helper function and return its result
-        return test()
-```
+        return test()   
+
+
+
+
 {% endraw %}
+```

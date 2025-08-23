@@ -1,11 +1,11 @@
 ---
-title: "1972 Rotating The Box"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1972 Rotating The Box"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Rotating the Box](https://leetcode.com/problems/rotating-the-box) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an m x n matrix of characters box representing a side-view of a box. Each cell of the box is one of the following:
@@ -78,7 +78,11 @@ Example 3:
 	box[i][j] is either '#', '*', or '.'.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def rotateTheBox(self, box: List[List[str]]) -> List[List[str]]:
         ans = []
@@ -135,5 +139,12 @@ class Solution:
             #print(t)
             row += 1
         return result
-```
+
+                    
+                
+
+        
+
+
 {% endraw %}
+```

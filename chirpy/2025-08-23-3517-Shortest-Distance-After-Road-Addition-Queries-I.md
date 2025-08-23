@@ -1,11 +1,11 @@
 ---
-title: "3517 Shortest Distance After Road Addition Queries I"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "3517 Shortest Distance After Road Addition Queries I"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Shortest Distance After Road Addition Queries I](https://leetcode.com/problems/shortest-distance-after-road-addition-queries-i) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an integer n and a 2D integer array queries.
@@ -66,7 +66,11 @@ After the addition of the road from 0 to 2, the length of the shortest path rema
 	There are no repeated roads among the queries.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def shortestDistanceAfterQueries(self, n: int, queries: List[List[int]]) -> List[int]:
         #O(q * n)
@@ -103,5 +107,11 @@ class Solution:
             #print(paths, dist)
             #print("abc")
         return result
-```
+
+
+
+        
+
+
 {% endraw %}
+```

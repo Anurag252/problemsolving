@@ -1,11 +1,11 @@
 ---
-title: "1516 The K Th Lexicographical String Of All Happy Strings Of Length N"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [go]
-layout: post
+            title: "1516 The K Th Lexicographical String Of All Happy Strings Of Length N"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [go]
+            layout: post
 ---
-
+            
 ## [The k-th Lexicographical String of All Happy Strings of Length n](https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 A **happy string** is a string that:
@@ -59,7 +59,11 @@ Example 3:
 	1 <= k <= 100
 
 {% raw %}
+
+
 ```go
+
+
 //import "sort"
 func getHappyString(n int, k int) string {
     str := []string{"a", "b", "c"}
@@ -89,5 +93,7 @@ func calc(str []string, n int) []string {
     }
     return newRes
 }
-```
+
+
 {% endraw %}
+```

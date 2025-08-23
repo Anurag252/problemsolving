@@ -1,11 +1,11 @@
 ---
-title: "1615 Range Sum Of Sorted Subarray Sums"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1615 Range Sum Of Sorted Subarray Sums"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Range Sum of Sorted Subarray Sums](https://leetcode.com/problems/range-sum-of-sorted-subarray-sums) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given the array nums consisting of n positive integers. You computed the sum of all non-empty continuous subarrays from the array and then sorted them in non-decreasing order, creating a new array of n * (n + 1) / 2 numbers.
@@ -53,7 +53,11 @@ Example 3:
 	1 <= left <= right <= n * (n + 1) / 2
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
         i = 0
@@ -72,5 +76,12 @@ class Solution:
         k = arr[left-1:right]
         x = sum(k)
         return x %  (pow(10,9) + 7)
-```
+
+
+
+
+        
+
+
 {% endraw %}
+```

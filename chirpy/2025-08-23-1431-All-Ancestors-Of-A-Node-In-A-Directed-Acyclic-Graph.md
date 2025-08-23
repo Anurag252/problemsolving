@@ -1,11 +1,11 @@
 ---
-title: "1431 All Ancestors Of A Node In A Directed Acyclic Graph"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1431 All Ancestors Of A Node In A Directed Acyclic Graph"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [All Ancestors of a Node in a Directed Acyclic Graph](https://leetcode.com/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a positive integer n representing the number of nodes of a **Directed Acyclic Graph** (DAG). The nodes are numbered from 0 to n - 1 (**inclusive**).
@@ -66,7 +66,11 @@ The above diagram represents the input graph.
 	The graph is **directed** and **acyclic**.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def getAncestors(self, n: int, edges: List[List[int]]) -> List[List[int]]:
         graph = [[] for _ in range(n)]
@@ -97,5 +101,7 @@ class Solution:
             ans[i] = sorted(list(ancestors[i]))
         
         return ans
-```
+
+
 {% endraw %}
+```

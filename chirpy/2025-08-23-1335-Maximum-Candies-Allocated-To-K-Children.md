@@ -1,11 +1,11 @@
 ---
-title: "1335 Maximum Candies Allocated To K Children"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1335 Maximum Candies Allocated To K Children"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Maximum Candies Allocated to K Children](https://leetcode.com/problems/maximum-candies-allocated-to-k-children) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a **0-indexed** integer array candies. Each element in the array denotes a pile of candies of size candies[i]. You can divide each pile into any number of **sub piles**, but you **cannot** merge two piles together.
@@ -45,7 +45,11 @@ Example 2:
 	1 <= k <= 1012
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def maximumCandies(self, candies: List[int], k: int) -> int:
         # say total number of candies is x
@@ -96,5 +100,8 @@ class Solution:
         if test(candies, left, k)[0]:
             res = left
         return res
-```
+        
+
+
 {% endraw %}
+```

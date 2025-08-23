@@ -1,11 +1,11 @@
 ---
-title: "2343 Count Unguarded Cells In The Grid"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "2343 Count Unguarded Cells In The Grid"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Count Unguarded Cells in the Grid](https://leetcode.com/problems/count-unguarded-cells-in-the-grid) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given two integers m and n representing a **0-indexed** m x n grid. You are also given two 2D integer arrays guards and walls where guards[i] = [rowi, coli] and walls[j] = [rowj, colj] represent the positions of the ith guard and jth wall respectively.
@@ -54,7 +54,11 @@ There are a total of 4 unguarded cells, so we return 4.
 	All the positions in guards and walls are **unique**.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def countUnguarded(self, m: int, n: int, guards: List[List[int]], walls: List[List[int]]) -> int:
         grid = [[0] * n for _ in range(m)]
@@ -78,5 +82,8 @@ class Solution:
         
         # Count unguarded cells
         return sum(cell == 0 for row in grid for cell in row)
-```
+
+
+
 {% endraw %}
+```

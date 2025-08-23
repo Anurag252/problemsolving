@@ -1,11 +1,11 @@
 ---
-title: "2148 Minimum Number Of Moves To Seat Everyone"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [c]
-layout: post
+            title: "2148 Minimum Number Of Moves To Seat Everyone"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [c]
+            layout: post
 ---
-
+            
 ## [Minimum Number of Moves to Seat Everyone](https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 There are n seats and n students in a room. You are given an array seats of length n, where seats[i] is the position of the ith seat. You are also given the array students of length n, where students[j] is the position of the jth student.
@@ -74,7 +74,11 @@ In total, 1 + 3 + 0 + 0 = 4 moves were used.
 	1 <= seats[i], students[j] <= 100
 
 {% raw %}
+
+
 ```c
+
+
 int cmpfunc (const void * a, const void * b) {
    return ( *(int*)a - *(int*)b );
 }
@@ -93,5 +97,7 @@ int minMovesToSeat(int* seats, int seatsSize, int* students, int studentsSize) {
      }
      return result;
 }
-```
+
+
 {% endraw %}
+```

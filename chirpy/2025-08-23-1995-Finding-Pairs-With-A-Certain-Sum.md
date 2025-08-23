@@ -1,11 +1,11 @@
 ---
-title: "1995 Finding Pairs With A Certain Sum"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1995 Finding Pairs With A Certain Sum"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Finding Pairs With a Certain Sum](https://leetcode.com/problems/finding-pairs-with-a-certain-sum) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given two integer arrays nums1 and nums2. You are tasked to implement a data structure that supports queries of two types:
@@ -57,7 +57,11 @@ findSumPairs.count(7);  // return 11; pairs (2,1), (2,2), (2,4), (3,1), (3,2), (
 	At most 1000 calls are made to add and count **each**.
 
 {% raw %}
+
+
 ```python
+
+
 class FindSumPairs:
 
     def __init__(self, nums1: List[int], nums2: List[int]):
@@ -102,5 +106,7 @@ class FindSumPairs:
 # obj = FindSumPairs(nums1, nums2)
 # obj.add(index,val)
 # param_2 = obj.count(tot)
-```
+
+
 {% endraw %}
+```

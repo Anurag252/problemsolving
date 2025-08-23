@@ -1,11 +1,11 @@
 ---
-title: "3201 Distribute Candies Among Children Ii"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "3201 Distribute Candies Among Children Ii"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Distribute Candies Among Children II](https://leetcode.com/problems/distribute-candies-among-children-ii) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given two positive integers n and limit.
@@ -42,7 +42,11 @@ Example 2:
 	1 <= limit <= 106
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def distributeCandies(self, n: int, limit: int) -> int:
 
@@ -96,5 +100,12 @@ class Solution:
                 return count
 
         return distribute(n, False, False, False, limit)
-```
+
+
+            
+
+        
+
+
 {% endraw %}
+```

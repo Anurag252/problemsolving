@@ -1,11 +1,11 @@
 ---
-title: "1424 Maximum Candies You Can Get From Boxes"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1424 Maximum Candies You Can Get From Boxes"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Maximum Candies You Can Get from Boxes](https://leetcode.com/problems/maximum-candies-you-can-get-from-boxes) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 You have n boxes labeled from 0 to n - 1. You are given four arrays: status, candies, keys, and containedBoxes where:
@@ -64,7 +64,11 @@ The total number of candies will be 6.
 	0 <= initialBoxes[i] < n
 
 {% raw %}
+
+
 ```python
+
+
 from typing import List
 
 class Solution:
@@ -113,5 +117,8 @@ class Solution:
 
         try_open_boxes()
         return total_candies
-```
+
+
+
 {% endraw %}
+```

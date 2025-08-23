@@ -1,11 +1,11 @@
 ---
-title: "2493 Reverse Odd Levels Of Binary Tree"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "2493 Reverse Odd Levels Of Binary Tree"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Reverse Odd Levels of Binary Tree](https://leetcode.com/problems/reverse-odd-levels-of-binary-tree) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given the root of a **perfect** binary tree, reverse the node values at each **odd** level of the tree.
@@ -67,7 +67,11 @@ The nodes at level 3 were 1, 1, 1, 1, 2, 2, 2, 2, and are 2, 2, 2, 2, 1, 1, 1, 1
 	root is a **perfect** binary tree.
 
 {% raw %}
+
+
 ```python
+
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -97,5 +101,8 @@ class Solution:
                     traverse(temp, not is_odd)
         traverse([root], True)
         return root
-```
+           
+
+
 {% endraw %}
+```

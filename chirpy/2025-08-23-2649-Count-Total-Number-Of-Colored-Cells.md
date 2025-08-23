@@ -1,11 +1,11 @@
 ---
-title: "2649 Count Total Number Of Colored Cells"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "2649 Count Total Number Of Colored Cells"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Count Total Number of Colored Cells](https://leetcode.com/problems/count-total-number-of-colored-cells) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 There exists an infinitely large two-dimensional grid of uncolored unit cells. You are given a positive integer n, indicating that you must do the following routine for n minutes:
@@ -48,7 +48,11 @@ Example 2:
 	1 <= n <= 105
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def coloredCells(self, n: int) -> int:
         """
@@ -65,5 +69,7 @@ class Solution:
             return 1
 
         return 4*(n-1) + self.coloredCells(n-1)
-```
+
+
 {% endraw %}
+```

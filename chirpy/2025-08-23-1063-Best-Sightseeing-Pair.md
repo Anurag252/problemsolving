@@ -1,11 +1,11 @@
 ---
-title: "1063 Best Sightseeing Pair"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1063 Best Sightseeing Pair"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Best Sightseeing Pair](https://leetcode.com/problems/best-sightseeing-pair) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an integer array values where values[i] represents the value of the ith sightseeing spot. Two sightseeing spots i and j have a **distance** j - i between them.
@@ -43,7 +43,11 @@ Example 2:
 	1 <= values[i] <= 1000
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def maxScoreSightseeingPair(self, values: List[int]) -> int:
         # maximize the value and minimize the gap
@@ -86,5 +90,10 @@ class Solution:
 
         [8, ]
         """
-```
+
+
+
+
+
 {% endraw %}
+```

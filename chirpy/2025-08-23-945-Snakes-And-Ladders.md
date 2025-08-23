@@ -1,11 +1,11 @@
 ---
-title: "945 Snakes And Ladders"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [go]
-layout: post
+            title: "945 Snakes And Ladders"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [go]
+            layout: post
 ---
-
+            
 ## [Snakes and Ladders](https://leetcode.com/problems/snakes-and-ladders) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an n x n integer matrix board where the cells are labeled from 1 to n2 in a [**Boustrophedon style**](https://en.wikipedia.org/wiki/Boustrophedon) starting from the bottom left of the board (i.e. board[n - 1][0]) and alternating direction each row.
@@ -65,7 +65,11 @@ Example 2:
 	The squares labeled 1 and n2 are not the starting points of any snake or ladder.
 
 {% raw %}
+
+
 ```go
+
+
 func snakesAndLadders(board [][]int) int {
     m := len(board)
     dict := make(map[int][2]int)
@@ -119,5 +123,7 @@ func snakesAndLadders(board [][]int) int {
     }
     return -1
 }
-```
+
+
 {% endraw %}
+```

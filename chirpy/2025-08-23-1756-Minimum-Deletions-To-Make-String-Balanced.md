@@ -1,11 +1,11 @@
 ---
-title: "1756 Minimum Deletions To Make String Balanced"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1756 Minimum Deletions To Make String Balanced"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Minimum Deletions to Make String Balanced](https://leetcode.com/problems/minimum-deletions-to-make-string-balanced) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a string s consisting only of characters 'a' and 'b'​​​​.
@@ -46,7 +46,11 @@ Example 2:
 	s[i] is 'a' or 'b'​​.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def minimumDeletions(self, s: str) -> int:
         la = [0] * len(s)
@@ -82,5 +86,8 @@ class Solution:
         # we can remove the number altogather
         #0,0,b,1,b,b,3,0
         #a,a,2,a,1,1,a,0
-```
+        
+
+
 {% endraw %}
+```

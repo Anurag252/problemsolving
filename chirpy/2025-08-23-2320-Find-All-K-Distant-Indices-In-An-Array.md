@@ -1,11 +1,11 @@
 ---
-title: "2320 Find All K Distant Indices In An Array"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "2320 Find All K Distant Indices In An Array"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Find All K-Distant Indices in an Array](https://leetcode.com/problems/find-all-k-distant-indices-in-an-array) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 You are given a **0-indexed** integer array nums and two integers key and k. A **k-distant index** is an index i of nums for which there exists at least one index j such that |i - j| <= k and nums[j] == key.
@@ -53,7 +53,11 @@ Hence, we return [0,1,2,3,4].
 	1 <= k <= nums.length
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def findKDistantIndices(self, nums: List[int], key: int, k: int) -> List[int]:
         arr =[]
@@ -67,5 +71,10 @@ class Solution:
                 if m + n >= 0 and m + n < len(nums):
                     res.add(m+n)
         return list(res)
-```
+
+
+        
+
+
 {% endraw %}
+```

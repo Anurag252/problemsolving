@@ -1,11 +1,11 @@
 ---
-title: "2473 Max Sum Of A Pair With Equal Sum Of Digits"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [go]
-layout: post
+            title: "2473 Max Sum Of A Pair With Equal Sum Of Digits"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [go]
+            layout: post
 ---
-
+            
 ## [Max Sum of a Pair With Equal Sum of Digits](https://leetcode.com/problems/max-sum-of-a-pair-with-equal-sum-of-digits) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a **0-indexed** array nums consisting of **positive** integers. You can choose two indices i and j, such that i != j, and the sum of digits of the number nums[i] is equal to that of nums[j].
@@ -45,7 +45,11 @@ Example 2:
 	1 <= nums[i] <= 109
 
 {% raw %}
+
+
 ```go
+
+
 
 
 func maximumSum(nums []int) int {
@@ -89,5 +93,7 @@ func maximumSum(nums []int) int {
     }
     return res
 }
-```
+
+
 {% endraw %}
+```

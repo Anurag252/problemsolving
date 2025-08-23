@@ -1,11 +1,11 @@
 ---
-title: "2188 Minimized Maximum Of Products Distributed To Any Store"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "2188 Minimized Maximum Of Products Distributed To Any Store"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Minimized Maximum of Products Distributed to Any Store](https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an integer n indicating there are n specialty retail stores. There are m product types of varying amounts, which are given as a **0-indexed** integer array quantities, where quantities[i] represents the number of products of the ith product type.
@@ -67,7 +67,11 @@ The maximum number of products given to any store is max(100000) = 100000.
 	1 <= quantities[i] <= 105
 
 {% raw %}
+
+
 ```python
+
+
 from typing import List
 from math import ceil
 
@@ -89,5 +93,8 @@ class Solution:
                 left = mid + 1  # Increase the maximum quantity
         
         return left
-```
+
+
+
 {% endraw %}
+```

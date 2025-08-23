@@ -1,11 +1,11 @@
 ---
-title: "1786 Count The Number Of Consistent Strings"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [c]
-layout: post
+            title: "1786 Count The Number Of Consistent Strings"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [c]
+            layout: post
 ---
-
+            
 ## [Count the Number of Consistent Strings](https://leetcode.com/problems/count-the-number-of-consistent-strings) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 You are given a string allowed consisting of **distinct** characters and an array of strings words. A string is **consistent **if all characters in the string appear in the string allowed.
@@ -55,7 +55,11 @@ Example 3:
 	words[i] and allowed contain only lowercase English letters.
 
 {% raw %}
+
+
 ```c
+
+
 
 
 int countConsistentStrings(char * allowed, char ** words, int wordsSize){
@@ -88,5 +92,7 @@ int countConsistentStrings(char * allowed, char ** words, int wordsSize){
     }
     return result;
 }
-```
+
+
 {% endraw %}
+```

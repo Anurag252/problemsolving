@@ -1,11 +1,11 @@
 ---
-title: "1556 Make Two Arrays Equal By Reversing Subarrays"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1556 Make Two Arrays Equal By Reversing Subarrays"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Make Two Arrays Equal by Reversing Subarrays](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-subarrays) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 You are given two integer arrays of equal length target and arr. In one step, you can select any **non-empty subarray** of arr and reverse it. You are allowed to make any number of steps.
@@ -58,7 +58,11 @@ Example 3:
 	1 <= arr[i] <= 1000
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
         #print(target, arr)
@@ -71,5 +75,8 @@ class Solution:
                 if self.canBeEqual(target[1:], (list(reversed(arr[0:k+1])) + arr[k+1:])[1:] ):
                     return True
         return False
-```
+        
+
+
 {% endraw %}
+```

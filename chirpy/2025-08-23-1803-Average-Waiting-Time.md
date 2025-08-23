@@ -1,11 +1,11 @@
 ---
-title: "1803 Average Waiting Time"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [c]
-layout: post
+            title: "1803 Average Waiting Time"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [c]
+            layout: post
 ---
-
+            
 ## [Average Waiting Time](https://leetcode.com/problems/average-waiting-time) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 There is a restaurant with a single chef. You are given an array customers, where customers[i] = [arrivali, timei]:
@@ -57,7 +57,11 @@ So the average waiting time = (2 + 6 + 4 + 1) / 4 = 3.25.
 	arrivali <= arrivali+1
 
 {% raw %}
+
+
 ```c
+
+
 double averageWaitingTime(int** customers, int customersSize, int* customersColSize) {
 
     if (customersSize == 0){
@@ -80,5 +84,7 @@ double averageWaitingTime(int** customers, int customersSize, int* customersColS
 
     return (wait)/customersSize;
 }
-```
+
+
 {% endraw %}
+```

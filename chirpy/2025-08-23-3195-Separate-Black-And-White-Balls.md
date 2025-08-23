@@ -1,11 +1,11 @@
 ---
-title: "3195 Separate Black And White Balls"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "3195 Separate Black And White Balls"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Separate Black and White Balls](https://leetcode.com/problems/separate-black-and-white-balls) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 There are n balls on a table, each ball has a color black or white.
@@ -60,7 +60,11 @@ Example 3:
 	s[i] is either '0' or '1'.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def minimumSteps(self, s: str) -> int:
 
@@ -112,5 +116,8 @@ class Solution:
         01 
         110 -> 101, 011
         '''
-```
+        
+
+
 {% endraw %}
+```

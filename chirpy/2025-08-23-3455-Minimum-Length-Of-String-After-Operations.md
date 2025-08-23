@@ -1,11 +1,11 @@
 ---
-title: "3455 Minimum Length Of String After Operations"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [go]
-layout: post
+            title: "3455 Minimum Length Of String After Operations"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [go]
+            layout: post
 ---
-
+            
 ## [Minimum Length of String After Operations](https://leetcode.com/problems/minimum-length-of-string-after-operations) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a string s.
@@ -51,7 +51,11 @@ We cannot perform any operations, so we return the length of the original string
 	s consists only of lowercase English letters.
 
 {% raw %}
+
+
 ```go
+
+
 func minimumLength(s string) int {
     // if there are 3 chars then 2 can be removed 1 is left 
     // if there are 4 - then also 2 can be removed 2 is left 
@@ -82,5 +86,7 @@ func minimumLength(s string) int {
     return len(s) - reduced
     
 }
-```
+
+
 {% endraw %}
+```

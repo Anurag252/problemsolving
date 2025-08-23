@@ -1,11 +1,11 @@
 ---
-title: "105 Construct Binary Tree From Preorder And Inorder Traversal"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "105 Construct Binary Tree From Preorder And Inorder Traversal"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return *the binary tree*.
@@ -44,7 +44,11 @@ Example 2:
 	inorder is **guaranteed** to be the inorder traversal of the tree.
 
 {% raw %}
+
+
 ```python
+
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -71,5 +75,8 @@ class Solution:
         root.left = self.buildTree( left_preorder, left_inorder)
         root.right = self.buildTree(right_preorder, right_inorder)
         return root
-```
+        
+
+
 {% endraw %}
+```

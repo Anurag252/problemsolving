@@ -1,11 +1,11 @@
 ---
-title: "2792 Neighboring Bitwise Xor"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [go]
-layout: post
+            title: "2792 Neighboring Bitwise Xor"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [go]
+            layout: post
 ---
-
+            
 ## [Neighboring Bitwise XOR](https://leetcode.com/problems/neighboring-bitwise-xor) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 A **0-indexed** array derived with length n is derived by computing the **bitwise XOR** (⊕) of adjacent values in a **binary array** original of length n.
@@ -67,7 +67,11 @@ Example 3:
 	The values in derived are either **0's** or **1's**
 
 {% raw %}
+
+
 ```go
+
+
 func doesValidArrayExist(derived []int) bool {
     // a ^ b = 1 diff
     // b ^ c = 1 diff
@@ -127,5 +131,7 @@ func doesValidArrayExist(derived []int) bool {
     }
     return false
 }
-```
+
+
 {% endraw %}
+```

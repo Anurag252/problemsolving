@@ -1,11 +1,11 @@
 ---
-title: "3791 Fruits Into Baskets Iii"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [rust]
-layout: post
+            title: "3791 Fruits Into Baskets Iii"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [rust]
+            layout: post
 ---
-
+            
 ## [Fruits Into Baskets III](https://leetcode.com/problems/fruits-into-baskets-iii) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given two arrays of integers, fruits and baskets, each of length n, where fruits[i] represents the **quantity** of the ith type of fruit, and baskets[j] represents the **capacity** of the jth basket.
@@ -57,7 +57,11 @@ Since all fruits are successfully placed, we return 0.
 	1 <= fruits[i], baskets[i] <= 109
 
 {% raw %}
+
+
 ```rust
+
+
 use std::cmp::max;
 
 impl Solution {
@@ -101,5 +105,7 @@ impl Solution {
         count
     }
 }
-```
+
+
 {% endraw %}
+```

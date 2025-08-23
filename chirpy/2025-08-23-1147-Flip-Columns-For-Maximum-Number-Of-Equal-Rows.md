@@ -1,11 +1,11 @@
 ---
-title: "1147 Flip Columns For Maximum Number Of Equal Rows"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1147 Flip Columns For Maximum Number Of Equal Rows"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Flip Columns For Maximum Number of Equal Rows](https://leetcode.com/problems/flip-columns-for-maximum-number-of-equal-rows) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an m x n binary matrix matrix.
@@ -56,7 +56,11 @@ Example 3:
 	matrix[i][j] is either 0 or 1.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def maxEqualRowsAfterFlips(self, matrix: List[List[int]]) -> int:
         # let's say there is a row that is good, flipping it will make it bad
@@ -86,5 +90,11 @@ class Solution:
             ans = max(ans, k1)
 
         return ans
-```
+
+
+
+        
+
+
 {% endraw %}
+```

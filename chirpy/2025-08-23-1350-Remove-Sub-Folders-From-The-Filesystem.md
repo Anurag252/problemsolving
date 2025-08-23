@@ -1,11 +1,11 @@
 ---
-title: "1350 Remove Sub Folders From The Filesystem"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1350 Remove Sub Folders From The Filesystem"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Remove Sub-Folders from the Filesystem](https://leetcode.com/problems/remove-sub-folders-from-the-filesystem) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given a list of folders folder, return *the folders after removing all **sub-folders** in those folders*. You may return the answer in **any order**.
@@ -58,7 +58,11 @@ Example 3:
 	Each folder name is **unique**.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def removeSubfolders(self, folder: List[str]) -> List[str]:
         folder.sort(key=lambda x : len(x))
@@ -77,5 +81,13 @@ class Solution:
             if include:
                 mp.add(p)
         return list(mp)
-```
+
+
+
+
+
+        
+
+
 {% endraw %}
+```

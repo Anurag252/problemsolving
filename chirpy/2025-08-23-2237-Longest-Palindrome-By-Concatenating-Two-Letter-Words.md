@@ -1,11 +1,11 @@
 ---
-title: "2237 Longest Palindrome By Concatenating Two Letter Words"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "2237 Longest Palindrome By Concatenating Two Letter Words"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Longest Palindrome by Concatenating Two Letter Words](https://leetcode.com/problems/longest-palindrome-by-concatenating-two-letter-words) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an array of strings words. Each element of words consists of **two** lowercase English letters.
@@ -60,7 +60,11 @@ Note that "ll" is another longest palindrome that can be created, and so is "xx"
 	words[i] consists of lowercase English letters.
 
 {% raw %}
+
+
 ```python
+
+
 from collections import Counter
 
 class Solution:
@@ -84,5 +88,8 @@ class Solution:
                     center = 2  # One symmetric word can be in the center
                     
         return res + center
-```
+
+
+
 {% endraw %}
+```

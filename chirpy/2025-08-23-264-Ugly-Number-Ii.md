@@ -1,11 +1,11 @@
 ---
-title: "264 Ugly Number Ii"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "264 Ugly Number Ii"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Ugly Number II](https://leetcode.com/problems/ugly-number-ii) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 An **ugly number** is a positive integer whose prime factors are limited to 2, 3, and 5.
@@ -41,7 +41,11 @@ Example 2:
 	1 <= n <= 1690
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def nthUglyNumber(self, n: int) -> int:
         s = set()
@@ -69,5 +73,11 @@ class Solution:
 
         
         # 2n, 2n + 2 (n > 1), 3n, 3n + 3 (n > 1), 5n, 5n + 5
-```
+
+        
+
+        
+
+
 {% endraw %}
+```

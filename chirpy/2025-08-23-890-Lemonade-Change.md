@@ -1,11 +1,11 @@
 ---
-title: "890 Lemonade Change"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "890 Lemonade Change"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Lemonade Change](https://leetcode.com/problems/lemonade-change) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 At a lemonade stand, each lemonade costs $5. Customers are standing in a queue to buy from you and order one at a time (in the order specified by bills). Each customer will only buy one lemonade and pay with either a $5, $10, or $20 bill. You must provide the correct change to each customer so that the net transaction is that the customer pays $5.
@@ -52,7 +52,11 @@ Since not every customer received the correct change, the answer is false.
 	bills[i] is either 5, 10, or 20.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def lemonadeChange(self, bills: List[int]) -> bool:
         intake = [0,0,0]
@@ -91,5 +95,10 @@ class Solution:
             
             
         return outgoing < intake
-```
+
+
+        
+
+
 {% endraw %}
+```

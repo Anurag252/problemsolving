@@ -1,11 +1,11 @@
 ---
-title: "3174 Minimum Number Of Changes To Make Binary String Beautiful"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "3174 Minimum Number Of Changes To Make Binary String Beautiful"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Minimum Number of Changes to Make Binary String Beautiful](https://leetcode.com/problems/minimum-number-of-changes-to-make-binary-string-beautiful) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a **0-indexed** binary string s having an even length.
@@ -64,7 +64,11 @@ Example 3:
 	s[i] is either '0' or '1'.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def minChanges(self, s: str) -> int:
 
@@ -76,5 +80,9 @@ class Solution:
                 count += 1
             id += 2
         return count
-```
+
+
+
+
 {% endraw %}
+```

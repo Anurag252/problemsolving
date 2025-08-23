@@ -1,11 +1,11 @@
 ---
-title: "2809 Create Hello World Function"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [javascript]
-layout: post
+            title: "2809 Create Hello World Function"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [javascript]
+            layout: post
 ---
-
+            
 ## [Create Hello World Function](https://leetcode.com/problems/create-hello-world-function) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)Write a function createHelloWorld. It should return a new function that always returns "Hello World".
 
  
@@ -45,7 +45,11 @@ Any arguments could be passed to the function but it should still always return 
 	0 <= args.length <= 10
 
 {% raw %}
+
+
 ```javascript
+
+
 /**
  * @return {Function}
  */
@@ -60,5 +64,7 @@ var createHelloWorld = function() {
  * const f = createHelloWorld();
  * f(); // "Hello World"
  */
-```
+
+
 {% endraw %}
+```

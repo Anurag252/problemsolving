@@ -1,11 +1,11 @@
 ---
-title: "1766 Minimum Number Of Removals To Make Mountain Array"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1766 Minimum Number Of Removals To Make Mountain Array"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Minimum Number of Removals to Make Mountain Array](https://leetcode.com/problems/minimum-number-of-removals-to-make-mountain-array) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 You may recall that an array arr is a **mountain array** if and only if:
@@ -49,7 +49,11 @@ Example 2:
 	It is guaranteed that you can make a mountain array out of nums.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def minimumMountainRemovals(self, nums: List[int]) -> int:
         N = len(nums)
@@ -77,5 +81,7 @@ class Solution:
                 )
 
         return min_removals
-```
+
+
 {% endraw %}
+```

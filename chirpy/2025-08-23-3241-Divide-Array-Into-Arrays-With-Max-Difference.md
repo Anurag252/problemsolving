@@ -1,11 +1,11 @@
 ---
-title: "3241 Divide Array Into Arrays With Max Difference"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "3241 Divide Array Into Arrays With Max Difference"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Divide Array Into Arrays With Max Difference](https://leetcode.com/problems/divide-array-into-arrays-with-max-difference) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an integer array nums of size n where n is a multiple of 3 and a positive integer k.
@@ -64,7 +64,11 @@ The difference between any two elements in each array is less than or equal to 1
 	1 <= k <= 105
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def divideArray(self, nums: List[int], k: int) -> List[List[int]]:
         """
@@ -84,5 +88,9 @@ class Solution:
             res.append(arr)
             mul += 3
         return res
-```
+
+        
+
+
 {% endraw %}
+```

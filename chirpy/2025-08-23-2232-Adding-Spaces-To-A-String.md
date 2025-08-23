@@ -1,11 +1,11 @@
 ---
-title: "2232 Adding Spaces To A String"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "2232 Adding Spaces To A String"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Adding Spaces to a String](https://leetcode.com/problems/adding-spaces-to-a-string) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a **0-indexed** string s and a **0-indexed** integer array spaces that describes the indices in the original string where spaces will be added. Each space should be inserted **before** the character at the given index.
@@ -62,7 +62,11 @@ We are also able to place spaces before the first character of the string.
 	All the values of spaces are **strictly increasing**.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def addSpaces(self, s: str, spaces: List[int]) -> str:
         res = [""] * (len(s) + len(spaces))
@@ -76,5 +80,8 @@ class Solution:
                 added_spaces += 1
             res[idx + added_spaces] = k
         return "".join(res)
-```
+        
+
+
 {% endraw %}
+```

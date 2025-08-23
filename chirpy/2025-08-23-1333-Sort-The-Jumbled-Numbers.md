@@ -1,11 +1,11 @@
 ---
-title: "1333 Sort The Jumbled Numbers"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1333 Sort The Jumbled Numbers"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Sort the Jumbled Numbers](https://leetcode.com/problems/sort-the-jumbled-numbers) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a **0-indexed** integer array mapping which represents the mapping rule of a shuffled decimal system. mapping[i] = j means digit i should be mapped to digit j in this system.
@@ -60,7 +60,11 @@ Example 2:
 	0 <= nums[i] < 109
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def sortJumbled(self, mapping: List[int], nums: List[int]) -> List[int]:
 
@@ -77,5 +81,10 @@ class Solution:
             return result
         nums=sorted(nums,reverse=False, key=srt)
         return nums
-```
+            
+
+        
+
+
 {% endraw %}
+```

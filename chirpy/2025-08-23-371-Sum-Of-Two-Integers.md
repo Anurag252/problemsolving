@@ -1,11 +1,11 @@
 ---
-title: "371 Sum Of Two Integers"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "371 Sum Of Two Integers"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given two integers a and b, return *the sum of the two integers without using the operators* + *and* -.
@@ -35,7 +35,11 @@ Example 2:
 	-1000 <= a, b <= 1000
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def getSum(self, a: int, b: int) -> int:
         if a < 0 or b < 0:
@@ -86,5 +90,7 @@ class Solution:
         carry_bit = ((a & b) | (a & c_in) | (b & c_in))
 
         return sum_bit, carry_bit
-```
+
+
 {% endraw %}
+```

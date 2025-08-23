@@ -1,11 +1,11 @@
 ---
-title: "2432 Number Of Zero Filled Subarrays"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "2432 Number Of Zero Filled Subarrays"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Number of Zero-Filled Subarrays](https://leetcode.com/problems/number-of-zero-filled-subarrays) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given an integer array nums, return *the number of **subarrays** filled with *0.
@@ -58,7 +58,11 @@ Example 3:
 	-109 <= nums[i] <= 109
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def zeroFilledSubarray(self, nums: List[int]) -> int:
         """
@@ -82,5 +86,12 @@ class Solution:
         for k in res:
             ans += int((k*(k+1))/2)
         return ans
-```
+
+
+
+
+        
+
+
 {% endraw %}
+```

@@ -1,11 +1,11 @@
 ---
-title: "3143 Longest Unequal Adjacent Groups Subsequence I"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "3143 Longest Unequal Adjacent Groups Subsequence I"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Longest Unequal Adjacent Groups Subsequence I](https://leetcode.com/problems/longest-unequal-adjacent-groups-subsequence-i) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 You are given a string array words and a **binary** array groups both of length n.
@@ -81,7 +81,11 @@ Example 2:
 	words[i] consists of lowercase English letters.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def getLongestSubsequence(self, words: List[str], groups: List[int]) -> List[str]:
         """
@@ -105,5 +109,14 @@ class Solution:
                 prev = k
                 res.append(words[i+1])
         return res
-```
+
+
+
+        
+
+
+        
+
+
 {% endraw %}
+```

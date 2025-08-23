@@ -1,11 +1,11 @@
 ---
-title: "71 Simplify Path"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "71 Simplify Path"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Simplify Path](https://leetcode.com/problems/simplify-path) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an *absolute* path for a Unix-style file system, which always begins with a slash '/'. Your task is to transform this absolute path into its **simplified canonical path**.
@@ -87,7 +87,11 @@ Example 5:
 	path is a valid absolute Unix path.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def simplifyPath(self, path: str) -> str:
         arr = path.split('/')
@@ -108,5 +112,9 @@ class Solution:
         if len(st) == 1:
             return "/" # still just one element 
         return "/".join(st) if len(st) > 0  else "/"
-```
+            
+        
+
+
 {% endraw %}
+```

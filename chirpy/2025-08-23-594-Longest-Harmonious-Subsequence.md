@@ -1,11 +1,11 @@
 ---
-title: "594 Longest Harmonious Subsequence"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "594 Longest Harmonious Subsequence"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 We define a harmonious array as an array where the difference between its maximum value and its minimum value is **exactly** 1.
@@ -52,7 +52,11 @@ No harmonic subsequence exists.
 	-109 <= nums[i] <= 109
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def findLHS(self, nums: List[int]) -> int:
         """
@@ -134,5 +138,11 @@ class Solution:
                 prev_indx = k[0]
                 
         return ans
-```
+
+
+
+        
+
+
 {% endraw %}
+```

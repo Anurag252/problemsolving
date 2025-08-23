@@ -1,11 +1,11 @@
 ---
-title: "1460 Number Of Substrings Containing All Three Characters"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1460 Number Of Substrings Containing All Three Characters"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given a string s consisting only of characters *a*, *b* and *c*.
@@ -51,7 +51,11 @@ Example 3:
 	s only consists of *a*, *b* or *c *characters.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def numberOfSubstrings(self, s: str) -> int:
         # at least one occurence 
@@ -101,5 +105,13 @@ class Solution:
             r += (len(s) - k + 1)
         #print(res)
         return r
-```
+
+            
+
+
+        
+        
+
+
 {% endraw %}
+```

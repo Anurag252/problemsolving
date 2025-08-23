@@ -1,11 +1,11 @@
 ---
-title: "1511 Count Number Of Teams"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1511 Count Number Of Teams"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Count Number of Teams](https://leetcode.com/problems/count-number-of-teams) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 There are n soldiers standing in a line. Each soldier is assigned a **unique** rating value.
@@ -58,7 +58,11 @@ Example 3:
 	All the integers in rating are **unique**.
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def numTeams(self, rating: List[int]) -> int:
         n = len(rating)
@@ -143,5 +147,7 @@ class Solution:
         # Cache and return the result
         decreasing_cache[current_index][team_size] = valid_teams
         return valid_teams
-```
+
+
 {% endraw %}
+```

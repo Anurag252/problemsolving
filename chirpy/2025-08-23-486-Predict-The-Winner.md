@@ -1,11 +1,11 @@
 ---
-title: "486 Predict The Winner"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "486 Predict The Winner"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Predict the Winner](https://leetcode.com/problems/predict-the-winner) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an integer array nums. Two players are playing a game with this array: player 1 and player 2.
@@ -48,7 +48,11 @@ Finally, player 1 has more score (234) than player 2 (12), so you need to return
 	0 <= nums[i] <= 107
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def predictTheWinner(self, nums: List[int], sum_a : int = 0, sum_b : int = 0 , is_a_turn : bool = True ) -> bool:
         print(nums, sum_a, sum_b, is_a_turn)
@@ -71,5 +75,10 @@ class Solution:
             if self.predictTheWinner(nums[1:], sum_a  , sum_b + nums[0], not is_a_turn ) == False :
                 return True
             return False
-```
+            
+
+        
+
+
 {% endraw %}
+```

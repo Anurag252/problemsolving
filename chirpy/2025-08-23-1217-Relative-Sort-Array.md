@@ -1,11 +1,11 @@
 ---
-title: "1217 Relative Sort Array"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [c]
-layout: post
+            title: "1217 Relative Sort Array"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [c]
+            layout: post
 ---
-
+            
 ## [Relative Sort Array](https://leetcode.com/problems/relative-sort-array) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 Given two arrays arr1 and arr2, the elements of arr2 are distinct, and all elements in arr2 are also in arr1.
@@ -42,7 +42,11 @@ Example 2:
 	Each arr2[i] is in arr1.
 
 {% raw %}
+
+
 ```c
+
+
 /**
  * Note: The returned array must be malloced, assume caller calls free().
  */
@@ -117,5 +121,8 @@ int compar (const void* p1, const void* p2) {
     }
     return 0;
 }
-```
+
+
+
 {% endraw %}
+```

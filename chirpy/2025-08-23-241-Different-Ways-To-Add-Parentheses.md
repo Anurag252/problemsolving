@@ -1,11 +1,11 @@
 ---
-title: "241 Different Ways To Add Parentheses"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "241 Different Ways To Add Parentheses"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Different Ways to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given a string expression of numbers and operators, return *all possible results from computing all the different possible ways to group numbers and operators*. You may return the answer in **any order**.
@@ -51,7 +51,11 @@ Example 2:
 	The integer values in the input expression do not have a leading '-' or '+' denoting the sign.
 
 {% raw %}
+
+
 ```python
+
+
 from typing import List
 
 class Solution:
@@ -90,5 +94,8 @@ class Solution:
         # Cache the result
         self.cache[expression] = res
         return res
-```
+
+
+
 {% endraw %}
+```

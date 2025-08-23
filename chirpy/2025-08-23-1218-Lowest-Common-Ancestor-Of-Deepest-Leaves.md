@@ -1,11 +1,11 @@
 ---
-title: "1218 Lowest Common Ancestor Of Deepest Leaves"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "1218 Lowest Common Ancestor Of Deepest Leaves"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given the root of a binary tree, return *the lowest common ancestor of its deepest leaves*.
@@ -63,7 +63,11 @@ Example 3:
 **Note:** This question is the same as 865: [https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)
 
 {% raw %}
+
+
 ```python
+
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -111,5 +115,8 @@ class Solution:
 
         dfs(root)
         return res
-```
+
+
+
 {% endraw %}
+```

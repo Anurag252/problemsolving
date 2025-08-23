@@ -1,11 +1,11 @@
 ---
-title: "2533 Bitwise Xor Of All Pairings"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [go]
-layout: post
+            title: "2533 Bitwise Xor Of All Pairings"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [go]
+            layout: post
 ---
-
+            
 ## [Bitwise XOR of All Pairings](https://leetcode.com/problems/bitwise-xor-of-all-pairings) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given two **0-indexed** arrays, nums1 and nums2, consisting of non-negative integers. There exists another array, nums3, which contains the bitwise XOR of **all pairings** of integers between nums1 and nums2 (every integer in nums1 is paired with every integer in nums2 **exactly once**).
@@ -48,7 +48,11 @@ Thus, one possible nums3 array is [2,5,1,6].
 	0 <= nums1[i], nums2[j] <= 109
 
 {% raw %}
+
+
 ```go
+
+
 func xorAllNums(nums1 []int, nums2 []int) int {
     
     // if num2 is even times and num 1 is odd times then num2 is answer
@@ -81,5 +85,7 @@ func xorAllNums(nums1 []int, nums2 []int) int {
     }
     return temp1 ^ temp2
 }
-```
+
+
 {% endraw %}
+```

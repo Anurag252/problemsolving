@@ -1,11 +1,11 @@
 ---
-title: "3181 Find Building Where Alice And Bob Can Meet"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [python]
-layout: post
+            title: "3181 Find Building Where Alice And Bob Can Meet"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [python]
+            layout: post
 ---
-
+            
 ## [Find Building Where Alice and Bob Can Meet](https://leetcode.com/problems/find-building-where-alice-and-bob-can-meet) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 You are given a **0-indexed** array heights of positive integers, where heights[i] represents the height of the ith building.
@@ -61,7 +61,11 @@ For ans[i] == -1, It can be shown that there is no building where Alice and Bob 
 	0 <= ai, bi <= heights.length - 1
 
 {% raw %}
+
+
 ```python
+
+
 class Solution:
     def leftmostBuildingQueries(self, heights, queries):
         mono_stack = []
@@ -100,5 +104,7 @@ class Solution:
             else:
                 right = mid - 1
         return ans
-```
+
+
 {% endraw %}
+```

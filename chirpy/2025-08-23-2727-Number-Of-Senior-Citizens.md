@@ -1,11 +1,11 @@
 ---
-title: "2727 Number Of Senior Citizens"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [c]
-layout: post
+            title: "2727 Number Of Senior Citizens"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [c]
+            layout: post
 ---
-
+            
 ## [Number of Senior Citizens](https://leetcode.com/problems/number-of-senior-citizens) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 You are given a **0-indexed** array of strings details. Each element of details provides information about a given passenger compressed into a string of length 15. The system is such that:
@@ -50,7 +50,11 @@ Example 2:
 	The phone numbers and seat numbers of the passengers are distinct.
 
 {% raw %}
+
+
 ```c
+
+
 int countSeniors(char ** details, int detailsSize){
     int result = 0;
 
@@ -63,5 +67,7 @@ int countSeniors(char ** details, int detailsSize){
     return result;
 
 }
-```
+
+
 {% endraw %}
+```

@@ -1,11 +1,11 @@
 ---
-title: "3600 Find The K Th Character In String Game I"
-date: "2025-08-23T10:09:41+02:00"
-categories: ["leetcode"]
-tags: [rust]
-layout: post
+            title: "3600 Find The K Th Character In String Game I"
+            date: "2025-08-23T10:16:39+02:00"
+            categories: ["leetcode"]
+            tags: [rust]
+            layout: post
 ---
-
+            
 ## [Find the K-th Character in String Game I](https://leetcode.com/problems/find-the-k-th-character-in-string-game-i) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 Alice and Bob are playing a game. Initially, Alice has a string word = "a".
@@ -51,7 +51,11 @@ Example 2:
 	1 <= k <= 500
 
 {% raw %}
+
+
 ```rust
+
+
 impl Solution {
     pub fn kth_character(k: i32) -> char {
         let mut arr : [char; 5001]= ['a'; 5001];
@@ -75,5 +79,7 @@ impl Solution {
 
     }
 }
-```
+
+
 {% endraw %}
+```
