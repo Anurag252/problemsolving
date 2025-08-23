@@ -1,6 +1,6 @@
 ---
             title: "1016 Subarray Sums Divisible By K"
-            date: "2025-08-23T13:48:50+02:00"
+            date: "2025-08-23T13:50:49+02:00"
             categories: ["leetcode"]
             tags: [c]
             layout: post
