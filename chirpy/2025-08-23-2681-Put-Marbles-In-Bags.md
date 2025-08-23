@@ -1,11 +1,11 @@
 ---
-            title: "2681 Put Marbles In Bags"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2681 Put Marbles In Bags"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Put Marbles in Bags](https://leetcode.com/problems/put-marbles-in-bags) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 You have k bags. You are given a **0-indexed** integer array weights where weights[i] is the weight of the ith marble. You are also given the integer k.
@@ -54,11 +54,7 @@ Since both the maximal and minimal score are the same, we return 0.
 	1 <= weights[i] <= 109
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def putMarbles(self, weights: List[int], k: int) -> int:
         # We collect and sort the value of all n - 1 pairs.
@@ -74,7 +70,5 @@ class Solution:
             answer += pairWeights[n - 2 - i] - pairWeights[i]
 
         return answer
-
-
-{% endraw %}
 ```
+{% endraw %}

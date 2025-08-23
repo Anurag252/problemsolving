@@ -1,11 +1,11 @@
 ---
-            title: "2720 Minimize The Maximum Difference Of Pairs"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2720 Minimize The Maximum Difference Of Pairs"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Minimize the Maximum Difference of Pairs](https://leetcode.com/problems/minimize-the-maximum-difference-of-pairs) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a **0-indexed** integer array nums and an integer p. Find p pairs of indices of nums such that the **maximum** difference amongst all the pairs is **minimized**. Also, ensure no index appears more than once amongst the p pairs.
@@ -46,11 +46,7 @@ Example 2:
 	0 <= p <= (nums.length)/2
 
 {% raw %}
-
-
 ```python
-
-
 from typing import List
 from functools import cache
 
@@ -73,7 +69,5 @@ class Solution:
                 else:
                     left = mid + 1
             return left
-
-
-{% endraw %}
 ```
+{% endraw %}

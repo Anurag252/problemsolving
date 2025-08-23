@@ -1,11 +1,11 @@
 ---
-            title: "2581 Divide Players Into Teams Of Equal Skill"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2581 Divide Players Into Teams Of Equal Skill"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Divide Players Into Teams of Equal Skill](https://leetcode.com/problems/divide-players-into-teams-of-equal-skill) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a positive integer array skill of **even** length n where skill[i] denotes the skill of the ith player. Divide the players into n / 2 teams of size 2 such that the total skill of each team is **equal**.
@@ -60,11 +60,7 @@ There is no way to divide the players into teams such that the total skill of ea
 	1 <= skill[i] <= 1000
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def dividePlayers(self, skill: List[int]) -> int:
         s = sum(skill)
@@ -101,8 +97,5 @@ class Solution:
 
 
         return result
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

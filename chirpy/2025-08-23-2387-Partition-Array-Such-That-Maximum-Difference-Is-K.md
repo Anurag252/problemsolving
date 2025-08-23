@@ -1,11 +1,11 @@
 ---
-            title: "2387 Partition Array Such That Maximum Difference Is K"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2387 Partition Array Such That Maximum Difference Is K"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Partition Array Such That Maximum Difference Is K](https://leetcode.com/problems/partition-array-such-that-maximum-difference-is-k) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an integer array nums and an integer k. You may partition nums into one or more **subsequences** such that each element in nums appears in **exactly** one of the subsequences.
@@ -68,11 +68,7 @@ Since three subsequences were created, we return 3. It can be shown that 3 is th
 	0 <= k <= 105
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def partitionArray(self, nums: List[int], k: int) -> int:
         """
@@ -102,15 +98,5 @@ class Solution:
                 curr_min = k1
                 curr_max = k1
         return grps
-
-
-
-
-
-
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

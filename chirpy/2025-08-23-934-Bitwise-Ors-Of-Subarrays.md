@@ -1,11 +1,11 @@
 ---
-            title: "934 Bitwise Ors Of Subarrays"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "934 Bitwise Ors Of Subarrays"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Bitwise ORs of Subarrays](https://leetcode.com/problems/bitwise-ors-of-subarrays) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given an integer array arr, return *the number of distinct bitwise ORs of all the non-empty subarrays of* arr.
@@ -56,11 +56,7 @@ Example 3:
 	0 <= arr[i] <= 109
 
 {% raw %}
-
-
 ```python
-
-
 class Solution(object):
     def subarrayBitwiseORs(self, A):
         ans = set()
@@ -69,7 +65,5 @@ class Solution(object):
             cur = {x | y for y in cur} | {x}
             ans |= cur
         return len(ans)
-
-
-{% endraw %}
 ```
+{% endraw %}

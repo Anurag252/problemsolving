@@ -1,11 +1,11 @@
 ---
-            title: "2202 Sum Of K Mirror Numbers"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2202 Sum Of K Mirror Numbers"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Sum of k-Mirror Numbers](https://leetcode.com/problems/sum-of-k-mirror-numbers) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 A **k-mirror number** is a **positive** integer **without leading zeros** that reads the same both forward and backward in base-10 **as well as** in base-k.
@@ -74,11 +74,7 @@ Example 3:
 	1 <= n <= 30
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def kMirror(self, k: int, n: int) -> int:
 
@@ -112,14 +108,5 @@ class Solution:
                     found += 1
                     if found == n:
                         return total
-            
-        
-                
-
-
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

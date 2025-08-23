@@ -1,11 +1,11 @@
 ---
-            title: "3788 Maximum Unique Subarray Sum After Deletion"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [rust]
-            layout: post
+title: "3788 Maximum Unique Subarray Sum After Deletion"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [rust]
+layout: post
 ---
-            
+
 ## [Maximum Unique Subarray Sum After Deletion](https://leetcode.com/problems/maximum-unique-subarray-sum-after-deletion) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 You are given an integer array nums.
@@ -57,11 +57,7 @@ Delete the elements nums[2] == -1 and nums[3] == -2, and select the subarray [2,
 	-100 <= nums[i] <= 100
 
 {% raw %}
-
-
 ```rust
-
-
 use std::collections::HashSet;
 use libc::abs;
 
@@ -95,7 +91,5 @@ impl Solution {
        res
     }
 }
-
-
-{% endraw %}
 ```
+{% endraw %}

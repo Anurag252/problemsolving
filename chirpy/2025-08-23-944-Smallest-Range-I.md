@@ -1,11 +1,11 @@
 ---
-            title: "944 Smallest Range I"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "944 Smallest Range I"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Smallest Range I](https://leetcode.com/problems/smallest-range-i) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 You are given an integer array nums and an integer k.
@@ -57,11 +57,7 @@ Example 3:
 	0 <= k <= 104
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def smallestRangeI(self, nums: List[int], k: int) -> int:
         min_num = min(nums)
@@ -71,10 +67,5 @@ class Solution:
             return 0
         else:
             return max_num - k - min_num - k
-
-
-
-
-
-{% endraw %}
 ```
+{% endraw %}

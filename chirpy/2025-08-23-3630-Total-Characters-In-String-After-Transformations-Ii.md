@@ -1,11 +1,11 @@
 ---
-            title: "3630 Total Characters In String After Transformations Ii"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "3630 Total Characters In String After Transformations Ii"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Total Characters in String After Transformations II](https://leetcode.com/problems/total-characters-in-string-after-transformations-ii) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 You are given a string s consisting of lowercase English letters, an integer t representing the number of **transformations** to perform, and an array nums of size 26. In one **transformation**, every character in s is replaced according to the following rules:
@@ -76,11 +76,7 @@ Example 2:
 	1 <= nums[i] <= 25
 
 {% raw %}
-
-
 ```python
-
-
 MOD = 10**9 + 7
 L = 26
 
@@ -145,7 +141,5 @@ class Solution:
                 ans = (ans + res.a[i][j] * f[j]) % MOD
 
         return ans
-
-
-{% endraw %}
 ```
+{% endraw %}

@@ -1,11 +1,11 @@
 ---
-            title: "2685 First Completely Painted Row Or Column"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [go]
-            layout: post
+title: "2685 First Completely Painted Row Or Column"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [go]
+layout: post
 ---
-            
+
 ## [First Completely Painted Row or Column](https://leetcode.com/problems/first-completely-painted-row-or-column) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a **0-indexed** integer array arr, and an m x n integer **matrix** mat. arr and mat both contain **all** the integers in the range [1, m * n].
@@ -52,11 +52,7 @@ Example 2:
 	All the integers of mat are **unique**.
 
 {% raw %}
-
-
 ```go
-
-
 func firstCompleteIndex(arr []int, mat [][]int) int {
     // cache row and col for all elements from mat
     // maintain another arr of row , and col sizes and initialize each element to col and row 
@@ -99,7 +95,5 @@ func firstCompleteIndex(arr []int, mat [][]int) int {
 
     return -1
 }
-
-
-{% endraw %}
 ```
+{% endraw %}

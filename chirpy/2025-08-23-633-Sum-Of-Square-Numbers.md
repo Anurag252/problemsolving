@@ -1,11 +1,11 @@
 ---
-            title: "633 Sum Of Square Numbers"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [c]
-            layout: post
+title: "633 Sum Of Square Numbers"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [c]
+layout: post
 ---
-            
+
 ## [Sum of Square Numbers](https://leetcode.com/problems/sum-of-square-numbers) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given a non-negative integer c, decide whether there're two integers a and b such that a2 + b2 = c.
@@ -38,11 +38,7 @@ Example 2:
 	0 <= c <= 231 - 1
 
 {% raw %}
-
-
 ```c
-
-
 bool judgeSquareSum(int c) {
     if (c == 0) {
         return true;
@@ -57,7 +53,5 @@ bool judgeSquareSum(int c) {
     return false;
     
 }
-
-
-{% endraw %}
 ```
+{% endraw %}

@@ -1,11 +1,11 @@
 ---
-            title: "1477 Product Of The Last K Numbers"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [go]
-            layout: post
+title: "1477 Product Of The Last K Numbers"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [go]
+layout: post
 ---
-            
+
 ## [Product of the Last K Numbers](https://leetcode.com/problems/product-of-the-last-k-numbers) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Design an algorithm that accepts a stream of integers and retrieves the product of the last k integers of the stream.
@@ -60,11 +60,7 @@ productOfNumbers.getProduct(2); // return 32. The product of the last 2 numbers 
 **Follow-up: **Can you implement **both** GetProduct and Add to work in O(1) time complexity instead of O(k) time complexity?
 
 {% raw %}
-
-
 ```go
-
-
 import "math/big"
 
 type ProductOfNumbers struct {
@@ -126,7 +122,5 @@ func (this *ProductOfNumbers) GetProduct(k int) int {
  * obj.Add(num);
  * param_2 := obj.GetProduct(k);
  */
-
-
-{% endraw %}
 ```
+{% endraw %}

@@ -1,11 +1,11 @@
 ---
-            title: "449 Serialize And Deserialize Bst"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "449 Serialize And Deserialize Bst"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Serialize and Deserialize BST](https://leetcode.com/problems/serialize-and-deserialize-bst) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Serialization is converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.
@@ -41,11 +41,7 @@ Example 2:
 	The input tree is **guaranteed** to be a binary search tree.
 
 {% raw %}
-
-
 ```python
-
-
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
@@ -138,7 +134,5 @@ class Codec:
 # tree = ser.serialize(root)
 # ans = deser.deserialize(tree)
 # return ans
-
-
-{% endraw %}
 ```
+{% endraw %}

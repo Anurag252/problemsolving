@@ -1,11 +1,11 @@
 ---
-            title: "2558 Minimum Number Of Operations To Sort A Binary Tree By Level"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2558 Minimum Number Of Operations To Sort A Binary Tree By Level"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Minimum Number of Operations to Sort a Binary Tree by Level](https://leetcode.com/problems/minimum-number-of-operations-to-sort-a-binary-tree-by-level) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given the root of a binary tree with **unique values**.
@@ -70,11 +70,7 @@ Example 3:
 	All the values of the tree are **unique**.
 
 {% raw %}
-
-
 ```python
-
-
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -133,11 +129,5 @@ class Solution:
                     temp.append(item.right)
             return count + recurse(temp) if temp else count
         return recurse([root])
-
-
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

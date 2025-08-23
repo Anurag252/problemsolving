@@ -1,11 +1,11 @@
 ---
-            title: "2645 Pass The Pillow"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [c]
-            layout: post
+title: "2645 Pass The Pillow"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [c]
+layout: post
 ---
-            
+
 ## [Pass the Pillow](https://leetcode.com/problems/pass-the-pillow) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 There are n people standing in a line labeled from 1 to n. The first person in the line is holding a pillow initially. Every second, the person holding the pillow passes it to the next person standing in the line. Once the pillow reaches the end of the line, the direction changes, and people continue passing the pillow in the opposite direction.
@@ -46,11 +46,7 @@ After two seconds, the 3rd person is holding the pillow.
 	1 <= time <= 1000
 
 {% raw %}
-
-
 ```c
-
-
 int passThePillow(int n, int time) {
 
 
@@ -65,7 +61,5 @@ int passThePillow(int n, int time) {
 }
 
 // 2
-
-
-{% endraw %}
 ```
+{% endraw %}

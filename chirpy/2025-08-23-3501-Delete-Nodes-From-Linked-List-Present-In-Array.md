@@ -1,11 +1,11 @@
 ---
-            title: "3501 Delete Nodes From Linked List Present In Array"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [go]
-            layout: post
+title: "3501 Delete Nodes From Linked List Present In Array"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [go]
+layout: post
 ---
-            
+
 ## [Delete Nodes From Linked List Present in Array](https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an array of integers nums and the head of a linked list. Return the head of the modified linked list after **removing** all nodes from the linked list that have a value that exists in nums.
@@ -60,11 +60,7 @@ No node has value 5.
 	The input is generated such that there is at least one node in the linked list that has a value not present in nums.
 
 {% raw %}
-
-
 ```go
-
-
 /**
  * Definition for singly-linked list.
  * type ListNode struct {
@@ -121,8 +117,5 @@ func binSearch(arr []int, val int) bool {
     //fmt.Println(arr, val)
     return false
 }
-
-
-
-{% endraw %}
 ```
+{% endraw %}

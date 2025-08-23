@@ -1,11 +1,11 @@
 ---
-            title: "789 Kth Largest Element In A Stream"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "789 Kth Largest Element In A Stream"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 Design a class to find the kth largest element in a stream. Note that it is the kth largest element in the sorted order, not the kth distinct element.
@@ -49,11 +49,7 @@ kthLargest.add(4);   // return 8
 	It is guaranteed that there will be at least k elements in the array when you search for the kth element.
 
 {% raw %}
-
-
 ```python
-
-
 class KthLargest:
 
     def __init__(self, k: int, nums: List[int]):
@@ -77,7 +73,5 @@ class KthLargest:
 # Your KthLargest object will be instantiated and called as such:
 # obj = KthLargest(k, nums)
 # param_1 = obj.add(val)
-
-
-{% endraw %}
 ```
+{% endraw %}

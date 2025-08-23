@@ -1,11 +1,11 @@
 ---
-            title: "2646 Kth Largest Sum In A Binary Tree"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2646 Kth Largest Sum In A Binary Tree"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Kth Largest Sum in a Binary Tree](https://leetcode.com/problems/kth-largest-sum-in-a-binary-tree) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given the root of a binary tree and a positive integer k.
@@ -55,11 +55,7 @@ Example 2:
 	1 <= k <= n
 
 {% raw %}
-
-
 ```python
-
-
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -94,13 +90,5 @@ class Solution:
         ls.sort(reverse=True)
         #print(ls)
         return ls[k-1] if k-1 >= 0 and k-1 < len(ls) else -1
-        
-
-
-
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

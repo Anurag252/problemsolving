@@ -1,11 +1,11 @@
 ---
-            title: "8 String To Integer Atoi"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "8 String To Integer Atoi"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer.
@@ -116,11 +116,7 @@ Reading stops at the first non-digit character 'w'.
 	s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def myAtoi(self, s: str) -> int:
         leading_whitespace_check = True
@@ -168,13 +164,5 @@ class Solution:
         if result > 2147483647:
             return 2147483647
         return result
-
-
-
-
-
-
-
-
-{% endraw %}
 ```
+{% endraw %}

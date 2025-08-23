@@ -1,11 +1,11 @@
 ---
-            title: "2265 Partition Array According To Given Pivot"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2265 Partition Array According To Given Pivot"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a **0-indexed** integer array nums and an integer pivot. Rearrange nums such that the following conditions are satisfied:
@@ -55,11 +55,7 @@ The relative ordering of the elements less than and greater than pivot is also m
 	pivot equals to an element of nums.
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def pivotArray(self, nums: List[int], pivot: int) -> List[int]:
         less = []
@@ -86,12 +82,5 @@ class Solution:
             res.append(k)
 
         return res
-
-         
-        
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

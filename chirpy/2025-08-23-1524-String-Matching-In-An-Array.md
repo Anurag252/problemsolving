@@ -1,11 +1,11 @@
 ---
-            title: "1524 String Matching In An Array"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "1524 String Matching In An Array"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [String Matching in an Array](https://leetcode.com/problems/string-matching-in-an-array) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 Given an array of string words, return *all strings in *words* that is a **substring** of another word*. You can return the answer in **any order**.
@@ -55,11 +55,7 @@ Example 3:
 	All the strings of words are **unique**.
 
 {% raw %}
-
-
 ```python
-
-
 class Trie:
     def __init__(self):
         self.dict = {}
@@ -106,8 +102,5 @@ class Solution:
             for i in range(0, len(k)):
                 t.insert(k[i:])
         return res
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

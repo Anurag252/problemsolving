@@ -1,11 +1,11 @@
 ---
-            title: "2076 Sum Of Digits Of String After Convert"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [go]
-            layout: post
+title: "2076 Sum Of Digits Of String After Convert"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [go]
+layout: post
 ---
-            
+
 ## [Sum of Digits of String After Convert](https://leetcode.com/problems/sum-of-digits-of-string-after-convert) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 You are given a string s consisting of lowercase English letters, and an integer k.
@@ -67,11 +67,7 @@ Example 3:
 	s consists of lowercase English letters.
 
 {% raw %}
-
-
 ```go
-
-
 func getLucky(s string, k int) int {
     result := ""
     for _,m := range s{
@@ -95,7 +91,5 @@ func getLucky(s string, k int) int {
     return ans
     
 }
-
-
-{% endraw %}
 ```
+{% endraw %}

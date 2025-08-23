@@ -1,11 +1,11 @@
 ---
-            title: "407 Trapping Rain Water Ii"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [go]
-            layout: post
+title: "407 Trapping Rain Water Ii"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [go]
+layout: post
 ---
-            
+
 ## [Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 Given an m x n integer matrix heightMap representing the height of each unit cell in a 2D elevation map, return *the volume of water it can trap after raining*.
@@ -45,11 +45,7 @@ Example 2:
 	0 <= heightMap[i][j] <= 2 * 104
 
 {% raw %}
-
-
 ```go
-
-
 type Cell struct {
 	height int
 	row    int
@@ -147,7 +143,5 @@ func trapRainWater(heightMap [][]int) int {
 
 	return totalWater
 }
-
-
-{% endraw %}
 ```
+{% endraw %}

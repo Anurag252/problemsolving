@@ -1,11 +1,11 @@
 ---
-            title: "443 String Compression"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "443 String Compression"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [String Compression](https://leetcode.com/problems/string-compression) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given an array of characters chars, compress it using the following algorithm:
@@ -60,11 +60,7 @@ Example 3:
 	chars[i] is a lowercase English letter, uppercase English letter, digit, or symbol.
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def compress(self, chars: List[str]) -> int:
         curr = 0
@@ -100,7 +96,5 @@ class Solution:
         curr = curr + 1
         chars[curr] = str(t)
         return chars, curr
-
-
-{% endraw %}
 ```
+{% endraw %}

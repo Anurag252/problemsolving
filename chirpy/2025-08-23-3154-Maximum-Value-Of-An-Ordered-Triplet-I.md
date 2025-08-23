@@ -1,11 +1,11 @@
 ---
-            title: "3154 Maximum Value Of An Ordered Triplet I"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "3154 Maximum Value Of An Ordered Triplet I"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Maximum Value of an Ordered Triplet I](https://leetcode.com/problems/maximum-value-of-an-ordered-triplet-i) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 You are given a **0-indexed** integer array nums.
@@ -56,11 +56,7 @@ Example 3:
 	1 <= nums[i] <= 106
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def maximumTripletValue(self, nums: List[int]) -> int:
         pos = [0] * len(nums)
@@ -92,9 +88,5 @@ class Solution:
             if i - 1 >= 0 and i + 1 < len(nums):
                 mx = max(mx, (pos1[i-1] - k) * pos[i+1])
         return mx
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

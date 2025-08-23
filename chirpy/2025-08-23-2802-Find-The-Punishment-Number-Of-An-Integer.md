@@ -1,11 +1,11 @@
 ---
-            title: "2802 Find The Punishment Number Of An Integer"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [go]
-            layout: post
+title: "2802 Find The Punishment Number Of An Integer"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [go]
+layout: post
 ---
-            
+
 ## [Find the Punishment Number of an Integer](https://leetcode.com/problems/find-the-punishment-number-of-an-integer) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given a positive integer n, return *the **punishment number*** of n.
@@ -53,11 +53,7 @@ Hence, the punishment number of 37 is 1 + 81 + 100 + 1296 = 1478
 	1 <= n <= 1000
 
 {% raw %}
-
-
 ```go
-
-
 func punishmentNumber(n int) int {
     // we can do n + T(n-1)
     // for each n -> square it, then split it and see if thi sums up. This can be done in 
@@ -105,7 +101,5 @@ func recurse(n int, init int, sum int) bool {
     return false
 
 }
-
-
-{% endraw %}
 ```
+{% endraw %}

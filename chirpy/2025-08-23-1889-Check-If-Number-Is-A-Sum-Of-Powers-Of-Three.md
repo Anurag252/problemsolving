@@ -1,11 +1,11 @@
 ---
-            title: "1889 Check If Number Is A Sum Of Powers Of Three"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "1889 Check If Number Is A Sum Of Powers Of Three"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Check if Number is a Sum of Powers of Three](https://leetcode.com/problems/check-if-number-is-a-sum-of-powers-of-three) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given an integer n, return true *if it is possible to represent *n* as the sum of distinct powers of three.* Otherwise, return false.
@@ -50,11 +50,7 @@ Example 3:
 	1 <= n <= 107
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def checkPowersOfThree(self, n: int) -> bool:
         
@@ -86,9 +82,5 @@ class Solution:
         res = recurse(n, mp)
         #print(cache)
         return res
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

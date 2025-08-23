@@ -1,11 +1,11 @@
 ---
-            title: "2089 Maximum Matrix Sum"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2089 Maximum Matrix Sum"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Maximum Matrix Sum](https://leetcode.com/problems/maximum-matrix-sum) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an n x n integer matrix. You can do the following operation **any** number of times:
@@ -52,11 +52,7 @@ Example 2:
 	-105 <= matrix[i][j] <= 105
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def maxMatrixSum(self, matrix: List[List[int]]) -> int:
         total_sum = 0
@@ -75,7 +71,5 @@ class Solution:
             total_sum -= 2 * min_abs_val
 
         return total_sum
-
-
-{% endraw %}
 ```
+{% endraw %}

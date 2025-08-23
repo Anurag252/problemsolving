@@ -1,11 +1,11 @@
 ---
-            title: "592 Fraction Addition And Subtraction"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "592 Fraction Addition And Subtraction"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Fraction Addition and Subtraction](https://leetcode.com/problems/fraction-addition-and-subtraction) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given a string expression representing an expression of fraction addition and subtraction, return the calculation result in string format.
@@ -52,11 +52,7 @@ Example 3:
 	The numerator and denominator of the **final result** are guaranteed to be valid and in the range of **32-bit** int.
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def fractionAddition(self, expression: str) -> str:
         
@@ -113,13 +109,5 @@ class Solution:
             print(old)
             a += 1
         return old if old[0] != "+" else old[1:]
-
-
-
-                
-
-
-
-
-{% endraw %}
 ```
+{% endraw %}

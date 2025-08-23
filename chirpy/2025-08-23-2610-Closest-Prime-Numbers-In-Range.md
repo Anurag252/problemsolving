@@ -1,11 +1,11 @@
 ---
-            title: "2610 Closest Prime Numbers In Range"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2610 Closest Prime Numbers In Range"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Closest Prime Numbers in Range](https://leetcode.com/problems/closest-prime-numbers-in-range) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given two positive integers left and right, find the two integers num1 and num2 such that:
@@ -49,11 +49,7 @@ Example 2:
  
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def closestPrimes(self, left: int, right: int) -> List[int]:
         
@@ -103,10 +99,5 @@ class Solution:
                         res[1] = k
                     last = k
         return res
-        
-        
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

@@ -1,11 +1,11 @@
 ---
-            title: "2599 Take K Of Each Character From Left And Right"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2599 Take K Of Each Character From Left And Right"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Take K of Each Character From Left and Right](https://leetcode.com/problems/take-k-of-each-character-from-left-and-right) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a string s consisting of the characters 'a', 'b', and 'c' and a non-negative integer k. Each minute, you may take either the **leftmost** character of s, or the **rightmost** character of s.
@@ -47,11 +47,7 @@ Example 2:
 	0 <= k <= s.length
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def takeCharacters(self, s: str, k: int) -> int:
         count = [0] * 3
@@ -85,7 +81,5 @@ class Solution:
             max_window = max(max_window, right - left + 1)
 
         return n - max_window
-
-
-{% endraw %}
 ```
+{% endraw %}

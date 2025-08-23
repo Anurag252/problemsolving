@@ -1,11 +1,11 @@
 ---
-            title: "118 Pascals Triangle"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [rust]
-            layout: post
+title: "118 Pascals Triangle"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [rust]
+layout: post
 ---
-            
+
 ## [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 Given an integer numRows, return the first numRows of **Pascal's triangle**.
@@ -39,11 +39,7 @@ Example 2:
 	1 <= numRows <= 30
 
 {% raw %}
-
-
 ```rust
-
-
 impl Solution {
     pub fn generate(num_rows: i32) -> Vec<Vec<i32>> {
         let mut res : Vec<Vec<i32>> = Vec::new();
@@ -67,7 +63,5 @@ impl Solution {
         res
     }
 }
-
-
-{% endraw %}
 ```
+{% endraw %}

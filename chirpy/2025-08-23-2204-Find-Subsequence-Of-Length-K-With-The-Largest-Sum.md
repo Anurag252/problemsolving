@@ -1,11 +1,11 @@
 ---
-            title: "2204 Find Subsequence Of Length K With The Largest Sum"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2204 Find Subsequence Of Length K With The Largest Sum"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Find Subsequence of Length K With the Largest Sum](https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 You are given an integer array nums and an integer k. You want to find a **subsequence **of nums of length k that has the **largest** sum.
@@ -58,11 +58,7 @@ Another possible subsequence is [4, 3].
 	1 <= k <= nums.length
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def maxSubsequence(self, nums: List[int], k: int) -> List[int]:
         """
@@ -86,15 +82,5 @@ class Solution:
                     arr.append(nums[i])
                     #print(arr)
         return arr
-
-
-
-            
-    
-
-
-
-
-
-{% endraw %}
 ```
+{% endraw %}

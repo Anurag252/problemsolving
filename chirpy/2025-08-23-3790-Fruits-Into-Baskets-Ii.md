@@ -1,11 +1,11 @@
 ---
-            title: "3790 Fruits Into Baskets Ii"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [rust]
-            layout: post
+title: "3790 Fruits Into Baskets Ii"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [rust]
+layout: post
 ---
-            
+
 ## [Fruits Into Baskets II](https://leetcode.com/problems/fruits-into-baskets-ii) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 You are given two arrays of integers, fruits and baskets, each of length n, where fruits[i] represents the **quantity** of the ith type of fruit, and baskets[j] represents the **capacity** of the jth basket.
@@ -57,11 +57,7 @@ Since all fruits are successfully placed, we return 0.
 	1 <= fruits[i], baskets[i] <= 1000
 
 {% raw %}
-
-
 ```rust
-
-
 impl Solution {
     pub fn num_of_unplaced_fruits(fruits: Vec<i32>, baskets: Vec<i32>) -> i32 {
         // START BY PLACING THE largest fruit 
@@ -90,7 +86,5 @@ impl Solution {
 
     }
 }
-
-
-{% endraw %}
 ```
+{% endraw %}

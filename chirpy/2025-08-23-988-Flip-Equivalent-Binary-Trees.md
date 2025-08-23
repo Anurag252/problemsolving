@@ -1,11 +1,11 @@
 ---
-            title: "988 Flip Equivalent Binary Trees"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [cpp]
-            layout: post
+title: "988 Flip Equivalent Binary Trees"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [cpp]
+layout: post
 ---
-            
+
 ## [Flip Equivalent Binary Trees](https://leetcode.com/problems/flip-equivalent-binary-trees) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 For a binary tree **T**, we can define a **flip operation** as follows: choose any node, and swap the left and right child subtrees.
@@ -53,11 +53,7 @@ Example 3:
 	Each tree will have **unique node values** in the range [0, 99].
 
 {% raw %}
-
-
 ```cpp
-
-
 class Solution {
 public:
     bool flipEquiv(TreeNode* root1, TreeNode* root2) {
@@ -84,7 +80,5 @@ public:
         return swap || noSwap;
     }
 };
-
-
-{% endraw %}
 ```
+{% endraw %}

@@ -1,11 +1,11 @@
 ---
-            title: "1653 Number Of Good Leaf Nodes Pairs"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "1653 Number Of Good Leaf Nodes Pairs"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Number of Good Leaf Nodes Pairs](https://leetcode.com/problems/number-of-good-leaf-nodes-pairs) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given the root of a binary tree and an integer distance. A pair of two different **leaf** nodes of a binary tree is said to be good if the length of **the shortest path** between them is less than or equal to distance.
@@ -55,11 +55,7 @@ Example 3:
 	1 <= distance <= 10
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def _traverse_tree(self, curr_node, prev_node, graph, leaf_nodes):
         if curr_node is None:
@@ -105,7 +101,5 @@ class Solution:
                                 bfs_queue.append(neighbor)
                                 seen.add(neighbor)
         return ans // 2
-
-
-{% endraw %}
 ```
+{% endraw %}

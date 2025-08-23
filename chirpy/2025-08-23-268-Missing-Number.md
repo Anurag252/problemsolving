@@ -1,11 +1,11 @@
 ---
-            title: "268 Missing Number"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [c]
-            layout: post
+title: "268 Missing Number"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [c]
+layout: post
 ---
-            
+
 ## [Missing Number](https://leetcode.com/problems/missing-number) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 Given an array nums containing n distinct numbers in the range [0, n], return *the only number in the range that is missing from the array.*
@@ -56,11 +56,7 @@ Example 3:
 **Follow up:** Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?
 
 {% raw %}
-
-
 ```c
-
-
 int missingNumber(int* nums, int numsSize) {
     int all_xor = 0 ;
     printf("%d", 1 ^ 1);
@@ -71,7 +67,5 @@ int missingNumber(int* nums, int numsSize) {
     // 3^0  ^ 0^1 ^ 1^2 ^ 3
     return all_xor ^ numsSize;
 }
-
-
-{% endraw %}
 ```
+{% endraw %}

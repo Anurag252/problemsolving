@@ -1,11 +1,11 @@
 ---
-            title: "1502 Construct K Palindrome Strings"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "1502 Construct K Palindrome Strings"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Construct K Palindrome Strings](https://leetcode.com/problems/construct-k-palindrome-strings) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given a string s and an integer k, return true *if you can use all the characters in *s* to construct *k* palindrome strings or *false* otherwise*.
@@ -52,11 +52,7 @@ Example 3:
 	1 <= k <= 105
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def canConstruct(self, s: str, k: int) -> bool:
 
@@ -74,9 +70,5 @@ class Solution:
         if k > len(s) or k - count_one < 0:
             return False
         return True
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

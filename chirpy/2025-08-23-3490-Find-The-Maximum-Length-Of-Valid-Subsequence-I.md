@@ -1,11 +1,11 @@
 ---
-            title: "3490 Find The Maximum Length Of Valid Subsequence I"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "3490 Find The Maximum Length Of Valid Subsequence I"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Find the Maximum Length of Valid Subsequence I](https://leetcode.com/problems/find-the-maximum-length-of-valid-subsequence-i) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)You are given an integer array nums.
 
 A subsequence sub of nums with length x is called **valid** if it satisfies:
@@ -56,11 +56,7 @@ The longest valid subsequence is [1, 3].
 	1 <= nums[i] <= 107
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def maximumLength(self, nums: List[int]) -> int:
         """
@@ -105,7 +101,5 @@ class Solution:
                 curr_odd += 1
         even_sum = max(curr_even, curr_odd)
         return max(odd_sum, even_sum)
-
-
-{% endraw %}
 ```
+{% endraw %}

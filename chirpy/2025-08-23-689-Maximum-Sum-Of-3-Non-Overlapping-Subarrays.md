@@ -1,11 +1,11 @@
 ---
-            title: "689 Maximum Sum Of 3 Non Overlapping Subarrays"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "689 Maximum Sum Of 3 Non Overlapping Subarrays"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Maximum Sum of 3 Non-Overlapping Subarrays](https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 Given an integer array nums and an integer k, find three non-overlapping subarrays of length k with maximum sum and return them.
@@ -43,11 +43,7 @@ Example 2:
 	1 <= k <= floor(nums.length / 3)
 
 {% raw %}
-
-
 ```python
-
-
 from typing import List
 
 class Solution:
@@ -94,10 +90,5 @@ class Solution:
         T[i,2] = (T[i-k]+ s[i], T[i-1, 2])
         T[i] = max(T[i-1] , S[i])
         """
-
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

@@ -1,11 +1,11 @@
 ---
-            title: "3633 Maximize The Number Of Target Nodes After Connecting Trees I"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "3633 Maximize The Number Of Target Nodes After Connecting Trees I"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Maximize the Number of Target Nodes After Connecting Trees I](https://leetcode.com/problems/maximize-the-number-of-target-nodes-after-connecting-trees-i) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 There exist two **undirected **trees with n and m nodes, with **distinct** labels in ranges [0, n - 1] and [0, m - 1], respectively.
@@ -64,11 +64,7 @@ For every i, connect node i of the first tree with any node of the second tree.
 	0 <= k <= 1000
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def maxTargetNodes(
         self, edges1: List[List[int]], edges2: List[List[int]], k: int
@@ -102,7 +98,5 @@ class Solution:
         maxCount2 = max(count2)
         res = [count1[i] + maxCount2 for i in range(n)]
         return res
-
-
-{% endraw %}
 ```
+{% endraw %}

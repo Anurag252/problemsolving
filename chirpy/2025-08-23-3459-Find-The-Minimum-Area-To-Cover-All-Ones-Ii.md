@@ -1,11 +1,11 @@
 ---
-            title: "3459 Find The Minimum Area To Cover All Ones Ii"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "3459 Find The Minimum Area To Cover All Ones Ii"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Find the Minimum Area to Cover All Ones II](https://leetcode.com/problems/find-the-minimum-area-to-cover-all-ones-ii) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 You are given a 2D **binary** array grid. You need to find 3 **non-overlapping** rectangles having **non-zero** areas with horizontal and vertical sides such that all the 1's in grid lie inside these rectangles.
@@ -53,11 +53,7 @@ Example 2:
 	The input is generated such that there are at least three 1's in grid.
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def minimumSum2(
         self, grid: List[List[int]], u: int, d: int, l: int, r: int
@@ -127,7 +123,5 @@ class Solution:
     def minimumSum(self, grid: List[List[int]]) -> int:
         rgrid = self.rotate(grid)
         return min(self.solve(grid), self.solve(rgrid))
-
-
-{% endraw %}
 ```
+{% endraw %}

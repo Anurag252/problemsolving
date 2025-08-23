@@ -1,11 +1,11 @@
 ---
-            title: "350 Intersection Of Two Arrays Ii"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [c]
-            layout: post
+title: "350 Intersection Of Two Arrays Ii"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [c]
+layout: post
 ---
-            
+
 ## [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 Given two integer arrays nums1 and nums2, return *an array of their intersection*. Each element in the result must appear as many times as it shows in both arrays and you may return the result in **any order**.
@@ -47,11 +47,7 @@ Example 2:
 	What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
 
 {% raw %}
-
-
 ```c
-
-
 /**
  * Note: The returned array must be malloced, assume caller calls free().
  */
@@ -94,7 +90,5 @@ int* intersect(int* nums1, int nums1Size, int* nums2, int nums2Size, int* return
     *returnSize = c;
     return arr;
 }
-
-
-{% endraw %}
 ```
+{% endraw %}

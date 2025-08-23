@@ -1,11 +1,11 @@
 ---
-            title: "2562 Count Ways To Build Good Strings"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2562 Count Ways To Build Good Strings"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Count Ways To Build Good Strings](https://leetcode.com/problems/count-ways-to-build-good-strings) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given the integers zero, one, low, and high, we can construct a string by starting with an empty string, and then at each step perform either of the following:
@@ -52,11 +52,7 @@ Example 2:
 	1 <= zero, one <= low
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def countGoodStrings(self, low: int, high: int, zero: int, one: int) -> int:
 
@@ -96,8 +92,5 @@ class Solution:
             return recurse(count , l + zero) + recurse(count , l + one)
 
         return recurse(0, 0) % (10 ** 9 + 7)
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

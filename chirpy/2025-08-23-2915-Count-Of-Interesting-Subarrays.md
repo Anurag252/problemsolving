@@ -1,11 +1,11 @@
 ---
-            title: "2915 Count Of Interesting Subarrays"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2915 Count Of Interesting Subarrays"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Count of Interesting Subarrays](https://leetcode.com/problems/count-of-interesting-subarrays) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a **0-indexed** integer array nums, an integer modulo, and an integer k.
@@ -67,11 +67,7 @@ It can be shown that there are no other interesting subarrays. So, the answer is
 	0 <= k < modulo
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def countInterestingSubarrays(self, nums: List[int], modulo: int, k: int) -> int:
         # in a subarr, find all indexes where % is k
@@ -114,13 +110,5 @@ class Solution:
             res += len(nums)  - prepare[0]
 
         return res
-
-
-
-        
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

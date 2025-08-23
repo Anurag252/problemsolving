@@ -1,11 +1,11 @@
 ---
-            title: "9 Palindrome Number"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "9 Palindrome Number"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Palindrome Number](https://leetcode.com/problems/palindrome-number) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 Given an integer x, return true* if *x* is a ****palindrome****, and *false* otherwise*.
@@ -53,11 +53,7 @@ Example 3:
 **Follow up:** Could you solve it without converting the integer to a string?
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         if x < 0 or x != ceil(x):
@@ -77,11 +73,5 @@ class Solution:
             n = int(n / 10)
             m = m * 10
         return inverted_num == orig
-
-
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

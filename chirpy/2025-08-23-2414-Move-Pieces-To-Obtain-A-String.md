@@ -1,11 +1,11 @@
 ---
-            title: "2414 Move Pieces To Obtain A String"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2414 Move Pieces To Obtain A String"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Move Pieces to Obtain a String](https://leetcode.com/problems/move-pieces-to-obtain-a-string) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given two strings start and target, both of length n. Each string consists **only** of the characters 'L', 'R', and '_' where:
@@ -60,11 +60,7 @@ Example 3:
 	start and target consist of the characters 'L', 'R', and '_'.
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def canChange(self, start: str, target: str) -> bool:
         start_length = len(start)
@@ -99,7 +95,5 @@ class Solution:
 
         # if all conditions satisfied, return true
         return True
-
-
-{% endraw %}
 ```
+{% endraw %}

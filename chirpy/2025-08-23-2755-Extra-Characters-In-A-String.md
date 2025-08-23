@@ -1,11 +1,11 @@
 ---
-            title: "2755 Extra Characters In A String"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2755 Extra Characters In A String"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Extra Characters in a String](https://leetcode.com/problems/extra-characters-in-a-string) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a **0-indexed** string s and a dictionary of words dictionary. You have to break s into one or more **non-overlapping** substrings such that each substring is present in dictionary. There may be some **extra characters** in s which are not present in any of the substrings.
@@ -45,11 +45,7 @@ Example 2:
 	dictionary contains distinct words
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def minExtraChar(self, s: str, dictionary: List[str]) -> int:
         n, dictionary_set = len(s), set(dictionary)
@@ -67,7 +63,5 @@ class Solution:
             return ans
             
         return dp(0)
-
-
-{% endraw %}
 ```
+{% endraw %}

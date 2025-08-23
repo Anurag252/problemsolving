@@ -1,11 +1,11 @@
 ---
-            title: "2764 Maximum Number Of Fish In A Grid"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [go]
-            layout: post
+title: "2764 Maximum Number Of Fish In A Grid"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [go]
+layout: post
 ---
-            
+
 ## [Maximum Number of Fish in a Grid](https://leetcode.com/problems/maximum-number-of-fish-in-a-grid) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a **0-indexed** 2D matrix grid of size m x n, where (r, c) represents:
@@ -56,11 +56,7 @@ Example 2:
 	0 <= grid[i][j] <= 10
 
 {% raw %}
-
-
 ```go
-
-
 
 func dfs(i int, j int, grid [][]int) int {
     if (grid)[i][j] == 0 {
@@ -89,7 +85,5 @@ func findMaxFish(grid [][]int) int {
     }
     return res
 }
-
-
-{% endraw %}
 ```
+{% endraw %}

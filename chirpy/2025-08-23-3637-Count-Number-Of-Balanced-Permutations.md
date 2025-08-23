@@ -1,11 +1,11 @@
 ---
-            title: "3637 Count Number Of Balanced Permutations"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "3637 Count Number Of Balanced Permutations"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Count Number of Balanced Permutations](https://leetcode.com/problems/count-number-of-balanced-permutations) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 You are given a string num. A string of digits is called **balanced **if the sum of the digits at even indices is equal to the sum of the digits at odd indices.
@@ -60,11 +60,7 @@ Example 3:
 	num consists of digits '0' to '9' only.
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def countBalancedPermutations(self, num: str) -> int:
         MOD = 10**9 + 7
@@ -158,8 +154,6 @@ class Solution:
         return len(s)
 
 
-"""  
-
-
-{% endraw %}
+"""
 ```
+{% endraw %}

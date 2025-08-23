@@ -1,11 +1,11 @@
 ---
-            title: "1049 Minimum Domino Rotations For Equal Row"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [rust]
-            layout: post
+title: "1049 Minimum Domino Rotations For Equal Row"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [rust]
+layout: post
 ---
-            
+
 ## [Minimum Domino Rotations For Equal Row](https://leetcode.com/problems/minimum-domino-rotations-for-equal-row) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 In a row of dominoes, tops[i] and bottoms[i] represent the top and bottom halves of the ith domino. (A domino is a tile with two numbers from 1 to 6 - one on each half of the tile.)
@@ -51,11 +51,7 @@ In this case, it is not possible to rotate the dominoes to make one row of value
 	1 <= tops[i], bottoms[i] <= 6
 
 {% raw %}
-
-
 ```rust
-
-
 use std::collections::HashMap;
 use std::cmp::max;
 use std::cmp::min;
@@ -107,8 +103,5 @@ impl Solution {
 
     }
 }
-
-
-
-{% endraw %}
 ```
+{% endraw %}

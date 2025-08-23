@@ -1,11 +1,11 @@
 ---
-            title: "1744 Number Of Ways To Form A Target String Given A Dictionary"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "1744 Number Of Ways To Form A Target String Given A Dictionary"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Number of Ways to Form a Target String Given a Dictionary](https://leetcode.com/problems/number-of-ways-to-form-a-target-string-given-a-dictionary) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 You are given a list of strings of the **same length** words and a string target.
@@ -64,11 +64,7 @@ Example 2:
 	words[i] and target contain only lowercase English letters.
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def numWays(self, words: List[str], target: str) -> int:
         
@@ -121,7 +117,5 @@ class Solution:
                 i += 1
             return result
         return recurse(0,target, 1) % (10 ** 9 + 7)
-
-
-{% endraw %}
 ```
+{% endraw %}

@@ -1,11 +1,11 @@
 ---
-            title: "3647 Zero Array Transformation Iii"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "3647 Zero Array Transformation Iii"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Zero Array Transformation III](https://leetcode.com/problems/zero-array-transformation-iii) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an integer array nums of length n and a 2D array queries where queries[i] = [li, ri].
@@ -65,11 +65,7 @@ nums cannot be converted to a zero array even after using all the queries.
 	0 <= li <= ri < nums.length
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def maxRemoval(self, nums: List[int], queries: List[List[int]]) -> int:
         queries.sort(key=lambda x: x[0])
@@ -88,7 +84,5 @@ class Solution:
             if operations < num:
                 return -1
         return len(heap)
-
-
-{% endraw %}
 ```
+{% endraw %}

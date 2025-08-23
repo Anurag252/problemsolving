@@ -1,11 +1,11 @@
 ---
-            title: "2580 Circular Sentence"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2580 Circular Sentence"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Circular Sentence](https://leetcode.com/problems/circular-sentence) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 A **sentence** is a list of words that are separated by a** single** space with no leading or trailing spaces.
@@ -71,11 +71,7 @@ The sentence is **not** circular.
 	There are no leading or trailing spaces.
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def isCircularSentence(self, s: str) -> bool:
 
@@ -88,10 +84,5 @@ class Solution:
                 return False
             prev = k[-1]
         return True
-
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

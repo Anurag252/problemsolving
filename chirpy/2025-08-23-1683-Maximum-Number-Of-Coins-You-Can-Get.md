@@ -1,11 +1,11 @@
 ---
-            title: "1683 Maximum Number Of Coins You Can Get"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "1683 Maximum Number Of Coins You Can Get"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Maximum Number of Coins You Can Get](https://leetcode.com/problems/maximum-number-of-coins-you-can-get) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 There are 3n piles of coins of varying size, you and your friends will take piles of coins as follows:
@@ -62,11 +62,7 @@ Example 3:
 	1 <= piles[i] <= 104
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     import heapq 
     def maxCoins(self, piles: List[int]) -> int:
@@ -81,13 +77,5 @@ class Solution:
 
 
         return total
-
-
-
-
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

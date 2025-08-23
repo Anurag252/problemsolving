@@ -1,11 +1,11 @@
 ---
-            title: "2716 Prime Subtraction Operation"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2716 Prime Subtraction Operation"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Prime Subtraction Operation](https://leetcode.com/problems/prime-subtraction-operation) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a **0-indexed** integer array nums of length n.
@@ -58,11 +58,7 @@ Example 3:
 	nums.length == n
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def primeSubOperation(self, nums: List[int]) -> bool:
         prime = []
@@ -92,10 +88,5 @@ class Solution:
         #print(a)
 
         return True
-
-
-
-
-
-{% endraw %}
 ```
+{% endraw %}

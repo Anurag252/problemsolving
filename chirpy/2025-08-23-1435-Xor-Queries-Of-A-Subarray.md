@@ -1,11 +1,11 @@
 ---
-            title: "1435 Xor Queries Of A Subarray"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [c]
-            layout: post
+title: "1435 Xor Queries Of A Subarray"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [c]
+layout: post
 ---
-            
+
 ## [XOR Queries of a Subarray](https://leetcode.com/problems/xor-queries-of-a-subarray) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an array arr of positive integers. You are also given the array queries where queries[i] = [lefti, righti].
@@ -55,11 +55,7 @@ Example 2:
 	0 <= lefti <= righti < arr.length
 
 {% raw %}
-
-
 ```c
-
-
 /**
  * Note: The returned array must be malloced, assume caller calls free().
  */
@@ -80,7 +76,5 @@ int* xorQueries(int* arr, int arrSize, int** queries, int queriesSize, int* quer
     }
     return result;
 }
-
-
-{% endraw %}
 ```
+{% endraw %}

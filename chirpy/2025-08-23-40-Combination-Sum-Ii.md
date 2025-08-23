@@ -1,11 +1,11 @@
 ---
-            title: "40 Combination Sum Ii"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "40 Combination Sum Ii"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Combination Sum II](https://leetcode.com/problems/combination-sum-ii) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sum to target.
@@ -53,11 +53,7 @@ Example 2:
 	1 <= target <= 30
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
         visited = [0] * len(candidates)
@@ -86,7 +82,5 @@ class Solution:
 
         Traverse(visited, 0, target)
         return result
-
-
-{% endraw %}
 ```
+{% endraw %}

@@ -1,11 +1,11 @@
 ---
-            title: "2846 Robot Collisions"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2846 Robot Collisions"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Robot Collisions](https://leetcode.com/problems/robot-collisions) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 There are n **1-indexed** robots, each having a position on a line, health, and movement direction.
@@ -71,11 +71,7 @@ Example 3:
 	All values in positions are distinct
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def survivedRobotsHealths(self, positions: List[int], healths: List[int], directions: str) -> List[int]:
         stack = []
@@ -106,12 +102,5 @@ class Solution:
                 result[i] = dic[k][0]
                 i  = i + 1
         return result
-
-            
-
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

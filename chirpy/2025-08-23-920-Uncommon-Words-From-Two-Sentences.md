@@ -1,11 +1,11 @@
 ---
-            title: "920 Uncommon Words From Two Sentences"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "920 Uncommon Words From Two Sentences"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Uncommon Words from Two Sentences](https://leetcode.com/problems/uncommon-words-from-two-sentences) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 A **sentence** is a string of single-space separated words where each word consists only of lowercase letters.
@@ -42,11 +42,7 @@ Example 2:
 	All the words in s1 and s2 are separated by a single space.
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def uncommonFromSentences(self, s1: str, s2: str) -> List[str]:
         dic = {}
@@ -68,9 +64,5 @@ class Solution:
                 result.append(k)
         
         return result
-
-
-
-
-{% endraw %}
 ```
+{% endraw %}

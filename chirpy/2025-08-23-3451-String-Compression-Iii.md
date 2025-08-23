@@ -1,11 +1,11 @@
 ---
-            title: "3451 String Compression Iii"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "3451 String Compression Iii"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [String Compression III](https://leetcode.com/problems/string-compression-iii) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given a string word, compress it using the following algorithm:
@@ -53,11 +53,7 @@ Initially, comp = "". Apply the operation 3 times, choosing "aaaaaaaaa", "aaaaa"
 	word consists only of lowercase English letters.
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def compressedString(self, word: str) -> str:
         
@@ -83,11 +79,5 @@ class Solution:
         if count > 0:
             res += (str(count) + curr)
         return res
-        
-
-                
-
-
-
-{% endraw %}
 ```
+{% endraw %}

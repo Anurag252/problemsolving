@@ -1,11 +1,11 @@
 ---
-            title: "1985 Maximum Subarray Min Product"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [c]
-            layout: post
+title: "1985 Maximum Subarray Min Product"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [c]
+layout: post
 ---
-            
+
 ## [Maximum Subarray Min-Product](https://leetcode.com/problems/maximum-subarray-min-product) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 The **min-product** of an array is equal to the **minimum value** in the array **multiplied by** the array's **sum**.
@@ -61,11 +61,7 @@ Example 3:
 	1 <= nums[i] <= 107
 
 {% raw %}
-
-
 ```c
-
-
 
 struct Node;
 typedef struct Node *PtrToNode;
@@ -212,9 +208,5 @@ Stack CreateStack(void)
         Pop(S);
     return S;
 }
-
-
-
-
-{% endraw %}
 ```
+{% endraw %}

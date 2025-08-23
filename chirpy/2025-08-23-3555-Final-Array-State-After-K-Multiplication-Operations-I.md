@@ -1,11 +1,11 @@
 ---
-            title: "3555 Final Array State After K Multiplication Operations I"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "3555 Final Array State After K Multiplication Operations I"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Final Array State After K Multiplication Operations I](https://leetcode.com/problems/final-array-state-after-k-multiplication-operations-i) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 You are given an integer array nums, an integer k, and an integer multiplier.
@@ -75,11 +75,7 @@ Example 2:
 	1 <= multiplier <= 5
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def getFinalState(self, nums: List[int], k: int, multiplier: int) -> List[int]:
         h = []
@@ -93,10 +89,5 @@ class Solution:
             k -= 1
         h.sort(key= lambda x : x[1])
         return list(map(lambda x : x[0], h))
-        
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

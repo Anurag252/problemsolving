@@ -1,11 +1,11 @@
 ---
-            title: "731 My Calendar Ii"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "731 My Calendar Ii"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [My Calendar II](https://leetcode.com/problems/my-calendar-ii) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are implementing a program to use as your calendar. We can add a new event if adding the event will not cause a **triple booking**.
@@ -50,11 +50,7 @@ myCalendarTwo.book(25, 55); // return True, The event can be booked, as the time
 	At most 1000 calls will be made to book.
 
 {% raw %}
-
-
 ```python
-
-
 class MyCalendarTwo:
 
     def __init__(self):
@@ -115,7 +111,5 @@ class MyCalendarTwo:
 # Your MyCalendarTwo object will be instantiated and called as such:
 # obj = MyCalendarTwo()
 # param_1 = obj.book(start,end)
-
-
-{% endraw %}
 ```
+{% endraw %}

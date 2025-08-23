@@ -1,11 +1,11 @@
 ---
-            title: "2170 Count Number Of Maximum Bitwise Or Subsets"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2170 Count Number Of Maximum Bitwise Or Subsets"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Count Number of Maximum Bitwise-OR Subsets](https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given an integer array nums, find the **maximum** possible **bitwise OR** of a subset of nums and return *the **number of different non-empty subsets** with the maximum bitwise OR*.
@@ -61,11 +61,7 @@ Example 3:
 	1 <= nums[i] <= 105
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def countMaxOrSubsets(self, nums: List[int]) -> int:
         # Calculate the maximum possible OR value
@@ -90,7 +86,5 @@ class Solution:
                 subsets_with_max_or += 1
 
         return subsets_with_max_or
-
-
-{% endraw %}
 ```
+{% endraw %}

@@ -1,11 +1,11 @@
 ---
-            title: "2586 Longest Square Streak In An Array"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2586 Longest Square Streak In An Array"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Longest Square Streak in an Array](https://leetcode.com/problems/longest-square-streak-in-an-array) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an integer array nums. A subsequence of nums is called a **square streak** if:
@@ -51,11 +51,7 @@ Example 2:
 	2 <= nums[i] <= 105
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def longestSquareStreak(self, nums: List[int]) -> int:
         nums.sort()
@@ -72,9 +68,5 @@ class Solution:
                 mp[k] = 0
         #print(res, mp)
         return max(res) +  1 if len(res) > 0 else -1
-
-
-
-
-{% endraw %}
 ```
+{% endraw %}

@@ -1,11 +1,11 @@
 ---
-            title: "3018 Make String A Subsequence Using Cyclic Increments"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "3018 Make String A Subsequence Using Cyclic Increments"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Make String a Subsequence Using Cyclic Increments](https://leetcode.com/problems/make-string-a-subsequence-using-cyclic-increments) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given two **0-indexed** strings str1 and str2.
@@ -60,11 +60,7 @@ Therefore, false is returned.
 	str1 and str2 consist of only lowercase English letters.
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def canMakeSubsequence(self, s1: str, s2: str) -> bool:
         arr = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','a']
@@ -97,15 +93,5 @@ class Solution:
                     idx1 += 1
                     idx2 += 1
                     continue
-        
-
-
-                
-
-
-
-
-
-
-{% endraw %}
 ```
+{% endraw %}

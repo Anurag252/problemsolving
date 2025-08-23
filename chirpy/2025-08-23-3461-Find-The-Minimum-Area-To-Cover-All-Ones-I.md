@@ -1,11 +1,11 @@
 ---
-            title: "3461 Find The Minimum Area To Cover All Ones I"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "3461 Find The Minimum Area To Cover All Ones I"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Find the Minimum Area to Cover All Ones I](https://leetcode.com/problems/find-the-minimum-area-to-cover-all-ones-i) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a 2D **binary** array grid. Find a rectangle with horizontal and vertical sides with the** smallest** area, such that all the 1's in grid lie inside this rectangle.
@@ -47,11 +47,7 @@ The smallest rectangle has both height and width 1, so its area is 1 * 1 = 1.
 	The input is generated such that there is at least one 1 in grid.
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def minimumArea(self, grid: List[List[int]]) -> int:
         """
@@ -75,9 +71,5 @@ class Solution:
                     last_col = max(last_col, j)
         
         return (last_row- first_row + 1) * (last_col - first_col + 1)
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

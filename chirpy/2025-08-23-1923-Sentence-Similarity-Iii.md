@@ -1,11 +1,11 @@
 ---
-            title: "1923 Sentence Similarity Iii"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "1923 Sentence Similarity Iii"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Sentence Similarity III](https://leetcode.com/problems/sentence-similarity-iii) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given two strings sentence1 and sentence2, each representing a **sentence** composed of words. A sentence is a list of **words** that are separated by a **single** space with no leading or trailing spaces. Each word consists of only uppercase and lowercase English characters.
@@ -60,11 +60,7 @@ sentence2 can be turned to sentence1 by inserting "right now" at the end of the 
 	The words in sentence1 and sentence2 are separated by a single space.
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def areSentencesSimilar(self, sentence1: str, sentence2: str) -> bool:
         s1 = sentence1.split(' ')
@@ -87,12 +83,5 @@ class Solution:
             return start + end == len(s2)
         else:
             return start + end == len(s1)
-        
-        
-            
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

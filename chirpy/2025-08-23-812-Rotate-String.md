@@ -1,11 +1,11 @@
 ---
-            title: "812 Rotate String"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "812 Rotate String"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Rotate String](https://leetcode.com/problems/rotate-string) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 Given two strings s and goal, return true *if and only if* s *can become* goal *after some number of **shifts** on* s.
@@ -40,11 +40,7 @@ Example 2:
 	s and goal consist of lowercase English letters.
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def rotateString(self, s: str, goal: str) -> bool:
         
@@ -53,7 +49,5 @@ class Solution:
             if (s[idx:] + s[:idx]) == goal:
                 return True
         return False
-
-
-{% endraw %}
 ```
+{% endraw %}

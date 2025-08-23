@@ -1,11 +1,11 @@
 ---
-            title: "2699 Count The Number Of Fair Pairs"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2699 Count The Number Of Fair Pairs"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Count the Number of Fair Pairs](https://leetcode.com/problems/count-the-number-of-fair-pairs) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given a **0-indexed** integer array nums of size n and two integers lower and upper, return *the number of fair pairs*.
@@ -47,11 +47,7 @@ Example 2:
 	-109 <= lower <= upper <= 109
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def lower_bound(self, nums, low, high, element):
         while low <= high:
@@ -81,7 +77,5 @@ class Solution:
             ans += high - low
 
         return ans
-
-
-{% endraw %}
 ```
+{% endraw %}

@@ -1,11 +1,11 @@
 ---
-            title: "2107 Find Unique Binary String"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [go]
-            layout: post
+title: "2107 Find Unique Binary String"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [go]
+layout: post
 ---
-            
+
 ## [Find Unique Binary String](https://leetcode.com/problems/find-unique-binary-string) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given an array of strings nums containing n **unique** binary strings each of length n, return *a binary string of length *n* that **does not appear** in *nums*. If there are multiple answers, you may return **any** of them*.
@@ -53,11 +53,7 @@ Example 3:
 	All the strings of nums are **unique**.
 
 {% raw %}
-
-
 ```go
-
-
 func findDifferentBinaryString(nums []string) string {
     arr := []string{"0","1"}
 
@@ -100,7 +96,5 @@ func calc(arr []string, n int, prev []string, mp map[string]bool) string {
     return calc(arr, n-1 , t, mp)
 
 }
-
-
-{% endraw %}
 ```
+{% endraw %}

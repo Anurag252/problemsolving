@@ -1,11 +1,11 @@
 ---
-            title: "1927 Maximum Ascending Subarray Sum"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [go]
-            layout: post
+title: "1927 Maximum Ascending Subarray Sum"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [go]
+layout: post
 ---
-            
+
 ## [Maximum Ascending Subarray Sum](https://leetcode.com/problems/maximum-ascending-subarray-sum) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 Given an array of positive integers nums, return the *maximum possible sum of an **ascending** subarray in *nums.
@@ -54,11 +54,7 @@ Example 3:
 	1 <= nums[i] <= 100
 
 {% raw %}
-
-
 ```go
-
-
 func maxAscendingSum(nums []int) int {
     s := 0
     prev := -1
@@ -77,7 +73,5 @@ func maxAscendingSum(nums []int) int {
      res = max(res, s)
      return res
 }
-
-
-{% endraw %}
 ```
+{% endraw %}

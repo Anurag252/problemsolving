@@ -1,11 +1,11 @@
 ---
-            title: "1256 Rank Transform Of An Array"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "1256 Rank Transform Of An Array"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Rank Transform of an Array](https://leetcode.com/problems/rank-transform-of-an-array) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 Given an array of integers arr, replace each element with its rank.
@@ -54,11 +54,7 @@ Example 3:
 	-109 <= arr[i] <= 109
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def arrayRankTransform(self, arr: List[int]) -> List[int]:
         arr_cpy = arr.copy()
@@ -79,13 +75,5 @@ class Solution:
             result[idx] = dic[k]
 
         return result
-            
-
-            
-
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

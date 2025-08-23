@@ -1,11 +1,11 @@
 ---
-            title: "684 Redundant Connection"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [go]
-            layout: post
+title: "684 Redundant Connection"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [go]
+layout: post
 ---
-            
+
 ## [Redundant Connection](https://leetcode.com/problems/redundant-connection) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 In this problem, a tree is an **undirected graph** that is connected and has no cycles.
@@ -49,11 +49,7 @@ Example 2:
 	The given graph is connected.
 
 {% raw %}
-
-
 ```go
-
-
 func dfs(source int, adj map[int][]int , visited map[int]bool, parent int) bool {
     //fmt.Println(visited, source, adj)
     _, ok := visited[source]
@@ -103,7 +99,5 @@ func findRedundantConnection(edges [][]int) []int {
 
     return nil
 }
-
-
-{% endraw %}
 ```
+{% endraw %}

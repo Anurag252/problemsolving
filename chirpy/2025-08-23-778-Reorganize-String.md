@@ -1,11 +1,11 @@
 ---
-            title: "778 Reorganize String"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "778 Reorganize String"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Reorganize String](https://leetcode.com/problems/reorganize-string) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given a string s, rearrange the characters of s so that any two adjacent characters are not the same.
@@ -38,11 +38,7 @@ Example 2:
 	s consists of lowercase English letters.
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     import heapq as hq
     
@@ -93,9 +89,5 @@ class Solution:
             v = v - 1
             i = i + 2
         return (i, v)
-
-
-
-
-{% endraw %}
 ```
+{% endraw %}

@@ -1,11 +1,11 @@
 ---
-            title: "1570 Final Prices With A Special Discount In A Shop"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "1570 Final Prices With A Special Discount In A Shop"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Final Prices With a Special Discount in a Shop](https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 You are given an integer array prices where prices[i] is the price of the ith item in a shop.
@@ -57,11 +57,7 @@ Example 3:
 	1 <= prices[i] <= 1000
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def finalPrices(self, prices: List[int]) -> List[int]:
         #find next smaller element to the right
@@ -80,10 +76,5 @@ class Solution:
                 result[t] -= k
             stack.append(idx)
         return result
-
-
-
-
-
-{% endraw %}
 ```
+{% endraw %}

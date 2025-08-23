@@ -1,11 +1,11 @@
 ---
-            title: "3243 Count The Number Of Powerful Integers"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "3243 Count The Number Of Powerful Integers"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Count the Number of Powerful Integers](https://leetcode.com/problems/count-the-number-of-powerful-integers) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 You are given three integers start, finish, and limit. You are also given a **0-indexed** string s representing a **positive** integer.
@@ -61,11 +61,7 @@ Example 3:
 	s does not have leading zeros.
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def numberOfPowerfulInt(
         self, start: int, finish: int, limit: int, s: str
@@ -101,7 +97,5 @@ class Solution:
             return res
 
         return dfs(0, True, True)
-
-
-{% endraw %}
 ```
+{% endraw %}

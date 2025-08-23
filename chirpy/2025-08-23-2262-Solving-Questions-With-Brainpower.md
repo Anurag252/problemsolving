@@ -1,11 +1,11 @@
 ---
-            title: "2262 Solving Questions With Brainpower"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2262 Solving Questions With Brainpower"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Solving Questions With Brainpower](https://leetcode.com/problems/solving-questions-with-brainpower) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a **0-indexed** 2D integer array questions where questions[i] = [pointsi, brainpoweri].
@@ -59,11 +59,7 @@ Total points earned: 2 + 5 = 7. There is no other way to earn 7 or more points.
 	1 <= pointsi, brainpoweri <= 105
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def mostPoints(self, questions: List[List[int]]) -> int:
         n = len(questions)
@@ -76,8 +72,5 @@ class Solution:
             dp[i] = max(take, skip)
 
         return dp[0]
-
-
-
-{% endraw %}
 ```
+{% endraw %}

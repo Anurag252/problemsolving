@@ -1,11 +1,11 @@
 ---
-            title: "2375 Minimum Obstacle Removal To Reach Corner"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2375 Minimum Obstacle Removal To Reach Corner"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Minimum Obstacle Removal to Reach Corner](https://leetcode.com/problems/minimum-obstacle-removal-to-reach-corner) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 You are given a **0-indexed** 2D integer array grid of size m x n. Each cell has one of two values:
@@ -55,11 +55,7 @@ Example 2:
 	grid[0][0] == grid[m - 1][n - 1] == 0
 
 {% raw %}
-
-
 ```python
-
-
 from heapq import heappush, heappop
 from typing import List
 
@@ -90,8 +86,5 @@ class Solution:
 
         # If the target is unreachable (edge case)
         return -1
-
-
-
-{% endraw %}
 ```
+{% endraw %}

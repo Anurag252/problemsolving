@@ -1,11 +1,11 @@
 ---
-            title: "3643 Zero Array Transformation Ii"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "3643 Zero Array Transformation Ii"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Zero Array Transformation II](https://leetcode.com/problems/zero-array-transformation-ii) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an integer array nums of length n and a 2D array queries where queries[i] = [li, ri, vali].
@@ -69,11 +69,7 @@ Example 2:
 	1 <= vali <= 5
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def minZeroArray(self, nums: List[int], queries: List[List[int]]) -> int:
         n = len(nums)
@@ -115,7 +111,5 @@ class Solution:
             if total_sum < nums[num_index]:
                 return False
         return True
-
-
-{% endraw %}
 ```
+{% endraw %}

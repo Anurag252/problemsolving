@@ -1,11 +1,11 @@
 ---
-            title: "2614 Maximum Count Of Positive Integer And Negative Integer"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2614 Maximum Count Of Positive Integer And Negative Integer"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Maximum Count of Positive Integer and Negative Integer](https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer) ![image](https://img.shields.io/badge/Difficulty-Easy-brightgreen)
 
 Given an array nums sorted in **non-decreasing** order, return *the maximum between the number of positive integers and the number of negative integers.*
@@ -59,11 +59,7 @@ Example 3:
 **Follow up:** Can you solve the problem in O(log(n)) time complexity?
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def maximumCount(self, nums: List[int]) -> int:
 
@@ -97,11 +93,5 @@ class Solution:
             return len(nums) - right + 1
 
         return max(left + 1, len(nums) - right)
-
-
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}

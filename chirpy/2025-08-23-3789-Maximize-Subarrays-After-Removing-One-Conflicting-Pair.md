@@ -1,11 +1,11 @@
 ---
-            title: "3789 Maximize Subarrays After Removing One Conflicting Pair"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "3789 Maximize Subarrays After Removing One Conflicting Pair"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Maximize Subarrays After Removing One Conflicting Pair](https://leetcode.com/problems/maximize-subarrays-after-removing-one-conflicting-pair) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 You are given an integer n which represents an array nums containing the numbers from 1 to n in order. Additionally, you are given a 2D array conflictingPairs, where conflictingPairs[i] = [a, b] indicates that a and b form a conflicting pair.
@@ -51,11 +51,7 @@ Example 2:
 	conflictingPairs[i][0] != conflictingPairs[i][1]
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def maxSubarrays(self, n: int, conflictingPairs: List[List[int]]) -> int:
         bMin1 = [2**31 - 1] * (n + 1)
@@ -83,7 +79,5 @@ class Solution:
                 bMin1[ib1], n + 1
             )
         return res + max(delCount)
-
-
-{% endraw %}
 ```
+{% endraw %}

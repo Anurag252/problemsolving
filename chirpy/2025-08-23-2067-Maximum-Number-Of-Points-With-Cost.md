@@ -1,11 +1,11 @@
 ---
-            title: "2067 Maximum Number Of Points With Cost"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "2067 Maximum Number Of Points With Cost"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Maximum Number of Points with Cost](https://leetcode.com/problems/maximum-number-of-points-with-cost) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given an m x n integer matrix points (**0-indexed**). Starting with 0 points, you want to **maximize** the number of points you can get from the matrix.
@@ -64,11 +64,7 @@ Your final score is 12 - 1 = 11.
 	0 <= points[r][c] <= 105
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def __init__(self):
         self.cache = {}
@@ -109,8 +105,5 @@ class Solution:
 
         # Compute result by taking the maximum of the first row
         return max(dp(0))
-
-
-
-{% endraw %}
 ```
+{% endraw %}

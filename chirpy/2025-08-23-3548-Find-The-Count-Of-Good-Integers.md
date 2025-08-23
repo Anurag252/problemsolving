@@ -1,11 +1,11 @@
 ---
-            title: "3548 Find The Count Of Good Integers"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "3548 Find The Count Of Good Integers"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Find the Count of Good Integers](https://leetcode.com/problems/find-the-count-of-good-integers) ![image](https://img.shields.io/badge/Difficulty-Hard-red)
 
 You are given two **positive** integers n and k.
@@ -60,11 +60,7 @@ Example 3:
 	1 <= k <= 9
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def countGoodIntegers(self, n: int, k: int) -> int:
         dictionary = set()
@@ -93,7 +89,5 @@ class Solution:
             ans += tot
 
         return ans
-
-
-{% endraw %}
 ```
+{% endraw %}

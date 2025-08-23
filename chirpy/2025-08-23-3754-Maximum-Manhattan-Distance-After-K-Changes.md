@@ -1,11 +1,11 @@
 ---
-            title: "3754 Maximum Manhattan Distance After K Changes"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "3754 Maximum Manhattan Distance After K Changes"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Maximum Manhattan Distance After K Changes](https://leetcode.com/problems/maximum-manhattan-distance-after-k-changes) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 You are given a string s consisting of the characters 'N', 'S', 'E', and 'W', where s[i] indicates movements in an infinite grid:
@@ -81,11 +81,7 @@ The maximum Manhattan distance from the origin that can be achieved is 6. Hence,
 	s consists of only 'N', 'S', 'E', and 'W'.
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def maxDistance(self, s: str, k: int) -> int:
         ans = 0
@@ -114,7 +110,5 @@ class Solution:
         return (
             abs(drt1 - drt2) + times * 2
         )  # Calculate modified Manhattan distance
-
-
-{% endraw %}
 ```
+{% endraw %}

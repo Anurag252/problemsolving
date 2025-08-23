@@ -1,11 +1,11 @@
 ---
-            title: "1628 Count Submatrices With All Ones"
-            date: "2025-08-23T09:59:26+02:00"
-            categories: ["leetcode"]
-            tags: [python]
-            layout: post
+title: "1628 Count Submatrices With All Ones"
+date: "2025-08-23T10:09:41+02:00"
+categories: ["leetcode"]
+tags: [python]
+layout: post
 ---
-            
+
 ## [Count Submatrices With All Ones](https://leetcode.com/problems/count-submatrices-with-all-ones) ![image](https://img.shields.io/badge/Difficulty-Medium-orange)
 
 Given an m x n binary matrix mat, *return the number of **submatrices** that have all ones*.
@@ -56,11 +56,7 @@ Total number of rectangles = 8 + 5 + 2 + 4 + 2 + 2 + 1 = 24.
 	mat[i][j] is either 0 or 1.
 
 {% raw %}
-
-
 ```python
-
-
 class Solution:
     def numSubmat(self, mat: List[List[int]]) -> int:
         """
@@ -120,12 +116,5 @@ class Solution:
             for c in range(len(rows[0])-1, -1, -1):
                 res += rows[r][c] * cols[r][c]
         return res
-
-
-
-
-        
-
-
-{% endraw %}
 ```
+{% endraw %}
