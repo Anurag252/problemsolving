@@ -3,13 +3,13 @@ name: Generate Chirpy Posts from LeetSync
 on:
   push:
     branches:
-      - main   # or your default branch
+      - main # or your default branch
     # we can't directly filter by commit message here,
     # so we'll run on all pushes to main and add a commit-message check in the job
 
 jobs:
   generate-posts:
-    if: "contains(github.event.head_commit.message, 'LeetSync')"   # only run if commit message contains LeetSync
+    if: ${{contains(github.event.head_commit.message,  'LeetSync')}} # only run if commit message contains LeetSync
     runs-on: ubuntu-latest
 
     steps:
@@ -34,6 +34,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add _posts/
+          git add *
           git commit -m "Auto-generate Chirpy posts from LeetSync" || echo "No changes to commit"
           git push
