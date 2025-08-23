@@ -1,6 +1,6 @@
 ---
             title: "1915 Check If One String Swap Can Make Strings Equal"
-            date: "2025-08-23T10:16:39+02:00"
+            date: "2025-08-23T11:43:59+02:00"
             categories: ["leetcode"]
             tags: [go]
             layout: post

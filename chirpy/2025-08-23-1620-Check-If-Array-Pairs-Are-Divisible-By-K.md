@@ -1,6 +1,6 @@
 ---
             title: "1620 Check If Array Pairs Are Divisible By K"
-            date: "2025-08-23T10:16:39+02:00"
+            date: "2025-08-23T11:43:59+02:00"
             categories: ["leetcode"]
             tags: [python]
             layout: post

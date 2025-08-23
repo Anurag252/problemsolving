@@ -1,6 +1,6 @@
 ---
             title: "2217 Step By Step Directions From A Binary Tree Node To Another"
-            date: "2025-08-23T10:16:39+02:00"
+            date: "2025-08-23T11:43:59+02:00"
             categories: ["leetcode"]
             tags: [python]
             layout: post

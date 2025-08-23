@@ -1,6 +1,6 @@
 ---
             title: "778 Reorganize String"
-            date: "2025-08-23T10:16:39+02:00"
+            date: "2025-08-23T11:43:59+02:00"
             categories: ["leetcode"]
             tags: [python]
             layout: post

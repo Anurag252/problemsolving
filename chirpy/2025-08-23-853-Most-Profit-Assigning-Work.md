@@ -1,6 +1,6 @@
 ---
             title: "853 Most Profit Assigning Work"
-            date: "2025-08-23T10:16:39+02:00"
+            date: "2025-08-23T11:43:59+02:00"
             categories: ["leetcode"]
             tags: [c]
             layout: post

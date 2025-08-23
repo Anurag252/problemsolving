@@ -1,6 +1,6 @@
 ---
             title: "1335 Maximum Candies Allocated To K Children"
-            date: "2025-08-23T10:16:39+02:00"
+            date: "2025-08-23T11:43:59+02:00"
             categories: ["leetcode"]
             tags: [python]
             layout: post
