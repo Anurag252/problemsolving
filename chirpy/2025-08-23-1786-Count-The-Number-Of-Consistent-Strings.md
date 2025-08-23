@@ -1,6 +1,6 @@
 ---
             title: "1786 Count The Number Of Consistent Strings"
-            date: "2025-08-23T13:42:46+02:00"
+            date: "2025-08-23T13:48:50+02:00"
             categories: ["leetcode"]
             tags: [c]
             layout: post

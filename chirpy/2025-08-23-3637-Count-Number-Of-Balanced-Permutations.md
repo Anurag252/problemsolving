@@ -1,6 +1,6 @@
 ---
             title: "3637 Count Number Of Balanced Permutations"
-            date: "2025-08-23T13:42:46+02:00"
+            date: "2025-08-23T13:48:50+02:00"
             categories: ["leetcode"]
             tags: [python]
             layout: post
