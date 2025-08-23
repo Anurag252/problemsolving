@@ -1,6 +1,6 @@
 ---
             title: "1818 Maximum Score From Removing Substrings"
-            date: "2025-08-23T11:43:59+02:00"
+            date: "2025-08-23T13:42:46+02:00"
             categories: ["leetcode"]
             tags: [rust]
             layout: post
