@@ -1,64 +1,39 @@
-name: deploy-github-pages
+name: Generate Chirpy Posts from LeetSync
 
-# This workflow represents a set of basic End-to-End tests
 on:
   push:
     branches:
-      - 'main'
-  pull_request:
-  workflow_dispatch:
+      - main   # or your default branch
+    # we can't directly filter by commit message here,
+    # so we'll run on all pushes to main and add a commit-message check in the job
 
 jobs:
-  build:
+  generate-posts:
+    if: "contains(github.event.head_commit.message, 'LeetSync')"   # only run if commit message contains LeetSync
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: "3.11"
 
-      - name: Install deps
-        run: pip install -r requirements.txt
-
-      - name: make dist
-        run: mkdir dist
-
-      - name: Convert Markdown to HTML and Generate Index Files
-        run: python convert_markdown.py
-
-      - name: list HTML and Images to Distribution
+      - name: Install dependencies
         run: |
-          ls ./dist
+          python -m pip install --upgrade pip
+          pip install pyyaml
 
-      - name: Upload Pages Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: pages
-          path: dist
+      - name: Run LeetSync → Chirpy script
+        run: |
+          python migrate.py   # replace with your actual script filename
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      contents: write
-    environment:
-      name: github-pages
-      url: ${{ steps.build.outputs.artifacts.pages }}
-
-    steps:
-      - name: Download Pages Artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: pages
-          path: dist
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
+      - name: Commit and push generated posts
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add _posts/
+          git commit -m "Auto-generate Chirpy posts from LeetSync" || echo "No changes to commit"
+          git push
