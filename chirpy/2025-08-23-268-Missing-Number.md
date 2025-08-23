@@ -1,8 +1,8 @@
 ---
             title: "268 Missing Number"
-            date: "2025-08-23T09:18:29+02:00"
+            date: "2025-08-23T09:59:26+02:00"
             categories: ["leetcode"]
-            tags: [python]
+            tags: [c]
             layout: post
 ---
             
@@ -58,19 +58,19 @@ Example 3:
 {% raw %}
 
 
-```python
+```c
 
 
-class Solution(object):
-    def missingNumber(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        sum_of_nums = sum(nums)
-        n = len(nums)
-        return (n*(n+1))/2 - sum_of_nums
-        
+int missingNumber(int* nums, int numsSize) {
+    int all_xor = 0 ;
+    printf("%d", 1 ^ 1);
+    for (int i = 0 ; i < numsSize; i ++) {
+        all_xor = all_xor ^ *(nums + i) ^ i;
+    }   
+
+    // 3^0  ^ 0^1 ^ 1^2 ^ 3
+    return all_xor ^ numsSize;
+}
 
 
 {% endraw %}

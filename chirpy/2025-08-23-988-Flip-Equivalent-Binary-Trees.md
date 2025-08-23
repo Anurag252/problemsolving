@@ -1,8 +1,8 @@
 ---
             title: "988 Flip Equivalent Binary Trees"
-            date: "2025-08-23T09:18:29+02:00"
+            date: "2025-08-23T09:59:26+02:00"
             categories: ["leetcode"]
-            tags: [python]
+            tags: [cpp]
             layout: post
 ---
             
@@ -55,35 +55,35 @@ Example 3:
 {% raw %}
 
 
-```python
+```cpp
 
 
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def flipEquiv(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> bool:
-        
-        
-        def abc(root1, root2):
-            
-            if (root1 == None and root2 != None) or (root1 != None and root2 == None) :
-                return False
+class Solution {
+public:
+    bool flipEquiv(TreeNode* root1, TreeNode* root2) {
+        // Both trees are empty
+        if (root1 == nullptr && root2 == nullptr) {
+            return true;
+        }
+        // Just one of the trees is empty
+        if (root1 == nullptr || root2 == nullptr) {
+            return false;
+        }
+        // Corresponding values differ
+        if (root1->val != root2->val) {
+            return false;
+        }
 
-            if root1 == None and root2 == None:
-                return True
+        // Check if corresponding subtrees are flip equivalent
+        bool noSwap = flipEquiv(root1->left, root2->left) &&
+                      flipEquiv(root1->right, root2->right);
+        // Check if opposite subtrees are flip equivalent
+        bool swap = flipEquiv(root1->left, root2->right) &&
+                    flipEquiv(root1->right, root2->left);
 
-            if root1.val != root2.val:
-                return False
-
-            return (abc(root1.right, root2.left) and abc(root1.left, root2.right)) or (abc(root1.left, root2.left) and abc(root1.right, root2.right))
-
-        return abc(root1, root2)
-        
-        
+        return swap || noSwap;
+    }
+};
 
 
 {% endraw %}

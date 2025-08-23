@@ -1,8 +1,8 @@
 ---
             title: "2170 Count Number Of Maximum Bitwise Or Subsets"
-            date: "2025-08-23T09:18:29+02:00"
+            date: "2025-08-23T09:59:26+02:00"
             categories: ["leetcode"]
-            tags: [rust]
+            tags: [python]
             layout: post
 ---
             
@@ -63,49 +63,33 @@ Example 3:
 {% raw %}
 
 
-```rust
+```python
 
 
-impl Solution {
-    pub fn count_max_or_subsets(nums: Vec<i32>) -> i32 {
-        // bitwise or is max if done for all elements ?
-        //length is 16 
-        // so there can be 2^16 subsets , which is quite lrge 
-        // but maybe still under pow(10,5) ? IDK 
-        // idea is if there is a 1 at a ceratin place 
-        // we could exclude the other 1 from other integeres
-        // say we have an array of 16
-        // we could all 1s at each place,
-        // indexes with just 1 1s are mandatory
-        // rest are optional
-        // final answer would be (optional + 1)*(mandatory count)
+class Solution:
+    def countMaxOrSubsets(self, nums: List[int]) -> int:
+        # Calculate the maximum possible OR value
+        max_or_value = 0
+        for num in nums:
+            max_or_value |= num
 
-        // 010 101
+        total_subsets = 1 << len(nums)  # 2^n subsets
+        subsets_with_max_or = 0
 
-        let mut final_result = 0;
-        let mut result = 0;
-        for k in &nums {
-            final_result |= k;
-        }
-        println!("{}", final_result);
+        # Iterate through all possible subsets
+        for subset_mask in range(total_subsets):
+            current_or_value = 0
 
-        fn subset( arr : &Vec<i32>, total : i32, final_result : i32, mut result : &mut i32, index : i32) {
-            //println!("{} {} {} {}", total, final_result, result, index);
-            if total == final_result && index == arr.len() as i32  {
-                *result = *result + 1;
-            }
-            if index >= arr.len() as i32 {
-                return 
-            }
-            subset(arr, total | arr[index as usize] , final_result, result, index + 1 );
-            subset(arr, total , final_result, result, index + 1 );
-            
+            # Calculate OR value for the current subset
+            for i in range(len(nums)):
+                if (subset_mask >> i) & 1:
+                    current_or_value |= nums[i]
 
-        }
-        subset(&nums, 0, final_result, &mut result, 0);
-        return result;
-    }
-}
+            # If current subset's OR equals max_or_value, increment count
+            if current_or_value == max_or_value:
+                subsets_with_max_or += 1
+
+        return subsets_with_max_or
 
 
 {% endraw %}

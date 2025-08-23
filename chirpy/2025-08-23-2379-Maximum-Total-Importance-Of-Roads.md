@@ -1,6 +1,6 @@
 ---
             title: "2379 Maximum Total Importance Of Roads"
-            date: "2025-08-23T09:18:29+02:00"
+            date: "2025-08-23T09:59:26+02:00"
             categories: ["leetcode"]
             tags: [c]
             layout: post

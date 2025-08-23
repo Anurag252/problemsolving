@@ -1,8 +1,8 @@
 ---
             title: "9 Palindrome Number"
-            date: "2025-08-23T09:18:29+02:00"
+            date: "2025-08-23T09:59:26+02:00"
             categories: ["leetcode"]
-            tags: [c]
+            tags: [python]
             layout: post
 ---
             
@@ -55,32 +55,32 @@ Example 3:
 {% raw %}
 
 
-```c
+```python
 
 
-bool isPalindrome(int x) {
-    int k = 1;
-    while(x/k >= 10){
-        k = k * 10;
-    }
-    if (x < 0) {
-        return false;
-    }
-    int l = 10;
-    int y = x;
-    //printf("%d %d", x/k, y%l);
-    while(k >= 1 && y >= 1 && x/k == y%l ){
-        x = x % k;
-        k = k /10;
-        y = y / 10;
-    }
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        if x < 0 or x != ceil(x):
+            return False
+        if x == 0:
+            return True
+        inverted_num = 0
+        orig = x
+        m = 1
+        n = pow(10,int(log(x,10)))
+        while(x >= 0 and n >= 1):
+            
+            l = int(x / n)
+            print(l,inverted_num, n,m,x)
+            inverted_num = inverted_num + l*m
+            x = int(x % n)
+            n = int(n / 10)
+            m = m * 10
+        return inverted_num == orig
 
-    if (x == 0) {
-        return true;
-    }
-    return false;
 
-}
+
+        
 
 
 {% endraw %}

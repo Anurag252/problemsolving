@@ -1,6 +1,6 @@
 ---
             title: "1566 Check If A Word Occurs As A Prefix Of Any Word In A Sentence"
-            date: "2025-08-23T09:18:29+02:00"
+            date: "2025-08-23T09:59:26+02:00"
             categories: ["leetcode"]
             tags: [python]
             layout: post

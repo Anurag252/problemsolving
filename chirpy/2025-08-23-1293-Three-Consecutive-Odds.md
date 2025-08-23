@@ -1,8 +1,8 @@
 ---
             title: "1293 Three Consecutive Odds"
-            date: "2025-08-23T09:18:29+02:00"
+            date: "2025-08-23T09:59:26+02:00"
             categories: ["leetcode"]
-            tags: [rust]
+            tags: [c]
             layout: post
 ---
             
@@ -40,26 +40,26 @@ Example 2:
 {% raw %}
 
 
-```rust
+```c
 
 
-impl Solution {
-    pub fn three_consecutive_odds(arr: Vec<i32>) -> bool {
-        let mut count = 0;
-        for k in arr {
-            if k % 2 != 0 {
-                count += 1;
-            } else {
-                count = 0;
-            }
 
-            if count == 3 {
-                return true;
-            }
+bool threeConsecutiveOdds(int* arr, int arrSize) {
+    //qsort(arr, arrSize, sizeof(int), compare);
+    int a = 0;
+    int prev = 0;
+   
+    for (int i = 0 ; i < arrSize ; i ++) {
+        if (arr[i] % 2 != 0 ) {
+                a ++;
+        } else {
+            a = 0;
         }
-
-        return false;
+        if (a == 3) {
+            return true;
+        }
     }
+    return false;
 }
 
 

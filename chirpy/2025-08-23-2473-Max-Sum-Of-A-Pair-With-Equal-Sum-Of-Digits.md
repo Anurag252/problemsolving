@@ -1,6 +1,6 @@
 ---
             title: "2473 Max Sum Of A Pair With Equal Sum Of Digits"
-            date: "2025-08-23T09:18:29+02:00"
+            date: "2025-08-23T09:59:26+02:00"
             categories: ["leetcode"]
             tags: [go]
             layout: post

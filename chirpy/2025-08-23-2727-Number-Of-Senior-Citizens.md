@@ -1,8 +1,8 @@
 ---
             title: "2727 Number Of Senior Citizens"
-            date: "2025-08-23T09:18:29+02:00"
+            date: "2025-08-23T09:59:26+02:00"
             categories: ["leetcode"]
-            tags: [python]
+            tags: [c]
             layout: post
 ---
             
@@ -52,15 +52,21 @@ Example 2:
 {% raw %}
 
 
-```python
+```c
 
 
-class Solution:
-    def countSeniors(self, details: List[str]) -> int:
-        return len(list(filter((lambda x : int(x[11:13]) > 60), details)))
+int countSeniors(char ** details, int detailsSize){
+    int result = 0;
 
-
+    for (int i = 0 ; i < detailsSize ; i ++) {
         
+        if ( (details[i][11] - '0') * 10 + (details[i][12] - '0') > 60) {
+            result ++;
+        }
+    }
+    return result;
+
+}
 
 
 {% endraw %}

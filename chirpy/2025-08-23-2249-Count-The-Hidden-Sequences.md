@@ -1,8 +1,8 @@
 ---
             title: "2249 Count The Hidden Sequences"
-            date: "2025-08-23T09:18:29+02:00"
+            date: "2025-08-23T09:59:26+02:00"
             categories: ["leetcode"]
-            tags: [rust]
+            tags: [python]
             layout: post
 ---
             
@@ -72,35 +72,29 @@ Example 3:
 {% raw %}
 
 
-```rust
+```python
 
 
-impl Solution {
-    pub fn number_of_arrays(differences: Vec<i32>, lower: i32, upper: i32) -> i32 {
-        // Use prefix sum to track running total
-        let mut prefix_sum = 0i64;
-        let mut min_val = 0i64;
-        let mut max_val = 0i64;
+class Solution:
+    def numberOfArrays(self, differences: List[int], lower: int, upper: int) -> int:
+        # find the min val the sequence can take at any moment
+        # also find the max val the sequ can take at any momemt
+        # use prefix arr to do that
+        # now lower_seq + min <= lower
+        # and upper_seq + max <= upper 
+        # meaning lower - min to upper - max is the seq
 
-        for &diff in &differences {
-            prefix_sum += diff as i64;
-            min_val = min_val.min(prefix_sum);
-            max_val = max_val.max(prefix_sum);
-        }
+        mn, mx = 1000000, -1000000
+        t = 0
+        for k in differences:
+            t += k
+            mx = max(t, mx)
+            mn = min(t, mn)
+        print(mx, mn)
+        t1 = min(upper - mx, upper)
+        t2 = max(lower - mn, lower)
 
-        // If the difference between max and min exceeds the available range, return 0
-        let available_range = (upper - lower) as i64;
-        let required_range = max_val - min_val;
-
-        if required_range > available_range {
-            return 0;
-        }
-
-        // Otherwise, calculate number of valid starting values
-        let valid_starts = available_range - required_range + 1;
-        valid_starts as i32
-    }
-}
+        return t1 - t2 + 1 if t1 - t2 + 1> 0 else 0
 
 
 

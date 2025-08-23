@@ -1,6 +1,6 @@
 ---
             title: "2434 Design A Number Container System"
-            date: "2025-08-23T09:18:29+02:00"
+            date: "2025-08-23T09:59:26+02:00"
             categories: ["leetcode"]
             tags: [go]
             layout: post

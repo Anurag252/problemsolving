@@ -1,8 +1,8 @@
 ---
             title: "1819 Construct The Lexicographically Largest Valid Sequence"
-            date: "2025-08-23T09:18:29+02:00"
+            date: "2025-08-23T09:59:26+02:00"
             categories: ["leetcode"]
-            tags: [go]
+            tags: [python]
             layout: post
 ---
             
@@ -50,59 +50,84 @@ Example 2:
 {% raw %}
 
 
-```go
+```python
 
 
-package main
+class Solution:
+    def constructDistancedSequence(self, target_number: int) -> List[int]:
+        # Initialize the result sequence with size 2*n - 1 filled with 0s
+        result_sequence = [0] * (target_number * 2 - 1)
 
-import "fmt"
+        # Keep track of which numbers are already placed in the sequence
+        is_number_used = [False] * (target_number + 1)
 
-func constructDistancedSequence(n int) []int {
-    arr := make([]int, 2*n-1)
-    used := make([]bool, n+1)
-    
-    var result []int
-    recurse(arr, used, n, 0, &result)
-    return result
-}
+        # Start recursive backtracking to construct the sequence
+        self.find_lexicographically_largest_sequence(
+            0, result_sequence, is_number_used, target_number
+        )
 
-func recurse(arr []int, used []bool, n, index int, result *[]int) bool {
-    if index == len(arr) {
-        *result = append([]int(nil), arr...) // Store the first valid solution
-        return true
-    }
+        return result_sequence
 
-    if arr[index] != 0 {
-        return recurse(arr, used, n, index+1, result) // Skip filled indices
-    }
+    # Recursive function to generate the desired sequence
+    def find_lexicographically_largest_sequence(
+        self, current_index, result_sequence, is_number_used, target_number
+    ):
+        # If we have filled all positions, return true indicating success
+        if current_index == len(result_sequence):
+            return True
 
-    for num := n; num >= 1; num-- {
-        if used[num] {
-            continue
-        }
-        if num == 1 {
-            arr[index] = 1
-            used[1] = true
-            if recurse(arr, used, n, index+1, result) {
-                return true
-            }
-            arr[index] = 0
-            used[1] = false
-        } else if index+num < len(arr) && arr[index+num] == 0 {
-            arr[index], arr[index+num] = num, num
-            used[num] = true
-            if recurse(arr, used, n, index+1, result) {
-                return true
-            }
-            arr[index], arr[index+num] = 0, 0
-            used[num] = false
-        }
-    }
-    return false
-}
+        # If the current position is already filled, move to the next index
+        if result_sequence[current_index] != 0:
+            return self.find_lexicographically_largest_sequence(
+                current_index + 1,
+                result_sequence,
+                is_number_used,
+                target_number,
+            )
 
+        # Attempt to place numbers from targetNumber to 1 for a
+        # lexicographically largest result
+        for number_to_place in range(target_number, 0, -1):
+            if is_number_used[number_to_place]:
+                continue
 
+            is_number_used[number_to_place] = True
+            result_sequence[current_index] = number_to_place
 
+            # If placing number 1, move to the next index directly
+            if number_to_place == 1:
+                if self.find_lexicographically_largest_sequence(
+                    current_index + 1,
+                    result_sequence,
+                    is_number_used,
+                    target_number,
+                ):
+                    return True
+            # Place larger numbers at two positions if valid
+            elif (
+                current_index + number_to_place < len(result_sequence)
+                and result_sequence[current_index + number_to_place] == 0
+            ):
+                result_sequence[current_index + number_to_place] = (
+                    number_to_place
+                )
+
+                if self.find_lexicographically_largest_sequence(
+                    current_index + 1,
+                    result_sequence,
+                    is_number_used,
+                    target_number,
+                ):
+                    return True
+
+                # Undo the placement for backtracking
+                result_sequence[current_index + number_to_place] = 0
+
+            # Undo current placement and mark the number as unused
+            result_sequence[current_index] = 0
+            is_number_used[number_to_place] = False
+
+        return False
 
 
 {% endraw %}

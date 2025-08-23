@@ -1,8 +1,8 @@
 ---
             title: "1302 Delete Characters To Make Fancy String"
-            date: "2025-08-23T09:18:29+02:00"
+            date: "2025-08-23T09:59:26+02:00"
             categories: ["leetcode"]
-            tags: [rust]
+            tags: [python]
             layout: post
 ---
             
@@ -61,44 +61,28 @@ Example 3:
 {% raw %}
 
 
-```rust
+```python
 
 
-use std::collections::HashMap;
-impl Solution {
-    pub fn make_fancy_string(s: String) -> String {
-        let mut left : usize = 0;
-        let mut right : usize = 0 ;
-        let mut result : String = "".to_string();
-        let mut chars = HashMap::new();
-        let s_chars: Vec<char> = s.chars().collect();
+class Solution:
+    def makeFancyString(self, s: str) -> str:
 
-        while right < 2 && right < s.len() {
-            chars.entry(s_chars[right]).and_modify(|x| *x += 1).or_insert(1);
-            result += &(s_chars[right]).to_string();
-            right += 1;
-        }
- 
-        while right < s.len() {
-            chars.entry(s_chars[right]).and_modify(|x| *x += 1).or_insert(1);
-            //println!("{:?}", chars);
-            if chars.len() == 1 {
-                
-            } else {
-                result += &(s_chars[right]).to_string()
-            }
-            chars.entry(s_chars[left]).and_modify(|x| *x -= 1);
-            if chars.get(&s_chars[left]) == Some(&0) {
-                chars.remove(&s_chars[left]);
-            }
-            left += 1 ;
-            
-            right += 1;
-        }
-        result
+        curr = ""
+        count = 0
+        res = []
 
-    }
-}
+        for k in s:
+            if k == curr:
+                count += 1
+            else:
+                curr = k
+                count = 1
+
+            if count < 3:
+                res.append(k)
+        return "".join(res)
+
+        
 
 
 {% endraw %}

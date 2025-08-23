@@ -1,6 +1,6 @@
 ---
             title: "3174 Minimum Number Of Changes To Make Binary String Beautiful"
-            date: "2025-08-23T09:18:29+02:00"
+            date: "2025-08-23T09:59:26+02:00"
             categories: ["leetcode"]
             tags: [python]
             layout: post

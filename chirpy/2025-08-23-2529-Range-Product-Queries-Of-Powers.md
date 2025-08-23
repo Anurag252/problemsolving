@@ -1,8 +1,8 @@
 ---
             title: "2529 Range Product Queries Of Powers"
-            date: "2025-08-23T09:18:29+02:00"
+            date: "2025-08-23T09:59:26+02:00"
             categories: ["leetcode"]
-            tags: [python]
+            tags: [rust]
             layout: post
 ---
             
@@ -54,47 +54,63 @@ The answer to the only query is powers[0] = 2. The answer modulo 109 + 7 is the 
 {% raw %}
 
 
-```python
+```rust
 
 
-class Solution:
-    def productQueries(self, n: int, queries: List[List[int]]) -> List[int]:
-        MOD = 10**9 + 7
+impl Solution {
+    pub fn product_queries(n: i32, queries: Vec<Vec<i32>>) -> Vec<i32> {
+        const MOD: i64 = 1_000_000_007;
 
-        def recurse(n, res):
-            if n == 0:
-                return True
-            if n < 0:
-                return False
-            b = n.bit_length() - 1
-            for k in range(b, -1, -1):
-                if recurse(n - 2**k, res):
-                    res.append(2**k)
-                    return True
-            return False
+        // Build vector of powers present in n: 2^i for each set bit (in increasing i)
+        let mut powers: Vec<i64> = Vec::new();
+        let mut bit: i64 = 0;
+        let mut tmp = n as i64;
+        while tmp > 0 {
+            if tmp & 1 == 1 {
+                powers.push((1i64 << bit) % MOD);
+            }
+            tmp >>= 1;
+            bit += 1;
+        }
 
-    
-        a = []
-        recurse(n, a)
+        // Prefix products modulo MOD
+        let mut prefix: Vec<i64> = Vec::with_capacity(powers.len());
+        let mut prod: i64 = 1;
+        for &p in &powers {
+            prod = (prod * p) % MOD;
+            prefix.push(prod);
+        }
 
-        # build prefix products modulo MOD
-        prefix = []
-        m = 1
-        for k in a:
-            m = (m * k) % MOD
-            prefix.append(m)
+        // fast modular exponentiation
+        fn mod_pow(mut a: i64, mut e: i64, m: i64) -> i64 {
+            let mut res = 1i64;
+            a %= m;
+            while e > 0 {
+                if e & 1 == 1 {
+                    res = (res * a) % m;
+                }
+                a = (a * a) % m;
+                e >>= 1;
+            }
+            res
+        }
 
-        results = []
-        for l, r in queries:
-            if l == 0:
-                val = prefix[r]
-            else:
-                # modular inverse needed here for correct mod division
-                # but since Python big int, let's do modular inverse with pow
-                val = prefix[r] * pow(prefix[l-1], MOD-2, MOD) % MOD
-            results.append(val)
-
-        return results
+        // answer queries using modular inverse
+        let mut ans: Vec<i32> = Vec::with_capacity(queries.len());
+        for q in queries {
+            let l = q[0] as usize;
+            let r = q[1] as usize;
+            let value = if l == 0 {
+                prefix[r]
+            } else {
+                let inv = mod_pow(prefix[l - 1], MOD - 2, MOD);
+                (prefix[r] * inv) % MOD
+            };
+            ans.push(value as i32);
+        }
+        ans
+    }
+}
 
 
 

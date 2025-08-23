@@ -1,8 +1,8 @@
 ---
             title: "2503 Longest Subarray With Maximum Bitwise And"
-            date: "2025-08-23T09:18:29+02:00"
+            date: "2025-08-23T09:59:26+02:00"
             categories: ["leetcode"]
-            tags: [rust]
+            tags: [python]
             layout: post
 ---
             
@@ -56,43 +56,24 @@ The longest subarray with that value is [4], so we return 1.
 {% raw %}
 
 
-```rust
+```python
 
 
+class Solution:
+    def longestSubarray(self, nums: List[int]) -> int:
+        max_val = ans = current_streak = 0
+        for num in nums:
+            if max_val < num:
+                max_val = num
+                ans = current_streak = 0
 
- use std::cmp::max;
- impl Solution {
-    pub fn longest_subarray(nums: Vec<i32>) -> i32 {
-        /*
-            maximum bitwise AND would be just one number 
-            or a group of number that are same
-            is it largest number ??
-            I guess so 
-        */
-        let mut result = 0;
-        let mut temp = 1;
-        let mut mx = nums.iter().max();
-        match mx {
-            Some(min) => {
-                for (i, k) in nums.iter().enumerate() {
-            if k == min {
-                if (i > 0 && nums[i-1] == *k) {
-                    temp += 1;
-                }
-            } else {
-                temp = 1;
-            }
+            if max_val == num:
+                current_streak += 1
+            else:
+                current_streak = 0
 
-            result = max(result, temp);
-        }
-        result
-            },
-            None      => return 0,
-        }
-        
-
-    }
-}
+            ans = max(ans, current_streak)
+        return ans   
 
 
 {% endraw %}

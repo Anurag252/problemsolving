@@ -1,6 +1,6 @@
 ---
             title: "3522 Find The Power Of K Size Subarrays I"
-            date: "2025-08-23T09:18:29+02:00"
+            date: "2025-08-23T09:59:26+02:00"
             categories: ["leetcode"]
             tags: [python]
             layout: post
