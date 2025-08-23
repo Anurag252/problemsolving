@@ -1,6 +1,6 @@
 ---
             title: "1411 Convert Binary Number In A Linked List To Integer"
-            date: "2025-08-23T13:50:49+02:00"
+            date: "2025-08-23T13:55:32+02:00"
             categories: ["leetcode"]
             tags: [rust]
             layout: post

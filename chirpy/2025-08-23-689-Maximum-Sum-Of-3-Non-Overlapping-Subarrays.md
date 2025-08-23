@@ -1,6 +1,6 @@
 ---
             title: "689 Maximum Sum Of 3 Non Overlapping Subarrays"
-            date: "2025-08-23T13:50:49+02:00"
+            date: "2025-08-23T13:55:32+02:00"
             categories: ["leetcode"]
             tags: [python]
             layout: post

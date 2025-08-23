@@ -1,6 +1,6 @@
 ---
             title: "1895 Minimum Number Of Operations To Move All Balls To Each Box"
-            date: "2025-08-23T13:50:49+02:00"
+            date: "2025-08-23T13:55:32+02:00"
             categories: ["leetcode"]
             tags: [python]
             layout: post

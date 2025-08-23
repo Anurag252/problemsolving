@@ -1,6 +1,6 @@
 ---
             title: "2148 Minimum Number Of Moves To Seat Everyone"
-            date: "2025-08-23T13:50:49+02:00"
+            date: "2025-08-23T13:55:32+02:00"
             categories: ["leetcode"]
             tags: [c]
             layout: post

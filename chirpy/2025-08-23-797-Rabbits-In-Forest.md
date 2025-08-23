@@ -1,6 +1,6 @@
 ---
             title: "797 Rabbits In Forest"
-            date: "2025-08-23T13:50:49+02:00"
+            date: "2025-08-23T13:55:32+02:00"
             categories: ["leetcode"]
             tags: [cpp]
             layout: post
