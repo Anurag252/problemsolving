@@ -3,7 +3,7 @@ import subprocess
 from datetime import datetime
 import re
 import html
-
+ 
 # Paths
 REPO_DIR = '.'
 TARGET_DIR = './chirpy'
