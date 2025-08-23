@@ -73,7 +73,8 @@ os.makedirs(TARGET_DIR, exist_ok=True)
 
 # Process all solution files
 for root, _, files in os.walk(REPO_DIR):
-
+    if "chirpy" in root:
+        continue
     for file in files:
         ext = os.path.splitext(file)[1]
         if ext in LANG_MAP:
