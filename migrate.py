@@ -80,8 +80,8 @@ for root, _, files in os.walk(REPO_DIR):
         if ext in LANG_MAP:
             solution_file = os.path.join(root, file)
             lang_tag = LANG_MAP[ext]
-            print(solution_file, "file--------")
             commit_date, commit_msg = get_commit_info(solution_file)
+            print(solution_file, "file--------", commit_date, commit_msg)
             if not commit_date:
                 continue
 
