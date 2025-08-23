@@ -23,13 +23,15 @@ LANG_MAP = {
 # Get last commit info
 def get_commit_info(file_path):
     result = subprocess.run(
-        ["git", "log", "--follow", "--diff-filter=A", "-1", "--format=%cd||%s", "--", file_path],
+        ["git", "log", "--follow", file_path],
         cwd=REPO_DIR,
         capture_output=True,
         text=True
     )
     if result.stdout.strip():
-        commit_date_str, commit_msg = result.stdout.strip().split("||")
+        ln = result.stdout.strip().split("\n")
+        commit_msg = ln[3:]
+        commit_date_str = ln[2].replace("Date:").strip()
         commit_date = datetime.strptime(commit_date_str, "%a %b %d %H:%M:%S %Y %z")
         return commit_date, commit_msg
     return None, None
