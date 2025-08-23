@@ -23,7 +23,7 @@ LANG_MAP = {
 # Get last commit info
 def get_commit_info(file_path):
     result = subprocess.run(
-        ["git", "log", "--follow", "--diff-filter=A", "-1", "--format=%a", "--", file_path],
+        ["git", "log", "--follow", "--diff-filter=A", "-1", "--format=%cd||%s", "--", file_path],
         cwd=REPO_DIR,
         capture_output=True,
         text=True
