@@ -122,6 +122,7 @@ for root, _, files in os.walk(REPO_DIR):
             target_file_name = f"{date_prefix}-{safe_title}.md"
             target_file_path = os.path.join(TARGET_DIR, target_file_name)
             if os.path.exists(target_file_path):
+                print(target_file_path)
                 continue
             with open(target_file_path, "w", encoding="utf-8") as f:
                 f.write(md_content)
