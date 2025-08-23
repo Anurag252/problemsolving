@@ -1,8 +1,8 @@
 ---
             title: "1485 Minimum Cost To Make At Least One Valid Path In A Grid"
-            date: "2025-01-18T12:06:27+01:00"
+            date: "2025-01-18T09:35:25+01:00"
             categories: ["leetcode"]
-            tags: [cpp]
+            tags: [python]
             layout: post
 ---
             
@@ -71,64 +71,61 @@ Example 3:
 {% raw %}
 
 
-```cpp
+```python
 
 
-constexpr int MAX_N = 101;
-constexpr int MAX_F = 2 * MAX_N;
+class Solution:
+    def minCost(self, grid: List[List[int]]) -> int:
+        num_rows, num_cols = len(grid), len(grid[0])
 
+        # Initialize all cells with max value
+        min_changes = [[float("inf")] * num_cols for _ in range(num_rows)]
+        min_changes[0][0] = 0
 
-constexpr int DR[] = {0, 0, 1, -1};
-constexpr int DC[] = {1, -1, 0, 0};
+        while True:
+            # Store previous state to check for convergence
+            prev_state = [row[:] for row in min_changes]
 
-class Solution {
-    int m, n;
-    vector<vector<int>> G;
-    int dp[MAX_N][MAX_N][MAX_F] = {};
-    bool seen[MAX_N][MAX_N][MAX_F] = {};
+            # Forward pass: check cells coming from left and top
+            for row in range(num_rows):
+                for col in range(num_cols):
+                    # Check cell above
+                    if row > 0:
+                        min_changes[row][col] = min(
+                            min_changes[row][col],
+                            min_changes[row - 1][col]
+                            + (0 if grid[row - 1][col] == 3 else 1),
+                        )
+                    # Check cell to the left
+                    if col > 0:
+                        min_changes[row][col] = min(
+                            min_changes[row][col],
+                            min_changes[row][col - 1]
+                            + (0 if grid[row][col - 1] == 1 else 1),
+                        )
 
-    bool valid(int r, int c) {
-        return 0 <= r && r < m && 0 <= c && c < n;
-    }
+            # Backward pass: check cells coming from right and bottom
+            for row in range(num_rows - 1, -1, -1):
+                for col in range(num_cols - 1, -1, -1):
+                    # Check cell below
+                    if row < num_rows - 1:
+                        min_changes[row][col] = min(
+                            min_changes[row][col],
+                            min_changes[row + 1][col]
+                            + (0 if grid[row + 1][col] == 4 else 1),
+                        )
+                    # Check cell to the right
+                    if col < num_cols - 1:
+                        min_changes[row][col] = min(
+                            min_changes[row][col],
+                            min_changes[row][col + 1]
+                            + (0 if grid[row][col + 1] == 2 else 1),
+                        )
+            # If no changes were made in this iteration, we've found optimal solution
+            if min_changes == prev_state:
+                break
 
-    int dfs(int r, int c, int fuel) {
-        if (fuel >= MAX_F)
-            return INT_MAX;
-        if (r == m - 1 && c == n - 1)
-            return fuel;
-        // if (dp[r][c][fuel] != -1)
-        //     return dp[r][c][fuel];
-        if (seen[r][c][fuel])
-            return INT_MAX;
-        seen[r][c][fuel] = true;
-        int d = G[r][c] - 1;
-        int rr = r + DR[d];
-        int cc = c + DC[d];
-        int best = INT_MAX;
-        if (valid(rr, cc))
-            best = min(best, dfs(rr, cc, fuel));
-        for (d = 0; d < 4; d++) {
-            rr = r + DR[d];
-            cc = c + DC[d];
-            if (valid(rr, cc)) {
-                int t = dfs(rr, cc, fuel + 1);
-                best = min(best, t == INT_MAX ? INT_MAX : t);
-            }
-        }
-        return best;
-    }
-public:
-    int minCost(vector<vector<int>>& grid) {
-        m = grid.size();
-        n = grid[0].size();
-        G = grid;
-        for (int r = 0; r < MAX_N; r++)
-            for (int c = 0; c < MAX_N; c++)
-                for (int f = 0; f < MAX_F; f++)
-                    dp[r][c][f] = -1;
-        return dfs(0, 0, 0);
-    }
-};
+        return min_changes[num_rows - 1][num_cols - 1]
 
 
 {% endraw %}
