@@ -31,7 +31,7 @@ def get_commit_info(file_path):
     if result.stdout.strip():
         ln = result.stdout.strip().split("\n")
         commit_msg = ln[3:]
-        commit_date_str = ln[2].replace("Date:").strip()
+        commit_date_str = ln[2].replace("Date:","").strip()
         commit_date = datetime.strptime(commit_date_str, "%a %b %d %H:%M:%S %Y %z")
         return commit_date, commit_msg
     return None, None
