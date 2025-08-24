@@ -3,17 +3,15 @@ name: Generate Chirpy Posts from LeetSync
 on:
   push:
     branches:
-      - main # or your default branch
-    # we can't directly filter by commit message here,
-    # so we'll run on all pushes to main and add a commit-message check in the job
+      - main
 
 jobs:
   generate-posts:
-    if: ${{contains(github.event.head_commit.message,  'LeetSync')}} # only run if commit message contains LeetSync
+    if: ${{ contains(github.event.head_commit.message, 'LeetSync') }}
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout LeetSync repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -30,14 +28,30 @@ jobs:
 
       - name: Run LeetSync → Chirpy script
         run: |
-          python migrate.py   # replace with your actual script filename
+          python migrate.py
 
-      - name: Commit and push generated posts
+      - name: Clone anurag252.github.io repository
         run: |
-          ls chirpy
+          git clone https://Anurag252:${{ secrets.GH_PAGES_TOKEN }}@github.com/Anurag252/anurag252.github.io.git ../anurag252.github.io
+
+      - name: Copy new posts into GitHub Pages repo
+        run: |
+          mkdir -p ../anurag252.github.io/_posts
+          for file in chirpy/*; do
+            target="../anurag252.github.io/_posts/$(basename "$file")"
+            if [ ! -f "$target" ]; then
+              cp "$file" "$target"
+              echo "Copied: $(basename "$file")"
+            else
+              echo "Skipped (already exists): $(basename "$file")"
+            fi
+          done
+
+      - name: Commit and push to GitHub Pages repo
+        run: |
+          cd ../anurag252.github.io
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git status
-          git add *
+          git add _posts
           git commit -m "Auto-generate Chirpy posts from LeetSync" || echo "No changes to commit"
           git push
