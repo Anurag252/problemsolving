@@ -23,7 +23,7 @@ class Solution:
                 else:
                     mp[i+j] = []
                     mp[i+j].append((i,j))
-        print(mp)
+        #print(mp)
         for k in range(0, len(mat) + len(mat[0]) - 1):
             if k % 2 != 0:
                 for v in mp[k]:
