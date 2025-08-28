@@ -21,7 +21,6 @@ class Solution:
                 i += 1
                 j += 1
             arr.sort(key=lambda x : x)
-            print(arr)
             i = 0
             j = k
             l = 0
@@ -41,7 +40,6 @@ class Solution:
                 i += 1
                 j += 1
             arr.sort(key=lambda x : -x)
-            print(arr)
             i = k
             j = 0
             l = 0
