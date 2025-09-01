@@ -1,39 +1,45 @@
 class Solution:
     def maxAverageRatio(self, classes: List[List[int]], extraStudents: int) -> float:
-        if len(classes) == 0:
-            return 0
-        h = []
-        for idx, k in enumerate(classes):
-            heapq.heappush(h, ( -(k[1] - k[0]) / (k[1] * k[1] + k[1]), idx ))
-        
         """
-        a/b
-        a + 1/b + 1
-        a/b - (a + 1)/(b + 1)
-        ab +a - ab -b / (bb + b)
+            idea is to find class with minimum pass ratio
+            and assign them extra students
+            in greedy fashion
 
-        (b-a) / (bb +b)
+            why adding to minimum raises the pass% by max ?
+            say it doesn't , since each class adds 1/n share to average 
+            we need to show adding x students to class raises the % by max
+            a/b -> a + x / b + x 
+            1/6  -> add 4 -> 5/10 = 34%
+            1.6/10 
+            1/5 -> 5/6 = 60%
+            2/3 -> add 4 -> 6/7 = 19%
+
+            from example it seems smallest denominator works best
+            in heap insert it logn 
+
+            a/b
+
+a+x/b+x - a/b
+
+a(b+x) - b(a+x) // b2+bx
+
+ax - bx // b2 + bx
+
+(b - a)*x / b2 + b
         """
-        
-        while(extraStudents > 0):
-            #h.sort(key=lambda x : -(x[1] - x[0]) / (x[1] * x[1] + x[1]))
-            item1, idx = heapq.heappop(h)
-            #print(h)
-            classes[idx][0] += 1
-            classes[idx][1] += 1
-            heapq.heappush(h, (-(classes[idx][1] - classes[idx][0]) / (classes[idx][1] * classes[idx][1] + classes[idx][1]) , idx))
-            extraStudents -= 1
-        result = 0
-        
-        for k in h:
-            result += (classes[k[1]][0]/classes[k[1]][1] * 100)
-        #print(h, result)
-        return (result / len(h)) / 100
 
+        h =[]
+        c = 0
+        for k in classes:
+            heapq.heappush(h, ( (k[0] - k[1]) / (math.pow(k[1], 2) + k[1]),  k[1], k[0]))
 
-        # at each level find the max change that can occur by adding one student
-"""
-        0.5 0.6 1
-        0.66 0.6 1
-        0.5 0.66
-        """
+        for k in range(extraStudents):
+            l = heapq.heappop(h)
+            d , n = l[1], l[2]
+            s = (n-d) / (math.pow(d + 1, 2) + d + 1)
+            heapq.heappush(h, ( s, d+ 1, n + 1))
+        res = 0
+        while(h):
+            l = heapq.heappop(h)
+            res += (l[2]/l[1])
+        return res / len(classes) 
