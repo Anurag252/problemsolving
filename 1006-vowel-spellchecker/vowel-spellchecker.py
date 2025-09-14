@@ -1,31 +1,49 @@
-class Solution(object):
-    def spellchecker(self, wordlist, queries):
-        def devowel(word):
-            return "".join('*' if c in 'aeiou' else c
-                           for c in word)
+class Solution:
+    def spellchecker(self, wordlist: List[str], queries: List[str]) -> List[str]:
+        
+        result = []
 
-        words_perfect = set(wordlist)
-        words_cap = {}
-        words_vow = {}
+        mp = set()
+        mp1 = {}
+        mp2 = {}
+        vowels = ['a', 'e', 'i', 'o', 'u']
 
-        for word in wordlist:
-            wordlow = word.lower()
-            words_cap.setdefault(wordlow, word)
-            words_vow.setdefault(devowel(wordlow), word)
+        for l in wordlist:
+            mp.add(l)
+            if l.lower() not in mp1:
+                mp1[l.lower()]= []
+            mp1[l.lower()].append(l)
+            t = ""
+            for x in l.lower():
+                if x in vowels:
+                    t += "*"
+                else:
+                    t += x
+            if t not in mp2:
+                mp2[t] = []
+            mp2[t.lower()].append(l)
 
-        def solve(query):
-            if query in words_perfect:
-                return query
 
-            queryL = query.lower()
-            if queryL in words_cap:
-                return words_cap[queryL]
 
-            queryLV = devowel(queryL)
-            if queryLV in words_vow:
-                return words_vow[queryLV]
-            return ""
-        solved_queries = map(solve, queries)
 
-        return list(solved_queries)
-        return map(solve, queries)
+        for k in queries:
+            if k in mp:
+                result.append(k)
+                continue
+            elif k.lower() in mp1:
+                # check if case matches
+                result.append(mp1[k.lower()][0])
+            else:
+                t = ""
+                for x in k.lower():
+                    if x in vowels:
+                        t += "*"
+                    else:
+                        t += x
+                if t in mp2:
+                    result.append(mp2[t][0])
+                else:
+                    result.append("")
+                        
+
+        return result
