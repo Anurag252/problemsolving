@@ -3,7 +3,6 @@ class Solution:
         res = numBottles
         leftover = 0
         while(numBottles >= numExchange):
-            print(numBottles)
             leftover = numBottles % numExchange
             numBottles = numBottles // numExchange
             res += numBottles
