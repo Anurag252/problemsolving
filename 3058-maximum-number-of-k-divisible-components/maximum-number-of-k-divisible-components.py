@@ -1,61 +1,55 @@
-class Tree:
-    def __init__(self, root):
-        self.root = root
-
-class Node:
-    def __init__(self,val, left= None, right=None):
-        self.val = val
-        self.left= left
-        self.right= right
-        self.sum = 0
-
-
-
 class Solution:
-    def maxKDivisibleComponents(self, n: int, edges: List[List[int]], values: List[int], k: int) -> int:
-        # find the leaf node equale to k
-        # then find the lvl 1 tree sum equale to k
-        # find all trees lvl 2
+    def maxKDivisibleComponents(
+        self, n: int, edges: List[List[int]], values: List[int], k: int
+    ) -> int:
+        # Step 1: Create adjacency list from edges
+        adj_list = [[] for _ in range(n)]
+        for node1, node2 in edges:
+            adj_list[node1].append(node2)
+            adj_list[node2].append(node1)
 
-        new_edges = {i: [] for i in range(n)}
-        for m in edges:
-            if m[0] not in new_edges:
-                new_edges[m[0]] = []
-            new_edges[m[0]].append(m[1])
+        # Step 2: Initialize component count
+        component_count = [0]  # Use a list to pass by reference
 
-            if m[1] not in new_edges:
-                new_edges[m[1]] = []
-            new_edges[m[1]].append(m[0])
-        print(new_edges)
+        # Step 3: Start DFS traversal from node 0
+        self.dfs(0, -1, adj_list, values, k, component_count)
 
-        count = {}
-        def traverse(m, s):
+        # Step 4: Return the total number of components
+        return component_count[0]
 
-            s.add(m)
-            if m not in new_edges:
-               
-                if (values[m] % k) == 0:
-                    count["sum"] += 1
-                    return 0
-                return values[m]
-            fin = 0
-            for n in new_edges[m]:
-                if n not in s :
-                    c = traverse(n, s)
-                    if (c)  % k == 0:
-                        count["sum"] += 1
-                        c = 0
-                    fin += c
-            return fin + values[m]
+    def dfs(
+        self,
+        current_node: int,
+        parent_node: int,
+        adj_list: List[List[int]],
+        node_values: List[int],
+        k: int,
+        component_count: List[int],
+    ) -> int:
+        # Step 1: Initialize sum for the current subtree
+        sum_ = 0
 
-                    
+        # Step 2: Traverse all neighbors
+        for neighbor_node in adj_list[current_node]:
+            if neighbor_node != parent_node:
+                # Recursive call to process the subtree rooted at the neighbor
+                sum_ += self.dfs(
+                    neighbor_node,
+                    current_node,
+                    adj_list,
+                    node_values,
+                    k,
+                    component_count,
+                )
+                sum_ %= k  # Ensure the sum stays within bounds
 
+        # Step 3: Add the value of the current node to the sum
+        sum_ += node_values[current_node]
+        sum_ %= k
 
-        ans = 0
-        count["sum"] = 0
-        s= set()
-        if traverse(0, s) % k == 0:
-            count["sum"] += 1
-        return count["sum"]
-        
+        # Step 4: Check if the sum is divisible by k
+        if sum_ == 0:
+            component_count[0] += 1
 
+        # Step 5: Return the computed sum for the current subtree
+        return sum_
