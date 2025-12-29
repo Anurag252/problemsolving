@@ -5,25 +5,35 @@ class Solution:
             if k[0:2] not in hs:
                 hs[k[0:2]] = []
             hs[k[0:2]].append(k[2])
+            
 
+        @cache
         def recurse(bottom):
+            #print(bottom)
             if len(bottom) == 1:
                 return True
+            
 
-            # helper to build the next level
-            def build(i, s):
-                if i == len(bottom) - 1:
-                    return recurse(s)
-
-                pair = bottom[i:i+2]
-                if pair not in hs:
+            left = 0
+            res = False
+            s = [""]
+            for left in range(1, len(bottom)):
+                if bottom[left-1:left+1] not in hs:
                     return False
-
-                for m in hs[pair]:
-                    if build(i + 1, s + m):
-                        return True
-                return False
-
-            return build(0, "")
-
+                temp = []
+                for m in hs[bottom[left-1:left+1]]:
+                    #print(m)
+                    
+                    for i,k in enumerate(s.copy()):
+                        temp.append(k+m)
+                    #print(temp)
+                s = temp
+            res = False
+            for l in s:
+                res = res or recurse(l)  
+                if res:
+                    return res
+            return res
         return recurse(bottom)
+
+        
