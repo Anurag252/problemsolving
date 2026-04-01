@@ -1,35 +1,41 @@
 class Solution:
-    def survivedRobotsHealths(self, positions: List[int], healths: List[int], directions: str) -> List[int]:
-        stack = []
-        arr = []
-        for k,l,m in zip(positions, healths, directions):
-            arr.append((k,l,m))
-        
-        arr.sort(reverse=False, key=lambda x : x[0])
-        
-        for k in arr:
-            stack.append(k)
-            while len(stack) > 1 and (stack[-1][2] == 'L' and stack[-2][2] == 'R'):
-                a = stack.pop()
-                b = stack.pop()
-                if a[1] > b[1]:
-                    stack.append((a[0], a[1]-1, a[2]))
-                elif a[1] < b[1]:
-                    stack.append((b[0], b[1]-1, b[2]))
+    def survivedRobotsHealths(
+        self, positions: List[int], healths: List[int], directions: str
+    ) -> List[int]:
+        n = len(positions)
+        indices = list(range(n))
+        result = []
+        stack = deque()
 
-        result = [None] * len(stack)
-        dic = {}
-        for k in stack:
-            dic[k[0]] = (k[1], k[2])
-        
-        i = 0
-        for k in positions:
-            if k in dic:
-                result[i] = dic[k][0]
-                i  = i + 1
+        # Sort indices based on their positions
+        indices.sort(key=lambda x: positions[x])
+
+        for current_index in indices:
+            # Add right-moving robots to the stack
+            if directions[current_index] == "R":
+                stack.append(current_index)
+            else:
+                while stack and healths[current_index] > 0:
+                    # Pop the top robot from the stack for collision check
+                    top_index = stack.pop()
+
+                    if healths[top_index] > healths[current_index]:
+                        # Top robot survives, current robot is destroyed
+                        healths[top_index] -= 1
+                        healths[current_index] = 0
+                        stack.append(top_index)
+                    elif healths[top_index] < healths[current_index]:
+                        # Current robot survives, top robot is destroyed
+                        healths[current_index] -= 1
+                        healths[top_index] = 0
+                    else:
+                        # Both robots are destroyed
+                        healths[current_index] = 0
+                        healths[top_index] = 0
+
+        # Collect surviving robots
+        for index in range(n):
+            if healths[index] > 0:
+                result.append(healths[index])
+
         return result
-
-            
-
-
-        
