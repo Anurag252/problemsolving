@@ -13,9 +13,7 @@ class Solution:
             
             if k in mp:
                 res = min(res, abs(mp[k] - i))
-                mp[t] = i
-            else:
-                mp[t] = i
+            mp[t] = i
             #print(t, mp, res, k)
         return res if res < 1000000 else -1
 
